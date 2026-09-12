@@ -1,33 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PhoneCta } from "@/components/PhoneCta";
 import { primaryNav, serviceLinks } from "@/lib/nav";
 import { site } from "@/lib/site";
 
 export function Header() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  useEffect(() => {
+  function close() {
     setOpen(false);
     setServicesOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
+  }
 
   return (
     <header className="sticky top-0 z-40 border-b border-navy/10 bg-navy text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-        <Link href="/" className="min-w-0">
+        <Link href="/" className="min-w-0" onClick={close}>
           <span className="block truncate font-serif text-lg leading-tight sm:text-xl">
             {site.businessName}
           </span>
@@ -44,6 +35,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className="text-sm text-white/80 hover:text-white"
+                onClick={close}
               >
                 {item.label}
               </Link>
@@ -53,6 +45,7 @@ export function Header() {
               type="button"
               className="text-sm text-white/80 hover:text-white"
               aria-expanded={servicesOpen}
+              aria-haspopup="true"
               onClick={() => setServicesOpen((value) => !value)}
             >
               Services
@@ -65,6 +58,7 @@ export function Header() {
                       <Link
                         href={item.href}
                         className="block rounded-sm px-2 py-2 text-sm hover:bg-paper"
+                        onClick={close}
                       >
                         {item.label}
                       </Link>
@@ -108,6 +102,7 @@ export function Header() {
                   <Link
                     href={item.href}
                     className="block py-3 text-base text-white"
+                    onClick={close}
                   >
                     {item.label}
                   </Link>
@@ -123,6 +118,7 @@ export function Header() {
                   <Link
                     href={item.href}
                     className="block py-2 text-sm text-white/85"
+                    onClick={close}
                   >
                     {item.label}
                   </Link>
