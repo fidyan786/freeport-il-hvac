@@ -9,8 +9,8 @@
   --paper: #f3eee4;
   --cream: #faf7f1;
   --white: #ffffff;
-  --ember: #c45c26;
-  --ember-dark: #9d4316;
+  --ember: #b45309;
+  --ember-dark: #9a3412;
   --line: #ddd4c6;
   --ok: #2f6f4e;
   --danger: #8b1e1e;
@@ -73,4 +73,69 @@ textarea:focus-visible {
 
 .skip-link:focus {
   top: 1rem;
+}
+
+.hvac-chat-launcher {
+  bottom: calc(4.75rem + 0.85rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .hvac-chat-launcher {
+    bottom: 1.5rem;
+  }
+}
+
+.hvac-chat-panel {
+  top: var(--chat-top, 0px);
+  height: var(--chat-height, 100dvh);
+}
+
+@media (min-width: 768px) {
+  .hvac-chat-panel {
+    top: auto;
+    height: min(40rem, calc(100dvh - 7rem));
+  }
+}
+
+.hvac-chat-launcher,
+.hvac-chat-panel {
+  animation: hvac-chat-in 180ms ease-out;
+}
+
+.hvac-chat-typing {
+  letter-spacing: 0.15em;
+  animation: hvac-chat-pulse 1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hvac-chat-launcher,
+  .hvac-chat-panel,
+  .hvac-chat-typing {
+    animation: none;
+  }
+}
+
+@keyframes hvac-chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hvac-chat-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
 }

@@ -9,7 +9,7 @@ type Props = {
 
 const variants = {
   primary:
-    "inline-flex items-center justify-center gap-2 rounded-sm bg-ember px-5 py-3 text-center text-sm font-semibold tracking-wide text-white transition hover:bg-ember-dark",
+    "inline-flex items-center justify-center gap-2 rounded-sm bg-ember px-5 py-3 text-center text-sm font-bold tracking-wide text-white transition hover:bg-ember-dark",
   secondary:
     "inline-flex items-center justify-center gap-2 rounded-sm border border-navy/20 bg-white px-5 py-3 text-center text-sm font-semibold tracking-wide text-navy transition hover:border-navy hover:bg-paper",
   light:

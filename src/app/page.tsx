@@ -188,7 +188,7 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 py-8 sm:flex-row sm:items-center sm:px-6">
           <div className="text-white">
             <h2 className="font-serif text-2xl">Need emergency HVAC in Freeport?</h2>
-            <p className="mt-1 text-sm text-white/90">
+            <p className="mt-1 text-sm font-medium text-white">
               No heat, furnace stopped, AC dead on the first hot day — call
               before the house gets dangerous or unbearable.
             </p>
