@@ -75,6 +75,10 @@ textarea:focus-visible {
   top: 1rem;
 }
 
+body.hvac-chat-open [data-sticky-call] {
+  visibility: hidden;
+}
+
 .hvac-chat-launcher {
   bottom: calc(4.75rem + 0.85rem + env(safe-area-inset-bottom, 0px));
 }

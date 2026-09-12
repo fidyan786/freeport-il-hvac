@@ -19,7 +19,12 @@ export default function PrivacyPage() {
       <p className="mt-4">
         If you call, your phone provider and any later call-tracking vendor
         process that call. If you use the request form, we collect name, phone,
-        service needed, and message to respond to the request.
+        service needed, and message to respond to the request. If you use the
+        on-site help chat, we may collect the HVAC issue, ZIP, property type,
+        timeline, and any name or phone you choose to share, plus the page you
+        were on. Chat messages stay in your browser session and are sent to our
+        server only to generate a reply and, when configured, a lead
+        notification.
       </p>
       <p className="mt-4">
         Form delivery is only sent to a webhook if one is configured by the

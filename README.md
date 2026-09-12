@@ -23,9 +23,12 @@ Copy `.env.example` and set:
 | `NEXT_PUBLIC_SITE_URL` | Canonical origin, e.g. `https://example.com` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional GA4 |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional Search Console |
-| `FORM_WEBHOOK` | Optional POST endpoint for the contact form |
+| `FORM_WEBHOOK` | Optional POST endpoint for the contact form and chatbot leads |
+| `AI_GATEWAY_API_KEY` | Optional. Polishes chatbot replies via Vercel AI Gateway. The chatbot still works without it. |
 
 Do not invent reviews, licenses, ratings, 24/7 claims, or prices.
+
+The floating chatbot is a conversion assistant. It does not replace service pages for SEO, does not invent prices, and uses the same phone CTA as the rest of the site (`src/lib/site.ts`).
 
 ## Local
 

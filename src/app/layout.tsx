@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
+import { ChatRoot } from "@/components/chat/ChatRoot";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <StickyCallBar />
+        <ChatRoot />
         <Analytics />
       </body>
     </html>
