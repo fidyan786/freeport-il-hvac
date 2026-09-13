@@ -89,6 +89,14 @@ const nextConfig: NextConfig = {
       permanent: true,
     }));
   },
+  async rewrites() {
+    return [
+      {
+        source: "/google:code.html",
+        destination: "/gsc-verify/:code",
+      },
+    ];
+  },
   async headers() {
     return [
       {

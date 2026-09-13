@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
-import { getSiteUrl } from "@/lib/site";
+import { getPublicOrigin } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = getSiteUrl();
+  const base = getPublicOrigin();
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/gsc-verify/"],
       },
     ],
     sitemap: `${base}/sitemap.xml`,

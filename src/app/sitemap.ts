@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
 import { guides } from "@/content/guides";
 import { indexablePaths } from "@/lib/nav";
-import { getSiteUrl } from "@/lib/site";
+import { getPublicOrigin } from "@/lib/site";
 
 const guideDates = new Map(
   guides.map((guide) => [guide.href, guide.datePublished] as const),
 );
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = getSiteUrl();
+  const base = getPublicOrigin();
 
   return indexablePaths.map((path) => {
     const entry: MetadataRoute.Sitemap[number] = {

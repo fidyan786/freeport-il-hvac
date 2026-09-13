@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { SOCIAL_IMAGE } from "@/lib/seo";
-import { BRAND, getSiteUrl, site } from "@/lib/site";
+import { BRAND, getSiteUrl, googleSiteVerification, site } from "@/lib/site";
 import "./globals.css";
 
 const sans = Manrope({
@@ -32,6 +32,8 @@ export const viewport: Viewport = {
 const defaultTitle = `Heating & Cooling Service in Freeport, IL | ${BRAND.shortName}`;
 const defaultDescription =
   "Furnace repair, AC repair, and HVAC help for Freeport, Illinois (61032) in Stephenson County. Request heating and cooling service from Millrace Heating & Air.";
+
+const googleVerification = googleSiteVerification();
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -57,8 +59,8 @@ export const metadata: Metadata = {
     description: defaultDescription,
     images: [SOCIAL_IMAGE.url],
   },
-  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+  verification: googleVerification
+    ? { google: googleVerification }
     : undefined,
   icons: {
     icon: [

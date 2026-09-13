@@ -51,7 +51,8 @@ export type SiteConfig = typeof site;
  * Localhost is allowed only on a local development machine.
  */
 export const PRODUCTION_HOST = "freeport-il-hvac.vercel.app";
-const FALLBACK_PRODUCTION_ORIGIN = `https://${PRODUCTION_HOST}`;
+export const PRODUCTION_ORIGIN = `https://${PRODUCTION_HOST}`;
+const FALLBACK_PRODUCTION_ORIGIN = PRODUCTION_ORIGIN;
 
 function stripTrailingSlash(value: string) {
   return value.replace(/\/$/, "");
@@ -119,6 +120,39 @@ export function getSiteUrl() {
   }
 
   return finalizeCanonical(FALLBACK_PRODUCTION_ORIGIN);
+}
+
+/** Origin for sitemap, robots, and Search Console. Never throws. */
+export function getPublicOrigin() {
+  if (process.env.VERCEL_ENV === "production") {
+    const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+    if (explicit && !explicit.includes("[")) {
+      try {
+        return finalizeCanonical(explicit);
+      } catch {
+        return PRODUCTION_ORIGIN;
+      }
+    }
+    return PRODUCTION_ORIGIN;
+  }
+
+  try {
+    return getSiteUrl();
+  } catch {
+    return PRODUCTION_ORIGIN;
+  }
+}
+
+/**
+ * Google Search Console HTML-tag token.
+ * Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION (or GOOGLE_SITE_VERIFICATION)
+ * to the content value from Search Console. Never invent a token.
+ */
+export function googleSiteVerification() {
+  const value =
+    readPublic("NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION") ||
+    readPublic("GOOGLE_SITE_VERIFICATION");
+  return value;
 }
 
 export function isPlaceholder(value: string) {
