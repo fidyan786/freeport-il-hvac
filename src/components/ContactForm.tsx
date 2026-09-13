@@ -73,13 +73,13 @@ export function ContactForm() {
   }
 
   const field =
-    "mt-1 w-full border border-line bg-white px-3 py-3 text-ink";
+    "mt-1 w-full rounded-brand border border-line bg-white px-3 py-3 text-ink";
 
   return (
     <form
       onSubmit={onSubmit}
       onFocus={markStarted}
-      className="relative grid gap-4 border border-line bg-white p-5 sm:p-6"
+      className="relative grid gap-4 rounded-brand border border-line bg-white p-5 sm:p-6"
       noValidate
     >
       <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
@@ -93,13 +93,13 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-spruce">
+        <label htmlFor="name" className="block text-sm font-semibold text-navy">
           Name
         </label>
         <input id="name" name="name" required autoComplete="name" className={field} />
       </div>
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-spruce">
+        <label htmlFor="phone" className="block text-sm font-semibold text-navy">
           Phone
         </label>
         <input
@@ -114,7 +114,7 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor="zip" className="block text-sm font-semibold text-spruce">
+        <label htmlFor="zip" className="block text-sm font-semibold text-navy">
           ZIP
         </label>
         <input
@@ -129,7 +129,7 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor="service" className="block text-sm font-semibold text-spruce">
+        <label htmlFor="service" className="block text-sm font-semibold text-navy">
           Service
         </label>
         <select id="service" name="service" required defaultValue="" className={field}>
@@ -144,7 +144,7 @@ export function ContactForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-spruce">
+        <label htmlFor="message" className="block text-sm font-semibold text-navy">
           Message
         </label>
         <textarea
@@ -164,7 +164,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="min-h-12 bg-spruce px-5 py-3 text-sm font-semibold text-white hover:bg-spruce-mid disabled:opacity-70"
+        className="min-h-12 rounded-brand bg-ember px-5 py-3 text-sm font-semibold text-white hover:bg-ember-dark disabled:opacity-70"
       >
         {status === "sending" ? "Sending…" : "Request a callback"}
       </button>
@@ -174,7 +174,7 @@ export function ContactForm() {
         </p>
       ) : null}
       {status === "missing" ? (
-        <p className="text-sm text-spruce" role="status">
+        <p className="text-sm text-navy" role="status">
           Online requests are not available right now.
           {isPhoneConfigured()
             ? ` Please call ${phoneDisplayLabel()} instead.`

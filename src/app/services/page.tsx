@@ -8,9 +8,9 @@ import { breadcrumbSchema, serviceListSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "HVAC Services in Freeport, IL",
+  title: "HVAC Services in Freeport, IL | Millrace",
   description:
-    "Furnace, air conditioning, heat pump, mini split, indoor air, and commercial HVAC services for Freeport, Illinois 61032.",
+    "HVAC services in Freeport, IL: furnace repair, AC repair, installation, maintenance, emergency HVAC, residential HVAC, and commercial HVAC for 61032.",
   path: "/services/",
 });
 
@@ -20,7 +20,7 @@ const sections: Array<{
   intro: string;
   image: string;
   imageAlt: string;
-  category: ServiceCategory | "specialized" | "emergency";
+  category: ServiceCategory | "specialized" | "emergency" | "residential";
 }> = [
   {
     id: "cooling",
@@ -39,6 +39,15 @@ const sections: Array<{
     image: "/photos/furnace-service.jpg",
     imageAlt: "HVAC technician servicing a residential furnace in a Midwestern home",
     category: "heating",
+  },
+  {
+    id: "residential",
+    title: "Residential HVAC",
+    intro:
+      "Most Freeport calls are houses: furnaces that carry winter, air conditioners that sat idle, and the shared blower and ducts between them. Start here if you need a home HVAC contractor rather than a rooftop visit.",
+    image: "/photos/hero-home-winter.jpg",
+    imageAlt: "Snow-covered Freeport-area home that depends on residential heating and cooling",
+    category: "residential",
   },
   {
     id: "heat-pumps",
@@ -93,12 +102,20 @@ function bySlugs(slugs: string[]): ServicePageContent[] {
     .filter((service): service is ServicePageContent => Boolean(service));
 }
 
-function itemsFor(category: ServiceCategory | "specialized" | "emergency") {
+function itemsFor(category: ServiceCategory | "specialized" | "emergency" | "residential") {
   if (category === "specialized") {
     return [...servicesByCategory("heat-pump"), ...servicesByCategory("ductless")];
   }
   if (category === "emergency") {
     return bySlugs(["emergency-hvac-freeport-il", "hvac-repair-freeport-il"]);
+  }
+  if (category === "residential") {
+    return bySlugs([
+      "residential-hvac-freeport-il",
+      "furnace-repair-freeport-il",
+      "ac-repair-freeport-il",
+      "hvac-maintenance-freeport-il",
+    ]);
   }
   if (category === "hvac") {
     return bySlugs([
@@ -123,13 +140,13 @@ export default function ServicesIndexPage() {
         ])}
       />
       <JsonLd data={serviceListSchema()} />
-      <section className="bg-spruce text-white">
+      <section className="bg-navy text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <p className="text-xs font-semibold tracking-[0.18em] text-brass uppercase">
+          <p className="kicker !text-brass">
             Freeport, Illinois 61032
           </p>
           <h1 className="mt-3 max-w-3xl font-serif text-4xl text-balance sm:text-5xl">
-            HVAC services for Freeport homes and businesses
+            HVAC services in Freeport, IL
           </h1>
           <p className="mt-5 max-w-2xl text-white/80">
             Furnace and AC repair, installation, maintenance, heat pumps,
@@ -157,7 +174,7 @@ export default function ServicesIndexPage() {
               <div
                 className={`grid items-start gap-8 lg:grid-cols-2 ${imageRight ? "lg:[&>div:first-child]:order-2" : ""}`}
               >
-                <div className="relative aspect-[16/10] min-w-0 overflow-hidden bg-line">
+                <div className="relative aspect-[16/10] min-w-0 overflow-hidden rounded-brand bg-line">
                   <Image
                     src={section.image}
                     alt={section.imageAlt}
@@ -168,7 +185,7 @@ export default function ServicesIndexPage() {
                   />
                 </div>
                 <div className="min-w-0">
-                  <h2 className="font-serif text-3xl text-spruce">{section.title}</h2>
+                  <h2 className="font-serif text-3xl text-navy">{section.title}</h2>
                   <p className="mt-3 leading-relaxed text-muted">{section.intro}</p>
                   <ul className="mt-6 grid gap-2">
                     {items.map((service) => (
@@ -177,7 +194,7 @@ export default function ServicesIndexPage() {
                           href={service.href}
                           className="group flex items-baseline justify-between gap-4 border-b border-line py-2.5"
                         >
-                          <span className="font-semibold text-spruce group-hover:text-copper">
+                          <span className="font-semibold text-navy group-hover:text-ember">
                             {service.navLabel}
                           </span>
                           <span className="hidden min-w-0 truncate text-sm text-muted sm:block">
@@ -194,7 +211,7 @@ export default function ServicesIndexPage() {
         })}
         <p className="mt-8 text-sm text-muted">
           Looking for a symptom instead of a service name? Start with the{" "}
-          <Link href="/guides/" className="font-semibold text-spruce underline">
+          <Link href="/guides/" className="font-semibold text-navy underline underline-offset-2">
             HVAC guides
           </Link>
           .

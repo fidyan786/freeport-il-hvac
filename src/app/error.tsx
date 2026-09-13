@@ -11,7 +11,7 @@ export default function Error({
 }) {
   return (
     <section className="mx-auto max-w-3xl px-4 py-20 text-center">
-      <h1 className="font-serif text-3xl text-spruce">Something went wrong</h1>
+      <h1 className="font-serif text-3xl text-navy">Something went wrong</h1>
       <p className="mt-4 text-muted">
         The page could not load. You can try again, or request HVAC help in
         Freeport.
@@ -20,11 +20,13 @@ export default function Error({
         <button
           type="button"
           onClick={() => reset()}
-          className="min-h-12 border border-spruce px-5 py-3 text-sm font-semibold text-spruce"
+          className="min-h-12 rounded-brand border border-navy px-5 py-3 text-sm font-semibold text-navy"
         >
           Try again
         </button>
-        <PhoneCta context="error-page">{primaryCtaLabel()}</PhoneCta>
+        <PhoneCta context="error-page" className="min-h-12">
+          {primaryCtaLabel()}
+        </PhoneCta>
       </div>
     </section>
   );

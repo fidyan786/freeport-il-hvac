@@ -40,9 +40,9 @@ export const services: ServicePageContent[] = [
     category: "cooling",
     navLabel: "AC Repair",
     navDescription: "Cooling that failed after sitting through winter.",
-    metaTitle: "AC Repair in Freeport After a Long Idle Winter",
+    metaTitle: "AC Repair in Freeport, IL",
     metaDescription:
-      "Freeport air conditioners sit idle through snow and freeze-thaw. If the first hot afternoon leaves the house warm, call for AC repair in Stephenson County.",
+      "Air conditioning repair in Freeport, IL for units that sat idle through winter. Call Millrace Heating & Air in 61032 when the AC will not cool.",
     h1: "The first real cooling day is when Freeport air conditioners show their winter damage.",
     eyebrow: "Cooling repair · Freeport 61032",
     lede: "The outdoor unit made it through snow. That is not a diagnosis. If the thermostat is on cool and the house still climbs, Millrace Heating & Air will find whether the refrigeration circuit is actually working.",
@@ -164,7 +164,7 @@ export const services: ServicePageContent[] = [
       "ac-maintenance-freeport-il",
       "ac-replacement-freeport-il",
       "emergency-hvac-freeport-il",
-      "hvac-repair-freeport-il",
+      "residential-hvac-freeport-il",
     ],
   },
   {
@@ -173,7 +173,7 @@ export const services: ServicePageContent[] = [
     category: "cooling",
     navLabel: "AC Installation",
     navDescription: "New AC sized for the house and the short cooling season.",
-    metaTitle: "AC Installation in Freeport for Real Houses, Not Catalogs",
+    metaTitle: "AC Installation in Freeport, IL",
     metaDescription:
       "New air conditioning in Freeport has to match older ducts and a heating-first climate. Talk through AC installation for a 61032 house before you buy a box.",
     h1: "A new air conditioner in Freeport has to fit the house, not a cooling-heavy catalog.",
@@ -304,7 +304,7 @@ export const services: ServicePageContent[] = [
     category: "cooling",
     navLabel: "AC Maintenance",
     navDescription: "Spring checks after snow, ice, and months of sitting idle.",
-    metaTitle: "AC Maintenance in Freeport Before the First Hot Week",
+    metaTitle: "AC Maintenance in Freeport, IL",
     metaDescription:
       "Spring AC maintenance in Freeport finds winter damage before the first sticky week. Request a spring cooling check after snow season in Stephenson County.",
     h1: "Spring is when we find what snow and idle months did to the outdoor unit.",
@@ -435,7 +435,7 @@ export const services: ServicePageContent[] = [
     category: "cooling",
     navLabel: "AC Replacement",
     navDescription: "When a tired outdoor unit and indoor coil need replacing.",
-    metaTitle: "AC Replacement in Freeport When Repair Stops Making Sense",
+    metaTitle: "AC Replacement in Freeport, IL",
     metaDescription:
       "Replace a tired Freeport air conditioner when repairs stack up or the coil no longer matches. Talk through AC replacement for a 61032 house after a diagnosis.",
     h1: "Replacing an air conditioner here is about the coil, the ducts, and a short cooling season.",
@@ -566,7 +566,7 @@ export const services: ServicePageContent[] = [
     category: "heating",
     navLabel: "Furnace Repair",
     navDescription: "No heat, weak heat, or a furnace that will not stay on.",
-    metaTitle: "Furnace Repair in Freeport When the House Will Not Stay Warm",
+    metaTitle: "Furnace Repair in Freeport, IL",
     metaDescription:
       "No heat, a furnace that will not ignite, or short cycling on a Freeport night is a repair call. Millrace Heating & Air diagnoses gas furnaces in 61032.",
     h1: "When a Freeport furnace quits, the house does not have time for guesswork.",
@@ -690,7 +690,7 @@ export const services: ServicePageContent[] = [
       "furnace-maintenance-freeport-il",
       "heating-repair-freeport-il",
       "emergency-hvac-freeport-il",
-      "furnace-installation-freeport-il",
+      "residential-hvac-freeport-il",
     ],
   },
   {
@@ -699,7 +699,7 @@ export const services: ServicePageContent[] = [
     category: "heating",
     navLabel: "Furnace Installation",
     navDescription: "New furnaces that fit older Freeport duct and vent work.",
-    metaTitle: "Furnace Installation in Freeport Built Around Older Homes",
+    metaTitle: "Furnace Installation in Freeport, IL",
     metaDescription:
       "A new furnace in Freeport has to fit older ducts, venting, and a long heating season. Talk through furnace installation for a 61032 house before you pick a box.",
     h1: "A furnace that matches an older Freeport house beats a bigger box in the basement.",
@@ -830,7 +830,7 @@ export const services: ServicePageContent[] = [
     category: "heating",
     navLabel: "Furnace Maintenance",
     navDescription: "Fall service before nights settle at or below freezing.",
-    metaTitle: "Furnace Maintenance in Freeport Before the Hard Freeze",
+    metaTitle: "Furnace Maintenance in Freeport, IL",
     metaDescription:
       "Fall furnace maintenance in Freeport is a heating-season check, not a coupon ritual. Request service before Stephenson County nights settle below freezing.",
     h1: "Fall service is how a furnace earns the right to run through January.",
@@ -961,7 +961,7 @@ export const services: ServicePageContent[] = [
     category: "heating",
     navLabel: "Heating Repair",
     navDescription: "Heat that quit — furnace, heat pump, or something else.",
-    metaTitle: "Heating Repair in Freeport for Whatever Is Keeping You Cold",
+    metaTitle: "Heating Repair in Freeport, IL",
     metaDescription:
       "Heat failed in Freeport and you may not care what the machine is called. Call for heating repair in 61032 — furnace, heat pump, or another system on site.",
     h1: "Heat failed. The equipment type is our problem, not yours.",
@@ -1092,7 +1092,7 @@ export const services: ServicePageContent[] = [
     category: "hvac",
     navLabel: "HVAC Repair",
     navDescription: "Shared blowers, thermostats, and ducts that fail both ways.",
-    metaTitle: "HVAC Repair in Freeport When Heat and Cooling Share the Fault",
+    metaTitle: "HVAC Repair in Freeport, IL",
     metaDescription:
       "When the blower, thermostat, or ducts fail, Freeport homes lose heat and cooling together. Call Millrace Heating & Air for system-level HVAC repair in 61032.",
     h1: "Sometimes the trouble is the whole system, not just the furnace or the AC.",
@@ -1223,7 +1223,7 @@ export const services: ServicePageContent[] = [
     category: "hvac",
     navLabel: "HVAC Maintenance",
     navDescription: "Fall heat checks and spring cooling checks in one plan.",
-    metaTitle: "HVAC Maintenance in Freeport for a Two-Season Climate",
+    metaTitle: "HVAC Maintenance in Freeport, IL",
     metaDescription:
       "Freeport HVAC maintenance is fall heat and spring cooling, because the climate is not one season. Request a two-visit seasonal check for a 61032 house.",
     h1: "In a heating climate, maintenance is two seasons of work, not one coupon visit.",
@@ -1354,7 +1354,7 @@ export const services: ServicePageContent[] = [
     category: "hvac",
     navLabel: "HVAC Replacement",
     navDescription: "Matched heating and cooling when piecemeal repairs pile up.",
-    metaTitle: "HVAC Replacement in Freeport When the Whole System Is Tired",
+    metaTitle: "HVAC Replacement in Freeport, IL",
     metaDescription:
       "Replace heating and cooling together in Freeport when the pair no longer matches. Millrace Heating & Air talks through whole-system HVAC replacement in 61032.",
     h1: "Replacing heat and cooling together only makes sense when the pieces no longer match.",
@@ -1485,9 +1485,9 @@ export const services: ServicePageContent[] = [
     category: "hvac",
     navLabel: "Emergency HVAC",
     navDescription: "Urgent no-heat or no-cooling help. Call first.",
-    metaTitle: "Emergency HVAC in Freeport: Call First, Then We Sort It",
+    metaTitle: "Emergency HVAC in Freeport, IL",
     metaDescription:
-      "No heat in a Freeport freeze or no cooling in a heat wave is a phone call first. Request emergency HVAC help in 61032 after the house is confirmed safe.",
+      "Emergency HVAC in Freeport, IL starts with a phone call: no heat, no cooling, or a system that will not start. Availability is confirmed when you call.",
     h1: "Call first. We will sort heat, cooling, and whether the house is safe.",
     eyebrow: "Urgent HVAC · Freeport 61032",
     lede: "If the furnace stopped on a Stephenson County night, or the AC died when the house was already hot, do not wait on a long form. Call Millrace Heating & Air. Availability is confirmed on the phone.",
@@ -1583,6 +1583,10 @@ export const services: ServicePageContent[] = [
     ],
     faqs: [
       {
+        q: "Do you offer 24 hour HVAC in Freeport?",
+        a: "Call and ask what we can do with the situation you have. Availability is confirmed on the phone. We do not advertise round-the-clock coverage we cannot keep.",
+      },
+      {
         q: "Do you offer after-hours emergency service?",
         a: "Call and ask what we can do with the situation you have. Availability is confirmed on the phone. We do not advertise round-the-clock coverage we cannot keep.",
       },
@@ -1616,7 +1620,7 @@ export const services: ServicePageContent[] = [
     category: "heat-pump",
     navLabel: "Heat Pump Repair",
     navDescription: "Heat pumps that struggle, ice up, or lean on backup heat.",
-    metaTitle: "Heat Pump Repair in Freeport for Cold-Climate Equipment",
+    metaTitle: "Heat Pump Repair in Freeport, IL",
     metaDescription:
       "A heat pump that ices up, blows cool air, or leans on backup heat in Freeport needs an on-site diagnosis. Call for heat pump repair in Stephenson County.",
     h1: "A heat pump that struggles in Freeport cold is a diagnosis, not a slogan.",
@@ -1747,7 +1751,7 @@ export const services: ServicePageContent[] = [
     category: "heat-pump",
     navLabel: "Heat Pump Installation",
     navDescription: "Cold-climate heat pumps and dual-fuel conversations.",
-    metaTitle: "Heat Pump Installation in Freeport Written for Real Winter",
+    metaTitle: "Heat Pump Installation in Freeport, IL",
     metaDescription:
       "Installing a heat pump in Freeport only makes sense if the machine can heat here. Talk through cold-climate or dual-fuel installation for a 61032 house.",
     h1: "If a heat pump is going to heat 61032, it has to be chosen for this winter.",
@@ -1877,7 +1881,7 @@ export const services: ServicePageContent[] = [
     category: "heat-pump",
     navLabel: "Heat Pump Maintenance",
     navDescription: "Year-round service for machines that never really rest.",
-    metaTitle: "Heat Pump Maintenance in Freeport for Year-Round Machines",
+    metaTitle: "Heat Pump Maintenance in Freeport, IL",
     metaDescription:
       "Heat pumps in Freeport run through winter, not only through summer. Request seasonal heat pump maintenance in 61032 for defrost, coils, and backup heat checks.",
     h1: "Heat pumps here do not get an off-season. Service has to follow that.",
@@ -2008,7 +2012,7 @@ export const services: ServicePageContent[] = [
     category: "ductless",
     navLabel: "Ductless Mini Splits",
     navDescription: "Room-by-room heating and cooling without new ductwork.",
-    metaTitle: "Ductless Mini Splits in Freeport for Rooms Without Decent Ducts",
+    metaTitle: "Ductless Mini Splits in Freeport, IL",
     metaDescription:
       "Ductless mini splits in Freeport heat and cool rooms older trunks never served. Talk through heads, outdoor units, and whether ducts are the wrong project.",
     h1: "Ductless heating and cooling for the rooms Freeport houses never quite served.",
@@ -2139,7 +2143,7 @@ export const services: ServicePageContent[] = [
     category: "ductless",
     navLabel: "Mini-Split Repair",
     navDescription: "Heads that freeze, error out, or blow without comfort.",
-    metaTitle: "Mini-Split Repair in Freeport When a Head Stops Doing Its Job",
+    metaTitle: "Mini-Split Repair in Freeport, IL",
     metaDescription:
       "A mini-split that errors out, ices up, or blows without changing the room is a repair call. Millrace Heating & Air diagnoses ductless systems in Freeport.",
     h1: "A silent head or a frozen outdoor unit is a mini-split problem, not a mystery.",
@@ -2270,7 +2274,7 @@ export const services: ServicePageContent[] = [
     category: "ductless",
     navLabel: "Mini-Split Installation",
     navDescription: "Honest room loads and clean line-set routes in older walls.",
-    metaTitle: "Mini-Split Installation in Freeport Without Tearing the House Apart",
+    metaTitle: "Mini-Split Installation in Freeport, IL",
     metaDescription:
       "Mini-split installation in Freeport is room load, head placement, and a line-set path through older walls. Request a layout visit before you buy a kit.",
     h1: "Line sets and honest room loads beat ripping plaster for new ducts.",
@@ -2401,7 +2405,7 @@ export const services: ServicePageContent[] = [
     category: "iaq",
     navLabel: "Indoor Air Quality",
     navDescription: "Dust, dryness, and stale air in closed-up winter houses.",
-    metaTitle: "Indoor Air Quality in Freeport for Houses That Stay Shut",
+    metaTitle: "Indoor Air Quality in Freeport, IL",
     metaDescription:
       "Indoor air in Freeport winters is closed windows and recirculated heat. Talk with Millrace Heating & Air about filtration and humidity — not medical claims.",
     h1: "Closed-up Freeport winters recirculate whatever the furnace already moves.",
@@ -2532,7 +2536,7 @@ export const services: ServicePageContent[] = [
     category: "iaq",
     navLabel: "Air Filtration",
     navDescription: "Filters that actually fit the return, not just the box.",
-    metaTitle: "Air Filtration in Freeport That Does Not Choke the Furnace",
+    metaTitle: "Air Filtration in Freeport, IL",
     metaDescription:
       "Thicker is not always better in an older Freeport return. Talk through air filtration that seals, fits the rack, and still lets the furnace move air in 61032.",
     h1: "A thicker filter is not always a better filter in an older return.",
@@ -2663,7 +2667,7 @@ export const services: ServicePageContent[] = [
     category: "iaq",
     navLabel: "Humidity Control",
     navDescription: "Winter moisture and summer humidity as two separate jobs.",
-    metaTitle: "Humidifiers and Dehumidifiers for Freeport's Two Extremes",
+    metaTitle: "Humidity Control in Freeport, IL",
     metaDescription:
       "Freeport winters dry the house out; July afternoons can feel sticky. Talk through humidifiers and dehumidifiers as HVAC add-ons — comfort, not medical claims.",
     h1: "January dryness and July stickiness are two different jobs in the same house.",
@@ -2789,14 +2793,145 @@ export const services: ServicePageContent[] = [
     ],
   },
   {
+    slug: "residential-hvac-freeport-il",
+    href: "/services/residential-hvac-freeport-il/",
+    category: "hvac",
+    navLabel: "Residential HVAC",
+    navDescription: "Home heating and cooling in Freeport 61032.",
+    metaTitle: "Residential HVAC in Freeport, IL",
+    metaDescription:
+      "Residential HVAC in Freeport, IL for furnaces, air conditioners, and the shared equipment that keeps a 61032 house livable. Call Millrace Heating & Air.",
+    h1: "A Freeport house needs heating that lasts winter and cooling that still works after it.",
+    eyebrow: "Residential HVAC · Freeport 61032",
+    lede: "Most calls in Stephenson County are homes: a furnace that quit, an air conditioner that sat through snow, or a system that never quite conditioned every room. Millrace Heating & Air treats residential HVAC as that house — the basement cabinet, the pad, the ducts, and the ZIP — not a generic contractor brochure.",
+    image: "/photos/hero-home-winter.jpg",
+    imageAlt:
+      "Snow-covered Freeport-area home that depends on residential heating and cooling",
+    problems: [
+      {
+        title: "A house that lives or dies on the furnace",
+        text: "61032 is a heating market. When the basement unit fails on a single-digit night, residential HVAC is not optional comfort. It is whether the house stays usable.",
+      },
+      {
+        title: "Cooling that only exists for a few hard weeks",
+        text: "The same home still needs an air conditioner that starts after months of idle. Residential cooling here is a short season with no rehearsal.",
+      },
+      {
+        title: "Rooms the original ducts never really served",
+        text: "Additions, closed-off upstairs, and ranch houses with one return show up as “the HVAC is fine except that room.” That is still a home comfort problem.",
+      },
+      {
+        title: "Shared equipment doing two seasons of work",
+        text: "Blower, filter, thermostat, and ducts serve heat and cooling. A residential diagnosis has to look at the plant, not only the outdoor pad or the burners.",
+      },
+    ],
+    symptoms: [
+      "No heat, weak heat, or a furnace that will not stay running",
+      "AC that will not cool after sitting through winter",
+      "One floor comfortable and another a different season",
+      "A system that is loud, dusty, or constantly running",
+      "You need a home HVAC contractor, not a rooftop commercial crew",
+    ],
+    explanation: [
+      "Residential HVAC on this site means the comfort systems in Freeport houses and similar Stephenson County homes: gas furnaces, central air conditioners, heat pumps, ductless heads, and indoor air equipment tied to that same air path.",
+      "The local pattern is heating-first. NOAA-class winters here put long hours on ignition, venting, and heat exchangers. Cooling still matters when humidity arrives, but it is not the same climate story as a cooling-heavy catalog.",
+      "This page is the home hub. If you already know the failed piece, the tighter pages — furnace repair, AC repair, installation, maintenance, emergency — are the better next click. If you only know the house is uncomfortable, start here and describe the symptom.",
+    ],
+    causes: [
+      {
+        title: "A heating plant asked to run all winter",
+        text: "Ignition parts, filters, and venting fail when the furnace is the main machine in the house for months.",
+      },
+      {
+        title: "An outdoor unit that did nothing until June",
+        text: "Residential AC in Freeport spends most of the year as a snow catcher. First-hot-day failures are a local pattern, not a mystery.",
+      },
+      {
+        title: "Ducts designed around heat, then asked to cool",
+        text: "Older Freeport houses often move air well enough for winter and poorly for a sticky upstairs in July.",
+      },
+      {
+        title: "A filter habit that serves neither season",
+        text: "Closed-up winters load returns with dust. The same restriction starves heat and cooling.",
+      },
+    ],
+    process: [
+      {
+        title: "Name the house and the symptom",
+        text: "ZIP, what the thermostat is doing, and whether you have any heat or cooling at all.",
+      },
+      {
+        title: "Identify the actual equipment",
+        text: "Furnace, AC, heat pump, mini split, or a mix. The label on the cabinet matters more than the search you typed.",
+      },
+      {
+        title: "Diagnose the failed piece first",
+        text: "Residential work starts with what stopped. Replacement talk only starts if the evidence heads there.",
+      },
+      {
+        title: "Send you to the tighter page if you already know the job",
+        text: "Repair, installation, maintenance, and emergency each have their own Freeport page so you are not reading the wrong story.",
+      },
+    ],
+    whenToCall: [
+      "A Freeport home lost heat or cooling",
+      "You want residential HVAC help rather than a commercial rooftop visit",
+      "The house is uncomfortable and you are not sure whether it is the furnace, the AC, or both",
+      "You need seasonal maintenance for a 61032 house",
+    ],
+    nextSteps: [
+      "If you smell gas or a CO alarm sounds, leave. Call 911 and Nicor Gas at 888-642-6748.",
+      "If the house is safe, note thermostat mode, whether the outdoor unit or furnace is trying, and the ZIP.",
+      "Call. Say it is a home. Ask for furnace repair, AC repair, or emergency HVAC if you already know which one you need.",
+    ],
+    why: [
+      "Freeport homes are the core of the work, written as houses rather than a copied commercial script.",
+      "Heating season is treated as the high-stakes job because that is how 61032 actually uses equipment.",
+      "You get a path into the specific service page instead of one vague “we do HVAC” block.",
+    ],
+    local: [
+      "Residential HVAC in Freeport is shaped by Stephenson County winters and short humid stretches, not a national template.",
+      "Older 61032 houses, ranch plans, and additions without honest ducts are the usual patients — not new construction showrooms.",
+      "Nearby towns such as Lena, Cedarville, Dakota, and Pearl City are confirmed when a homeowner calls. This page is not a cloned city mill.",
+    ],
+    faqs: [
+      {
+        q: "Do you do residential HVAC in Freeport, IL?",
+        a: "Yes. Homes in Freeport 61032 are the primary work. Nearby Stephenson County towns are confirmed by phone.",
+      },
+      {
+        q: "Is this different from commercial HVAC?",
+        a: "Yes. This page is for houses. Shops, offices, and storefronts belong on the commercial HVAC page so the visit is set up for the building you actually have.",
+      },
+      {
+        q: "I need furnace repair, not a general HVAC visit.",
+        a: "Use the furnace repair page and say no heat on the call. This hub exists for people who only know the house is uncomfortable.",
+      },
+      {
+        q: "Do you handle air conditioning repair at the same house?",
+        a: "Yes. Residential cooling is part of the same air path. Start on AC repair if the outdoor unit failed after winter idle.",
+      },
+      {
+        q: "Are you an HVAC contractor near me if I live in 61032?",
+        a: "Freeport is the home market. If your ZIP is 61032, you are in the primary service city. Other nearby ZIPs are confirmed when you call.",
+      },
+    ],
+    related: [
+      "furnace-repair-freeport-il",
+      "ac-repair-freeport-il",
+      "hvac-maintenance-freeport-il",
+      "emergency-hvac-freeport-il",
+    ],
+  },
+  {
     slug: "commercial-hvac-freeport-il",
     href: "/services/commercial-hvac-freeport-il/",
     category: "commercial",
     navLabel: "Commercial HVAC",
     navDescription: "Offices, shops, and storefronts — not a factory division.",
-    metaTitle: "Commercial HVAC in Freeport for Shops, Offices, and Storefronts",
+    metaTitle: "Commercial HVAC in Freeport, IL",
     metaDescription:
-      "Commercial HVAC in Freeport is for offices, shops, and storefronts that must open. Call Millrace Heating & Air about the equipment on site — not a plant crew.",
+      "Commercial HVAC in Freeport, IL for shops, offices, and storefronts that have to open. Call Millrace Heating & Air about the equipment on site.",
     h1: "Small Freeport businesses need equipment that holds overnight and through opening.",
     eyebrow: "Small commercial · 61032",
     lede: "A storefront on a corridor, a shop that cannot freeze over the weekend, an office that still has to be usable on Monday — that is the commercial work this page is written for. Millrace Heating & Air does not claim a factory division we have not verified.",
@@ -2925,7 +3060,7 @@ export const services: ServicePageContent[] = [
     category: "commercial",
     navLabel: "Commercial Maintenance",
     navDescription: "Planned commercial service before a season starts badly.",
-    metaTitle: "Commercial HVAC Maintenance in Freeport Before Opening Day Fails",
+    metaTitle: "Commercial Maintenance in Freeport, IL",
     metaDescription:
       "Commercial HVAC maintenance in Freeport is planned before heating season and before July humidity. Request a check so opening day is not the first test.",
     h1: "Shop and office systems fail on the day you cannot close. Plan before that.",
@@ -3056,7 +3191,7 @@ export const services: ServicePageContent[] = [
     category: "commercial",
     navLabel: "Commercial AC Repair",
     navDescription: "Rooftop and split cooling that failed when customers arrived.",
-    metaTitle: "Commercial AC Repair in Freeport When the Store Gets Hot",
+    metaTitle: "Commercial AC Repair in Freeport, IL",
     metaDescription:
       "When a Freeport shop stays hot, commercial AC repair is a business-hours problem. Call about rooftop or split cooling that failed after sitting through winter.",
     h1: "When the rooftop sits through winter, July is a rude reminder.",
@@ -3187,7 +3322,7 @@ export const services: ServicePageContent[] = [
     category: "commercial",
     navLabel: "Commercial Heating Repair",
     navDescription: "Unit heaters, rooftops, and office heat that will not hold.",
-    metaTitle: "Commercial Heating Repair in Freeport After a Frozen Weekend",
+    metaTitle: "Commercial Heating Repair in Freeport, IL",
     metaDescription:
       "A cold shop on Monday or an office that will not hold is commercial heating repair. Call Millrace Heating & Air in Freeport about the heat that failed.",
     h1: "A cold shop on Monday morning is a heating call, not a wait-and-see.",

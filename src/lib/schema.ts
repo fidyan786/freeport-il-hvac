@@ -1,6 +1,7 @@
-import { serviceLinks } from "@/lib/nav";
+import { nearbyCommunities, serviceLinks } from "@/lib/nav";
 import { absoluteUrl } from "@/lib/seo";
 import {
+  BRAND,
   getSiteUrl,
   isHoursConfigured,
   isNameConfigured,
@@ -13,6 +14,39 @@ function businessId() {
   return `${getSiteUrl()}/#business`;
 }
 
+function areaServed() {
+  return [
+    {
+      "@type": "City",
+      name: site.city,
+      containedInPlace: [
+        {
+          "@type": "AdministrativeArea",
+          name: site.county,
+        },
+        {
+          "@type": "State",
+          name: site.state,
+        },
+      ],
+    },
+    {
+      "@type": "PostalCode",
+      name: site.zip,
+      addressCountry: "US",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: site.county,
+    },
+    ...nearbyCommunities.map((town) => ({
+      "@type": "City",
+      name: town.name,
+      postalCode: town.zip,
+    })),
+  ];
+}
+
 export function localBusinessSchema() {
   const url = absoluteUrl("/");
   const data: Record<string, unknown> = {
@@ -20,9 +54,15 @@ export function localBusinessSchema() {
     "@type": "HVACBusiness",
     "@id": businessId(),
     name: site.businessName,
+    alternateName: BRAND.shortName,
+    description: `${BRAND.name} is an HVAC company in ${site.city}, ${site.state} (${site.zip}) offering furnace repair, air conditioning repair, heating and cooling service, and HVAC maintenance for homes and small businesses.`,
     url,
     image: absoluteUrl("/opengraph-image/"),
-    logo: absoluteUrl("/apple-icon/"),
+    logo: {
+      "@type": "ImageObject",
+      url: absoluteUrl("/apple-icon/"),
+    },
+    slogan: BRAND.tagline,
     address: {
       "@type": "PostalAddress",
       addressLocality: site.city,
@@ -30,36 +70,35 @@ export function localBusinessSchema() {
       postalCode: site.zip,
       addressCountry: "US",
     },
-    areaServed: [
-      {
-        "@type": "City",
-        name: site.city,
-        containedInPlace: [
-          {
-            "@type": "AdministrativeArea",
-            name: site.county,
-          },
-          {
-            "@type": "State",
-            name: site.state,
-          },
-        ],
-      },
-      {
-        "@type": "PostalCode",
-        name: site.zip,
-        addressCountry: "US",
-      },
-    ],
+    areaServed: areaServed(),
     serviceType: serviceLinks.map((item) => item.label),
     knowsAbout: [
+      "HVAC contractor",
+      "Residential HVAC",
+      "Commercial HVAC",
       "Furnace repair",
+      "Furnace installation",
+      "Heating repair",
       "Air conditioning repair",
+      "AC installation",
       "Emergency HVAC",
       "HVAC maintenance",
       "Heat pumps",
       "Ductless mini splits",
+      "Indoor air quality",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `HVAC services in ${site.city}, ${site.stateCode}`,
+      itemListElement: serviceLinks.map((item) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: `${item.label} in ${site.city}, ${site.stateCode}`,
+          url: absoluteUrl(item.href),
+        },
+      })),
+    },
   };
 
   if (site.address) {
@@ -85,7 +124,8 @@ export function websiteSchema() {
     "@id": `${url}#website`,
     name: isNameConfigured()
       ? site.businessName
-      : `HVAC service in ${site.city}, ${site.stateCode}`,
+      : `HVAC company in ${site.city}, ${site.stateCode}`,
+    alternateName: `${site.city} HVAC`,
     url,
     inLanguage: "en-US",
     publisher: {
@@ -111,10 +151,12 @@ export function serviceSchema({
   name,
   description,
   path,
+  serviceType,
 }: {
   name: string;
   description: string;
   path: string;
+  serviceType?: string;
 }) {
   const provider: Record<string, unknown> = {
     "@type": "HVACBusiness",
@@ -131,13 +173,20 @@ export function serviceSchema({
     "@context": "https://schema.org",
     "@type": "Service",
     name,
-    serviceType: name,
+    serviceType: serviceType ?? name,
+    category: "HVAC",
     description,
     url: absoluteUrl(path),
-    areaServed: {
-      "@type": "City",
-      name: site.city,
-    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: site.city,
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: site.county,
+      },
+    ],
     provider,
   };
 }
@@ -150,7 +199,7 @@ export function serviceListSchema() {
     itemListElement: serviceLinks.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: item.label,
+      name: `${item.label} in ${site.city}, ${site.stateCode}`,
       url: absoluteUrl(item.href),
     })),
   };

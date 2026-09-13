@@ -9,15 +9,18 @@ const guideDates = new Map(
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getPublicOrigin();
+  const seen = new Set<string>();
+  const entries: MetadataRoute.Sitemap = [];
 
-  return indexablePaths.map((path) => {
-    const entry: MetadataRoute.Sitemap[number] = {
-      url: `${base}${path}`,
-    };
+  for (const path of indexablePaths) {
+    const url = `${base}${path}`;
+    if (seen.has(url)) continue;
+    seen.add(url);
     const published = guideDates.get(path);
-    if (published) {
-      entry.lastModified = published;
-    }
-    return entry;
-  });
+    entries.push(
+      published ? { url, lastModified: published } : { url },
+    );
+  }
+
+  return entries;
 }

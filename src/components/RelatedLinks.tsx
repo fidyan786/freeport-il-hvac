@@ -9,7 +9,7 @@ export function RelatedLinks({
 }) {
   return (
     <div>
-      <h2 className="font-serif text-2xl text-spruce sm:text-3xl">
+      <h2 className="font-serif text-2xl text-navy sm:text-3xl">
         {title ?? "Related Freeport HVAC pages"}
       </h2>
       <ul className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -17,9 +17,9 @@ export function RelatedLinks({
           <li key={link.href}>
             <Link
               href={link.href}
-              className="card-lift block border border-line bg-white p-4 hover:border-copper"
+              className="card-lift block rounded-brand border border-line bg-white p-4"
             >
-              <span className="font-semibold text-spruce">{link.label}</span>
+              <span className="font-semibold text-navy">{link.label}</span>
               {link.note ? (
                 <span className="mt-1 block text-sm text-muted">{link.note}</span>
               ) : null}

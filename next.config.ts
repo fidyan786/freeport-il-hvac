@@ -20,6 +20,11 @@ const legacyRedirects = [
   ["/indoor-air-quality-freeport-il", "/services/indoor-air-quality-freeport-il"],
   ["/commercial-hvac-freeport-il", "/services/commercial-hvac-freeport-il"],
   ["/emergency-hvac-freeport-il", "/services/emergency-hvac-freeport-il"],
+  ["/residential-hvac-freeport-il", "/services/residential-hvac-freeport-il"],
+  ["/hvac-contractor-freeport-il", "/about"],
+  ["/hvac-company-freeport-il", "/"],
+  ["/heating-and-cooling-freeport-il", "/"],
+  ["/air-conditioning-repair-freeport-il", "/services/ac-repair-freeport-il"],
   ["/service-areas", "/service-area"],
   ["/reviews", "/about"],
   ["/blog", "/guides"],
@@ -77,17 +82,20 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    deviceSizes: [480, 640, 750, 828, 1080, 1200, 1920],
   },
   turbopack: {
     root: path.join(__dirname),
   },
   async redirects() {
-    return legacyRedirects.map(([source, destination]) => ({
-      source,
-      destination,
-      permanent: true,
-    }));
+    return legacyRedirects.flatMap(([source, destination]) => {
+      const src = source.endsWith("/") ? source.slice(0, -1) : source;
+      const dest = destination.endsWith("/") ? destination : `${destination}/`;
+      return [
+        { source: src, destination: dest, permanent: true },
+        { source: `${src}/`, destination: dest, permanent: true },
+      ];
+    });
   },
   async headers() {
     return [

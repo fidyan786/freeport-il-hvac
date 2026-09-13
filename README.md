@@ -20,7 +20,8 @@ Copy `.env.example`:
 | `NEXT_PUBLIC_BUSINESS_HOURS` | Optional hours string |
 | `NEXT_PUBLIC_SITE_URL` | Canonical origin |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional GA4 |
-| `FORM_WEBHOOK` | Optional lead delivery |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional GSC HTML-tag token override |
+| `FORM_WEBHOOK` | Optional lead delivery. Without this, the contact form returns 503 and asks the visitor to call. |
 | `AI_GATEWAY_API_KEY` | Optional chat polish |
 
 Do not invent reviews, licenses, ratings, 24/7 claims, or prices.
@@ -30,6 +31,8 @@ Do not invent reviews, licenses, ratings, 24/7 claims, or prices.
 ```bash
 npm install
 npm run dev
+npm run lint
+npm run typecheck
 npm run test:chat
 npm run build
 ```

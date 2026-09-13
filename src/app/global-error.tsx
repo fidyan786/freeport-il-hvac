@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND_COLORS } from "@/lib/brand";
 import { phoneDisplayLabel } from "@/lib/site";
 
 export default function GlobalError({
@@ -14,8 +15,8 @@ export default function GlobalError({
         style={{
           margin: 0,
           fontFamily: "Georgia, serif",
-          background: "#f7f6f3",
-          color: "#1a1c19",
+          background: BRAND_COLORS.cream,
+          color: BRAND_COLORS.ink,
         }}
       >
         <main style={{ maxWidth: 640, margin: "4rem auto", padding: "0 1.25rem" }}>
@@ -28,9 +29,10 @@ export default function GlobalError({
             type="button"
             onClick={() => reset()}
             style={{
-              background: "#8a5a3c",
+              background: BRAND_COLORS.ember,
               color: "white",
               border: 0,
+              borderRadius: 6,
               padding: "0.85rem 1.25rem",
               fontWeight: 600,
             }}

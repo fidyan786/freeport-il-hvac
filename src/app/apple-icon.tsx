@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { BRAND_COLORS } from "@/lib/brand";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
@@ -10,7 +11,7 @@ export default function AppleIcon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#1c1e1c",
+          background: BRAND_COLORS.navy,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -18,12 +19,24 @@ export default function AppleIcon() {
       >
         <div
           style={{
-            width: 78,
-            height: 56,
-            background: "#8a5a3c",
-            clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
+            width: 118,
+            height: 118,
+            border: "8px solid #F8F6F1",
+            borderRadius: 59,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
-        />
+        >
+          <div
+            style={{
+              width: 52,
+              height: 38,
+              background: BRAND_COLORS.ember,
+              clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
+            }}
+          />
+        </div>
       </div>
     ),
     size,

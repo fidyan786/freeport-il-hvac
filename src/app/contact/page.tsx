@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContactForm } from "@/components/ContactForm";
+import { PhoneIcon, PinIcon } from "@/components/Icons";
 import { JsonLd } from "@/components/JsonLd";
 import { PhoneCta } from "@/components/PhoneCta";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -13,9 +14,9 @@ import {
 } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Contact Millrace Heating & Air in Freeport",
+  title: "Contact a Freeport, IL HVAC Company | Millrace",
   description:
-    "Request HVAC service in Freeport, Illinois. Call or send your name, phone, ZIP, service needed, and a short message.",
+    "Contact Millrace Heating & Air for HVAC service in Freeport, Illinois 61032. Call or send your name, phone, ZIP, and what stopped working.",
   path: "/contact/",
 });
 
@@ -37,8 +38,8 @@ export default function ContactPage() {
             { name: "Contact" },
           ]}
         />
-        <h1 className="mt-6 font-serif text-4xl text-spruce">
-          Contact Millrace in Freeport
+        <h1 className="mt-6 font-serif text-4xl text-navy">
+          Contact a Freeport, IL HVAC company
         </h1>
         <p className="mt-4 max-w-2xl text-muted">
           {phoneReady
@@ -46,8 +47,9 @@ export default function ContactPage() {
             : "Send your name, phone, ZIP, and a short description of what stopped working."}
         </p>
         <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
-          <section className="bg-spruce p-6 text-white sm:p-8">
-            <p className="text-xs tracking-[0.18em] text-brass uppercase">
+          <section className="rounded-brand bg-navy p-6 text-white sm:p-8">
+            <p className="inline-flex items-center gap-2 text-xs tracking-[0.18em] text-brass uppercase">
+              <PinIcon className="h-3.5 w-3.5" />
               Freeport, Illinois
             </p>
             {phoneReady ? (
@@ -64,8 +66,11 @@ export default function ContactPage() {
               {site.city}, {site.state} {site.zip} · {site.county}
             </p>
             {phoneReady ? (
-              <PhoneCta context="contact-primary" className="mt-6">
-                {primaryCtaLabel()}
+              <PhoneCta context="contact-primary" className="mt-6 min-h-12">
+                <span className="inline-flex items-center gap-2">
+                  <PhoneIcon />
+                  {primaryCtaLabel()}
+                </span>
               </PhoneCta>
             ) : (
               <p className="mt-6 text-sm text-white/75">
@@ -75,7 +80,7 @@ export default function ContactPage() {
             )}
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-spruce">Request service</h2>
+            <h2 className="font-serif text-2xl text-navy">Request service</h2>
             <p className="mt-2 mb-5 text-sm text-muted">
               Name, phone, ZIP, the service you need, and a short description
               of the problem.

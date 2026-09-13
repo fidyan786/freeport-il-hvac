@@ -1,37 +1,39 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { ChatRoot } from "@/components/chat/ChatRoot";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { StickyCallBar } from "@/components/StickyCallBar";
+import { BRAND_COLORS } from "@/lib/brand";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { SOCIAL_IMAGE } from "@/lib/seo";
 import { BRAND, getSiteUrl, googleSiteVerification, site } from "@/lib/site";
 import "./globals.css";
 
-const sans = Manrope({
+const sans = Source_Sans_3({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-source-sans",
   display: "swap",
 });
 
-const serif = Fraunces({
+const serif = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-source-serif",
   display: "swap",
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1c1e1c",
+  themeColor: BRAND_COLORS.navy,
 };
 
-const defaultTitle = `Heating & Cooling Service in Freeport, IL | ${BRAND.shortName}`;
+const defaultTitle =
+  "Freeport IL HVAC Repair | Furnace, AC & Urgent Help | Millrace";
 const defaultDescription =
-  "Furnace repair, AC repair, and HVAC help for Freeport, Illinois (61032) in Stephenson County. Request heating and cooling service from Millrace Heating & Air.";
+  "Furnace repair, AC repair, and heating and cooling help in Freeport, IL 61032. Call Millrace Heating & Air — describe the symptom and the ZIP.";
 
 const googleVerification = googleSiteVerification();
 
@@ -74,14 +76,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable} h-full`}>
-      <body className="min-h-full bg-cream font-sans text-ink antialiased pb-[4.75rem] md:pb-0">
+      <body className="min-h-full bg-cream font-sans text-ink antialiased">
         <a className="skip-link" href="#main">
           Skip to content
         </a>
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <Header />
-        <main id="main" className="flex-1">
+        <main id="main" className="flex-1 overflow-x-clip">
           {children}
         </main>
         <Footer />

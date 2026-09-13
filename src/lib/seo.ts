@@ -11,12 +11,31 @@ export function absoluteUrl(path = "/", options?: { asset?: boolean }) {
   return `${base}${normalized.endsWith("/") ? normalized : `${normalized}/`}`;
 }
 
-export const SOCIAL_IMAGE = {
-  url: absoluteUrl("/opengraph-image/"),
-  width: 1200,
-  height: 630,
-  alt: `${BRAND.name} — heating and cooling in ${site.city}, ${site.state}`,
-} as const;
+const OG_OWN_PREFIXES = [
+  "/services/",
+  "/guides/",
+  "/about/",
+  "/contact/",
+  "/service-area/",
+];
+
+export function socialImageFor(path = "/") {
+  const normalized = path === "/" || path === "" ? "/" : path.endsWith("/") ? path : `${path}/`;
+  const hasOwnOg =
+    normalized !== "/" &&
+    OG_OWN_PREFIXES.some(
+      (prefix) => normalized === prefix || normalized.startsWith(prefix),
+    );
+  const imagePath = hasOwnOg ? `${normalized}opengraph-image/` : "/opengraph-image/";
+  return {
+    url: absoluteUrl(imagePath),
+    width: 1200,
+    height: 630,
+    alt: `${BRAND.name} — heating and cooling in ${site.city}, ${site.state}`,
+  };
+}
+
+export const SOCIAL_IMAGE = socialImageFor("/");
 
 function brandedTitle(title: string) {
   if (title.includes(BRAND.name) || title.includes(BRAND.shortName)) {
@@ -40,6 +59,7 @@ export function pageMetadata({
 }): Metadata {
   const url = absoluteUrl(path);
   const fullTitle = brandedTitle(title);
+  const image = socialImageFor(path);
 
   return {
     title: { absolute: fullTitle },
@@ -55,13 +75,13 @@ export function pageMetadata({
       siteName: site.businessName,
       title: fullTitle,
       description,
-      images: [SOCIAL_IMAGE],
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [SOCIAL_IMAGE.url],
+      images: [image.url],
     },
   };
 }

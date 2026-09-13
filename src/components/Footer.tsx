@@ -1,13 +1,30 @@
 import Link from "next/link";
+import { PhoneIcon } from "@/components/Icons";
 import { Logo } from "@/components/Logo";
-import { PhonePlain } from "@/components/PhoneCta";
+import { PhoneCta, PhonePlain } from "@/components/PhoneCta";
 import { footerServiceHighlights, nearbyCommunities } from "@/lib/nav";
-import { hoursLabel, site } from "@/lib/site";
+import { hoursLabel, localLabel, primaryCtaLabel, site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="bg-spruce-deep text-white/80">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-navy-deep text-white/80">
+      <div className="border-b border-white/10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <div>
+            <p className="font-serif text-2xl text-white">Need HVAC help in {site.city}?</p>
+            <p className="mt-1 text-sm text-white/70">
+              Describe the symptom and the ZIP. We will tell you the next step.
+            </p>
+          </div>
+          <PhoneCta context="footer-band" className="min-h-12 w-full sm:w-auto">
+            <span className="inline-flex items-center gap-2">
+              <PhoneIcon />
+              {primaryCtaLabel()}
+            </span>
+          </PhoneCta>
+        </div>
+      </div>
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="/" aria-label={`${site.businessName} home`}>
             <Logo invert decorative />
@@ -17,7 +34,7 @@ export function Footer() {
             {site.county}. Tell us what stopped working.
           </p>
           <p className="mt-4 text-sm">
-            <PhonePlain className="font-semibold text-white" />
+            <PhonePlain className="font-semibold text-white hover:text-brass" />
           </p>
           {hoursLabel() ? (
             <p className="mt-1 text-sm">{hoursLabel()}</p>
@@ -25,9 +42,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
+          <p className="font-sans text-xs font-semibold tracking-[0.16em] text-brass uppercase">
             Services
-          </h3>
+          </p>
           <ul className="mt-3 grid gap-2 text-sm">
             {footerServiceHighlights.map((item) => (
               <li key={item.href}>
@@ -40,13 +57,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
+          <p className="font-sans text-xs font-semibold tracking-[0.16em] text-brass uppercase">
             Company
-          </h3>
+          </p>
           <ul className="mt-3 grid gap-2 text-sm">
             <li>
               <Link className="hover:text-white" href="/about/">
-                About
+                HVAC Contractor
               </Link>
             </li>
             <li>
@@ -78,9 +95,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
+          <p className="font-sans text-xs font-semibold tracking-[0.16em] text-brass uppercase">
             Freeport & nearby
-          </h3>
+          </p>
           <p className="mt-3 text-sm">
             Primary city: {site.city} {site.zip}. Nearby Stephenson County towns
             are confirmed by phone.
@@ -93,6 +110,7 @@ export function Footer() {
               Service area details
             </Link>
           </p>
+          <p className="mt-3 text-xs text-white/50">{localLabel}</p>
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs text-white/50">

@@ -421,10 +421,10 @@ export function ChatWidget() {
       <button
         ref={launcherRef}
         type="button"
-        className="hvac-chat-launcher fixed right-4 z-[90] inline-flex h-12 items-center rounded-none bg-spruce pr-1 text-white shadow-[0_12px_30px_rgba(17,18,17,0.28)] md:right-6"
+        className="hvac-chat-launcher fixed right-4 z-[90] inline-flex h-12 items-center rounded-brand bg-navy pr-1 text-white shadow-[0_12px_30px_rgba(11,30,46,0.28)] md:right-6"
         aria-label={open ? "Close Millrace Assistant" : "Open Millrace Assistant"}
         aria-expanded={open}
-        aria-controls={panelId}
+        aria-controls={open ? panelId : undefined}
         onClick={() => (open ? close() : openPanel())}
       >
         <span className="hidden pl-4 pr-1 text-sm font-semibold whitespace-nowrap md:inline">
@@ -434,7 +434,7 @@ export function ChatWidget() {
           <ChatIcon open={open} />
         </span>
         {unread && !open ? (
-          <span className="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-copper" />
+          <span className="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-copper" aria-hidden="true" />
         ) : null}
       </button>
 
@@ -445,7 +445,7 @@ export function ChatWidget() {
           role="dialog"
           aria-modal="true"
           aria-labelledby={titleId}
-          className="hvac-chat-panel fixed inset-x-0 z-[95] flex flex-col border-t border-line bg-cream md:inset-auto md:right-6 md:bottom-24 md:w-[min(24rem,calc(100vw-2rem))] md:border md:shadow-xl"
+          className="hvac-chat-panel fixed inset-x-0 z-[95] flex flex-col border-t border-line bg-cream md:inset-auto md:right-6 md:bottom-24 md:w-[min(24rem,calc(100vw-2rem))] md:overflow-hidden md:rounded-brand md:border md:shadow-xl"
           style={
             {
               "--chat-top": `${viewport.offsetTop}px`,
@@ -454,7 +454,7 @@ export function ChatWidget() {
           }
           data-open="true"
         >
-          <header className="flex shrink-0 items-start gap-3 bg-spruce px-4 py-3 text-white">
+          <header className="flex shrink-0 items-start gap-3 bg-navy px-4 py-3 text-white">
             <div className="min-w-0 flex-1">
               <p id={titleId} className="font-serif text-lg leading-tight">
                 Millrace Assistant
@@ -471,7 +471,7 @@ export function ChatWidget() {
             </PhoneCta>
             <button
               type="button"
-              className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-sm border border-white/20"
+              className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-brand border border-white/20"
               aria-label="Close chat"
               onClick={close}
             >
@@ -498,8 +498,8 @@ export function ChatWidget() {
                   key={message.id}
                   className={
                     message.role === "user"
-                      ? "ml-8 justify-self-end bg-spruce px-3 py-2 text-sm text-white"
-                      : "mr-6 border border-line bg-white px-3 py-2 text-sm text-ink"
+                      ? "ml-8 justify-self-end rounded-brand bg-navy px-3 py-2 text-sm text-white"
+                      : "mr-6 rounded-brand border border-line bg-white px-3 py-2 text-sm text-ink"
                   }
                 >
                   <p className="leading-relaxed">{message.text}</p>
@@ -518,7 +518,7 @@ export function ChatWidget() {
                 </li>
               ))}
               {sending ? (
-                <li className="mr-6 rounded-sm border border-line bg-white px-3 py-2 text-sm text-muted">
+                <li className="mr-6 rounded-brand border border-line bg-white px-3 py-2 text-sm text-muted">
                   <span className="hvac-chat-typing" aria-hidden="true">
                     ● ● ●
                   </span>
@@ -554,7 +554,7 @@ export function ChatWidget() {
                     <button
                       key={reply.id}
                       type="button"
-                      className="min-h-10 border border-spruce/15 bg-white px-3 py-2 text-xs font-semibold text-spruce hover:border-spruce hover:bg-paper"
+                      className="min-h-10 rounded-brand border border-navy/15 bg-white px-3 py-2 text-xs font-semibold text-navy hover:border-navy hover:bg-paper"
                       onClick={() => void submit(reply.label, reply.id)}
                     >
                       {reply.label}
@@ -597,12 +597,12 @@ export function ChatWidget() {
                   }
                 }}
                 placeholder="Describe the problem…"
-                className="max-h-28 min-h-11 flex-1 resize-none rounded-sm border border-line px-3 py-2 text-sm"
+                className="max-h-28 min-h-11 flex-1 resize-none rounded-brand border border-line px-3 py-2 text-sm"
               />
               <button
                 type="submit"
                 disabled={sending || input.trim().length === 0}
-                className="min-h-11 bg-copper px-4 text-sm font-semibold text-white hover:bg-copper-dark disabled:opacity-60"
+                className="min-h-11 rounded-brand bg-ember px-4 text-sm font-semibold text-white hover:bg-ember-dark disabled:opacity-60"
               >
                 Send
               </button>

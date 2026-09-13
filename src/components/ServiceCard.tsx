@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowIcon } from "@/components/Icons";
 import { IMAGE_SIZES } from "@/lib/images";
 
 export function ServiceCard({
@@ -16,7 +17,10 @@ export function ServiceCard({
   imageAlt: string;
 }) {
   return (
-    <Link href={href} className="card-lift group overflow-hidden border border-line bg-white">
+    <Link
+      href={href}
+      className="card-lift group overflow-hidden rounded-brand border border-line bg-white"
+    >
       <div className="relative aspect-[16/10] overflow-hidden bg-line">
         <Image
           src={image}
@@ -27,10 +31,11 @@ export function ServiceCard({
         />
       </div>
       <div className="p-5">
-        <h3 className="font-semibold text-spruce">{title}</h3>
+        <h3 className="font-semibold text-navy">{title}</h3>
         <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>
-        <p className="card-arrow mt-4 text-sm font-semibold text-copper">
-          Learn more →
+        <p className="card-arrow mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-ember">
+          Learn more
+          <ArrowIcon />
         </p>
       </div>
     </Link>

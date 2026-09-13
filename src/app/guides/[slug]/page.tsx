@@ -56,7 +56,7 @@ export default async function GuidePage({
       />
       <JsonLd
         data={articleSchema({
-          title: guide.h1,
+          title: guide.metaTitle,
           description: guide.metaDescription,
           path: guide.href,
           datePublished: guide.datePublished,
@@ -65,7 +65,8 @@ export default async function GuidePage({
       />
       <PageHero
         eyebrow="Freeport HVAC guide"
-        title={guide.h1}
+        title={guide.metaTitle}
+        deck={guide.h1}
         lede={guide.lede}
         context={`guide-${guide.slug}`}
         ctaLabel={primaryCtaLabel()}
@@ -84,7 +85,7 @@ export default async function GuidePage({
         />
         {guide.body.map((section) => (
           <section key={section.heading} className="mt-10">
-            <h2 className="font-serif text-2xl text-spruce sm:text-3xl">
+            <h2 className="font-serif text-2xl text-navy sm:text-3xl">
               {section.heading}
             </h2>
             {section.paragraphs.map((paragraph) => (
@@ -96,12 +97,12 @@ export default async function GuidePage({
         ))}
         {relatedServices.length ? (
           <section className="mt-12">
-            <h2 className="font-serif text-2xl text-spruce">Related services</h2>
+            <h2 className="font-serif text-2xl text-navy">Related services</h2>
             <ul className="mt-4 grid gap-2">
               {relatedServices.map((service) =>
                 service ? (
                   <li key={service.slug}>
-                    <Link className="font-semibold text-spruce underline" href={service.href}>
+                    <Link className="font-semibold text-navy underline underline-offset-2" href={service.href}>
                       {service.navLabel}
                     </Link>
                   </li>
@@ -112,12 +113,12 @@ export default async function GuidePage({
         ) : null}
         {relatedGuides.length ? (
           <section className="mt-8">
-            <h2 className="font-serif text-2xl text-spruce">Related guides</h2>
+            <h2 className="font-serif text-2xl text-navy">Related guides</h2>
             <ul className="mt-4 grid gap-2">
               {relatedGuides.map((item) =>
                 item ? (
                   <li key={item.slug}>
-                    <Link className="font-semibold text-spruce underline" href={item.href}>
+                    <Link className="font-semibold text-navy underline underline-offset-2" href={item.href}>
                       {item.title}
                     </Link>
                   </li>

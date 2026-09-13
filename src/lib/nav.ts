@@ -103,6 +103,7 @@ export const megaGroups: MegaGroup[] = [
     href: "/services/#emergency",
     items: pick([
       "emergency-hvac-freeport-il",
+      "residential-hvac-freeport-il",
       "hvac-repair-freeport-il",
       "hvac-maintenance-freeport-il",
       "hvac-replacement-freeport-il",
@@ -122,15 +123,28 @@ export const primaryNav: NavLink[] = [
   { href: "/guides/", label: "Resources" },
 ];
 
-export const footerServiceHighlights: NavLink[] = [
-  { href: "/services/furnace-repair-freeport-il/", label: "Furnace Repair" },
-  { href: "/services/ac-repair-freeport-il/", label: "AC Repair" },
+export const footerServiceHighlights: NavLink[] = pick([
+  "furnace-repair-freeport-il",
+  "ac-repair-freeport-il",
+  "heating-repair-freeport-il",
+  "ac-installation-freeport-il",
+  "emergency-hvac-freeport-il",
+  "hvac-maintenance-freeport-il",
+  "residential-hvac-freeport-il",
+  "commercial-hvac-freeport-il",
+]);
+
+export const intentLinks: NavLink[] = [
+  { href: "/services/furnace-repair-freeport-il/", label: "Furnace repair" },
+  { href: "/services/ac-repair-freeport-il/", label: "AC repair" },
+  { href: "/services/ac-installation-freeport-il/", label: "AC installation" },
+  { href: "/services/furnace-installation-freeport-il/", label: "Furnace installation" },
+  { href: "/services/heating-repair-freeport-il/", label: "Heating repair" },
+  { href: "/services/hvac-maintenance-freeport-il/", label: "HVAC maintenance" },
   { href: "/services/emergency-hvac-freeport-il/", label: "Emergency HVAC" },
-  { href: "/services/hvac-maintenance-freeport-il/", label: "HVAC Maintenance" },
-  { href: "/services/heat-pump-repair-freeport-il/", label: "Heat Pumps" },
-  { href: "/services/ductless-mini-split-freeport-il/", label: "Mini Splits" },
-  { href: "/services/indoor-air-quality-freeport-il/", label: "Indoor Air Quality" },
+  { href: "/services/residential-hvac-freeport-il/", label: "Residential HVAC" },
   { href: "/services/commercial-hvac-freeport-il/", label: "Commercial HVAC" },
+  { href: "/about/", label: "HVAC contractor" },
 ];
 
 export const problemLinks: Array<NavLink & { text: string }> = [

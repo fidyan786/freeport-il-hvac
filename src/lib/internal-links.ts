@@ -20,7 +20,10 @@ const SERVICE_GUIDE_RULES: Array<{
     ],
   },
   {
-    test: (slug) => slug.startsWith("hvac-repair") || slug.includes("emergency"),
+    test: (slug) =>
+      slug.startsWith("hvac-repair") ||
+      slug.includes("emergency") ||
+      slug.includes("residential-hvac"),
     slugs: ["furnace-not-heating", "ac-blowing-warm-air", "hvac-strange-noises"],
   },
   {

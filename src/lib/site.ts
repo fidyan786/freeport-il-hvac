@@ -144,16 +144,20 @@ export function getPublicOrigin() {
 }
 
 /**
- * Google Search Console HTML-tag token.
- * Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION (or GOOGLE_SITE_VERIFICATION)
- * to the content value from Search Console. Never invent a token.
+ * HTML-tag token already present on live production
+ * (https://freeport-il-hvac.vercel.app/). Do not invent a replacement.
+ * Override with NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION when GSC issues a new one.
+ * A matching HTML-file token also lives at /google7129b29a73db544e.html.
  */
+export const EXISTING_GOOGLE_SITE_VERIFICATION =
+  "x0uFz9tFyvdygV8RR7eIe-omOKFxjPIDDOx_MaowXfo";
+
 export function googleSiteVerification() {
-  const value =
+  return (
     readPublic("NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION") ||
     readPublic("GOOGLE_SITE_VERIFICATION") ||
-    "x0uFz9tFyvdygV8RR7eIe-omOKFxjPIDDOx_MaowXfo";
-  return value;
+    EXISTING_GOOGLE_SITE_VERIFICATION
+  );
 }
 
 export function isPlaceholder(value: string) {
