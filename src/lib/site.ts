@@ -88,11 +88,11 @@ export function primaryCtaLabel(action: "call" | "request" = "call") {
       ? `Call ${site.phoneDisplay}`
       : `Request service · ${site.phoneDisplay}`;
   }
-  return "Request HVAC Service";
+  return "Call for Service";
 }
 
 export function phoneDisplayLabel() {
-  return isPhoneConfigured() ? site.phoneDisplay : "Request HVAC Service";
+  return isPhoneConfigured() ? site.phoneDisplay : "Call for Service";
 }
 
 export function hoursLabel() {

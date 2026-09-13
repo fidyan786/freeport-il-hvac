@@ -110,14 +110,9 @@ export const serviceLinks: NavLink[] = services.map((service) => ({
 }));
 
 export const primaryNav: NavLink[] = [
-  { href: "/services/", label: "Services" },
-  { href: "/services/#heating", label: "Heating" },
-  { href: "/services/#cooling", label: "Cooling" },
-  { href: "/services/indoor-air-quality-freeport-il/", label: "Indoor Air Quality" },
-  { href: "/services/commercial-hvac-freeport-il/", label: "Commercial" },
   { href: "/service-area/", label: "Service Areas" },
   { href: "/about/", label: "About" },
-  { href: "/contact/", label: "Contact" },
+  { href: "/guides/", label: "Resources" },
 ];
 
 export const footerServiceHighlights: NavLink[] = [

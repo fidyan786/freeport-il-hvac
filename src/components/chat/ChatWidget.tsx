@@ -418,14 +418,14 @@ export function ChatWidget() {
       <button
         ref={launcherRef}
         type="button"
-        className="hvac-chat-launcher relative fixed right-4 z-[90] inline-flex h-12 items-center bg-spruce pr-1 text-white md:right-6"
+        className="hvac-chat-launcher fixed right-4 z-[90] inline-flex h-12 items-center rounded-full bg-spruce pr-1 text-white shadow-lg ring-2 ring-copper/80 md:right-6"
         aria-label={open ? "Close Millrace Assistant" : "Open Millrace Assistant"}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => (open ? close() : openPanel())}
       >
         <span className="hidden pl-4 pr-1 text-sm font-semibold whitespace-nowrap md:inline">
-          Need help?
+          Need HVAC Help?
         </span>
         <span className="flex h-12 w-12 items-center justify-center">
           <ChatIcon open={open} />
