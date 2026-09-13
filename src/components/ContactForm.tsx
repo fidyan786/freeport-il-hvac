@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { track } from "@/lib/analytics";
 import { serviceLinks } from "@/lib/nav";
-import { phoneDisplayLabel, primaryCtaLabel } from "@/lib/site";
+import { phoneDisplayLabel } from "@/lib/site";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "missing" | "error">(
@@ -131,8 +131,8 @@ export function ContactForm() {
         </select>
       </div>
       <p className="text-xs text-muted">
-        This form is secondary to {primaryCtaLabel().toLowerCase()}. Delivery is
-        connected only after a form endpoint is configured.
+        This form is a backup if you cannot call. Delivery is connected only
+        after a form endpoint is configured.
       </p>
       <button
         type="submit"
@@ -146,7 +146,8 @@ export function ContactForm() {
       ) : null}
       {status === "missing" ? (
         <p className="text-sm text-spruce">
-          Form delivery is not connected yet. Please {primaryCtaLabel().toLowerCase()}.
+          Form delivery is not connected yet. Use the request button or call
+          when a number is configured.
         </p>
       ) : null}
       {status === "error" ? (

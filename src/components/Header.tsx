@@ -80,6 +80,7 @@ export function Header() {
             className="relative"
             onMouseEnter={openMega}
             onMouseLeave={delayCloseMega}
+            onMouseDown={(event) => event.stopPropagation()}
           >
             <button
               type="button"
@@ -87,7 +88,7 @@ export function Header() {
               aria-expanded={servicesOpen}
               aria-controls={menuId}
               aria-haspopup="true"
-              onClick={() => setServicesOpen((value) => !value)}
+              onClick={openMega}
               onFocus={openMega}
             >
               Services
