@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { getService, servicesByCategory, type ServiceCategory, type ServicePageContent } from "@/content/services";
+import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
@@ -34,8 +35,8 @@ const sections: Array<{
     title: "Heating",
     intro:
       "Furnaces and heating systems carry Stephenson County winters. No heat is not the same problem as a planned replacement or a fall tune-up.",
-    image: "/photos/furnace.jpg",
-    imageAlt: "Gas furnace in a Midwestern basement mechanical room",
+    image: "/photos/furnace-service.jpg",
+    imageAlt: "HVAC technician servicing a residential furnace in a Midwestern home",
     category: "heating",
   },
   {
@@ -148,12 +149,13 @@ export default function ServicesIndexPage() {
               <div
                 className={`grid items-start gap-8 lg:grid-cols-2 ${imageRight ? "lg:[&>div:first-child]:order-2" : ""}`}
               >
-                <div className="relative aspect-[16/10] min-w-0 overflow-hidden">
+                <div className="relative aspect-[16/10] min-w-0 overflow-hidden bg-line">
                   <Image
                     src={section.image}
                     alt={section.imageAlt}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority={index === 0}
+                    sizes={IMAGE_SIZES.split}
                     className="object-cover"
                   />
                 </div>

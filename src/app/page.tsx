@@ -7,6 +7,7 @@ import { PhoneCta } from "@/components/PhoneCta";
 import { SafetyCallout } from "@/components/SafetyCallout";
 import { TrustSection } from "@/components/TrustSection";
 import { faqSchema } from "@/lib/schema";
+import { IMAGE_SIZES } from "@/lib/images";
 import { pageMetadata } from "@/lib/seo";
 import { problemLinks } from "@/lib/nav";
 import { primaryCtaLabel } from "@/lib/site";
@@ -55,7 +56,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold tracking-[0.22em] text-copper uppercase">
               Freeport, Illinois
             </p>
-            <h1 className="mt-4 max-w-xl font-serif text-4xl leading-[1.12] text-spruce text-balance sm:text-5xl">
+            <h1 className="mt-4 max-w-xl font-serif text-[2.15rem] leading-[1.12] text-spruce text-balance sm:text-5xl">
               Reliable heating and cooling for Freeport homes
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
@@ -81,7 +82,7 @@ export default function HomePage() {
               alt="Snow-covered Freeport-area home with warm interior lights at dusk"
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes={IMAGE_SIZES.hero}
               className="object-cover"
             />
           </div>
@@ -123,7 +124,7 @@ export default function HomePage() {
           Choose the problem you are living with. Each path goes to a specific
           service or guide.
         </p>
-        <div className="mt-8 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-px bg-line sm:grid-cols-2 xl:grid-cols-4">
           {problemLinks.map((item) => (
             <Link
               key={item.label}
@@ -157,10 +158,10 @@ export default function HomePage() {
             <article className="grid gap-6 sm:grid-cols-[minmax(0,14rem)_1fr] sm:items-start">
               <div className="relative aspect-[4/3] min-w-0 overflow-hidden">
                 <Image
-                  src="/photos/furnace.jpg"
-                  alt="Gas furnace in a Midwestern basement mechanical room"
+                  src="/photos/furnace-service.jpg"
+                  alt="HVAC technician servicing a residential furnace in a Midwestern home"
                   fill
-                  sizes="(max-width: 640px) 100vw, 224px"
+                  sizes={IMAGE_SIZES.thumb}
                   className="object-cover"
                 />
               </div>
@@ -200,7 +201,7 @@ export default function HomePage() {
                   src="/photos/ac-outdoor.jpg"
                   alt="Outdoor air conditioner beside a brick Midwestern home"
                   fill
-                  sizes="(max-width: 640px) 100vw, 224px"
+                  sizes={IMAGE_SIZES.thumb}
                   className="object-cover"
                 />
               </div>
@@ -240,7 +241,7 @@ export default function HomePage() {
                   src="/photos/heat-pump.jpg"
                   alt="Heat pump outdoor unit beside a ranch home"
                   fill
-                  sizes="(max-width: 640px) 100vw, 224px"
+                  sizes={IMAGE_SIZES.thumb}
                   className="object-cover"
                 />
               </div>
@@ -280,7 +281,7 @@ export default function HomePage() {
                   src="/photos/commercial.jpg"
                   alt="Commercial rooftop HVAC units on a small-city building"
                   fill
-                  sizes="(max-width: 640px) 100vw, 224px"
+                  sizes={IMAGE_SIZES.thumb}
                   className="object-cover"
                 />
               </div>
@@ -325,7 +326,7 @@ export default function HomePage() {
               src="/photos/furnace-install.jpg"
               alt="Newly installed high-efficiency furnace in a tidy basement"
               fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes={IMAGE_SIZES.split}
               className="object-cover"
             />
           </div>
@@ -371,7 +372,7 @@ export default function HomePage() {
               src="/photos/tech-ac-service.jpg"
               alt="Technician servicing an outdoor air conditioner beside a Midwestern home"
               fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes={IMAGE_SIZES.split}
               className="object-cover"
             />
           </div>
@@ -461,7 +462,7 @@ export default function HomePage() {
               alt="Whole-home humidifier mounted on a furnace plenum"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes={IMAGE_SIZES.split}
             />
           </div>
         </div>

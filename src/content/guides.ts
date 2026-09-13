@@ -289,9 +289,9 @@ export const guides: Guide[] = [
     lede:
       "In a heating-dominated climate, a furnace is supposed to run long enough to warm the heat exchanger, satisfy the thermostat, and shut down cleanly. Two minutes of flame, a pause, and another try is not thrift. It is a limit, a sensor, or a design problem interrupting the job.",
     datePublished: "2026-09-13",
-    image: "/photos/furnace.jpg",
+    image: "/photos/furnace-service.jpg",
     imageAlt:
-      "Gas furnace in a Freeport basement that should complete a full heat cycle",
+      "HVAC technician diagnosing a furnace that is not completing a full heat cycle",
     body: [
       {
         heading: "What a finished cycle looks like",
@@ -662,7 +662,7 @@ export const guides: Guide[] = [
       {
         heading: "What this page will not do",
         paragraphs: [
-          "There is no installed price, no “starting at,” and no financing pitch here. Those numbers only mean something after a load look, a duct look, and a safety look.",
+          "This page does not quote equipment prices. Repair versus replacement depends on the furnace, the ducts, and how the house is behaving.",
           "Request furnace repair if you are still on the fence and the house is failing now. Request a furnace installation conversation if you already know the current unit should not be asked to do another January. Either way, start with what the furnace is doing tonight, not with a catalog page.",
         ],
       },

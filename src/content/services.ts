@@ -572,9 +572,9 @@ export const services: ServicePageContent[] = [
     h1: "When a Freeport furnace quits, the house does not have time for guesswork.",
     eyebrow: "Gas furnace repair · Stephenson County",
     lede: "January nights near 11°F are not a theory. If the burners will not stay lit, the blower runs cold, or the furnace locks out after a few tries, call. We diagnose the cabinet in the basement, not a symptom list from a forum.",
-    image: "/photos/furnace.jpg",
+    image: "/photos/furnace-service.jpg",
     imageAlt:
-      "Gas furnace in a Freeport basement ready for diagnosis and repair",
+      "HVAC technician servicing a residential furnace in a Midwestern basement",
     problems: [
       {
         title: "No heat after a normal evening",
@@ -836,9 +836,9 @@ export const services: ServicePageContent[] = [
     h1: "Fall service is how a furnace earns the right to run through January.",
     eyebrow: "Heating tune-up · Freeport",
     lede: "A furnace that sat quiet through a mild stretch still has a long job ahead. Millrace Heating & Air uses fall maintenance to watch a heat sequence on purpose — before a lockout happens on an 11°F night.",
-    image: "/photos/furnace.jpg",
+    image: "/photos/furnace-service.jpg",
     imageAlt:
-      "Furnace being checked before the Freeport heating season",
+      "HVAC technician checking a residential furnace before the heating season",
     problems: [
       {
         title: "A flame sensor that is already tired",
@@ -1583,8 +1583,8 @@ export const services: ServicePageContent[] = [
     ],
     faqs: [
       {
-        q: "Do you offer 24/7 emergency service?",
-        a: "Call and ask what we can do with the situation you have. Availability is confirmed on the phone.",
+        q: "Do you offer after-hours emergency service?",
+        a: "Call and ask what we can do with the situation you have. Availability is confirmed on the phone. We do not advertise round-the-clock coverage we cannot keep.",
       },
       {
         q: "What counts as an HVAC emergency?",
