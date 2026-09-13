@@ -25,7 +25,7 @@ const serif = Fraunces({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#14352c",
+  themeColor: "#1c1e1c",
 };
 
 export const metadata: Metadata = {
@@ -37,12 +37,6 @@ export const metadata: Metadata = {
   description:
     "Furnace repair, AC repair, and HVAC help for Freeport, Illinois (61032) in Stephenson County. Request heating and cooling service from Millrace Heating & Air.",
   applicationName: site.businessName,
-  keywords: [
-    "Freeport IL HVAC",
-    "furnace repair Freeport",
-    "AC repair Freeport Illinois",
-    "heating and cooling 61032",
-  ],
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
@@ -72,7 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <Header />
-        <main id="main" className="flex-1">
+        <main id="main" className="relative z-0 flex-1">
           {children}
         </main>
         <Footer />

@@ -136,8 +136,8 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
               <div className="p-5">
                 <p className="text-sm font-semibold text-spruce">Freeport, Illinois 61032</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
-                  Stephenson County winters and idle summers are why this page exists. Request
-                  service and describe the symptom — not a catalog model number.
+                  Stephenson County winters and idle summers shape this work.
+                  Describe the symptom and the ZIP when you call.
                 </p>
               </div>
             </div>
@@ -175,17 +175,14 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
 
         {related.length ? (
           <section className="mt-16">
-            <h2 className="font-serif text-3xl text-spruce">Related services</h2>
-            <div className="mt-6">
-              <RelatedLinks
-                title="Related services"
-                links={related.map((item) => ({
-                  href: item.href,
-                  label: item.navLabel,
-                  note: item.navDescription,
-                }))}
-              />
-            </div>
+            <RelatedLinks
+              title="Related services"
+              links={related.map((item) => ({
+                href: item.href,
+                label: item.navLabel,
+                note: item.navDescription,
+              }))}
+            />
             <p className="mt-4 text-sm">
               <Link href="/guides/" className="font-semibold text-spruce underline">
                 Read HVAC guides
@@ -196,7 +193,7 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
       </div>
       <FinalCta
         title={`Need ${service.navLabel.toLowerCase()} in Freeport?`}
-        body="Describe what the system is doing and the ZIP. The next step is a conversation, not a price sheet."
+        body="Describe what the system is doing and the ZIP. We will tell you the next step."
         context={`${service.slug}-final`}
       />
     </>

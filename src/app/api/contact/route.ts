@@ -6,6 +6,10 @@ function clean(value: unknown) {
   return typeof value === "string" ? value.trim().slice(0, MAX) : "";
 }
 
+function isValidZip(value: string) {
+  return /^\d{5}(?:-\d{4})?$/.test(value);
+}
+
 export async function POST(request: Request) {
   let body: Record<string, unknown> = {};
   try {
@@ -14,18 +18,25 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
+  const message = clean(body.message) || clean(body.problem);
   const payload = {
     name: clean(body.name),
     phone: clean(body.phone),
     service: clean(body.service),
-    problem: clean(body.problem),
+    problem: message,
     zip: clean(body.zip).slice(0, 10),
-    contactMethod: clean(body.contactMethod),
-    message: clean(body.message) || clean(body.problem),
+    contactMethod: clean(body.contactMethod) || "phone",
+    message,
     submittedAt: new Date().toISOString(),
   };
 
-  if (!payload.name || !payload.phone || !payload.service || !payload.problem) {
+  if (
+    !payload.name ||
+    payload.phone.replace(/\D/g, "").length < 10 ||
+    !payload.service ||
+    !payload.message ||
+    !isValidZip(payload.zip)
+  ) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 

@@ -11,9 +11,8 @@ export function Footer() {
         <div>
           <Logo invert />
           <p className="mt-4 text-sm leading-relaxed">
-            Heating and cooling service for {site.city}, {site.state} ({site.zip})
-            in {site.county}. The fastest next step is a conversation about what
-            stopped working.
+            Heating and cooling for {site.city}, {site.state} ({site.zip}) in{" "}
+            {site.county}. Tell us what stopped working.
           </p>
           <p className="mt-4 text-sm">
             <PhonePlain className="font-semibold text-white" />
@@ -48,12 +47,12 @@ export function Footer() {
             </li>
             <li>
               <Link className="hover:text-white" href="/service-area/">
-                Service area
+                Service Areas
               </Link>
             </li>
             <li>
               <Link className="hover:text-white" href="/guides/">
-                Guides
+                Resources
               </Link>
             </li>
             <li>
@@ -71,11 +70,6 @@ export function Footer() {
                 Terms
               </Link>
             </li>
-            <li>
-              <Link className="hover:text-white" href="/sitemap.xml">
-                Sitemap
-              </Link>
-            </li>
           </ul>
         </div>
 
@@ -85,7 +79,7 @@ export function Footer() {
           </p>
           <p className="mt-3 text-sm">
             Primary city: {site.city} {site.zip}. Nearby Stephenson County towns
-            are confirmed by phone — not assumed.
+            are confirmed by phone.
           </p>
           <p className="mt-3 text-sm leading-relaxed">
             {nearbyCommunities.map((town) => town.name).join(" · ")}

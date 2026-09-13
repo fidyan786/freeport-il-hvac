@@ -14,7 +14,7 @@ export default function GlobalError({
         style={{
           margin: 0,
           fontFamily: "Georgia, serif",
-          background: "#f7f3ec",
+          background: "#f7f6f3",
           color: "#1a1c19",
         }}
       >
@@ -28,7 +28,7 @@ export default function GlobalError({
             type="button"
             onClick={() => reset()}
             style={{
-              background: "#c45c26",
+              background: "#8a5a3c",
               color: "white",
               border: 0,
               padding: "0.85rem 1.25rem",

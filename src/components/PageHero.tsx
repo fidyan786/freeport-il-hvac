@@ -28,29 +28,18 @@ export function PageHero({
 }) {
   const bg = tone === "copper" ? "bg-copper" : "bg-spruce";
   return (
-    <section className={`relative overflow-hidden ${bg} text-white`}>
-      {image ? (
-        <Image
-          src={image}
-          alt={imageAlt || ""}
-          fill
-          priority
-          sizes="100vw"
-          className="hero-kenburns object-cover opacity-35"
-        />
-      ) : null}
-      <div className="absolute inset-0 bg-gradient-to-r from-spruce-deep/90 via-spruce/75 to-spruce/35" />
-      <div className="relative mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-20">
-        <div className="reveal">
+    <section className={`${bg} text-white`}>
+      <div className="mx-auto grid max-w-6xl items-stretch lg:grid-cols-2">
+        <div className="flex flex-col justify-center px-4 py-12 sm:px-6 sm:py-16">
           {eyebrow ? (
             <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-brass uppercase">
               {eyebrow}
             </p>
           ) : null}
-          <h1 className="max-w-4xl font-serif text-3xl leading-tight text-balance sm:text-4xl lg:text-5xl">
+          <h1 className="max-w-xl font-serif text-3xl leading-tight text-balance sm:text-4xl lg:text-[2.65rem]">
             {title}
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80">
             {lede}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -60,13 +49,25 @@ export function PageHero({
             {secondaryHref && secondaryLabel ? (
               <Link
                 href={secondaryHref}
-                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="inline-flex min-h-12 items-center justify-center border border-white/25 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 {secondaryLabel}
               </Link>
             ) : null}
           </div>
         </div>
+        {image ? (
+          <div className="relative min-h-[16rem] sm:min-h-[20rem] lg:min-h-full">
+            <Image
+              src={image}
+              alt={imageAlt || ""}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        ) : null}
       </div>
     </section>
   );

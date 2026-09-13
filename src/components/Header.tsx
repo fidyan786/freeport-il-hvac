@@ -16,10 +16,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [expandedGroup, setExpandedGroup] = useState<string | null>("heating");
+  const [headerH, setHeaderH] = useState(72);
   const menuId = useId();
   const drawerId = useId();
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const closeTimer = useRef<number>(0);
+  const wrapRef = useRef<HTMLElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   if (route !== pathname) {
     setRoute(pathname);
@@ -32,19 +33,22 @@ export function Header() {
     setServicesOpen(false);
   }
 
-  function openMega() {
-    window.clearTimeout(closeTimer.current);
-    setServicesOpen(true);
-  }
-
-  function delayCloseMega() {
-    window.clearTimeout(closeTimer.current);
-    closeTimer.current = window.setTimeout(() => setServicesOpen(false), 140);
-  }
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const sync = () => setHeaderH(Math.round(el.getBoundingClientRect().height));
+    sync();
+    const observer = new ResizeObserver(sync);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (event.key === "Escape") closeAll();
+      if (event.key === "Escape") {
+        closeAll();
+        buttonRef.current?.focus();
+      }
     }
     function onPointer(event: MouseEvent) {
       if (!wrapRef.current?.contains(event.target as Node)) {
@@ -67,96 +71,43 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-spruce text-white">
+    <header
+      ref={wrapRef}
+      className="sticky top-0 z-[80] border-b border-white/10 bg-spruce text-white"
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <Link href="/" className="min-w-0" onClick={closeAll}>
           <Logo invert compact />
           <span className="sr-only">Millrace Heating & Air home</span>
         </Link>
 
-        <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
-          <div
-            ref={wrapRef}
-            className="relative"
-            onMouseEnter={openMega}
-            onMouseLeave={delayCloseMega}
-            onMouseDown={(event) => event.stopPropagation()}
+        <nav className="hidden min-w-0 items-center gap-1 xl:flex" aria-label="Primary">
+          <button
+            ref={buttonRef}
+            type="button"
+            className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm text-white/90 hover:bg-white/10 hover:text-white"
+            aria-expanded={servicesOpen}
+            aria-controls={menuId}
+            aria-haspopup="true"
+            onClick={() => setServicesOpen(true)}
+            onMouseEnter={() => setServicesOpen(true)}
+            onFocus={() => setServicesOpen(true)}
           >
-            <button
-              type="button"
-              className="rounded-full px-3 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-white"
-              aria-expanded={servicesOpen}
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={openMega}
-              onFocus={openMega}
-            >
-              Services
-            </button>
-            {servicesOpen ? (
-              <div
-                id={menuId}
-                className="mega-panel absolute top-full left-1/2 z-50 mt-3 max-h-[min(36rem,70vh)] w-[min(72rem,calc(100vw-2rem))] -translate-x-[42%] overflow-y-auto rounded-2xl border border-line bg-cream p-6 text-ink shadow-[0_24px_80px_-32px_rgba(12,34,28,0.55)]"
-              >
-                <div className="grid gap-6 lg:grid-cols-3">
-                  {megaGroups.map((group) => (
-                    <div key={group.id}>
-                      <Link
-                        href={group.href}
-                        className="text-xs font-semibold tracking-[0.16em] text-copper uppercase"
-                        onClick={closeAll}
-                      >
-                        {group.title}
-                      </Link>
-                      <ul className="mt-3 grid gap-1">
-                        {group.items.map((item) => (
-                          <li key={item.href}>
-                            <Link
-                              href={item.href}
-                              className="group flex items-start gap-3 rounded-xl px-2 py-2 hover:bg-white"
-                              onClick={closeAll}
-                            >
-                              <span className="mt-0.5 h-8 w-8 shrink-0 rounded-lg bg-spruce/10 text-spruce">
-                                <ServiceGlyph name={group.id} />
-                              </span>
-                              <span>
-                                <span className="block text-sm font-semibold text-spruce">
-                                  {item.label}
-                                </span>
-                                {item.description ? (
-                                  <span className="mt-0.5 block text-xs leading-snug text-muted">
-                                    {item.description}
-                                  </span>
-                                ) : null}
-                              </span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
-                  <p className="text-sm text-muted">
-                    Heating and cooling service for Freeport, Illinois 61032.
-                  </p>
-                  <Link
-                    href="/services/"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-spruce"
-                    onClick={closeAll}
-                  >
-                    View all services
-                    <span aria-hidden="true">→</span>
-                  </Link>
-                </div>
-              </div>
-            ) : null}
-          </div>
+            Services
+            <span aria-hidden="true" className="text-[0.65rem]">
+              {servicesOpen ? "▴" : "▾"}
+            </span>
+          </button>
           {desktopLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-3 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-white"
+              className="rounded-full px-3 py-2 text-sm text-white/90 hover:bg-white/10 hover:text-white"
+              onMouseEnter={
+                item.label === "Heating" || item.label === "Cooling"
+                  ? () => setServicesOpen(true)
+                  : undefined
+              }
             >
               {item.label}
             </Link>
@@ -164,10 +115,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <PhoneCta
-            context="header"
-            className="hidden min-h-11 px-4 py-2 sm:inline-flex"
-          >
+          <PhoneCta context="header" className="hidden min-h-11 px-4 py-2 sm:inline-flex">
             {primaryCtaLabel()}
           </PhoneCta>
           <button
@@ -183,10 +131,64 @@ export function Header() {
         </div>
       </div>
 
+      {servicesOpen ? (
+        <div
+          id={menuId}
+          role="navigation"
+          aria-label="Services"
+          className="fixed inset-x-0 z-[90] hidden xl:block"
+          style={{ top: headerH, backgroundColor: "#f7f3ec" }}
+        >
+          <div
+            className="border-t border-[#d5cfc4] shadow-[0_24px_50px_rgba(12,34,28,0.28)]"
+            style={{ backgroundColor: "#f7f3ec", color: "#1a1c19" }}
+          >
+            <div className="mx-auto grid max-h-[min(70vh,32rem)] max-w-6xl grid-cols-2 gap-x-6 gap-y-5 overflow-y-auto px-4 py-5 sm:px-6 md:grid-cols-3 xl:grid-cols-6">
+              {megaGroups.map((group) => (
+                <div key={group.id} className="min-w-0">
+                  <Link
+                    href={group.href}
+                    className="text-[11px] font-semibold tracking-[0.14em] text-[#c45c26] uppercase"
+                    onClick={closeAll}
+                  >
+                    {group.title}
+                  </Link>
+                  <ul className="mt-3 grid gap-1.5">
+                    {group.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className="block py-0.5 text-sm font-medium text-[#14352c] hover:text-[#c45c26]"
+                          onClick={closeAll}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 border-t border-[#d5cfc4] px-4 py-3 sm:px-6">
+              <p className="text-xs text-[#5a615c]">
+                Heating and cooling for Freeport, Illinois 61032.
+              </p>
+              <Link
+                href="/services/"
+                className="shrink-0 text-sm font-semibold text-[#14352c]"
+                onClick={closeAll}
+              >
+                View all services →
+              </Link>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
       {open ? (
         <div
           id={drawerId}
-          className="drawer-in fixed inset-0 z-50 bg-spruce-deep xl:hidden"
+          className="drawer-in fixed inset-0 z-[100] bg-spruce-deep xl:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
@@ -244,20 +246,18 @@ export function Header() {
                   </div>
                 );
               })}
-              {primaryNav
-                .filter((item) => item.label !== "Services")
-                .map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block border-b border-white/10 py-3 text-lg"
-                    onClick={closeAll}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+              {desktopLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block border-b border-white/10 py-3 text-lg"
+                  onClick={closeAll}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
-            <PhoneCta context="mobile-menu" className="mt-6 w-full min-h-12">
+            <PhoneCta context="mobile-menu" className="mt-6 min-h-12 w-full">
               {primaryCtaLabel()}
             </PhoneCta>
           </div>
@@ -280,44 +280,5 @@ function Hamburger({ open }: { open: boolean }) {
         className={`absolute left-0 block h-0.5 w-4 bg-white transition ${open ? "top-1.5 -rotate-45" : "top-3"}`}
       />
     </span>
-  );
-}
-
-function ServiceGlyph({ name }: { name: string }) {
-  const common = "h-8 w-8 p-1.5";
-  if (name === "cooling") {
-    return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.7">
-        <path d="M12 3v18M4.5 7.5l15 9M4.5 16.5l15-9" />
-      </svg>
-    );
-  }
-  if (name === "heating") {
-    return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.7">
-        <path d="M12 21c4-3 6-6.2 6-9.4C18 7.5 15.3 5 12 5S6 7.5 6 11.6C6 14.8 8 18 12 21Z" />
-      </svg>
-    );
-  }
-  if (name === "iaq") {
-    return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.7">
-        <path d="M4 12h16M6 8h12M8 16h8" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  if (name === "commercial") {
-    return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.7">
-        <path d="M4 20V8l8-4 8 4v12H4Z" />
-        <path d="M10 20v-6h4v6" />
-      </svg>
-    );
-  }
-  return (
-    <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.7">
-      <rect x="5" y="8" width="14" height="10" rx="1.5" />
-      <path d="M9 8V6h6v2M8 13h.01M12 13h.01M16 13h.01" strokeLinecap="round" />
-    </svg>
   );
 }

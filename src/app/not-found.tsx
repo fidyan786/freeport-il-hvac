@@ -16,20 +16,20 @@ export default function NotFound() {
         That page is not on this site.
       </h1>
       <p className="mt-4 text-muted">
-        If you need heat or cooling help in Freeport, skip the scavenger hunt and
-        request service.
+        If you need heat or cooling help in Freeport, request service from the
+        home page or services list.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <PhoneCta context="404">{primaryCtaLabel()}</PhoneCta>
         <Link
           href="/"
-          className="inline-flex min-h-12 items-center justify-center rounded-full border border-spruce px-5 py-3 text-sm font-semibold text-spruce"
+          className="inline-flex min-h-12 items-center justify-center border border-spruce px-5 py-3 text-sm font-semibold text-spruce"
         >
           Home
         </Link>
         <Link
           href="/services/"
-          className="inline-flex min-h-12 items-center justify-center rounded-full border border-spruce px-5 py-3 text-sm font-semibold text-spruce"
+          className="inline-flex min-h-12 items-center justify-center border border-spruce px-5 py-3 text-sm font-semibold text-spruce"
         >
           Services
         </Link>

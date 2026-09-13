@@ -7,7 +7,7 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
       focusable="false"
     >
       <circle cx="32" cy="32" r="31" fill="currentColor" />
-      <g fill="none" stroke="#f7f3ec" strokeWidth="2.1" strokeLinecap="round">
+      <g fill="none" stroke="#f7f6f3" strokeWidth="2.1" strokeLinecap="round">
         <circle cx="32" cy="32" r="17.5" />
         <circle cx="32" cy="32" r="5.5" />
         <path d="M32 14.5v12.2M32 37.3v12.2M14.5 32h12.2M37.3 32h12.2" />
@@ -15,7 +15,7 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
       </g>
       <path
         d="M24.2 33.4 32 26.2l7.8 7.2v7.2H24.2z"
-        fill="#c45c26"
+        fill="#8a5a3c"
       />
       <rect x="30.2" y="35.4" width="3.6" height="5.2" fill="#f7f3ec" />
     </svg>
@@ -32,7 +32,7 @@ export function Logo({
   return (
     <span className="flex min-w-0 items-center gap-2.5">
       <LogoMark
-        className={`h-10 w-10 shrink-0 ${invert ? "text-[#0c221c]" : "text-spruce"}`}
+        className={`h-10 w-10 shrink-0 ${invert ? "text-[#111211]" : "text-spruce"}`}
       />
       <span className="min-w-0">
         <span

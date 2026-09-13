@@ -10,7 +10,7 @@ export function StickyCallBar() {
       <PhoneCta context="sticky-mobile" className="min-h-12 w-full">
         <span className="inline-flex items-center gap-2">
           <PhoneIcon />
-          {isPhoneConfigured() ? "Call HVAC Service" : primaryCtaLabel()}
+          {isPhoneConfigured() ? "Call for Service" : primaryCtaLabel()}
         </span>
       </PhoneCta>
     </div>

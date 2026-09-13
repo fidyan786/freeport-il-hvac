@@ -96,7 +96,7 @@ export function phoneDisplayLabel() {
 }
 
 export function hoursLabel() {
-  return isHoursConfigured() ? site.hours : "Availability confirmed when you call";
+  return isHoursConfigured() ? site.hours : "Call to confirm availability";
 }
 
 export const localLabel = `${site.city}, ${site.stateCode}`;

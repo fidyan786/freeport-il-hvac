@@ -30,63 +30,76 @@ export const nearbyCommunities = [
   { name: "Winslow", zip: "61089" },
 ] as const;
 
-function links(category: ServiceCategory): NavLink[] {
-  return servicesByCategory(category).map((service) => ({
-    href: service.href,
-    label: service.navLabel,
-    description: service.navDescription,
-  }));
+function pick(slugs: string[]): NavLink[] {
+  return slugs
+    .map((slug) => services.find((service) => service.slug === slug))
+    .filter((service): service is NonNullable<typeof service> => Boolean(service))
+    .map((service) => ({
+      href: service.href,
+      label: service.navLabel,
+    }));
 }
 
-const specialized: NavLink[] = [
-  ...servicesByCategory("ductless").map((service) => ({
-    href: service.href,
-    label: service.navLabel,
-    description: service.navDescription,
-  })),
-  ...servicesByCategory("heat-pump").map((service) => ({
-    href: service.href,
-    label: service.navLabel,
-    description: service.navDescription,
-  })),
-];
-
 export const megaGroups: MegaGroup[] = [
-  {
-    id: "heating",
-    title: "Heating",
-    href: "/services/#heating",
-    items: links("heating"),
-  },
   {
     id: "cooling",
     title: "Cooling",
     href: "/services/#cooling",
-    items: links("cooling"),
+    items: pick([
+      "ac-repair-freeport-il",
+      "ac-installation-freeport-il",
+      "ac-replacement-freeport-il",
+      "ac-maintenance-freeport-il",
+    ]),
   },
   {
-    id: "hvac",
-    title: "HVAC",
-    href: "/services/#hvac",
-    items: links("hvac"),
+    id: "heating",
+    title: "Heating",
+    href: "/services/#heating",
+    items: pick([
+      "furnace-repair-freeport-il",
+      "furnace-installation-freeport-il",
+      "furnace-maintenance-freeport-il",
+      "heating-repair-freeport-il",
+    ]),
+  },
+  {
+    id: "heat-pump",
+    title: "Heat Pumps",
+    href: "/services/#heat-pumps",
+    items: pick([
+      "heat-pump-repair-freeport-il",
+      "heat-pump-installation-freeport-il",
+      "heat-pump-maintenance-freeport-il",
+      "ductless-mini-split-freeport-il",
+    ]),
   },
   {
     id: "iaq",
-    title: "Indoor Air",
+    title: "Indoor Air Quality",
     href: "/services/#iaq",
-    items: links("iaq"),
-  },
-  {
-    id: "specialized",
-    title: "Specialized",
-    href: "/services/#specialized",
-    items: specialized,
+    items: pick([
+      "indoor-air-quality-freeport-il",
+      "air-filtration-freeport-il",
+      "humidifiers-dehumidifiers-freeport-il",
+    ]),
   },
   {
     id: "commercial",
     title: "Commercial",
     href: "/services/#commercial",
-    items: links("commercial"),
+    items: pick([
+      "commercial-hvac-freeport-il",
+      "commercial-ac-repair-freeport-il",
+      "commercial-heating-repair-freeport-il",
+      "commercial-hvac-maintenance-freeport-il",
+    ]),
+  },
+  {
+    id: "emergency",
+    title: "Emergency HVAC",
+    href: "/services/emergency-hvac-freeport-il/",
+    items: pick(["emergency-hvac-freeport-il"]),
   },
 ];
 
@@ -160,6 +173,10 @@ export const problemLinks: Array<NavLink & { text: string }> = [
     text: "Dust, dryness, or stale air after months of closed windows.",
   },
 ];
+
+export function servicesByNavCategory(category: ServiceCategory) {
+  return servicesByCategory(category);
+}
 
 export const indexablePaths = [
   "/",

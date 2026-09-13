@@ -9,7 +9,7 @@ import { hoursLabel, phoneDisplayLabel, primaryCtaLabel, site } from "@/lib/site
 export const metadata = pageMetadata({
   title: "Contact Millrace Heating & Air in Freeport",
   description:
-    "Request HVAC service in Freeport, Illinois. Phone is the primary action. Short form for name, phone, service, problem, ZIP, and contact method.",
+    "Request HVAC service in Freeport, Illinois. Call or send your name, phone, ZIP, service needed, and a short message.",
   path: "/contact/",
 });
 
@@ -33,13 +33,13 @@ export default function ContactPage() {
           Contact Millrace in Freeport
         </h1>
         <p className="mt-4 max-w-2xl text-muted">
-          Phone is the main action. The form is a backup if you cannot call right
-          now.
+          Call when heat or cooling has already failed. Use the form if you
+          cannot talk right now.
         </p>
         <div className="mt-10 grid gap-10 lg:grid-cols-2">
-          <section className="rounded-3xl bg-spruce p-6 text-white sm:p-8">
+          <section className="bg-spruce p-6 text-white sm:p-8">
             <p className="text-xs tracking-[0.18em] text-brass uppercase">
-              Primary
+              Freeport, Illinois
             </p>
             <p className="mt-3 font-serif text-4xl">{phoneDisplayLabel()}</p>
             <p className="mt-3 text-sm text-white/75">{hoursLabel()}</p>
@@ -49,15 +49,12 @@ export default function ContactPage() {
             <PhoneCta context="contact-primary" className="mt-6">
               {primaryCtaLabel()}
             </PhoneCta>
-            <p className="mt-6 text-sm text-white/70">
-              A street address is omitted until a verified location exists. This
-              is treated as a service-area business.
-            </p>
           </section>
           <section>
-            <h2 className="font-serif text-2xl text-spruce">Request a callback</h2>
+            <h2 className="font-serif text-2xl text-spruce">Request service</h2>
             <p className="mt-2 mb-5 text-sm text-muted">
-              Name, phone, service, problem, ZIP, and how you want to be reached.
+              Name, phone, ZIP, the service you need, and a short description
+              of the problem.
             </p>
             <ContactForm />
           </section>

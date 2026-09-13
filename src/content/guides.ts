@@ -594,7 +594,7 @@ export const guides: Guide[] = [
         heading: "How to request a check",
         paragraphs: [
           "Ask for HVAC maintenance and say whether you want the heating visit, the cooling visit, or both on their proper seasons. Mention nearby equipment — humidifier, heat pump, mini split — so the visit is not planned as a single-furnace glance.",
-          "Millrace Heating & Air will not invent a membership pitch on this page. The useful move is a seasonal check timed to Freeport weather, then repair if the check finds something that should not wait.",
+          "The useful move is a seasonal check timed to Freeport weather, then repair if the check finds something that should not wait.",
         ],
       },
     ],

@@ -27,8 +27,8 @@ export default function GuidesIndexPage() {
             HVAC guides for Freeport homes
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
-            Short, useful explanations of the problems Stephenson County houses
-            actually have. Not a dump of thin articles.
+            Short explanations of heating and cooling problems Stephenson County
+            houses actually have.
           </p>
         </div>
       </section>

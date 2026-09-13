@@ -1260,7 +1260,7 @@ export const services: ServicePageContent[] = [
     explanation: [
       "HVAC maintenance in Stephenson County has a calendar. Heat is the long job. Cooling is the idle job. Checking a condenser in November tells you almost nothing. Skipping the furnace until January is how lockouts get scheduled by the weather.",
       "A combined maintenance visit in one day can make sense when both machines are accessible and the weather cooperates. Often the honest plan is still two trips: heat before the freeze, cooling after the snow.",
-      "We will not invent a membership brand, a service club, or a discount ladder on this page. You can request seasonal service. If we find a repair, it gets its own sentence.",
+      "Seasonal service is available. If we find a repair, it is named as a repair.",
     ],
     causes: [
       {
@@ -1490,7 +1490,7 @@ export const services: ServicePageContent[] = [
       "No heat in a Freeport freeze or no cooling in a heat wave is a phone call first. Request emergency HVAC help in 61032 after the house is confirmed safe.",
     h1: "Call first. We will sort heat, cooling, and whether the house is safe.",
     eyebrow: "Urgent HVAC · Freeport 61032",
-    lede: "If the furnace stopped on a Stephenson County night, or the AC died when the house was already hot, do not wait on a long form. Millrace Heating & Air treats this as a call. We do not advertise a clock we cannot keep.",
+    lede: "If the furnace stopped on a Stephenson County night, or the AC died when the house was already hot, do not wait on a long form. Call Millrace Heating & Air. Availability is confirmed on the phone.",
     image: "/photos/emergency-night.jpg",
     imageAlt:
       "Freeport home at night when heating or cooling has failed and a call is needed",
@@ -1573,8 +1573,8 @@ export const services: ServicePageContent[] = [
     ],
     why: [
       "We would rather you call than keep resetting a locked-out furnace.",
-      "We will not invent response times or round-the-clock coverage on this page.",
-      "Safety contacts for gas and carbon monoxide are public and stay on this page on purpose.",
+      "We will not advertise response times or round-the-clock coverage we cannot keep.",
+      "Safety contacts for gas and carbon monoxide stay on this page because they matter before any HVAC visit.",
     ],
     local: [
       "Freeport January nights average near 11°F. A dead heating system is a pipes-and-people problem before it is a parts problem.",
@@ -1584,7 +1584,7 @@ export const services: ServicePageContent[] = [
     faqs: [
       {
         q: "Do you offer 24/7 emergency service?",
-        a: "We do not claim round-the-clock coverage on this website. Call and ask what we can do with the situation you have.",
+        a: "Call and ask what we can do with the situation you have. Availability is confirmed on the phone.",
       },
       {
         q: "What counts as an HVAC emergency?",
@@ -2115,7 +2115,7 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Is ductless cheaper than new ducts?",
-        a: "Sometimes. Plaster, path, electrical, and how many rooms you want conditioned decide that. We will not quote a race on this page.",
+        a: "Sometimes. Plaster, path, electrical, and how many rooms you want conditioned decide that. Ask on the call.",
       },
       {
         q: "Can one outdoor unit serve several rooms?",
@@ -2883,7 +2883,7 @@ export const services: ServicePageContent[] = [
     why: [
       "We stay in the small commercial lane we can stand behind.",
       "Opening-day comfort is the measure, not a residential script copied onto a rooftop.",
-      "After-hours coverage is asked and answered on the phone, not invented here.",
+      "We confirm after-hours coverage on the phone for the situation you have.",
     ],
     local: [
       "Downtown and corridor buildings in Freeport often mix older rooftops, splits, and equipment that has been patched through several owners.",
@@ -2897,7 +2897,7 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Can a business get help outside published hours?",
-        a: "Call and ask. After-hours commercial coverage is not invented on this website.",
+        a: "Call and ask. After-hours commercial coverage is confirmed on the phone.",
       },
       {
         q: "Is this the same as residential service with a different invoice?",
@@ -2909,7 +2909,7 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Can you look at a building before we lease it?",
-        a: "Ask on the phone. An equipment look is sometimes possible. We will not invent a full due-diligence product on this page.",
+        a: "Ask on the phone. An equipment look is sometimes possible.",
       },
     ],
     related: [
@@ -2961,7 +2961,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Commercial maintenance in Freeport still follows the climate: heat is the long season, cooling is the idle-then-sudden season. A shop rooftop that sat through snow needs a spring look. A unit heater that has to hold January needs a fall look.",
-      "We are not selling a named membership club on this page. You can request seasonal commercial service. If we find a repair, it is a repair. If the building needs a different contractor for a crane or a specialized control, we will say that.",
+      "Seasonal commercial service is available. If we find a repair, it is a repair. If the building needs a different contractor for a crane or a specialized control, we will say that.",
       "Access is part of the visit. Roof hatches, keys, and hours when we can shut a unit down without emptying the floor get decided on the call.",
     ],
     causes: [
@@ -3014,7 +3014,7 @@ export const services: ServicePageContent[] = [
     why: [
       "We would rather find a belt in private than explain a silent rooftop at opening.",
       "Seasonal timing follows Freeport weather, not a generic annual sticker.",
-      "No invented service club. Findings that need repair get named as repair.",
+      "Seasonal service is available. If we find a repair, it is named as a repair.",
     ],
     local: [
       "Small commercial buildings here face the same 6,956-to-690 heating-to-cooling imbalance as houses. Maintenance still leans toward not missing heat.",
@@ -3276,7 +3276,7 @@ export const services: ServicePageContent[] = [
     why: [
       "Monday-morning heat is a business problem. We treat it like one.",
       "We identify unit heaters, rooftops, and closet furnaces instead of forcing one script.",
-      "Safety contacts stay public. Coverage hours stay off the invented list.",
+      "Safety contacts stay public. Coverage for a given night is confirmed when you call.",
     ],
     local: [
       "Stephenson County nights routinely sit at or below freezing. A commercial setback that works in a milder town can be a freeze here.",

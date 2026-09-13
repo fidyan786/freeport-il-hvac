@@ -26,12 +26,11 @@ export default function ServiceAreaPage() {
       <section className="bg-spruce text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <h1 className="max-w-3xl font-serif text-4xl sm:text-5xl">
-            HVAC service centered on Freeport, Illinois.
+            HVAC service centered on Freeport, Illinois
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
-            Primary city: {site.city} {site.zip}, {site.county}. Nearby communities
-            are listed so you can ask — not so a website can pretend every village
-            has its own office.
+            Primary city: {site.city} {site.zip}, {site.county}. Nearby
+            communities are listed so you can ask whether we can reach you.
           </p>
         </div>
       </section>
@@ -44,21 +43,19 @@ export default function ServiceAreaPage() {
         />
         <h2 className="mt-8 font-serif text-3xl text-spruce">Primary market</h2>
         <p className="mt-4 leading-relaxed text-muted">
-          Freeport is the city this site is built for. Heating demand here is the
-          high-stakes season. Cooling still matters, especially after equipment
-          sits idle through winter.
+          Freeport is home. Heating demand is the high-stakes season. Cooling
+          still matters, especially after equipment sits idle through winter.
         </p>
         <h2 className="mt-10 font-serif text-3xl text-spruce">
           Nearby Stephenson County towns
         </h2>
         <p className="mt-4 leading-relaxed text-muted">
           Coverage for these communities is confirmed when you call. Distance,
-          weather, and current work all matter. None of these towns are automatic
-          dispatches, and none of them get a thin doorway page.
+          weather, and current work all matter.
         </p>
         <ul className="mt-6 grid gap-2 sm:grid-cols-2">
           {nearbyCommunities.map((town) => (
-            <li key={town.zip} className="rounded-xl bg-white px-4 py-3 ring-1 ring-line">
+            <li key={town.zip} className="bg-white px-4 py-3 ring-1 ring-line">
               <span className="font-semibold text-spruce">{town.name}</span>
               <span className="ml-2 text-sm text-muted">{town.zip}</span>
             </li>
@@ -78,7 +75,7 @@ export default function ServiceAreaPage() {
       </div>
       <FinalCta
         title="Confirm coverage for your ZIP"
-        body="Freeport 61032 is the home market. Other Stephenson County towns are a phone conversation."
+        body="Freeport 61032 is the home market. Other Stephenson County towns are confirmed by phone."
         context="service-area-final"
       />
     </>

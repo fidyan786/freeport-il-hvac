@@ -20,7 +20,7 @@ export default function Error({
         <button
           type="button"
           onClick={() => reset()}
-          className="min-h-12 rounded-full border border-spruce px-5 py-3 text-sm font-semibold text-spruce"
+          className="min-h-12 border border-spruce px-5 py-3 text-sm font-semibold text-spruce"
         >
           Try again
         </button>

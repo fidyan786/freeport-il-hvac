@@ -1,0 +1,5 @@
+Contact: https://freeport-il-hvac.vercel.app/contact/
+Expires: 2027-09-13T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://freeport-il-hvac.vercel.app/.well-known/security.txt
+Policy: https://freeport-il-hvac.vercel.app/privacy-policy/

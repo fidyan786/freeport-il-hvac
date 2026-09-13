@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy policy for the ${site.city}, ${site.state} HVAC website.`,
+  description: `Privacy policy for ${site.businessName} in ${site.city}, ${site.state}.`,
   path: "/privacy-policy/",
 });
 
@@ -13,27 +13,21 @@ export default function PrivacyPage() {
       <h1 className="font-serif text-4xl text-navy">Privacy Policy</h1>
       <p className="mt-6">
         This notice describes how {site.businessName} may handle information
-        submitted through this website for HVAC inquiries in {site.city},{" "}
-        {site.state}.
+        submitted for HVAC inquiries in {site.city}, {site.state}.
       </p>
       <p className="mt-4">
-        If you call, your phone provider and any later call-tracking vendor
-        process that call. If you use the request form, we collect name, phone,
-        service needed, and message to respond to the request. If you use the
-        on-site help chat, we may collect the HVAC issue, ZIP, property type,
-        timeline, and any name or phone you choose to share, plus the page you
-        were on. Chat messages stay in your browser session and are sent to our
-        server only to generate a reply and, when configured, a lead
-        notification.
+        If you call, your phone provider processes that call. If you use the
+        request form, we collect name, phone, ZIP, service needed, and message
+        so we can respond. If you use the on-site help chat, we may collect the
+        HVAC issue, ZIP, property type, timeline, and any name or phone you
+        choose to share, plus the page you were on.
       </p>
       <p className="mt-4">
-        Form delivery is only sent to a webhook if one is configured by the
-        site operator. Analytics load only if a Google Analytics measurement
-        ID is configured. We do not sell form submissions as a product.
+        Form submissions and chat messages are used to respond to your request.
+        We do not sell that information.
       </p>
       <p className="mt-4">
-        This is a starting notice, not legal advice. Have counsel review it
-        before advertising.
+        This notice is informational and is not legal advice.
       </p>
     </article>
   );
