@@ -18,12 +18,14 @@ export function Header() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const phoneReady = isPhoneConfigured();
+  const pathRef = useRef(pathname);
 
-  useEffect(() => {
+  if (pathRef.current !== pathname) {
+    pathRef.current = pathname;
     setOpen(false);
     setServicesOpen(false);
     setExpandedGroup(null);
-  }, [pathname]);
+  }
 
   function closeAll() {
     setOpen(false);
