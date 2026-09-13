@@ -18,14 +18,14 @@ export function Header() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const phoneReady = isPhoneConfigured();
-  const pathRef = useRef(pathname);
 
-  if (pathRef.current !== pathname) {
-    pathRef.current = pathname;
+  useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- close menus on route change */
     setOpen(false);
     setServicesOpen(false);
     setExpandedGroup(null);
-  }
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }, [pathname]);
 
   function closeAll() {
     setOpen(false);

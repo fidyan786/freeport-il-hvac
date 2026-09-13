@@ -25,9 +25,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
+          <h3 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
             Services
-          </h2>
+          </h3>
           <ul className="mt-3 grid gap-2 text-sm">
             {footerServiceHighlights.map((item) => (
               <li key={item.href}>
@@ -40,9 +40,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
+          <h3 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
             Company
-          </h2>
+          </h3>
           <ul className="mt-3 grid gap-2 text-sm">
             <li>
               <Link className="hover:text-white" href="/about/">
@@ -78,9 +78,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
+          <h3 className="font-sans text-xs font-normal tracking-[0.16em] text-copper uppercase">
             Freeport & nearby
-          </h2>
+          </h3>
           <p className="mt-3 text-sm">
             Primary city: {site.city} {site.zip}. Nearby Stephenson County towns
             are confirmed by phone.

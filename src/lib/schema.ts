@@ -21,8 +21,8 @@ export function localBusinessSchema() {
     "@id": businessId(),
     name: site.businessName,
     url,
-    image: absoluteUrl("/opengraph-image", { asset: true }),
-    logo: absoluteUrl("/apple-icon", { asset: true }),
+    image: absoluteUrl("/opengraph-image/"),
+    logo: absoluteUrl("/apple-icon/"),
     address: {
       "@type": "PostalAddress",
       addressLocality: site.city,

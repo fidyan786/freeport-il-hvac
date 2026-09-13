@@ -12,7 +12,7 @@ export function absoluteUrl(path = "/", options?: { asset?: boolean }) {
 }
 
 export const SOCIAL_IMAGE = {
-  url: absoluteUrl("/opengraph-image", { asset: true }),
+  url: absoluteUrl("/opengraph-image/"),
   width: 1200,
   height: 630,
   alt: `${BRAND.name} — heating and cooling in ${site.city}, ${site.state}`,
