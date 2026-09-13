@@ -133,29 +133,18 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex shrink-0 items-center gap-2">
-          {phoneReady ? (
-            <>
-              <PhoneCta
-                context="header-call"
-                className="hidden min-h-10 px-4 py-2 lg:inline-flex"
-              >
-                {primaryCtaLabel()}
-              </PhoneCta>
-              <Link
-                href="/contact/"
-                className="hidden min-h-10 items-center justify-center border border-white/25 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 lg:inline-flex"
-              >
-                Request Service
-              </Link>
-            </>
-          ) : (
-            <PhoneCta
-              context="header-request"
-              className="hidden min-h-10 px-4 py-2 lg:inline-flex"
-            >
-              Request Service
-            </PhoneCta>
-          )}
+          <PhoneCta
+            context="header-call"
+            className="hidden min-h-10 px-4 py-2 lg:inline-flex"
+          >
+            {phoneReady ? primaryCtaLabel() : "Call for Service"}
+          </PhoneCta>
+          <Link
+            href="/contact/"
+            className="hidden min-h-10 items-center justify-center border border-white/25 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 lg:inline-flex"
+          >
+            Request Service
+          </Link>
           <button
             type="button"
             className="inline-flex min-h-11 min-w-11 items-center justify-center border border-white/20 lg:hidden"
@@ -175,46 +164,48 @@ export function Header() {
                 role="navigation"
                 aria-label="Services"
                 data-mega-menu="true"
-                className="mega-panel fixed inset-x-0 z-[90] hidden border-t border-line bg-cream text-ink shadow-[0_24px_50px_rgba(17,18,17,0.18)] lg:block"
+                className="mega-panel fixed inset-x-0 z-[300] hidden lg:block"
                 style={{ top: headerH }}
               >
-            <div className="mx-auto grid max-h-[min(70vh,36rem)] max-w-6xl grid-cols-2 gap-x-8 gap-y-6 overflow-y-auto p-5 sm:p-6 md:grid-cols-3">
-              {megaGroups.map((group) => (
-                <div key={group.id} className="min-w-0">
-                  <Link
-                    href={group.href}
-                    className="text-[11px] font-semibold tracking-[0.14em] text-muted uppercase"
-                    onClick={closeAll}
-                  >
-                    {group.title}
-                  </Link>
-                  <ul className="mt-3 grid gap-1.5">
-                    {group.items.map((item) => (
-                      <li key={item.href}>
+                <div className="border-b border-line bg-white text-ink shadow-[0_24px_50px_rgba(17,18,17,0.22)]">
+                  <div className="mx-auto grid max-h-[min(70vh,36rem)] max-w-6xl grid-cols-3 gap-x-10 gap-y-8 overflow-y-auto px-6 py-6">
+                    {megaGroups.map((group) => (
+                      <div key={group.id} className="min-w-0">
                         <Link
-                          href={item.href}
-                          className="block py-0.5 text-sm text-spruce hover:text-copper"
+                          href={group.href}
+                          className="text-[11px] font-semibold tracking-[0.14em] text-muted uppercase"
                           onClick={closeAll}
                         >
-                          {item.label}
+                          {group.title}
                         </Link>
-                      </li>
+                        <ul className="mt-3 grid gap-1.5">
+                          {group.items.map((item) => (
+                            <li key={item.href}>
+                              <Link
+                                href={item.href}
+                                className="block py-0.5 text-sm text-spruce hover:text-copper"
+                                onClick={closeAll}
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+                  <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 border-t border-line px-6 py-3">
+                    <p className="text-xs text-muted">Freeport, Illinois 61032</p>
+                    <Link
+                      href="/services/"
+                      className="shrink-0 text-sm font-semibold text-spruce"
+                      onClick={closeAll}
+                    >
+                      View all services
+                    </Link>
+                  </div>
                 </div>
-              ))}
-            </div>
-            <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 border-t border-line px-5 py-3 sm:px-6">
-              <p className="text-xs text-muted">Freeport, Illinois 61032</p>
-              <Link
-                href="/services/"
-                className="shrink-0 text-sm font-semibold text-spruce"
-                onClick={closeAll}
-              >
-                View all services
-              </Link>
-            </div>
-          </div>,
+              </div>,
               document.body,
             )
           : null}

@@ -66,7 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <Header />
-        <main id="main" className="relative z-0 flex-1">
+        <main id="main" className="flex-1">
           {children}
         </main>
         <Footer />
