@@ -33,7 +33,6 @@ export default function GlobalError({
               border: 0,
               padding: "0.85rem 1.25rem",
               fontWeight: 600,
-              borderRadius: 999,
             }}
           >
             Try again

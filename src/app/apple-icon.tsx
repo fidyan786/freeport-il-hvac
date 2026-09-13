@@ -1,9 +1,9 @@
 import { ImageResponse } from "next/og";
 
-export const size = { width: 32, height: 32 };
+export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-export default function Icon() {
+export default function AppleIcon() {
   return new ImageResponse(
     (
       <div
@@ -18,8 +18,8 @@ export default function Icon() {
       >
         <div
           style={{
-            width: 14,
-            height: 10,
+            width: 78,
+            height: 56,
             background: "#8a5a3c",
             clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
           }}

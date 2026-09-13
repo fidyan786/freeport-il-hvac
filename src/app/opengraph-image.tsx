@@ -12,7 +12,7 @@ export default function OpenGraphImage() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#14352c",
+          background: "#1c1e1c",
           color: "white",
           display: "flex",
           flexDirection: "column",
@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
             display: "flex",
             fontSize: 22,
             letterSpacing: 6,
-            color: "#c4a574",
+            color: "#b9a48c",
           }}
         >
           {`${site.city.toUpperCase()}, ILLINOIS · 61032`}
@@ -35,7 +35,7 @@ export default function OpenGraphImage() {
             style={{
               display: "flex",
               fontSize: 28,
-              color: "#c45c26",
+              color: "#8a5a3c",
               letterSpacing: 4,
             }}
           >
@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
               marginTop: 16,
             }}
           >
-            Heating and cooling for Freeport winters that actually get cold.
+            Reliable heating and cooling for Freeport homes.
           </div>
         </div>
       </div>

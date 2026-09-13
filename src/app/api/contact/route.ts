@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { allowRequest, clientKey } from "@/lib/rate-limit";
 
 const MAX = 2000;
 
@@ -11,11 +12,19 @@ function isValidZip(value: string) {
 }
 
 export async function POST(request: Request) {
+  if (!allowRequest(`contact:${clientKey(request)}`, 8, 60_000)) {
+    return NextResponse.json({ ok: false, reason: "rate_limited" }, { status: 429 });
+  }
+
   let body: Record<string, unknown> = {};
   try {
     body = (await request.json()) as Record<string, unknown>;
   } catch {
     return NextResponse.json({ ok: false }, { status: 400 });
+  }
+
+  if (clean(body.companyWebsite)) {
+    return NextResponse.json({ ok: true, stored: false });
   }
 
   const message = clean(body.message) || clean(body.problem);

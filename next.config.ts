@@ -30,6 +30,13 @@ const legacyRedirects = [
   ["/blog/heat-pumps-northern-illinois", "/guides/heat-pump-basics-northern-illinois"],
 ] as const;
 
+const scriptSrc = [
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://va.vercel-scripts.com",
+];
+if (process.env.NODE_ENV !== "production") {
+  scriptSrc[0] += " 'unsafe-eval' 'wasm-unsafe-eval'";
+}
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   "base-uri 'self'",
@@ -39,7 +46,7 @@ const contentSecurityPolicy = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "style-src 'self' 'unsafe-inline'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://va.vercel-scripts.com",
+  scriptSrc[0],
   "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com https://va.vercel-scripts.com",
   "worker-src 'self' blob:",
   "upgrade-insecure-requests",
@@ -69,6 +76,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  images: {
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+  },
   turbopack: {
     root: path.join(__dirname),
   },
@@ -84,6 +94,10 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: securityHeaders,
+      },
+      {
+        source: "/api/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
     ];
   },

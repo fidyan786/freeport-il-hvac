@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { getService, servicesByCategory, type ServiceCategory, type ServicePageContent } from "@/content/services";
 import { IMAGE_SIZES } from "@/lib/images";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, serviceListSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -121,6 +122,7 @@ export default function ServicesIndexPage() {
           { name: "Services", path: "/services/" },
         ])}
       />
+      <JsonLd data={serviceListSchema()} />
       <section className="bg-spruce text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <p className="text-xs font-semibold tracking-[0.18em] text-brass uppercase">
@@ -137,6 +139,12 @@ export default function ServicesIndexPage() {
         </div>
       </section>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Services" },
+          ]}
+        />
         {sections.map((section, index) => {
           const items = itemsFor(section.category);
           const imageRight = index % 2 === 1;

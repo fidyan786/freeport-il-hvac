@@ -1,10 +1,28 @@
 import type { Metadata } from "next";
-import { getSiteUrl, site } from "@/lib/site";
+import { BRAND, getSiteUrl, site } from "@/lib/site";
 
-export function absoluteUrl(path = "/") {
+export function absoluteUrl(path = "/", options?: { asset?: boolean }) {
   const base = getSiteUrl();
-  if (path === "/") return `${base}/`;
-  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+  if (path === "/" || path === "") return `${base}/`;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  if (options?.asset) {
+    return `${base}${normalized.replace(/\/$/, "")}`;
+  }
+  return `${base}${normalized.endsWith("/") ? normalized : `${normalized}/`}`;
+}
+
+export const SOCIAL_IMAGE = {
+  url: absoluteUrl("/opengraph-image", { asset: true }),
+  width: 1200,
+  height: 630,
+  alt: `${BRAND.name} — heating and cooling in ${site.city}, ${site.state}`,
+} as const;
+
+function brandedTitle(title: string) {
+  if (title.includes(BRAND.name) || title.includes(BRAND.shortName)) {
+    return title;
+  }
+  return `${title} | ${BRAND.shortName}`;
 }
 
 export function pageMetadata({
@@ -12,35 +30,38 @@ export function pageMetadata({
   description,
   path,
   index = true,
+  type = "website",
 }: {
   title: string;
   description: string;
   path: string;
   index?: boolean;
+  type?: "website" | "article";
 }): Metadata {
   const url = absoluteUrl(path);
-  const brand = site.businessName;
-  const ogTitle = title.includes(site.city) ? title : `${title} | ${site.city}, ${site.stateCode}`;
+  const fullTitle = brandedTitle(title);
 
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: url },
     robots: index
       ? { index: true, follow: true }
       : { index: false, follow: false },
     openGraph: {
-      type: "website",
+      type,
       locale: "en_US",
       url,
-      siteName: brand,
-      title: ogTitle,
+      siteName: site.businessName,
+      title: fullTitle,
       description,
+      images: [SOCIAL_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
-      title: ogTitle,
+      title: fullTitle,
       description,
+      images: [SOCIAL_IMAGE.url],
     },
   };
 }

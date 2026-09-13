@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneCta } from "@/components/PhoneCta";
+import { IMAGE_SIZES } from "@/lib/images";
 import { primaryCtaLabel } from "@/lib/site";
 
 export function PageHero({
@@ -36,7 +37,7 @@ export function PageHero({
               {eyebrow}
             </p>
           ) : null}
-          <h1 className="max-w-xl font-serif text-3xl leading-tight text-balance sm:text-4xl lg:text-[2.65rem]">
+          <h1 className="max-w-xl font-serif text-[1.85rem] leading-tight text-balance sm:text-4xl lg:text-[2.65rem]">
             {title}
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80">
@@ -60,10 +61,10 @@ export function PageHero({
           <div className="relative min-h-[16rem] sm:min-h-[20rem] lg:min-h-full">
             <Image
               src={image}
-              alt={imageAlt || ""}
+              alt={imageAlt ?? ""}
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes={IMAGE_SIZES.hero}
               className="object-cover"
             />
           </div>

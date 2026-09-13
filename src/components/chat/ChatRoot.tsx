@@ -1,12 +1,15 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const ChatWidget = dynamic(
-  () => import("./ChatWidget").then((mod) => mod.ChatWidget),
-  { ssr: false },
-);
+import { useEffect, useState } from "react";
+import { ChatWidget } from "./ChatWidget";
 
 export function ChatRoot() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   return <ChatWidget />;
 }

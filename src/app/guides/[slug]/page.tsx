@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/FinalCta";
@@ -27,6 +26,7 @@ export async function generateMetadata({
     title: guide.metaTitle,
     description: guide.metaDescription,
     path: guide.href,
+    type: "article",
   });
 }
 
@@ -60,6 +60,7 @@ export default async function GuidePage({
           description: guide.metaDescription,
           path: guide.href,
           datePublished: guide.datePublished,
+          image: guide.image,
         })}
       />
       <PageHero
@@ -81,15 +82,6 @@ export default async function GuidePage({
             { name: guide.title },
           ]}
         />
-        <div className="relative my-8 aspect-[16/9] overflow-hidden rounded-2xl">
-          <Image
-            src={guide.image}
-            alt={guide.imageAlt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-        </div>
         {guide.body.map((section) => (
           <section key={section.heading} className="mt-10">
             <h2 className="font-serif text-2xl text-spruce sm:text-3xl">

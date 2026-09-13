@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
+import { SOCIAL_IMAGE } from "@/lib/seo";
 import { BRAND, getSiteUrl, site } from "@/lib/site";
 import "./globals.css";
 
@@ -28,31 +29,43 @@ export const viewport: Viewport = {
   themeColor: "#1c1e1c",
 };
 
+const defaultTitle = `Heating & Cooling Service in Freeport, IL | ${BRAND.shortName}`;
+const defaultDescription =
+  "Furnace repair, AC repair, and HVAC help for Freeport, Illinois (61032) in Stephenson County. Request heating and cooling service from Millrace Heating & Air.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: `Heating & Cooling in Freeport, IL | ${BRAND.name}`,
+    default: defaultTitle,
     template: `%s | ${BRAND.shortName}`,
   },
-  description:
-    "Furnace repair, AC repair, and HVAC help for Freeport, Illinois (61032) in Stephenson County. Request heating and cooling service from Millrace Heating & Air.",
+  description: defaultDescription,
   applicationName: site.businessName,
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: `${getSiteUrl()}/`,
     siteName: site.businessName,
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [SOCIAL_IMAGE],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [SOCIAL_IMAGE.url],
+  },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
     : undefined,
   icons: {
     icon: [
       { url: "/brand/favicon.svg", type: "image/svg+xml" },
-      { url: "/brand/logo-icon.png", type: "image/png" },
+      { url: "/icon/", type: "image/png", sizes: "32x32" },
     ],
-    apple: "/brand/logo-icon.png",
+    apple: [{ url: "/apple-icon/", sizes: "180x180", type: "image/png" }],
   },
 };
 

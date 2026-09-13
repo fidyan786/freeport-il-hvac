@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { guides } from "@/content/guides";
+import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
@@ -32,12 +34,20 @@ export default function GuidesIndexPage() {
           </p>
         </div>
       </section>
+      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Guides" },
+          ]}
+        />
+      </div>
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
         {guides.map((guide) => (
           <Link
             key={guide.slug}
             href={guide.href}
-            className="card-lift overflow-hidden rounded-2xl border border-line bg-white"
+            className="card-lift overflow-hidden border border-line bg-white"
           >
             <div className="relative aspect-[16/10]">
               <Image
@@ -45,7 +55,7 @@ export default function GuidesIndexPage() {
                 alt={guide.imageAlt}
                 fill
                 className="card-image object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes={IMAGE_SIZES.card}
               />
             </div>
             <div className="p-5">

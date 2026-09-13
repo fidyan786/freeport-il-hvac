@@ -1,16 +1,31 @@
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy policy for ${site.businessName} in ${site.city}, ${site.state}.`,
+  description: `How ${site.businessName} handles phone calls, service request forms, and on-site chat for HVAC inquiries in ${site.city}, ${site.state}.`,
   path: "/privacy-policy/",
 });
 
 export default function PrivacyPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 leading-relaxed text-muted">
-      <h1 className="font-serif text-4xl text-navy">Privacy Policy</h1>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy-policy/" },
+        ])}
+      />
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Privacy Policy" },
+        ]}
+      />
+      <h1 className="mt-6 font-serif text-4xl text-navy">Privacy Policy</h1>
       <p className="mt-6">
         This notice describes how {site.businessName} may handle information
         submitted for HVAC inquiries in {site.city}, {site.state}.

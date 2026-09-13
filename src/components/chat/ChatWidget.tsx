@@ -21,7 +21,7 @@ import type {
   Lead,
   QuickReply,
 } from "@/lib/chat/types";
-import { primaryCtaLabel } from "@/lib/site";
+import { isPhoneConfigured, primaryCtaLabel } from "@/lib/site";
 
 const STORAGE_KEY = "freeport-hvac-chat-v1";
 const SEEN_KEY = "freeport-hvac-chat-seen";
@@ -59,6 +59,7 @@ function assistantMessage(
 }
 
 function loadStored(): StoredChat | null {
+  if (typeof window === "undefined") return null;
   try {
     const raw = sessionStorage.getItem(STORAGE_KEY);
     return raw ? (JSON.parse(raw) as StoredChat) : null;
@@ -97,7 +98,9 @@ function fromEngine(engine: EngineResult, prior: ChatMessage[]) {
 
 export function ChatWidget() {
   const pathname = usePathname() ?? "/";
-  const [boot] = useState(() => bootstrapChat(window.location.pathname || "/"));
+  const [boot] = useState(() =>
+    bootstrapChat(typeof window === "undefined" ? pathname : window.location.pathname || pathname),
+  );
 
   const panelId = useId();
   const titleId = useId();
@@ -418,14 +421,14 @@ export function ChatWidget() {
       <button
         ref={launcherRef}
         type="button"
-        className="hvac-chat-launcher fixed right-4 z-[90] inline-flex h-12 items-center rounded-full bg-spruce pr-1 text-white shadow-lg ring-2 ring-copper/80 md:right-6"
+        className="hvac-chat-launcher fixed right-4 z-[90] inline-flex h-12 items-center rounded-none bg-spruce pr-1 text-white shadow-[0_12px_30px_rgba(17,18,17,0.28)] md:right-6"
         aria-label={open ? "Close Millrace Assistant" : "Open Millrace Assistant"}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => (open ? close() : openPanel())}
       >
         <span className="hidden pl-4 pr-1 text-sm font-semibold whitespace-nowrap md:inline">
-          Need HVAC Help?
+            Need help?
         </span>
         <span className="flex h-12 w-12 items-center justify-center">
           <ChatIcon open={open} />
@@ -442,7 +445,7 @@ export function ChatWidget() {
           role="dialog"
           aria-modal="true"
           aria-labelledby={titleId}
-          className="hvac-chat-panel fixed inset-x-0 z-[70] flex flex-col border-t border-line bg-cream md:inset-auto md:right-6 md:bottom-24 md:w-[min(24rem,calc(100vw-2rem))] md:border md:shadow-xl"
+          className="hvac-chat-panel fixed inset-x-0 z-[95] flex flex-col border-t border-line bg-cream md:inset-auto md:right-6 md:bottom-24 md:w-[min(24rem,calc(100vw-2rem))] md:border md:shadow-xl"
           style={
             {
               "--chat-top": `${viewport.offsetTop}px`,
@@ -464,7 +467,7 @@ export function ChatWidget() {
               context="chatbot-header"
               className="min-h-10 shrink-0 px-3 py-2 text-xs"
             >
-              Call now
+              {isPhoneConfigured() ? "Call now" : "Request Service"}
             </PhoneCta>
             <button
               type="button"

@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { PhoneCta } from "@/components/PhoneCta";
 import { primaryCtaLabel } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: { absolute: "Page not found | Millrace" },
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (

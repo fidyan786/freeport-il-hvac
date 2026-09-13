@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IMAGE_SIZES } from "@/lib/images";
 
 export function ServiceCard({
   href,
@@ -15,13 +16,13 @@ export function ServiceCard({
   imageAlt: string;
 }) {
   return (
-    <Link href={href} className="card-lift group overflow-hidden rounded-2xl border border-line bg-white">
-      <div className="relative aspect-[16/10] overflow-hidden">
+    <Link href={href} className="card-lift group overflow-hidden border border-line bg-white">
+      <div className="relative aspect-[16/10] overflow-hidden bg-line">
         <Image
           src={image}
           alt={imageAlt}
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes={IMAGE_SIZES.card}
           className="card-image object-cover"
         />
       </div>

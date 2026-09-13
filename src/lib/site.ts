@@ -43,14 +43,82 @@ export const site = {
 
 export type SiteConfig = typeof site;
 
+/**
+ * Public canonical origin. Single source of truth for metadataBase,
+ * canonical URLs, Open Graph URLs, sitemap, and robots.
+ *
+ * Never use VERCEL_URL — preview deployments must not become canonical.
+ * Localhost is allowed only on a local development machine.
+ */
+export const PRODUCTION_HOST = "freeport-il-hvac.vercel.app";
+const FALLBACK_PRODUCTION_ORIGIN = `https://${PRODUCTION_HOST}`;
+
+function stripTrailingSlash(value: string) {
+  return value.replace(/\/$/, "");
+}
+
+function hostnameOf(origin: string) {
+  try {
+    const href = origin.includes("://") ? origin : `https://${origin}`;
+    return new URL(href).hostname;
+  } catch {
+    return "";
+  }
+}
+
+function isLocalHostname(hostname: string) {
+  return hostname === "localhost" || hostname === "127.0.0.1" || hostname === "[::1]";
+}
+
+function isPreviewVercelHost(hostname: string) {
+  return hostname.endsWith(".vercel.app") && hostname !== PRODUCTION_HOST;
+}
+
+function finalizeCanonical(origin: string) {
+  const normalized = stripTrailingSlash(origin);
+  const hostname = hostnameOf(normalized);
+  const vercelEnv = process.env.VERCEL_ENV;
+
+  if (!hostname) {
+    throw new Error(
+      "Canonical site URL is invalid. Set NEXT_PUBLIC_SITE_URL to the production origin.",
+    );
+  }
+
+  if (isLocalHostname(hostname) && (vercelEnv === "production" || vercelEnv === "preview")) {
+    throw new Error(
+      "Canonical site URL cannot be localhost on a Vercel deployment. Set NEXT_PUBLIC_SITE_URL.",
+    );
+  }
+
+  if (isPreviewVercelHost(hostname) && vercelEnv === "production") {
+    throw new Error(
+      "Canonical site URL cannot be a preview Vercel host in production. Set NEXT_PUBLIC_SITE_URL.",
+    );
+  }
+
+  return normalized;
+}
+
 export function getSiteUrl() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (explicit) return explicit.replace(/\/$/, "");
+  if (explicit && !explicit.includes("[")) {
+    return finalizeCanonical(explicit);
+  }
 
   const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
-  if (production) return `https://${production.replace(/\/$/, "")}`;
+  if (production) {
+    const host = production.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    return finalizeCanonical(`https://${host}`);
+  }
 
-  return "https://freeport-il-hvac.vercel.app";
+  const onVercel = Boolean(process.env.VERCEL);
+  const localDev = process.env.NODE_ENV !== "production" && !onVercel;
+  if (localDev) {
+    return "http://localhost:3000";
+  }
+
+  return finalizeCanonical(FALLBACK_PRODUCTION_ORIGIN);
 }
 
 export function isPlaceholder(value: string) {

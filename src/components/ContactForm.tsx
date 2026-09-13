@@ -31,6 +31,11 @@ export function ContactForm() {
     setFieldError(null);
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+    if (String(data.companyWebsite ?? "").trim()) {
+      setStatus("ok");
+      form.reset();
+      return;
+    }
     const phone = String(data.phone ?? "");
     const zip = String(data.zip ?? "");
 
@@ -74,9 +79,19 @@ export function ContactForm() {
     <form
       onSubmit={onSubmit}
       onFocus={markStarted}
-      className="grid gap-4 border border-line bg-white p-5 sm:p-6"
+      className="relative grid gap-4 border border-line bg-white p-5 sm:p-6"
       noValidate
     >
+      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="companyWebsite">Company website</label>
+        <input
+          id="companyWebsite"
+          name="companyWebsite"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
+      </div>
       <div>
         <label htmlFor="name" className="block text-sm font-semibold text-spruce">
           Name
@@ -93,6 +108,8 @@ export function ContactForm() {
           type="tel"
           required
           autoComplete="tel"
+          aria-invalid={fieldError?.includes("phone") ? true : undefined}
+          aria-describedby={fieldError?.includes("phone") ? "contact-form-error" : undefined}
           className={field}
         />
       </div>
@@ -106,6 +123,8 @@ export function ContactForm() {
           inputMode="numeric"
           autoComplete="postal-code"
           required
+          aria-invalid={fieldError?.includes("ZIP") ? true : undefined}
+          aria-describedby={fieldError?.includes("ZIP") ? "contact-form-error" : undefined}
           className={field}
         />
       </div>
@@ -137,7 +156,11 @@ export function ContactForm() {
           placeholder="What stopped working?"
         />
       </div>
-      {fieldError ? <p className="text-sm text-danger">{fieldError}</p> : null}
+      {fieldError ? (
+        <p id="contact-form-error" className="text-sm text-danger" role="alert">
+          {fieldError}
+        </p>
+      ) : null}
       <button
         type="submit"
         disabled={status === "sending"}
@@ -146,10 +169,12 @@ export function ContactForm() {
         {status === "sending" ? "Sending…" : "Request a callback"}
       </button>
       {status === "ok" ? (
-        <p className="text-sm text-ok">Request received. We will follow up.</p>
+        <p className="text-sm text-ok" role="status">
+          Request received. We will follow up.
+        </p>
       ) : null}
       {status === "missing" ? (
-        <p className="text-sm text-spruce">
+        <p className="text-sm text-spruce" role="status">
           Online requests are not available right now.
           {isPhoneConfigured()
             ? ` Please call ${phoneDisplayLabel()} instead.`
@@ -157,7 +182,7 @@ export function ContactForm() {
         </p>
       ) : null}
       {status === "error" ? (
-        <p className="text-sm text-danger">
+        <p className="text-sm text-danger" role="alert">
           The form could not send.
           {isPhoneConfigured()
             ? ` Use ${phoneDisplayLabel()} instead.`

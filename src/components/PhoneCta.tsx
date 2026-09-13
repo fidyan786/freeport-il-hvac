@@ -1,4 +1,4 @@
-import { ctaHref, isPhoneConfigured, phoneDisplayLabel, primaryCtaLabel } from "@/lib/site";
+import { ctaHref, phoneDisplayLabel, primaryCtaLabel } from "@/lib/site";
 
 type Props = {
   children?: React.ReactNode;
@@ -55,5 +55,5 @@ export function PhonePlain({ className = "" }: { className?: string }) {
 }
 
 export function CallNowCopy() {
-  return isPhoneConfigured() ? primaryCtaLabel() : "Call for Service";
+  return primaryCtaLabel();
 }

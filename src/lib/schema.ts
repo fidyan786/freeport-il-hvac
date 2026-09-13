@@ -1,3 +1,5 @@
+import { serviceLinks } from "@/lib/nav";
+import { absoluteUrl } from "@/lib/seo";
 import {
   getSiteUrl,
   isHoursConfigured,
@@ -6,17 +8,28 @@ import {
   phoneE164,
   site,
 } from "@/lib/site";
-import { serviceLinks } from "@/lib/nav";
+
+function businessId() {
+  return `${getSiteUrl()}/#business`;
+}
 
 export function localBusinessSchema() {
-  const url = `${getSiteUrl()}/`;
+  const url = absoluteUrl("/");
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
+    "@id": businessId(),
     name: site.businessName,
     url,
-    image: `${getSiteUrl()}/brand/logo-horizontal.png`,
-    logo: `${getSiteUrl()}/brand/logo-icon.png`,
+    image: absoluteUrl("/opengraph-image", { asset: true }),
+    logo: absoluteUrl("/apple-icon", { asset: true }),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: site.city,
+      addressRegion: site.stateCode,
+      postalCode: site.zip,
+      addressCountry: "US",
+    },
     areaServed: [
       {
         "@type": "City",
@@ -49,6 +62,10 @@ export function localBusinessSchema() {
     ],
   };
 
+  if (site.address) {
+    (data.address as Record<string, unknown>).streetAddress = site.address;
+  }
+
   if (isPhoneConfigured()) {
     data.telephone = phoneE164() ?? site.phoneDisplay;
   }
@@ -57,35 +74,27 @@ export function localBusinessSchema() {
     data.openingHours = site.hours;
   }
 
-  if (site.address) {
-    data.address = {
-      "@type": "PostalAddress",
-      streetAddress: site.address,
-      addressLocality: site.city,
-      addressRegion: site.stateCode,
-      postalCode: site.zip,
-      addressCountry: "US",
-    };
-  }
-
-  // Never emit ratings, review counts, geo, or address unless verified.
   return data;
 }
 
 export function websiteSchema() {
+  const url = absoluteUrl("/");
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${url}#website`,
     name: isNameConfigured()
       ? site.businessName
       : `HVAC service in ${site.city}, ${site.stateCode}`,
-    url: `${getSiteUrl()}/`,
+    url,
     inLanguage: "en-US",
+    publisher: {
+      "@id": businessId(),
+    },
   };
 }
 
 export function breadcrumbSchema(items: Array<{ name: string; path: string }>) {
-  const base = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -93,7 +102,7 @@ export function breadcrumbSchema(items: Array<{ name: string; path: string }>) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${base}${item.path}`,
+      item: absoluteUrl(item.path),
     })),
   };
 }
@@ -107,29 +116,44 @@ export function serviceSchema({
   description: string;
   path: string;
 }) {
-  const data: Record<string, unknown> = {
+  const provider: Record<string, unknown> = {
+    "@type": "HVACBusiness",
+    "@id": businessId(),
+    name: site.businessName,
+    url: absoluteUrl("/"),
+  };
+
+  if (isPhoneConfigured()) {
+    provider.telephone = phoneE164() ?? site.phoneDisplay;
+  }
+
+  return {
     "@context": "https://schema.org",
     "@type": "Service",
     name,
+    serviceType: name,
     description,
-    url: `${getSiteUrl()}${path}`,
+    url: absoluteUrl(path),
     areaServed: {
       "@type": "City",
       name: site.city,
     },
-    provider: {
-      "@type": "HVACBusiness",
-      name: site.businessName,
-      url: `${getSiteUrl()}/`,
-    },
+    provider,
   };
+}
 
-  if (isPhoneConfigured()) {
-    (data.provider as Record<string, unknown>).telephone =
-      phoneE164() ?? site.phoneDisplay;
-  }
-
-  return data;
+export function serviceListSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `HVAC services in ${site.city}, ${site.stateCode}`,
+    itemListElement: serviceLinks.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      url: absoluteUrl(item.href),
+    })),
+  };
 }
 
 export function faqSchema(items: Array<{ q: string; a: string }>) {
@@ -152,23 +176,34 @@ export function articleSchema({
   description,
   path,
   datePublished,
+  image,
 }: {
   title: string;
   description: string;
   path: string;
   datePublished: string;
+  image?: string;
 }) {
-  return {
+  const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,
     datePublished,
-    dateModified: datePublished,
-    mainEntityOfPage: `${getSiteUrl()}${path}`,
+    mainEntityOfPage: absoluteUrl(path),
     author: {
       "@type": "Organization",
       name: site.businessName,
+      url: absoluteUrl("/"),
+    },
+    publisher: {
+      "@id": businessId(),
     },
   };
+
+  if (image) {
+    data.image = absoluteUrl(image, { asset: true });
+  }
+
+  return data;
 }

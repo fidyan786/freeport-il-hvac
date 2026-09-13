@@ -17,7 +17,7 @@ export function RelatedLinks({
           <li key={link.href}>
             <Link
               href={link.href}
-              className="card-lift block rounded-2xl border border-line bg-white p-4 hover:border-copper"
+              className="card-lift block border border-line bg-white p-4 hover:border-copper"
             >
               <span className="font-semibold text-spruce">{link.label}</span>
               {link.note ? (

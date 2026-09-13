@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
+import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { hoursLabel, phoneDisplayLabel, site } from "@/lib/site";
@@ -43,7 +44,7 @@ export default function AboutPage() {
               alt="HVAC technician performing outdoor equipment maintenance"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes={IMAGE_SIZES.hero}
             />
           </div>
         </div>
@@ -76,7 +77,7 @@ export default function AboutPage() {
           <li>County: {site.county}</li>
           <li>Work: furnace, AC, heat pumps, mini splits, indoor air, commercial HVAC</li>
           <li>Contact: {phoneDisplayLabel()}</li>
-          <li>{hoursLabel()}</li>
+          {hoursLabel() ? <li>{hoursLabel()}</li> : null}
         </ul>
       </div>
       <FinalCta

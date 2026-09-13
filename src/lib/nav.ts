@@ -1,3 +1,4 @@
+import { guides } from "@/content/guides";
 import {
   services,
   servicesByCategory,
@@ -70,8 +71,9 @@ export const megaGroups: MegaGroup[] = [
     items: pick([
       "heat-pump-repair-freeport-il",
       "heat-pump-installation-freeport-il",
-      "heat-pump-maintenance-freeport-il",
       "ductless-mini-split-freeport-il",
+      "mini-split-repair-freeport-il",
+      "mini-split-installation-freeport-il",
     ]),
   },
   {
@@ -97,9 +99,14 @@ export const megaGroups: MegaGroup[] = [
   },
   {
     id: "emergency",
-    title: "Emergency HVAC",
-    href: "/services/emergency-hvac-freeport-il/",
-    items: pick(["emergency-hvac-freeport-il"]),
+    title: "Urgent",
+    href: "/services/#emergency",
+    items: pick([
+      "emergency-hvac-freeport-il",
+      "hvac-repair-freeport-il",
+      "hvac-maintenance-freeport-il",
+      "hvac-replacement-freeport-il",
+    ]),
   },
 ];
 
@@ -178,21 +185,10 @@ export const indexablePaths = [
   "/services/",
   ...services.map((service) => service.href),
   "/guides/",
-  "/guides/ac-blowing-warm-air/",
-  "/guides/ac-freezing-up/",
-  "/guides/ac-constantly-running/",
-  "/guides/furnace-not-heating/",
-  "/guides/furnace-short-cycling/",
-  "/guides/hvac-strange-noises/",
-  "/guides/poor-airflow/",
-  "/guides/uneven-temperatures/",
-  "/guides/hvac-maintenance-checklist/",
-  "/guides/furnace-replacement-signals/",
-  "/guides/heat-pump-basics-northern-illinois/",
-  "/guides/indoor-air-quality-closed-homes/",
+  ...guides.map((guide) => guide.href),
   "/service-area/",
   "/about/",
   "/contact/",
   "/privacy-policy/",
   "/terms/",
-] as const;
+];
