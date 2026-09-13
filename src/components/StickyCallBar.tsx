@@ -1,16 +1,22 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { PhoneCta } from "@/components/PhoneCta";
-import { isPhoneConfigured, primaryCtaLabel } from "@/lib/site";
+import { primaryCtaLabel } from "@/lib/site";
 
 export function StickyCallBar() {
+  const pathname = usePathname() ?? "";
+  if (pathname.startsWith("/contact")) return null;
+
   return (
     <div
       data-sticky-call
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-spruce/20 bg-spruce p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-spruce/20 bg-spruce p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:hidden"
     >
       <PhoneCta context="sticky-mobile" className="min-h-12 w-full">
         <span className="inline-flex items-center gap-2">
           <PhoneIcon />
-          {isPhoneConfigured() ? "Call for Service" : primaryCtaLabel()}
+          {primaryCtaLabel()}
         </span>
       </PhoneCta>
     </div>

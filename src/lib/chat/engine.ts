@@ -9,7 +9,12 @@ import type {
   QuickReply,
   ServiceType,
 } from "@/lib/chat/types";
+import { isPhoneConfigured, site } from "@/lib/site";
 import { NICOR_GAS } from "@/lib/safety-contacts";
+
+function callNumber() {
+  return isPhoneConfigured() ? site.phoneDisplay : null;
+}
 
 const STATUS_REPLIES: QuickReply[] = [
   { id: "down", label: "Completely down" },
@@ -261,7 +266,7 @@ export function processTurn(input: {
   if (extracted.pricing) {
     lead = asked(lead, "pricing");
     return result(
-      "Repair costs depend on what's actually causing the problem. The quickest way to get help with your specific system is to call the HVAC team.",
+      `Repair costs depend on what's actually causing the problem. The quickest way to get help with your specific system is to call${callNumber() ? ` ${callNumber()}` : " the HVAC team"}.`,
       { ...lead, highIntent: true },
       { showCall: true, quickReplies: CALL_ONLY_REPLIES },
     );
@@ -271,7 +276,9 @@ export function processTurn(input: {
     return result(
       lead.serviceType || lead.issue
         ? gotItLine(lead)
-        : "Need help now? Calling is the fastest way to reach the HVAC team.",
+        : callNumber()
+          ? `Need help now? Call ${callNumber()}.`
+          : "Need help now? Calling is the fastest way to reach the HVAC team.",
       { ...lead, highIntent: true },
       { showCall: true, quickReplies: CALL_ONLY_REPLIES },
     );
@@ -325,7 +332,7 @@ export function processTurn(input: {
   if (!has(lead, "zip") && !lead.asked.includes("zip")) {
     lead = asked(lead, "zip");
     const prefix = lead.highIntent
-      ? "Need help now? Call whenever you're ready. "
+      ? `Need help now? Call${callNumber() ? ` ${callNumber()}` : ""} whenever you're ready. `
       : "";
     return result(
       `${prefix}What ZIP are you in? Freeport is 61032 — nearby towns can be confirmed by phone.`,
@@ -353,7 +360,11 @@ export function processTurn(input: {
   const lines = [gotItLine(lead)];
   if (coverage) lines.push(coverage);
   if (lead.phone) {
-    lines.push("Thanks — calling is still the fastest way to get on the schedule.");
+    lines.push(
+      callNumber()
+        ? `Thanks — calling ${callNumber()} is still the fastest way to get on the schedule.`
+        : "Thanks — calling is still the fastest way to get on the schedule.",
+    );
   }
 
   return result(lines.join(" "), { ...lead, highIntent: true }, {

@@ -1,4 +1,11 @@
-import { getSiteUrl, isHoursConfigured, isNameConfigured, isPhoneConfigured, site } from "@/lib/site";
+import {
+  getSiteUrl,
+  isHoursConfigured,
+  isNameConfigured,
+  isPhoneConfigured,
+  phoneE164,
+  site,
+} from "@/lib/site";
 import { serviceLinks } from "@/lib/nav";
 
 export function localBusinessSchema() {
@@ -43,7 +50,7 @@ export function localBusinessSchema() {
   };
 
   if (isPhoneConfigured()) {
-    data.telephone = site.phoneDisplay;
+    data.telephone = phoneE164() ?? site.phoneDisplay;
   }
 
   if (isHoursConfigured()) {
@@ -118,7 +125,8 @@ export function serviceSchema({
   };
 
   if (isPhoneConfigured()) {
-    (data.provider as Record<string, unknown>).telephone = site.phoneDisplay;
+    (data.provider as Record<string, unknown>).telephone =
+      phoneE164() ?? site.phoneDisplay;
   }
 
   return data;

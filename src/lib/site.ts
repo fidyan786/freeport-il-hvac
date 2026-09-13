@@ -20,8 +20,8 @@ function readPublic(name: string, fallback = "") {
 
 export const site = {
   businessName: readPublic("NEXT_PUBLIC_BUSINESS_NAME", BRAND.name),
-  phoneDisplay: readPublic("NEXT_PUBLIC_PHONE_DISPLAY"),
-  phoneTel: readPublic("NEXT_PUBLIC_PHONE_TEL"),
+  phoneDisplay: readPublic("NEXT_PUBLIC_PHONE_DISPLAY", "888-989-8898"),
+  phoneTel: readPublic("NEXT_PUBLIC_PHONE_TEL", "8889898898"),
   hours: readPublic("NEXT_PUBLIC_BUSINESS_HOURS"),
   city: "Freeport",
   state: "Illinois",
@@ -58,16 +58,27 @@ export function isPlaceholder(value: string) {
   return value.includes("[") && value.includes("]");
 }
 
-export function isPhoneConfigured() {
-  if (isPlaceholder(site.phoneDisplay)) return false;
+export function phoneDigits() {
+  if (isPlaceholder(site.phoneDisplay) && isPlaceholder(site.phoneTel)) {
+    return null;
+  }
   const digits = (site.phoneTel || site.phoneDisplay).replace(/\D/g, "");
-  return digits.length >= 10;
+  if (digits.length < 10) return null;
+  return digits.slice(-10);
+}
+
+export function isPhoneConfigured() {
+  return Boolean(phoneDigits());
+}
+
+export function phoneE164() {
+  const digits = phoneDigits();
+  return digits ? `+1${digits}` : null;
 }
 
 export function phoneHref() {
-  if (!isPhoneConfigured()) return null;
-  const digits = (site.phoneTel || site.phoneDisplay).replace(/\D/g, "");
-  return `tel:+1${digits.slice(-10)}`;
+  const e164 = phoneE164();
+  return e164 ? `tel:${e164}` : null;
 }
 
 export function ctaHref() {
@@ -88,15 +99,15 @@ export function primaryCtaLabel(action: "call" | "request" = "call") {
       ? `Call ${site.phoneDisplay}`
       : `Request service · ${site.phoneDisplay}`;
   }
-  return "Call for Service";
+  return "Request Service";
 }
 
 export function phoneDisplayLabel() {
-  return isPhoneConfigured() ? site.phoneDisplay : "Call for Service";
+  return isPhoneConfigured() ? site.phoneDisplay : "Request Service";
 }
 
 export function hoursLabel() {
-  return isHoursConfigured() ? site.hours : "Call to confirm availability";
+  return isHoursConfigured() ? site.hours : "";
 }
 
 export const localLabel = `${site.city}, ${site.stateCode}`;
