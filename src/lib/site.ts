@@ -151,7 +151,8 @@ export function getPublicOrigin() {
 export function googleSiteVerification() {
   const value =
     readPublic("NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION") ||
-    readPublic("GOOGLE_SITE_VERIFICATION");
+    readPublic("GOOGLE_SITE_VERIFICATION") ||
+    "x0uFz9tFyvdygV8RR7eIe-omOKFxjPIDDOx_MaowXfo";
   return value;
 }
 
