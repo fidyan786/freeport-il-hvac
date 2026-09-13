@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Logo } from "@/components/Logo";
 import { PhoneCta } from "@/components/PhoneCta";
 import { megaGroups, primaryNav } from "@/lib/nav";
@@ -41,9 +42,10 @@ export function Header() {
       if (open) setOpen(false);
     }
     function onPointer(event: MouseEvent) {
-      if (!wrapRef.current?.contains(event.target as Node)) {
-        setServicesOpen(false);
-      }
+      const target = event.target as Node;
+      if (wrapRef.current?.contains(target)) return;
+      if ((target as Element).closest?.('[data-mega-menu="true"]')) return;
+      setServicesOpen(false);
     }
     document.addEventListener("keydown", onKey);
     document.addEventListener("mousedown", onPointer);
@@ -60,8 +62,27 @@ export function Header() {
     };
   }, [open]);
 
+  const [headerH, setHeaderH] = useState(64);
+  const phoneReady = isPhoneConfigured();
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const sync = () => setHeaderH(Math.round(el.getBoundingClientRect().bottom));
+    sync();
+    const observer = new ResizeObserver(sync);
+    observer.observe(el);
+    window.addEventListener("resize", sync);
+    window.addEventListener("scroll", sync, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", sync);
+      window.removeEventListener("scroll", sync);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-spruce text-white">
+    <header className="sticky top-0 z-[80] isolate border-b border-white/10 bg-spruce text-white">
       <div
         ref={wrapRef}
         className="relative mx-auto flex min-w-0 max-w-6xl items-center gap-3 px-4 py-3 sm:px-6"
@@ -72,7 +93,7 @@ export function Header() {
         </Link>
 
         <nav
-          className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex"
+          className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex"
           aria-label="Primary"
         >
           <button
@@ -88,8 +109,8 @@ export function Header() {
                 event.preventDefault();
                 setServicesOpen(true);
                 window.requestAnimationFrame(() => {
-                  wrapRef.current
-                    ?.querySelector<HTMLElement>(".mega-panel a")
+                  document
+                    .querySelector<HTMLElement>("[data-mega-menu] a")
                     ?.focus();
                 });
               }
@@ -112,18 +133,29 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex shrink-0 items-center gap-2">
-          <PhoneCta
-            context="header-call"
-            className="hidden min-h-10 px-4 py-2 lg:inline-flex"
-          >
-            {isPhoneConfigured() ? primaryCtaLabel() : "Call for Service"}
-          </PhoneCta>
-          <Link
-            href="/contact/"
-            className="hidden min-h-10 items-center justify-center border border-white/25 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 lg:inline-flex"
-          >
-            Request Service
-          </Link>
+          {phoneReady ? (
+            <>
+              <PhoneCta
+                context="header-call"
+                className="hidden min-h-10 px-4 py-2 lg:inline-flex"
+              >
+                {primaryCtaLabel()}
+              </PhoneCta>
+              <Link
+                href="/contact/"
+                className="hidden min-h-10 items-center justify-center border border-white/25 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 lg:inline-flex"
+              >
+                Request Service
+              </Link>
+            </>
+          ) : (
+            <PhoneCta
+              context="header-request"
+              className="hidden min-h-10 px-4 py-2 lg:inline-flex"
+            >
+              Request Service
+            </PhoneCta>
+          )}
           <button
             type="button"
             className="inline-flex min-h-11 min-w-11 items-center justify-center border border-white/20 lg:hidden"
@@ -136,14 +168,17 @@ export function Header() {
           </button>
         </div>
 
-        {servicesOpen ? (
-          <div
-            id={menuId}
-            role="navigation"
-            aria-label="Services"
-            className="mega-panel absolute top-full left-0 z-50 hidden w-full max-w-full border border-line bg-white text-ink shadow-[0_20px_40px_rgba(17,18,17,0.18)] lg:block"
-          >
-            <div className="grid max-h-[min(70vh,36rem)] grid-cols-2 gap-x-6 gap-y-6 overflow-y-auto p-5 sm:p-6 md:grid-cols-3 xl:grid-cols-6">
+        {servicesOpen
+          ? createPortal(
+              <div
+                id={menuId}
+                role="navigation"
+                aria-label="Services"
+                data-mega-menu="true"
+                className="mega-panel fixed inset-x-0 z-[90] hidden border-t border-line bg-cream text-ink shadow-[0_24px_50px_rgba(17,18,17,0.18)] lg:block"
+                style={{ top: headerH }}
+              >
+            <div className="mx-auto grid max-h-[min(70vh,36rem)] max-w-6xl grid-cols-2 gap-x-8 gap-y-6 overflow-y-auto p-5 sm:p-6 md:grid-cols-3">
               {megaGroups.map((group) => (
                 <div key={group.id} className="min-w-0">
                   <Link
@@ -169,7 +204,7 @@ export function Header() {
                 </div>
               ))}
             </div>
-            <div className="flex items-center justify-between gap-3 border-t border-line px-5 py-3 sm:px-6">
+            <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 border-t border-line px-5 py-3 sm:px-6">
               <p className="text-xs text-muted">Freeport, Illinois 61032</p>
               <Link
                 href="/services/"
@@ -179,14 +214,16 @@ export function Header() {
                 View all services
               </Link>
             </div>
-          </div>
-        ) : null}
+          </div>,
+              document.body,
+            )
+          : null}
       </div>
 
       {open ? (
         <div
           id={drawerId}
-          className="drawer-in fixed inset-0 z-50 bg-spruce-deep lg:hidden"
+          className="drawer-in fixed inset-0 z-[100] bg-spruce-deep lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
@@ -268,7 +305,7 @@ export function Header() {
               </Link>
             </nav>
             <PhoneCta context="mobile-menu" className="mt-6 min-h-12 w-full">
-              {isPhoneConfigured() ? primaryCtaLabel() : "Call for Service"}
+              {phoneReady ? primaryCtaLabel() : "Request Service"}
             </PhoneCta>
           </div>
         </div>

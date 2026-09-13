@@ -40,7 +40,7 @@
   --color-muted: var(--muted);
   --color-paper: var(--paper);
   --color-cream: var(--cream);
-  --color-line: var(--line);
+  --color-white: var(--white);
   --color-ok: var(--ok);
   --color-danger: var(--danger);
   --font-sans: var(--font-manrope);
@@ -81,7 +81,7 @@ summary:focus-visible {
   position: absolute;
   left: 1rem;
   top: -40px;
-  z-index: 80;
+  z-index: 110;
   border-radius: 0.5rem;
   background: var(--copper);
   color: white;
@@ -169,6 +169,8 @@ summary:focus-visible {
 
 .mega-panel {
   animation: mega-in 180ms ease-out;
+  background: #f7f3ec !important;
+  isolation: isolate;
 }
 
 .drawer-in {
