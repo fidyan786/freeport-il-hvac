@@ -1,17 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { track } from "@/lib/analytics";
 import { serviceLinks } from "@/lib/nav";
-import { site } from "@/lib/site";
+import { phoneDisplayLabel, primaryCtaLabel } from "@/lib/site";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "missing" | "error">(
     "idle",
   );
+  const started = useRef(false);
+
+  function markStarted() {
+    if (started.current) return;
+    started.current = true;
+    track("form_started");
+  }
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
+    track("form_submitted");
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
 
@@ -36,22 +45,23 @@ export function ContactForm() {
     }
   }
 
+  const field =
+    "mt-1 w-full rounded-xl border border-line bg-white px-3 py-3 text-ink";
+
   return (
-    <form onSubmit={onSubmit} className="grid gap-4 rounded-sm border border-line bg-white p-5 sm:p-6">
+    <form
+      onSubmit={onSubmit}
+      onFocus={markStarted}
+      className="grid gap-4 rounded-2xl border border-line bg-white p-5 sm:p-6"
+    >
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-navy">
+        <label htmlFor="name" className="block text-sm font-semibold text-spruce">
           Name
         </label>
-        <input
-          id="name"
-          name="name"
-          required
-          autoComplete="name"
-          className="mt-1 w-full rounded-sm border border-line px-3 py-3"
-        />
+        <input id="name" name="name" required autoComplete="name" className={field} />
       </div>
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-navy">
+        <label htmlFor="phone" className="block text-sm font-semibold text-spruce">
           Phone
         </label>
         <input
@@ -60,20 +70,14 @@ export function ContactForm() {
           type="tel"
           required
           autoComplete="tel"
-          className="mt-1 w-full rounded-sm border border-line px-3 py-3"
+          className={field}
         />
       </div>
       <div>
-        <label htmlFor="service" className="block text-sm font-semibold text-navy">
-          Service needed
+        <label htmlFor="service" className="block text-sm font-semibold text-spruce">
+          Service
         </label>
-        <select
-          id="service"
-          name="service"
-          required
-          defaultValue=""
-          className="mt-1 w-full rounded-sm border border-line px-3 py-3"
-        >
+        <select id="service" name="service" required defaultValue="" className={field}>
           <option value="" disabled>
             Select a service
           </option>
@@ -85,25 +89,55 @@ export function ContactForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-navy">
-          Message
+        <label htmlFor="problem" className="block text-sm font-semibold text-spruce">
+          Problem
         </label>
         <textarea
-          id="message"
-          name="message"
+          id="problem"
+          name="problem"
           rows={4}
-          className="mt-1 w-full rounded-sm border border-line px-3 py-3"
-          placeholder="What stopped working, and which ZIP?"
+          required
+          className={field}
+          placeholder="What stopped working?"
         />
       </div>
+      <div>
+        <label htmlFor="zip" className="block text-sm font-semibold text-spruce">
+          ZIP
+        </label>
+        <input
+          id="zip"
+          name="zip"
+          inputMode="numeric"
+          autoComplete="postal-code"
+          required
+          className={field}
+        />
+      </div>
+      <div>
+        <label htmlFor="contactMethod" className="block text-sm font-semibold text-spruce">
+          Preferred contact method
+        </label>
+        <select
+          id="contactMethod"
+          name="contactMethod"
+          required
+          defaultValue="phone"
+          className={field}
+        >
+          <option value="phone">Phone</option>
+          <option value="text">Text</option>
+          <option value="either">Either</option>
+        </select>
+      </div>
       <p className="text-xs text-muted">
-        This form is secondary to calling {site.phoneDisplay}. Delivery is
+        This form is secondary to {primaryCtaLabel().toLowerCase()}. Delivery is
         connected only after a form endpoint is configured.
       </p>
       <button
         type="submit"
         disabled={status === "sending"}
-        className="min-h-12 rounded-sm bg-navy px-5 py-3 text-sm font-semibold text-white hover:bg-navy-mid disabled:opacity-70"
+        className="min-h-12 rounded-full bg-spruce px-5 py-3 text-sm font-semibold text-white hover:bg-spruce-mid disabled:opacity-70"
       >
         {status === "sending" ? "Sending…" : "Request a callback"}
       </button>
@@ -111,13 +145,13 @@ export function ContactForm() {
         <p className="text-sm text-ok">Request received. We will follow up.</p>
       ) : null}
       {status === "missing" ? (
-        <p className="text-sm text-navy">
-          Form delivery is not connected yet. Please call {site.phoneDisplay}.
+        <p className="text-sm text-spruce">
+          Form delivery is not connected yet. Please {primaryCtaLabel().toLowerCase()}.
         </p>
       ) : null}
       {status === "error" ? (
         <p className="text-sm text-danger">
-          The form could not send. Call {site.phoneDisplay} instead.
+          The form could not send. Use {phoneDisplayLabel()} instead.
         </p>
       ) : null}
     </form>

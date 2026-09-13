@@ -1,6 +1,6 @@
 "use client";
 
-import { site } from "@/lib/site";
+import { phoneDisplayLabel } from "@/lib/site";
 
 export default function GlobalError({
   reset,
@@ -14,14 +14,14 @@ export default function GlobalError({
         style={{
           margin: 0,
           fontFamily: "Georgia, serif",
-          background: "#faf7f1",
-          color: "#1b2430",
+          background: "#f7f3ec",
+          color: "#1a1c19",
         }}
       >
         <main style={{ maxWidth: 640, margin: "4rem auto", padding: "0 1.25rem" }}>
           <h1>The site could not load</h1>
           <p>
-            Please try again, or call {site.phoneDisplay} for HVAC help in
+            Please try again, or use {phoneDisplayLabel()} for HVAC help in
             Freeport, Illinois.
           </p>
           <button
@@ -33,6 +33,7 @@ export default function GlobalError({
               border: 0,
               padding: "0.85rem 1.25rem",
               fontWeight: 600,
+              borderRadius: 999,
             }}
           >
             Try again

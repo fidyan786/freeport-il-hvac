@@ -10,18 +10,19 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0c2238",
+          background: "#14352c",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          borderRadius: 8,
         }}
       >
         <div
           style={{
             width: 14,
-            height: 14,
+            height: 10,
             background: "#c45c26",
-            transform: "rotate(45deg)",
+            clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
           }}
         />
       </div>

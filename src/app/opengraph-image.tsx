@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
-import { site } from "@/lib/site";
+import { BRAND, site } from "@/lib/site";
 
-export const alt = `HVAC service in ${site.city}, ${site.state}`;
+export const alt = `${BRAND.name} — HVAC service in ${site.city}, ${site.state}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,7 +12,7 @@ export default function OpenGraphImage() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0c2238",
+          background: "#14352c",
           color: "white",
           display: "flex",
           flexDirection: "column",
@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
             display: "flex",
             fontSize: 22,
             letterSpacing: 6,
-            color: "#c45c26",
+            color: "#c4a574",
           }}
         >
           {`${site.city.toUpperCase()}, ILLINOIS · 61032`}
@@ -34,22 +34,23 @@ export default function OpenGraphImage() {
           <div
             style={{
               display: "flex",
-              fontSize: 58,
-              lineHeight: 1.15,
-              maxWidth: 980,
+              fontSize: 28,
+              color: "#c45c26",
+              letterSpacing: 4,
             }}
           >
-            Furnace and AC service for Stephenson County winters.
+            MILLRACE HEATING & AIR
           </div>
           <div
             style={{
               display: "flex",
-              marginTop: 24,
-              fontSize: 28,
-              color: "rgba(255,255,255,0.75)",
+              fontSize: 54,
+              lineHeight: 1.15,
+              maxWidth: 980,
+              marginTop: 16,
             }}
           >
-            {`Call ${site.phoneDisplay}`}
+            Heating and cooling for Freeport winters that actually get cold.
           </div>
         </div>
       </div>

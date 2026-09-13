@@ -1,36 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0c2238;
-  --navy-deep: #071525;
-  --navy-mid: #16324f;
-  --ink: #1b2430;
-  --muted: #5b6774;
-  --paper: #f3eee4;
-  --cream: #faf7f1;
+  --spruce: #14352c;
+  --spruce-deep: #0c221c;
+  --spruce-mid: #1f4a3e;
+  --navy: #14352c;
+  --navy-deep: #0c221c;
+  --navy-mid: #1f4a3e;
+  --copper: #c45c26;
+  --copper-dark: #a34a1d;
+  --ember: #c45c26;
+  --ember-dark: #a34a1d;
+  --brass: #c4a574;
+  --ink: #1a1c19;
+  --muted: #5a615c;
+  --paper: #efe8dc;
+  --cream: #f7f3ec;
   --white: #ffffff;
-  --ember: #b45309;
-  --ember-dark: #9a3412;
-  --line: #ddd4c6;
+  --line: #d5cfc4;
   --ok: #2f6f4e;
   --danger: #8b1e1e;
+  --shadow: 0 18px 50px -24px rgb(12 34 28 / 0.45);
+  --radius: 0.85rem;
 }
 
 @theme inline {
+  --color-spruce: var(--spruce);
+  --color-spruce-deep: var(--spruce-deep);
+  --color-spruce-mid: var(--spruce-mid);
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
   --color-navy-mid: var(--navy-mid);
+  --color-copper: var(--copper);
+  --color-copper-dark: var(--copper-dark);
+  --color-ember: var(--ember);
+  --color-ember-dark: var(--ember-dark);
+  --color-brass: var(--brass);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-paper: var(--paper);
   --color-cream: var(--cream);
-  --color-ember: var(--ember);
-  --color-ember-dark: var(--ember-dark);
   --color-line: var(--line);
   --color-ok: var(--ok);
   --color-danger: var(--danger);
-  --font-sans: var(--font-source-sans);
-  --font-serif: var(--font-source-serif);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-fraunces);
+  --radius-brand: var(--radius);
 }
 
 html {
@@ -49,14 +64,16 @@ h2,
 h3,
 .font-serif {
   font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
 }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid var(--ember);
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--copper);
   outline-offset: 3px;
 }
 
@@ -65,14 +82,97 @@ textarea:focus-visible {
   left: 1rem;
   top: -40px;
   z-index: 80;
-  border-radius: 0.25rem;
-  background: var(--ember);
+  border-radius: 0.5rem;
+  background: var(--copper);
   color: white;
   padding: 0.5rem 0.75rem;
 }
 
 .skip-link:focus {
   top: 1rem;
+}
+
+.container-page {
+  width: min(72rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    width: min(72rem, calc(100% - 3rem));
+  }
+}
+
+.reveal {
+  animation: reveal-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 80ms;
+}
+.reveal-delay-2 {
+  animation-delay: 160ms;
+}
+.reveal-delay-3 {
+  animation-delay: 240ms;
+}
+.reveal-delay-4 {
+  animation-delay: 320ms;
+}
+
+.hero-kenburns {
+  animation: kenburns 18s ease-out both;
+}
+
+.float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+.card-lift {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--spruce) 35%, var(--line));
+}
+
+.card-lift .card-image {
+  transition: transform 500ms ease;
+}
+
+.card-lift:hover .card-image {
+  transform: scale(1.06);
+}
+
+.card-lift .card-arrow {
+  transition: transform 220ms ease;
+}
+
+.card-lift:hover .card-arrow {
+  transform: translateX(4px);
+}
+
+.cta-pulse {
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.cta-pulse:hover {
+  transform: translateY(-1px);
+}
+
+.mega-panel {
+  animation: mega-in 180ms ease-out;
+}
+
+.drawer-in {
+  animation: drawer-in 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 body.hvac-chat-open [data-sticky-call] {
@@ -97,7 +197,7 @@ body.hvac-chat-open [data-sticky-call] {
 @media (min-width: 768px) {
   .hvac-chat-panel {
     top: auto;
-    height: min(40rem, calc(100dvh - 7rem));
+    height: min(42rem, calc(100dvh - 6.5rem));
   }
 }
 
@@ -116,10 +216,79 @@ body.hvac-chat-open [data-sticky-call] {
     scroll-behavior: auto;
   }
 
+  .reveal,
+  .hero-kenburns,
+  .float-soft,
+  .mega-panel,
+  .drawer-in,
   .hvac-chat-launcher,
   .hvac-chat-panel,
   .hvac-chat-typing {
     animation: none;
+  }
+
+  .card-lift,
+  .card-lift .card-image,
+  .card-lift .card-arrow,
+  .cta-pulse {
+    transition: none;
+  }
+
+  .card-lift:hover,
+  .cta-pulse:hover {
+    transform: none;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.08) translate3d(0, 8px, 0);
+  }
+  to {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes mega-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drawer-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 

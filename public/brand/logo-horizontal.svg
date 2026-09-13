@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-label="Millrace Heating & Air">
+  <rect width="420" height="96" fill="none"/>
+  <g transform="translate(8,16)">
+    <rect width="64" height="64" rx="14" fill="#14352c"/>
+    <g fill="none" stroke="#f7f3ec" stroke-width="2.1" stroke-linecap="round">
+      <circle cx="32" cy="32" r="17.5"/>
+      <circle cx="32" cy="32" r="5.5"/>
+      <path d="M32 14.5v12.2M32 37.3v12.2M14.5 32h12.2M37.3 32h12.2"/>
+      <path d="M20.1 20.1l8.6 8.6M35.3 35.3l8.6 8.6M20.1 43.9l8.6-8.6M35.3 28.7l8.6-8.6"/>
+    </g>
+    <path d="M24.2 33.4 32 26.2l7.8 7.2v7.2H24.2z" fill="#c45c26"/>
+    <rect x="30.2" y="35.4" width="3.6" height="5.2" fill="#f7f3ec"/>
+  </g>
+  <text x="92" y="48" font-family="Georgia, serif" font-size="32" fill="#14352c">Millrace</text>
+  <text x="92" y="72" font-family="Arial, sans-serif" font-size="12" letter-spacing="3.2" fill="#c45c26">HEATING &amp; AIR</text>
+</svg>

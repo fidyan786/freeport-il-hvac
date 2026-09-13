@@ -18,11 +18,14 @@ export async function POST(request: Request) {
     name: clean(body.name),
     phone: clean(body.phone),
     service: clean(body.service),
-    message: clean(body.message),
+    problem: clean(body.problem),
+    zip: clean(body.zip).slice(0, 10),
+    contactMethod: clean(body.contactMethod),
+    message: clean(body.message) || clean(body.problem),
     submittedAt: new Date().toISOString(),
   };
 
-  if (!payload.name || !payload.phone || !payload.service) {
+  if (!payload.name || !payload.phone || !payload.service || !payload.problem) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 

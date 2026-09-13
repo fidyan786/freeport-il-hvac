@@ -94,6 +94,11 @@ const QUICK_REPLY_MAP: Record<string, Partial<ExtractedSignals>> = {
     issue: "mini split",
   },
   iaq: { serviceType: "iaq", intent: "question", issue: "indoor air quality" },
+  hvac_repair: {
+    serviceType: "furnace_repair",
+    intent: "repair",
+    issue: "HVAC repair",
+  },
   commercial: {
     serviceType: "commercial",
     intent: "commercial",

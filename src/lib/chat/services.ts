@@ -3,42 +3,49 @@ import type { ServiceType } from "@/lib/chat/types";
 export const SERVICE_PAGES: Partial<
   Record<ServiceType, { href: string; label: string }>
 > = {
-  ac_repair: { href: "/ac-repair-freeport-il/", label: "AC repair in Freeport" },
+  ac_repair: {
+    href: "/services/ac-repair-freeport-il/",
+    label: "AC repair in Freeport",
+  },
   furnace_repair: {
-    href: "/furnace-repair-freeport-il/",
+    href: "/services/furnace-repair-freeport-il/",
     label: "furnace repair in Freeport",
   },
   heat_pump: {
-    href: "/heat-pump-services-freeport-il/",
+    href: "/services/heat-pump-repair-freeport-il/",
     label: "heat pump service",
   },
   mini_split: {
-    href: "/ductless-mini-split-freeport-il/",
+    href: "/services/ductless-mini-split-freeport-il/",
     label: "ductless mini splits",
   },
   iaq: {
-    href: "/indoor-air-quality-freeport-il/",
+    href: "/services/indoor-air-quality-freeport-il/",
     label: "indoor air quality",
   },
   maintenance: {
-    href: "/hvac-maintenance-freeport-il/",
+    href: "/services/hvac-maintenance-freeport-il/",
     label: "HVAC maintenance",
   },
   ac_install: {
-    href: "/ac-installation-replacement-freeport-il/",
+    href: "/services/ac-installation-freeport-il/",
     label: "AC installation",
   },
   furnace_install: {
-    href: "/furnace-installation-replacement-freeport-il/",
+    href: "/services/furnace-installation-freeport-il/",
     label: "furnace installation",
   },
   emergency: {
-    href: "/emergency-hvac-freeport-il/",
+    href: "/services/emergency-hvac-freeport-il/",
     label: "emergency HVAC",
   },
   commercial: {
-    href: "/commercial-hvac-freeport-il/",
+    href: "/services/commercial-hvac-freeport-il/",
     label: "commercial HVAC",
+  },
+  hvac_replace: {
+    href: "/services/hvac-replacement-freeport-il/",
+    label: "HVAC replacement",
   },
 };
 

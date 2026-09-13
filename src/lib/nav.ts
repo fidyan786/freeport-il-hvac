@@ -1,65 +1,21 @@
-export const serviceLinks = [
-  {
-    href: "/emergency-hvac-freeport-il/",
-    label: "Emergency HVAC",
-    short: "Emergency",
-  },
-  {
-    href: "/furnace-repair-freeport-il/",
-    label: "Furnace Repair",
-    short: "Furnace Repair",
-  },
-  {
-    href: "/ac-repair-freeport-il/",
-    label: "AC Repair",
-    short: "AC Repair",
-  },
-  {
-    href: "/furnace-installation-replacement-freeport-il/",
-    label: "Furnace Installation",
-    short: "Furnace Install",
-  },
-  {
-    href: "/ac-installation-replacement-freeport-il/",
-    label: "AC Installation",
-    short: "AC Install",
-  },
-  {
-    href: "/hvac-maintenance-freeport-il/",
-    label: "HVAC Maintenance",
-    short: "Maintenance",
-  },
-  {
-    href: "/heat-pump-services-freeport-il/",
-    label: "Heat Pump Services",
-    short: "Heat Pumps",
-  },
-  {
-    href: "/ductless-mini-split-freeport-il/",
-    label: "Ductless Mini Splits",
-    short: "Mini Splits",
-  },
-  {
-    href: "/indoor-air-quality-freeport-il/",
-    label: "Indoor Air Quality",
-    short: "Indoor Air",
-  },
-  {
-    href: "/commercial-hvac-freeport-il/",
-    label: "Commercial HVAC",
-    short: "Commercial",
-  },
-] as const;
+import {
+  services,
+  servicesByCategory,
+  type ServiceCategory,
+} from "@/content/services";
 
-export const primaryNav = [
-  { href: "/", label: "Home" },
-  { href: "/emergency-hvac-freeport-il/", label: "Emergency" },
-  { href: "/service-areas/", label: "Service Area" },
-  { href: "/reviews/", label: "Reviews" },
-  { href: "/about/", label: "About" },
-  { href: "/blog/", label: "Guides" },
-  { href: "/contact/", label: "Contact" },
-] as const;
+export type NavLink = {
+  href: string;
+  label: string;
+  description?: string;
+};
+
+export type MegaGroup = {
+  id: string;
+  title: string;
+  href: string;
+  items: NavLink[];
+};
 
 export const nearbyCommunities = [
   { name: "Lena", zip: "61048" },
@@ -74,28 +30,157 @@ export const nearbyCommunities = [
   { name: "Winslow", zip: "61089" },
 ] as const;
 
+function links(category: ServiceCategory): NavLink[] {
+  return servicesByCategory(category).map((service) => ({
+    href: service.href,
+    label: service.navLabel,
+    description: service.navDescription,
+  }));
+}
+
+const specialized: NavLink[] = [
+  ...servicesByCategory("ductless").map((service) => ({
+    href: service.href,
+    label: service.navLabel,
+    description: service.navDescription,
+  })),
+  ...servicesByCategory("heat-pump").map((service) => ({
+    href: service.href,
+    label: service.navLabel,
+    description: service.navDescription,
+  })),
+];
+
+export const megaGroups: MegaGroup[] = [
+  {
+    id: "heating",
+    title: "Heating",
+    href: "/services/#heating",
+    items: links("heating"),
+  },
+  {
+    id: "cooling",
+    title: "Cooling",
+    href: "/services/#cooling",
+    items: links("cooling"),
+  },
+  {
+    id: "hvac",
+    title: "HVAC",
+    href: "/services/#hvac",
+    items: links("hvac"),
+  },
+  {
+    id: "iaq",
+    title: "Indoor Air",
+    href: "/services/#iaq",
+    items: links("iaq"),
+  },
+  {
+    id: "specialized",
+    title: "Specialized",
+    href: "/services/#specialized",
+    items: specialized,
+  },
+  {
+    id: "commercial",
+    title: "Commercial",
+    href: "/services/#commercial",
+    items: links("commercial"),
+  },
+];
+
+export const serviceLinks: NavLink[] = services.map((service) => ({
+  href: service.href,
+  label: service.navLabel,
+  description: service.navDescription,
+}));
+
+export const primaryNav: NavLink[] = [
+  { href: "/services/", label: "Services" },
+  { href: "/services/#heating", label: "Heating" },
+  { href: "/services/#cooling", label: "Cooling" },
+  { href: "/services/indoor-air-quality-freeport-il/", label: "Indoor Air Quality" },
+  { href: "/services/commercial-hvac-freeport-il/", label: "Commercial" },
+  { href: "/service-area/", label: "Service Areas" },
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
+];
+
+export const footerServiceHighlights: NavLink[] = [
+  { href: "/services/furnace-repair-freeport-il/", label: "Furnace Repair" },
+  { href: "/services/ac-repair-freeport-il/", label: "AC Repair" },
+  { href: "/services/emergency-hvac-freeport-il/", label: "Emergency HVAC" },
+  { href: "/services/hvac-maintenance-freeport-il/", label: "HVAC Maintenance" },
+  { href: "/services/heat-pump-repair-freeport-il/", label: "Heat Pumps" },
+  { href: "/services/ductless-mini-split-freeport-il/", label: "Mini Splits" },
+  { href: "/services/indoor-air-quality-freeport-il/", label: "Indoor Air Quality" },
+  { href: "/services/commercial-hvac-freeport-il/", label: "Commercial HVAC" },
+];
+
+export const problemLinks: Array<NavLink & { text: string }> = [
+  {
+    href: "/guides/ac-blowing-warm-air/",
+    label: "AC blowing warm air",
+    text: "The system runs, but supply vents feel like outdoor air.",
+  },
+  {
+    href: "/services/furnace-repair-freeport-il/",
+    label: "Furnace not heating",
+    text: "No ignition, weak heat, or a house that will not hold temperature.",
+  },
+  {
+    href: "/services/hvac-repair-freeport-il/",
+    label: "System won't turn on",
+    text: "No response from heat or cooling when the thermostat calls.",
+  },
+  {
+    href: "/guides/hvac-strange-noises/",
+    label: "HVAC making strange noises",
+    text: "Banging, squealing, rattling, or grinding from the equipment.",
+  },
+  {
+    href: "/guides/poor-airflow/",
+    label: "Weak airflow",
+    text: "Rooms starve for air even though the blower sounds busy.",
+  },
+  {
+    href: "/guides/uneven-temperatures/",
+    label: "Uneven temperatures",
+    text: "One floor is fine. Another is a different season.",
+  },
+  {
+    href: "/guides/ac-constantly-running/",
+    label: "System constantly running",
+    text: "The equipment never finishes a cycle, or short-cycles and starts again.",
+  },
+  {
+    href: "/guides/indoor-air-quality-closed-homes/",
+    label: "Poor indoor air quality",
+    text: "Dust, dryness, or stale air after months of closed windows.",
+  },
+];
+
 export const indexablePaths = [
   "/",
-  "/emergency-hvac-freeport-il/",
-  "/furnace-repair-freeport-il/",
-  "/ac-repair-freeport-il/",
-  "/furnace-installation-replacement-freeport-il/",
-  "/ac-installation-replacement-freeport-il/",
-  "/hvac-maintenance-freeport-il/",
-  "/heat-pump-services-freeport-il/",
-  "/ductless-mini-split-freeport-il/",
-  "/indoor-air-quality-freeport-il/",
-  "/commercial-hvac-freeport-il/",
-  "/service-areas/",
+  "/services/",
+  ...services.map((service) => service.href),
+  "/guides/",
+  "/guides/ac-blowing-warm-air/",
+  "/guides/ac-freezing-up/",
+  "/guides/ac-constantly-running/",
+  "/guides/furnace-not-heating/",
+  "/guides/furnace-short-cycling/",
+  "/guides/hvac-strange-noises/",
+  "/guides/poor-airflow/",
+  "/guides/uneven-temperatures/",
+  "/guides/hvac-maintenance-checklist/",
+  "/guides/furnace-replacement-signals/",
+  "/guides/heat-pump-basics-northern-illinois/",
+  "/guides/indoor-air-quality-closed-homes/",
+  "/service-area/",
   "/about/",
-  "/reviews/",
   "/contact/",
-  "/blog/",
-  "/blog/furnace-stops-working-freeport-winter/",
-  "/blog/ac-fails-after-illinois-winter/",
-  "/blog/furnace-short-cycling-cold-weather/",
-  "/blog/indoor-air-closed-up-winter-homes/",
-  "/blog/heat-pumps-northern-illinois/",
   "/privacy-policy/",
   "/terms/",
 ] as const;

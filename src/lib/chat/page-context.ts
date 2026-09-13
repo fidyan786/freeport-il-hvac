@@ -8,13 +8,14 @@ export type PageChatContext = {
 };
 
 const HOME_REPLIES: QuickReply[] = [
-  { id: "ac", label: "❄️ AC / Cooling" },
-  { id: "heat", label: "🔥 Heating" },
-  { id: "install", label: "🏠 Installation / Replacement" },
-  { id: "maintenance", label: "🛠 Maintenance" },
-  { id: "urgent", label: "🚨 Urgent Problem" },
-  { id: "question", label: "❓ Question" },
-  { id: "call", label: "📞 Call Now" },
+  { id: "ac", label: "AC Problem" },
+  { id: "heat", label: "Furnace Problem" },
+  { id: "hvac_repair", label: "HVAC Repair" },
+  { id: "install", label: "Installation" },
+  { id: "maintenance", label: "Maintenance" },
+  { id: "iaq", label: "Indoor Air Quality" },
+  { id: "urgent", label: "Emergency Problem" },
+  { id: "call", label: "Call Now" },
 ];
 
 const AC_REPLIES: QuickReply[] = [
@@ -46,103 +47,9 @@ const MAINT_REPLIES: QuickReply[] = [
   { id: "call", label: "Call Now" },
 ];
 
-const PAGES: Record<string, Omit<PageChatContext, "path">> = {
-  "/": {
-    greeting: "Need help with your home's heating or cooling?",
-    quickReplies: HOME_REPLIES,
-    hintService: null,
-  },
-  "/ac-repair-freeport-il/": {
-    greeting: "Having trouble with your AC?",
-    quickReplies: AC_REPLIES,
-    hintService: "ac_repair",
-  },
-  "/furnace-repair-freeport-il/": {
-    greeting: "Having trouble with your furnace?",
-    quickReplies: FURNACE_REPLIES,
-    hintService: "furnace_repair",
-  },
-  "/ac-installation-replacement-freeport-il/": {
-    greeting: "Looking for a new cooling system?",
-    quickReplies: INSTALL_REPLIES,
-    hintService: "ac_install",
-  },
-  "/furnace-installation-replacement-freeport-il/": {
-    greeting: "Looking for a new heating system?",
-    quickReplies: INSTALL_REPLIES,
-    hintService: "furnace_install",
-  },
-  "/heat-pump-services-freeport-il/": {
-    greeting: "Need heat pump repair or installation?",
-    quickReplies: [
-      { id: "heat_pump", label: "Heat Pump Issue" },
-      { id: "noise", label: "Making Noise" },
-      { id: "install", label: "Replacement" },
-      { id: "call", label: "Call Now" },
-    ],
-    hintService: "heat_pump",
-  },
-  "/hvac-maintenance-freeport-il/": {
-    greeting: "Looking for HVAC maintenance?",
-    quickReplies: MAINT_REPLIES,
-    hintService: "maintenance",
-  },
-  "/emergency-hvac-freeport-il/": {
-    greeting: "Need urgent HVAC help?",
-    quickReplies: [
-      { id: "no_heat", label: "No Heat" },
-      { id: "no_cool", label: "No Cooling" },
-      { id: "urgent", label: "Need Someone Today" },
-      { id: "call", label: "Call Now" },
-    ],
-    hintService: "emergency",
-  },
-  "/ductless-mini-split-freeport-il/": {
-    greeting: "Questions about ductless mini splits?",
-    quickReplies: [
-      { id: "mini_split", label: "Mini Split Problem" },
-      { id: "install", label: "New Mini Split" },
-      { id: "call", label: "Call Now" },
-    ],
-    hintService: "mini_split",
-  },
-  "/indoor-air-quality-freeport-il/": {
-    greeting: "Concerned about indoor air quality?",
-    quickReplies: [
-      { id: "iaq", label: "Air Quality Help" },
-      { id: "question", label: "Question" },
-      { id: "call", label: "Call Now" },
-    ],
-    hintService: "iaq",
-  },
-  "/commercial-hvac-freeport-il/": {
-    greeting: "Does your business need HVAC help?",
-    quickReplies: [
-      { id: "commercial", label: "Business HVAC" },
-      { id: "urgent", label: "Urgent Problem" },
-      { id: "call", label: "Call Now" },
-    ],
-    hintService: "commercial",
-  },
-  "/service-areas/": {
-    greeting: "Checking if we cover your area?",
-    quickReplies: [
-      { id: "zip_61032", label: "Freeport 61032" },
-      { id: "question", label: "Other ZIP" },
-      { id: "call", label: "Call Now" },
-    ],
-    hintService: null,
-  },
-  "/contact/": {
-    greeting: "Ready to talk with the HVAC team?",
-    quickReplies: HOME_REPLIES,
-    hintService: null,
-  },
-};
-
 export const FALLBACK_REPLIES: QuickReply[] = [
   { id: "ac", label: "AC Problem" },
-  { id: "heat", label: "Heating Problem" },
+  { id: "heat", label: "Furnace Problem" },
   { id: "install", label: "Installation" },
   { id: "maintenance", label: "Maintenance" },
   { id: "call", label: "Call Now" },
@@ -156,12 +63,138 @@ export function normalizePath(path: string) {
   return withSlash.startsWith("/") ? withSlash : `/${withSlash}`;
 }
 
+function context(
+  greeting: string,
+  quickReplies: QuickReply[],
+  hintService: ServiceType | null,
+): Omit<PageChatContext, "path"> {
+  return { greeting, quickReplies, hintService };
+}
+
 export function getPageContext(path: string): PageChatContext {
   const normalized = normalizePath(path);
-  const match = PAGES[normalized];
-  if (match) return { path: normalized, ...match };
-  if (normalized.startsWith("/blog/")) {
-    return { path: normalized, ...PAGES["/"] };
+
+  if (normalized === "/") {
+    return {
+      path: normalized,
+      ...context(
+        "Need help with heating or cooling in Freeport?",
+        HOME_REPLIES,
+        null,
+      ),
+    };
   }
-  return { path: normalized, ...PAGES["/"] };
+
+  if (normalized.includes("emergency")) {
+    return {
+      path: normalized,
+      ...context("Need urgent HVAC help?", [
+        { id: "no_heat", label: "No Heat" },
+        { id: "no_cool", label: "No Cooling" },
+        { id: "urgent", label: "Need Someone Today" },
+        { id: "call", label: "Call Now" },
+      ], "emergency"),
+    };
+  }
+
+  if (normalized.includes("commercial")) {
+    return {
+      path: normalized,
+      ...context("Does your business need HVAC help?", [
+        { id: "commercial", label: "Business HVAC" },
+        { id: "urgent", label: "Urgent Problem" },
+        { id: "call", label: "Call Now" },
+      ], "commercial"),
+    };
+  }
+
+  if (normalized.includes("mini-split") || normalized.includes("ductless")) {
+    return {
+      path: normalized,
+      ...context("Questions about ductless mini splits?", [
+        { id: "mini_split", label: "Mini Split Problem" },
+        { id: "install", label: "New Mini Split" },
+        { id: "call", label: "Call Now" },
+      ], "mini_split"),
+    };
+  }
+
+  if (normalized.includes("heat-pump")) {
+    return {
+      path: normalized,
+      ...context("Need heat pump repair or installation?", [
+        { id: "heat_pump", label: "Heat Pump Issue" },
+        { id: "noise", label: "Making Noise" },
+        { id: "install", label: "Replacement" },
+        { id: "call", label: "Call Now" },
+      ], "heat_pump"),
+    };
+  }
+
+  if (
+    normalized.includes("indoor-air") ||
+    normalized.includes("filtr") ||
+    normalized.includes("humid")
+  ) {
+    return {
+      path: normalized,
+      ...context("Concerned about indoor air quality?", [
+        { id: "iaq", label: "Air Quality Help" },
+        { id: "question", label: "Question" },
+        { id: "call", label: "Call Now" },
+      ], "iaq"),
+    };
+  }
+
+  if (normalized.includes("ac-install") || normalized.includes("ac-replacement")) {
+    return {
+      path: normalized,
+      ...context("Looking for a new cooling system?", INSTALL_REPLIES, "ac_install"),
+    };
+  }
+
+  if (normalized.includes("furnace-install")) {
+    return {
+      path: normalized,
+      ...context("Looking for a new heating system?", INSTALL_REPLIES, "furnace_install"),
+    };
+  }
+
+  if (normalized.includes("maintenance")) {
+    return {
+      path: normalized,
+      ...context("Looking for HVAC maintenance?", MAINT_REPLIES, "maintenance"),
+    };
+  }
+
+  if (normalized.includes("ac-")) {
+    return {
+      path: normalized,
+      ...context("Having trouble with your AC?", AC_REPLIES, "ac_repair"),
+    };
+  }
+
+  if (normalized.includes("furnace") || normalized.includes("heating")) {
+    return {
+      path: normalized,
+      ...context("Having trouble with your furnace?", FURNACE_REPLIES, "furnace_repair"),
+    };
+  }
+
+  if (normalized.includes("service-area")) {
+    return {
+      path: normalized,
+      ...context("Checking if we cover your area?", [
+        { id: "zip_61032", label: "Freeport 61032" },
+        { id: "question", label: "Other ZIP" },
+        { id: "call", label: "Call Now" },
+      ], null),
+    };
+  }
+
+  if (normalized.includes("contact")) {
+    return { path: normalized, ...context("Ready to talk with Millrace?", HOME_REPLIES, null) };
+  }
+
+  return { path: normalized, ...context("What can we help with?", HOME_REPLIES, null) };
 }

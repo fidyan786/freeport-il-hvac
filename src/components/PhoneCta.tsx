@@ -1,20 +1,22 @@
-import { ctaHref, isPhoneConfigured, site } from "@/lib/site";
+import { ctaHref, isPhoneConfigured, phoneDisplayLabel, primaryCtaLabel } from "@/lib/site";
 
 type Props = {
   children?: React.ReactNode;
   className?: string;
   context: string;
-  variant?: "primary" | "secondary" | "light" | "text";
+  variant?: "primary" | "secondary" | "light" | "ghost" | "text";
 };
 
 const variants = {
   primary:
-    "inline-flex items-center justify-center gap-2 rounded-sm bg-ember px-5 py-3 text-center text-sm font-bold tracking-wide text-white transition hover:bg-ember-dark",
+    "cta-pulse inline-flex items-center justify-center gap-2 rounded-full bg-copper px-5 py-3 text-center text-sm font-semibold tracking-wide text-white shadow-[0_10px_24px_-12px_rgba(196,92,38,0.9)] hover:bg-copper-dark",
   secondary:
-    "inline-flex items-center justify-center gap-2 rounded-sm border border-navy/20 bg-white px-5 py-3 text-center text-sm font-semibold tracking-wide text-navy transition hover:border-navy hover:bg-paper",
+    "inline-flex items-center justify-center gap-2 rounded-full border border-spruce/20 bg-white px-5 py-3 text-center text-sm font-semibold tracking-wide text-spruce transition hover:border-spruce hover:bg-paper",
   light:
-    "inline-flex items-center justify-center gap-2 rounded-sm bg-white px-5 py-3 text-center text-sm font-semibold tracking-wide text-navy transition hover:bg-paper",
-  text: "inline-flex items-center gap-2 font-semibold text-ember underline-offset-4 hover:underline",
+    "inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-center text-sm font-semibold tracking-wide text-spruce hover:bg-paper",
+  ghost:
+    "inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-5 py-3 text-center text-sm font-semibold tracking-wide text-white hover:bg-white/10",
+  text: "inline-flex items-center gap-2 font-semibold text-copper underline-offset-4 hover:underline",
 };
 
 export function PhoneCta({
@@ -33,7 +35,7 @@ export function PhoneCta({
       data-cta={context}
       data-cta-type={tel ? "phone" : "contact-fallback"}
     >
-      {children ?? (isPhoneConfigured() ? `Call ${site.phoneDisplay}` : `Call ${site.phoneDisplay}`)}
+      {children ?? primaryCtaLabel()}
     </a>
   );
 }
@@ -47,7 +49,11 @@ export function PhonePlain({ className = "" }: { className?: string }) {
       data-cta="plain-number"
       data-cta-type={href.startsWith("tel:") ? "phone" : "contact-fallback"}
     >
-      {site.phoneDisplay}
+      {phoneDisplayLabel()}
     </a>
   );
+}
+
+export function CallNowCopy() {
+  return isPhoneConfigured() ? primaryCtaLabel() : "Request HVAC Service";
 }

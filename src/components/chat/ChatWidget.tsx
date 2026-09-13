@@ -21,7 +21,7 @@ import type {
   Lead,
   QuickReply,
 } from "@/lib/chat/types";
-import { site } from "@/lib/site";
+import { primaryCtaLabel } from "@/lib/site";
 
 const STORAGE_KEY = "freeport-hvac-chat-v1";
 const SEEN_KEY = "freeport-hvac-chat-seen";
@@ -418,15 +418,20 @@ export function ChatWidget() {
       <button
         ref={launcherRef}
         type="button"
-        className="hvac-chat-launcher fixed right-4 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-navy text-white shadow-lg ring-2 ring-ember/80 md:right-6"
-        aria-label={open ? "Close HVAC help chat" : "Open HVAC help chat"}
+        className="hvac-chat-launcher group relative fixed right-4 z-[60] flex items-center gap-2 rounded-full bg-spruce text-white shadow-lg ring-2 ring-copper/80 md:right-6"
+        aria-label={open ? "Close Millrace Assistant" : "Open Millrace Assistant"}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => (open ? close() : openPanel())}
       >
-        <ChatIcon open={open} />
+        <span className="hidden rounded-full pl-4 text-sm font-semibold sm:inline">
+          Need HVAC Help?
+        </span>
+        <span className="flex h-14 w-14 items-center justify-center">
+          <ChatIcon open={open} />
+        </span>
         {unread && !open ? (
-          <span className="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-ember" />
+          <span className="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-copper" />
         ) : null}
       </button>
 
@@ -437,7 +442,7 @@ export function ChatWidget() {
           role="dialog"
           aria-modal="true"
           aria-labelledby={titleId}
-          className="hvac-chat-panel fixed inset-x-0 z-[70] flex flex-col bg-cream md:inset-auto md:right-6 md:bottom-28 md:w-[min(26.5rem,calc(100vw-2rem))] md:rounded-sm md:border md:border-line md:shadow-2xl"
+          className="hvac-chat-panel fixed inset-x-0 z-[70] flex flex-col bg-cream md:inset-auto md:right-6 md:bottom-28 md:w-[min(26.5rem,calc(100vw-2rem))] md:rounded-2xl md:border md:border-line md:shadow-2xl"
           style={
             {
               "--chat-top": `${viewport.offsetTop}px`,
@@ -446,13 +451,13 @@ export function ChatWidget() {
           }
           data-open="true"
         >
-          <header className="flex shrink-0 items-start gap-3 bg-navy px-4 py-3 text-white">
+          <header className="flex shrink-0 items-start gap-3 bg-spruce px-4 py-3 text-white">
             <div className="min-w-0 flex-1">
               <p id={titleId} className="font-serif text-lg leading-tight">
-                HVAC help · {site.city}, {site.stateCode}
+                Millrace Assistant
               </p>
               <p className="mt-0.5 text-xs text-white/70">
-                Not a technician. We can get you to a call.
+                HVAC help for Freeport. Not a technician — we get you to a call.
               </p>
             </div>
             <PhoneCta
@@ -490,8 +495,8 @@ export function ChatWidget() {
                   key={message.id}
                   className={
                     message.role === "user"
-                      ? "ml-8 justify-self-end rounded-sm bg-navy px-3 py-2 text-sm text-white"
-                      : "mr-6 rounded-sm border border-line bg-white px-3 py-2 text-sm text-ink"
+                      ? "ml-8 justify-self-end rounded-2xl bg-spruce px-3 py-2 text-sm text-white"
+                      : "mr-6 rounded-2xl border border-line bg-white px-3 py-2 text-sm text-ink"
                   }
                 >
                   <p className="leading-relaxed">{message.text}</p>
@@ -524,7 +529,7 @@ export function ChatWidget() {
             <div className="shrink-0 border-t border-line bg-white px-4 py-3">
               <p className="mb-2 text-sm font-semibold text-navy">Need help now?</p>
               <PhoneCta context="chatbot-cta" className="min-h-12 w-full">
-                Call now · {site.phoneDisplay}
+                {primaryCtaLabel()}
               </PhoneCta>
             </div>
           ) : null}
@@ -546,7 +551,7 @@ export function ChatWidget() {
                     <button
                       key={reply.id}
                       type="button"
-                      className="min-h-10 rounded-sm border border-navy/15 bg-white px-3 py-2 text-xs font-semibold text-navy hover:border-navy hover:bg-paper"
+                      className="min-h-10 rounded-full border border-spruce/15 bg-white px-3 py-2 text-xs font-semibold text-spruce hover:border-spruce hover:bg-paper"
                       onClick={() => void submit(reply.label, reply.id)}
                     >
                       {reply.label}
@@ -594,7 +599,7 @@ export function ChatWidget() {
               <button
                 type="submit"
                 disabled={sending || input.trim().length === 0}
-                className="min-h-11 rounded-sm bg-ember px-4 text-sm font-semibold text-white hover:bg-ember-dark disabled:opacity-60"
+                className="min-h-11 rounded-full bg-copper px-4 text-sm font-semibold text-white hover:bg-copper-dark disabled:opacity-60"
               >
                 Send
               </button>

@@ -8,6 +8,8 @@ export function localBusinessSchema() {
     "@type": "HVACBusiness",
     name: site.businessName,
     url,
+    image: `${getSiteUrl()}/brand/logo-horizontal.png`,
+    logo: `${getSiteUrl()}/brand/logo-icon.png`,
     areaServed: [
       {
         "@type": "City",
