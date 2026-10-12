@@ -46,6 +46,51 @@ export const heatingRepair = defineService({
       ],
     },
   ],
+  directAnswer:
+    "Heating repair in Freeport, IL is where to start when the house is cold and you are not sure a gas furnace is the equipment. Boilers, baseboard, heat pumps, and furnaces all show up as no heat. Call with the symptom, the town, and the ZIP. This site connects that call. It is not the contractor.",
+  decision: {
+    heading: "Which heating page fits the house",
+    paragraphs: [
+      "A forced-air gas furnace you can see in the utility room belongs on furnace repair. A cold house with radiators, baseboard, or an outdoor unit that also cools belongs here until the equipment is clear. A heat pump that is the only heat, and is failing on a night in the teens, is also a heat pump page, and the urgency is the same as a dead furnace.",
+      "If the indoor temperature is falling and waiting is the risk, use emergency HVAC. If the system still heats and you are deciding whether it should face another winter, furnace installation is the replacement conversation.",
+    ],
+    links: [
+      {
+        href: "/services/furnace-repair-freeport-il/",
+        label: "Furnace repair in Freeport",
+      },
+      {
+        href: "/services/heat-pump-repair-freeport-il/",
+        label: "Heat pump service in Freeport",
+      },
+      {
+        href: "/services/emergency-hvac-freeport-il/",
+        label: "Emergency HVAC in Freeport",
+      },
+      {
+        href: "/guides/no-heat-in-house/",
+        label: "No heat in the house",
+      },
+      {
+        href: "/guides/uneven-temperatures/",
+        label: "Uneven temperatures",
+      },
+    ],
+  },
+  checks: [
+    {
+      name: "Look, do not open",
+      text: "Note vents or radiators, and whether an outdoor cabinet is running. Do not remove panels. A model number is optional.",
+    },
+    {
+      name: "Thermostat",
+      text: "Heat mode, setpoint above the room, and a screen that is on. A blank battery thermostat can look like a dead boiler.",
+    },
+    {
+      name: "How cold, and how fast",
+      text: "Say the indoor temperature and whether the whole house is cold or only one room. One cold room with the rest warm is often ducts, which the uneven-temperature guide describes.",
+    },
+  ],
   faqs: [
     {
       q: "I have no heat and I do not know what kind of system I have. Where do I start?",

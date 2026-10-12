@@ -178,6 +178,61 @@ export function faqSchema(
   };
 }
 
+export function howToSchema({
+  name,
+  description,
+  path,
+  steps,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  steps: Array<{ name: string; text: string }>;
+}) {
+  const page = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      url: `${page}#check-${index + 1}`,
+    })),
+  };
+}
+
+export function speakableWebPage({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  const page = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    description,
+    url: page,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable"],
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: site.businessName,
+      url: absoluteUrl("/"),
+    },
+  };
+}
+
 export function articleSchema({
   title,
   description,

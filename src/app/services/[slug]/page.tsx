@@ -3,6 +3,8 @@ import { ServiceTemplate } from "@/components/ServiceTemplate";
 import { getService, services } from "@/content/services";
 import { pageMetadata } from "@/lib/seo";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }

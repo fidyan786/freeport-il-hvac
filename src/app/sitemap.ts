@@ -3,6 +3,8 @@ import { guides } from "@/content/guides";
 import { indexablePaths } from "@/lib/nav";
 import { getPublicOrigin } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 const guideDates = new Map(
   guides.map((guide) => [guide.href, guide.datePublished] as const),
 );

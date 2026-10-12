@@ -28,10 +28,13 @@ export default function ImageCreditsPage() {
       />
       <h1 className="mt-6 text-4xl text-navy">Image credits</h1>
       <p className="mt-6">
-        Photographs on this site come from Wikimedia Commons under the licenses
-        listed below. They show real equipment and real places. They are not
-        photos of a Freeport service call. Smaller files under /photos/heroes/
-        are the same photographs, resized for page heroes.
+        Photographs on this site are Creative Commons and public-domain files from Wikimedia Commons.
+        Unsplash, Pexels, Pixabay, and Openverse were checked for closer HVAC
+        photographs. Usable files that showed real equipment or Illinois winter
+        homes, without another company’s uniform, came from Commons. They are
+        not photos of a Freeport service call. Each picture is also saved as
+        smaller WebP and AVIF files so the pages do not depend on an image
+        optimizer.
       </p>
       <ul className="mt-8 grid gap-6">
         {IMAGE_CREDITS.map((item) => (

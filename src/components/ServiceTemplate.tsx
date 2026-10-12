@@ -11,7 +11,13 @@ import { SectionCall } from "@/components/SectionCall";
 import type { ServicePageContent } from "@/content/service-types";
 import { getService } from "@/content/services";
 import { relatedGuidesForService } from "@/lib/internal-links";
-import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  howToSchema,
+  serviceSchema,
+  speakableWebPage,
+} from "@/lib/schema";
 import { primaryCtaLabel } from "@/lib/site";
 
 const CORE_LINKS = [
@@ -64,6 +70,24 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
         })}
       />
       <JsonLd data={faqSchema(service.faqs)} />
+      <JsonLd
+        data={speakableWebPage({
+          name: service.h1,
+          description: service.directAnswer ?? service.lede,
+          path: service.href,
+        })}
+      />
+      {service.checks?.length ? (
+        <JsonLd
+          data={howToSchema({
+            name: `Checks before calling about ${service.navLabel} in Freeport`,
+            description:
+              "Homeowner checks only. This site does not perform the repair.",
+            path: service.href,
+            steps: service.checks,
+          })}
+        />
+      ) : null}
       <PageHero
         eyebrow={service.eyebrow}
         title={service.h1}
@@ -83,8 +107,13 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
         />
         <div className="mt-10 grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           <article>
+            {service.directAnswer ? (
+              <p className="speakable rounded-brand border border-line bg-paper p-5 leading-relaxed text-navy">
+                {service.directAnswer}
+              </p>
+            ) : null}
             {service.sections.map((section) => (
-              <section key={section.heading} className="mt-12 first:mt-0">
+              <section key={section.heading} data-reveal className="mt-12 first:mt-0">
                 <h2 className="text-3xl text-navy">{section.heading}</h2>
                 {section.paragraphs.map((paragraph) => (
                   <p
@@ -109,6 +138,56 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
                 ))}
               </section>
             ))}
+            {service.decision ? (
+              <section data-reveal className="mt-12">
+                <h2 className="text-3xl text-navy">{service.decision.heading}</h2>
+                {service.decision.paragraphs.map((paragraph) => (
+                  <p
+                    key={paragraph.slice(0, 48)}
+                    className="mt-4 leading-relaxed text-muted"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+                <ul className="mt-4 grid gap-2">
+                  {service.decision.links.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="font-semibold text-navy underline underline-offset-2"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+            {service.checks?.length ? (
+              <section data-reveal className="mt-12">
+                <h2 className="text-3xl text-navy">
+                  What a homeowner can check before calling
+                </h2>
+                <p className="mt-4 leading-relaxed text-muted">
+                  These are safe look-and-see steps. They are not a repair
+                  procedure, and this site does not do the work.
+                </p>
+                <ol className="mt-6 grid gap-4">
+                  {service.checks.map((step, index) => (
+                    <li
+                      key={step.name}
+                      id={`check-${index + 1}`}
+                      className="surface-card p-5"
+                    >
+                      <h3 className="text-xl text-navy">
+                        {index + 1}. {step.name}
+                      </h3>
+                      <p className="mt-2 leading-relaxed text-muted">{step.text}</p>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ) : null}
             <SectionCall context={`${service.slug}-body`} />
           </article>
           <aside className="grid gap-6 self-start lg:sticky lg:top-32">
@@ -143,7 +222,7 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
           </aside>
         </div>
 
-        <section className="mt-16">
+        <section data-reveal className="mt-16">
           <h2 className="text-3xl text-navy">Questions people ask before they call</h2>
           <div className="mt-6">
             <FaqList items={service.faqs} />

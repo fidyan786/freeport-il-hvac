@@ -8,15 +8,19 @@ Items only the owner can confirm or finish. The site does not invent an address,
 - Display, `tel:+17037037855`, and schema `+1-703-703-7855` all come from `src/lib/site.ts`.
 - Overrides, if the number changes: `NEXT_PUBLIC_PHONE_DISPLAY` and `NEXT_PUBLIC_PHONE_TEL` (digits only). Recheck meta descriptions after a change. Several are written to land between 140 and 160 characters with the current number.
 
-## Domain
+## Domain and hosting
 
-- Attach `freeporthvacil.com` in Vercel as the production domain (apex, not www).
-- www and `freeport-il-hvac.vercel.app` already 301 to `https://freeporthvacil.com`.
-- If `NEXT_PUBLIC_SITE_URL` is still a vercel.app host, clear it. The default origin is `https://freeporthvacil.com`.
+The site is a static export for Hostinger shared hosting, not a Node server and not Vercel. Follow `docs/deploy-hostinger.md`.
+
+- Add GitHub Actions secrets `FTP_SERVER`, `FTP_USERNAME`, and `FTP_PASSWORD`. Set optional `FTP_DIR` to the domain’s `public_html/` if the FTP account does not already open there.
+- Point `freeporthvacil.com` DNS at Hostinger, then enable the free SSL certificate for the apex and `www`.
+- `www` and `http` redirect to `https://freeporthvacil.com` from `public/.htaccess`. Old URLs 301 in one hop to the current page.
+- Leave `NEXT_PUBLIC_SITE_URL` unset, or set it to `https://freeporthvacil.com`. Do not use any other host as the canonical origin.
+- After the first upload, delete leftover files in `public_html` that this project does not ship. The workflow does not wipe the folder.
 
 ## Analytics and Search Console
 
-- Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in Vercel when a GA4 property exists. Until then the site does not load Google Analytics. Call clicks are wired to `call_click` once that ID is present.
+- Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` for the production build when a GA4 property exists. Until then the site does not load Google Analytics. Call clicks are wired to `call_click` once that ID is present. The value is baked in at build time.
 - Search Console: the HTML-tag token in `src/lib/site.ts` (`EXISTING_GOOGLE_SITE_VERIFICATION`) and `/google7129b29a73db544e.html` are already in the repo. Confirm that token belongs to the property for `https://freeporthvacil.com`, then submit `https://freeporthvacil.com/sitemap.xml`.
 - Do not create a Google Business Profile or directory citations with an invented address. See `docs/local-seo-checklist.md`.
 

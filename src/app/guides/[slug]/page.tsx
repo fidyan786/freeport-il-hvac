@@ -11,6 +11,8 @@ import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { primaryCtaLabel } from "@/lib/site";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return guides.map((guide) => ({ slug: guide.slug }));
 }

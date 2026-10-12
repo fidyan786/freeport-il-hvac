@@ -13,9 +13,9 @@ export const emergencyHvac = defineService({
   eyebrow: "No heat and no cooling",
   lede:
     "Emergency HVAC in Freeport, IL is for a house that is losing heat in the cold, or losing cooling when someone cannot safely wait. It is not a slogan and it is not a promise that a truck is already on the way. You call, you describe what is happening, and the call is connected with an independent local professional who can say whether they can reach you.",
-  image: "/photos/heroes/snow-street-oak-park-illinois.webp",
+  image: "/photos/heroes/dahinda-illinois-farmhouse.webp",
   imageAlt:
-    "Snow-covered houses on a residential street, the kind of night behind emergency HVAC calls in Freeport, IL.",
+    "A farmhouse near Dahinda, Illinois, in January snow. This is not a Freeport street.",
   sections: [
     {
       heading: "When emergency HVAC is the right call",
@@ -44,6 +44,47 @@ export const emergencyHvac = defineService({
         "Stephenson County winters are long. Sub-freezing weather is normal, not a rare emergency by itself. What makes a no-heat call urgent is the house temperature falling and no safe way to stop it. Older housing stock, with original windows, balloon framing, and basements that were not built as living space, loses heat quickly once the furnace stops. A brick two-story that feels solid in October can drop fast in January if the burners are out.",
         "Cooling emergencies are less common here because the hot season is shorter, but they are not imaginary. An upstairs apartment over a sun-facing roof, a bedroom with one window unit that died, or a house with a vulnerable person can be an emergency HVAC call even when the neighbors are only uncomfortable. Say that plainly. For a system that is warm but not dangerous, AC repair is the better page, and HVAC maintenance is how you avoid discovering the failure on the first sticky afternoon.",
       ],
+    },
+  ],
+  directAnswer:
+    "Emergency HVAC in Freeport, IL is for no heat while the house is getting colder, or no cooling when someone cannot safely wait. It is not a promise that a truck is already coming. Call, give the indoor temperature and the ZIP, and the call is connected with an independent local professional.",
+  decision: {
+    heading: "Emergency, repair, or a call that can wait",
+    paragraphs: [
+      "A house with no heat and a falling temperature in sub-freezing weather belongs here. A furnace that is weak but still heating, in a house that is still safe, belongs on furnace repair or heating repair. An air conditioner that is warm but not dangerous belongs on AC repair.",
+      "Gas smell and carbon monoxide alarms are not HVAC calls. Leave, then call 911 and Nicor Gas. Maintenance is for equipment that still runs, before the season turns.",
+    ],
+    links: [
+      {
+        href: "/services/furnace-repair-freeport-il/",
+        label: "Furnace repair in Freeport",
+      },
+      {
+        href: "/services/ac-repair-freeport-il/",
+        label: "AC repair in Freeport",
+      },
+      {
+        href: "/services/heating-repair-freeport-il/",
+        label: "Heating repair in Freeport",
+      },
+      {
+        href: "/guides/no-heat-in-house/",
+        label: "No heat in the house",
+      },
+    ],
+  },
+  checks: [
+    {
+      name: "Leave if the air is unsafe",
+      text: "Gas smell, hissing, or a carbon monoxide alarm means get everyone out. Call 911 and Nicor Gas at 888-642-6748 from outside. Do not hunt for the furnace.",
+    },
+    {
+      name: "Read the indoor temperature",
+      text: "A number is more useful than “it’s cold.” Say whether the temperature is still falling and whether anyone in the house cannot safely wait.",
+    },
+    {
+      name: "Name the equipment if you can",
+      text: "Furnace, heat pump, boiler, or air conditioner. If you do not know, say what you see: vents, radiators, or an outdoor cabinet. Do not take the cabinet apart.",
     },
   ],
   faqs: [

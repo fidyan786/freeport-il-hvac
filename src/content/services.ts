@@ -41,11 +41,16 @@ export function servicesByCategory(
 
 export function serviceBodyWords(service: ServicePageContent): number {
   const chunks = [service.lede];
+  if (service.directAnswer) chunks.push(service.directAnswer);
   for (const section of service.sections) {
     chunks.push(...section.paragraphs);
     for (const sub of section.subsections ?? []) {
       chunks.push(...sub.paragraphs);
     }
+  }
+  if (service.decision) chunks.push(...service.decision.paragraphs);
+  for (const check of service.checks ?? []) {
+    chunks.push(check.name, check.text);
   }
   return chunks.join(" ").trim().split(/\s+/).filter(Boolean).length;
 }

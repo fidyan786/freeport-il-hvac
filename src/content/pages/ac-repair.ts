@@ -12,9 +12,9 @@ export const acRepair = defineService({
   eyebrow: "Central air conditioning",
   lede:
     "AC repair in Freeport, IL is what you call when the air conditioner will not start, will not stay on, or runs while the supply air stays warm. Summers here are shorter than the winters, but a humid stretch will still make a dead condenser miserable, especially in an upstairs bedroom.",
-  image: "/photos/heroes/outdoor-ac-condenser.webp",
+  image: "/photos/heroes/aging-split-condenser.webp",
   imageAlt:
-    "Outdoor air-conditioner condenser on a pad, typical of AC repair calls in Freeport, IL.",
+    "Weathered outdoor condenser of a split air conditioner, with refrigerant lines at the cabinet.",
   sections: [
     {
       heading: "AC repair symptoms in a Freeport house",
@@ -45,6 +45,51 @@ export const acRepair = defineService({
       ],
     },
   ],
+  directAnswer:
+    "AC repair in Freeport, IL is the call when the air conditioner will not start, will not stay on, or runs while the supply air stays warm. Outdoor units sit idle all winter, so the first humid week is when failures show up. This site connects the call. It does not add refrigerant or promise a visit.",
+  decision: {
+    heading: "Repair the air conditioner, or replace it",
+    paragraphs: [
+      "A condenser that is silent, humming, or icing on the lines is an AC repair call. A unit that has limped through several humid summers and cannot hold the house is an AC installation conversation after someone has looked at it. This page does not declare a unit too old from a photograph.",
+      "If someone in the house cannot safely wait through the heat, say that on the call and start from emergency HVAC. If the system still cools and you want it looked at before July, that is maintenance, not a breakdown.",
+    ],
+    links: [
+      {
+        href: "/services/ac-installation-freeport-il/",
+        label: "AC installation in Freeport",
+      },
+      {
+        href: "/services/emergency-hvac-freeport-il/",
+        label: "Emergency HVAC in Freeport",
+      },
+      {
+        href: "/services/hvac-maintenance-freeport-il/",
+        label: "HVAC maintenance in Freeport",
+      },
+      {
+        href: "/guides/ac-blowing-warm-air/",
+        label: "AC blowing warm air",
+      },
+    ],
+  },
+  checks: [
+    {
+      name: "Thermostat mode",
+      text: "Set the thermostat to cool, below the room temperature. A system left in heat after winter will not cool, and that is not a failed compressor.",
+    },
+    {
+      name: "Filter and outdoor disconnect",
+      text: "Look at the filter once. At the outdoor unit, confirm the disconnect is on. Do not open the cabinet and do not add refrigerant from a can.",
+    },
+    {
+      name: "Watch the outdoor unit",
+      text: "Note whether the fan is silent, humming, or spinning while the indoor air stays warm. That description is what the call needs.",
+    },
+    {
+      name: "Stop resetting a tripped breaker",
+      text: "One reset after a known event is enough. A breaker that trips again is a repair call. Do not keep cycling it.",
+    },
+  ],
   faqs: [
     {
       q: "Why is my AC blowing warm air in Freeport?",
@@ -69,6 +114,12 @@ export const acRepair = defineService({
       a: "AC repair tries to get the existing air conditioner cooling again. AC installation is a replacement or a new system when this outdoor unit should not be asked to do another summer. If you need cold air this week, start with repair and let the visit show whether replacement is the honest next step.",
       detail:
         "Maintenance is the third path: a check while the unit still runs, before the first humid week. It is not a substitute for a system that is already down.",
+    },
+    {
+      q: "Why do Freeport air conditioners fail in the first hot week?",
+      a: "The condenser sits outside through snow and ice, then has to start on the first humid afternoon. A failed capacitor, a seized fan, or a system low on charge often shows up then, not in January. The idle season is why a unit that cooled last August can be dead in June.",
+      detail:
+        "Say how long it has been since the system last ran, and what the outdoor fan is doing now. AC installation is the later conversation if the visit shows the unit should not do another summer.",
     },
   ],
   related: [

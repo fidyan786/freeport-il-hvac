@@ -56,8 +56,9 @@ export const extraGuides: Guide[] = [
     lede:
       "No heat in a Freeport house is the symptom. The equipment behind it might be a gas furnace, a heat pump, a boiler, or electric baseboard in an addition. You do not have to name the part before you call. You do have to say whether the whole house is cold and how cold it is inside.",
     datePublished: "2026-10-12",
-    image: "/photos/heroes/snow-street-oak-park-illinois.webp",
-    imageAlt: "Snow-covered houses, the setting for no-heat calls in Freeport.",
+    image: "/photos/heroes/dahinda-illinois-farmhouse.webp",
+    imageAlt:
+      "A farmhouse near Dahinda, Illinois, in January snow. This is not a Freeport street.",
     body: [
       {
         heading: "No heat in the house is not one failure",
@@ -142,8 +143,8 @@ export const extraGuides: Guide[] = [
     lede:
       "A thermostat not working in Freeport is often the first thing people blame, and sometimes they are right. Dead batteries, a mode left on cool in January, a blank screen after a power blink, or a setpoint the furnace never answers are different problems. The wall control is not the furnace, and replacing it at random does not fix a lockout.",
     datePublished: "2026-10-12",
-    image: "/photos/heroes/digital-wall-thermostat.webp",
-    imageAlt: "Wall thermostat, the control people check first in Freeport heating calls.",
+    image: "/photos/heroes/touch-thermostat.webp",
+    imageAlt: "Touch-screen thermostat on an interior wall, in programming mode.",
     body: [
       {
         heading: "Thermostat not working: what the screen is telling you",

@@ -47,13 +47,11 @@ export type SiteConfig = typeof site;
  * Public canonical origin. Single source of truth for metadataBase,
  * canonical URLs, Open Graph URLs, sitemap, and robots.
  *
- * Never use VERCEL_URL or VERCEL_PROJECT_PRODUCTION_URL — preview and
- * vercel.app hosts must not become canonical. Localhost is allowed only
- * on a local development machine.
+ * The live site is the static export on Hostinger. A vercel.app host
+ * must not become canonical. Localhost is allowed only in development.
  */
 export const PRODUCTION_HOST = "freeporthvacil.com";
 export const PRODUCTION_ORIGIN = `https://${PRODUCTION_HOST}`;
-const FALLBACK_PRODUCTION_ORIGIN = PRODUCTION_ORIGIN;
 
 function stripTrailingSlash(value: string) {
   return value.replace(/\/$/, "");
@@ -79,23 +77,22 @@ function isPreviewVercelHost(hostname: string) {
 function finalizeCanonical(origin: string) {
   const normalized = stripTrailingSlash(origin);
   const hostname = hostnameOf(normalized);
-  const vercelEnv = process.env.VERCEL_ENV;
 
   if (!hostname) {
     throw new Error(
-      "Canonical site URL is invalid. Set NEXT_PUBLIC_SITE_URL to the production origin.",
+      "Canonical site URL is invalid. Set NEXT_PUBLIC_SITE_URL to https://freeporthvacil.com.",
     );
   }
 
-  if (isLocalHostname(hostname) && (vercelEnv === "production" || vercelEnv === "preview")) {
+  if (isPreviewVercelHost(hostname)) {
     throw new Error(
-      "Canonical site URL cannot be localhost on a Vercel deployment. Set NEXT_PUBLIC_SITE_URL.",
+      "Canonical site URL cannot be a vercel.app host. Use https://freeporthvacil.com.",
     );
   }
 
-  if (isPreviewVercelHost(hostname) && vercelEnv === "production") {
+  if (isLocalHostname(hostname) && process.env.NODE_ENV === "production") {
     throw new Error(
-      "Canonical site URL cannot be a preview Vercel host in production. Set NEXT_PUBLIC_SITE_URL.",
+      "Canonical site URL cannot be localhost in a production build.",
     );
   }
 
@@ -108,29 +105,15 @@ export function getSiteUrl() {
     return finalizeCanonical(explicit);
   }
 
-  const onVercel = Boolean(process.env.VERCEL);
-  const localDev = process.env.NODE_ENV !== "production" && !onVercel;
-  if (localDev) {
+  if (process.env.NODE_ENV !== "production") {
     return "http://localhost:3000";
   }
 
-  return finalizeCanonical(FALLBACK_PRODUCTION_ORIGIN);
+  return PRODUCTION_ORIGIN;
 }
 
 /** Origin for sitemap, robots, and Search Console. Never throws. */
 export function getPublicOrigin() {
-  if (process.env.VERCEL_ENV === "production") {
-    const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-    if (explicit && !explicit.includes("[")) {
-      try {
-        return finalizeCanonical(explicit);
-      } catch {
-        return PRODUCTION_ORIGIN;
-      }
-    }
-    return PRODUCTION_ORIGIN;
-  }
-
   try {
     return getSiteUrl();
   } catch {

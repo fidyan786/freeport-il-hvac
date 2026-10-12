@@ -10,7 +10,7 @@ import { SectionCall } from "@/components/SectionCall";
 import { TrustSignals } from "@/components/TrustSection";
 import { IMAGE_SIZES } from "@/lib/images";
 import { intentLinks, problemLinks } from "@/lib/nav";
-import { faqSchema } from "@/lib/schema";
+import { faqSchema, speakableWebPage } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { localLabel, primaryCtaLabel, site } from "@/lib/site";
 
@@ -63,7 +63,15 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema(faqs)} />
-      <section className="border-b border-line bg-white">
+      <JsonLd
+        data={speakableWebPage({
+          name: "Heating and cooling help in Freeport, Illinois",
+          description:
+            "Furnace trouble, an air conditioner that will not cool, or a system that will not start. Call to be connected with a local heating and cooling professional.",
+          path: "/",
+        })}
+      />
+      <section className="hero-panel border-b border-line bg-white">
         <div className="mx-auto grid max-w-6xl items-stretch lg:grid-cols-2">
           <div className="flex flex-col justify-center px-4 py-12 sm:px-6 lg:py-16">
             <p className="kicker">
@@ -72,7 +80,7 @@ export default function HomePage() {
             <h1 className="mt-3 max-w-xl text-3xl leading-tight text-balance text-navy sm:text-4xl">
               Heating and cooling help in Freeport, Illinois
             </h1>
-            <p className="mt-5 max-w-xl leading-relaxed text-muted">
+            <p className="speakable mt-5 max-w-xl leading-relaxed text-muted">
               Furnace trouble, an air conditioner that will not cool, or a system
               that will not start. Call to be connected with a local heating and
               cooling professional.
@@ -109,7 +117,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <h2 className="text-3xl text-navy">What is happening with the system?</h2>
         <p className="mt-3 max-w-2xl text-muted">
           Start with the symptom. Each link explains the problem and ends with a
@@ -120,7 +128,7 @@ export default function HomePage() {
             <Link
               key={item.label}
               href={item.href}
-              className="rounded-brand border border-line bg-white p-5 hover:border-navy"
+              className="symptom-link rounded-brand border border-line bg-white p-5"
             >
               <h3 className="font-semibold text-navy">{item.label}</h3>
               <p className="mt-2 text-muted">{item.text}</p>
@@ -130,8 +138,8 @@ export default function HomePage() {
         <SectionCall context="home-symptoms" />
       </section>
 
-      <section className="border-y border-line bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section data-reveal className="border-y border-line bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <h2 className="text-3xl text-navy">Common heating and cooling topics</h2>
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <article className="grid gap-4 sm:grid-cols-[12rem_1fr]">
@@ -165,8 +173,8 @@ export default function HomePage() {
             <article className="grid gap-4 sm:grid-cols-[12rem_1fr]">
               <div className="relative aspect-[4/3] overflow-hidden rounded-brand">
                 <SitePhoto
-                  src="/photos/outdoor-ac-condenser.webp"
-                  alt="Outdoor air-conditioner condenser on a concrete pad beside a house."
+                  src="/photos/condenser-beside-house.webp"
+                  alt="Outdoor condenser on a concrete pad beside house siding."
                   sizes={IMAGE_SIZES.thumb}
                 />
               </div>
@@ -195,7 +203,64 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section data-reveal className="border-b border-line bg-paper">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+          <h2 className="text-3xl text-navy">Repair, replace, or call now</h2>
+          <p className="speakable mt-3 max-w-2xl text-muted">
+            Freeport winters are long and the cooling season is short and humid.
+            The right page depends on whether the equipment still runs, whether
+            it should carry another season, or whether the house is already
+            getting unsafe.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {[
+              {
+                title: "It failed, and it might still be fixed",
+                text: "A furnace that will not stay lit, or an air conditioner that runs warm, starts as a repair call. Say the symptom, not a parts guess.",
+                links: [
+                  ["/services/furnace-repair-freeport-il/", "Furnace repair"],
+                  ["/services/ac-repair-freeport-il/", "AC repair"],
+                ],
+              },
+              {
+                title: "It should not carry another season",
+                text: "Replacement is a separate conversation from tonight’s breakdown. Installation pages are for equipment that should be retired, not for a unit that quit this hour.",
+                links: [
+                  ["/services/furnace-installation-freeport-il/", "Furnace installation"],
+                  ["/services/ac-installation-freeport-il/", "AC installation"],
+                ],
+              },
+              {
+                title: "The house cannot wait",
+                text: "No heat while the indoor temperature is falling, or no cooling when someone cannot safely wait, belongs on the emergency page. This site still only connects the call.",
+                links: [
+                  ["/services/emergency-hvac-freeport-il/", "Emergency HVAC"],
+                  ["/services/heating-repair-freeport-il/", "Heating repair"],
+                ],
+              },
+            ].map((item) => (
+              <article key={item.title} className="surface-card p-5">
+                <h3 className="text-xl text-navy">{item.title}</h3>
+                <p className="mt-3 text-muted">{item.text}</p>
+                <ul className="mt-4 grid gap-2">
+                  {item.links.map(([href, label]) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        className="font-semibold text-navy underline underline-offset-2"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <h2 className="text-3xl text-navy">How a call works</h2>
         <ol className="mt-8 grid gap-4 md:grid-cols-3">
           {[
@@ -225,18 +290,20 @@ export default function HomePage() {
         <SectionCall context="home-steps" />
       </section>
 
-      <TrustSignals />
+      <div data-reveal>
+        <TrustSignals />
+      </div>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionCall context="home-trust" />
       </div>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <SafetyCallout />
         <SectionCall context="home-safety" />
       </section>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section data-reveal className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <h2 className="text-3xl text-navy">Freeport questions</h2>
           <div className="mt-8">
             <FaqList items={faqs} />

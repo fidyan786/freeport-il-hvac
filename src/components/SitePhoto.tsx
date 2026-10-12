@@ -1,7 +1,6 @@
-import Image from "next/image";
+import { PHOTO_WIDTHS } from "@/lib/photo-sizes";
 
-export const PHOTO_WIDTH = 1200;
-export const PHOTO_HEIGHT = 800;
+const FALLBACK_WIDTHS = [480, 640, 960];
 
 type Props = {
   src: string;
@@ -11,6 +10,11 @@ type Props = {
   className?: string;
 };
 
+function baseName(src: string) {
+  const file = src.split("/").pop() ?? "";
+  return file.replace(/\.(webp|avif|jpe?g|png)$/i, "");
+}
+
 export function SitePhoto({
   src,
   alt,
@@ -18,19 +22,29 @@ export function SitePhoto({
   priority = false,
   className = "",
 }: Props) {
-  const directHero = src.startsWith("/photos/heroes/");
+  const name = baseName(src);
+  const widths = PHOTO_WIDTHS[name] ?? FALLBACK_WIDTHS;
+  const srcFor = (width: number, ext: "avif" | "webp") =>
+    `/photos/sized/${name}-${width}.${ext}`;
+  const set = (ext: "avif" | "webp") =>
+    widths.map((width) => `${srcFor(width, ext)} ${width}w`).join(", ");
+  const fallbackWidth = widths.includes(640) ? 640 : widths[widths.length - 1];
+
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={directHero ? 640 : PHOTO_WIDTH}
-      height={directHero ? 427 : PHOTO_HEIGHT}
-      sizes={directHero ? "(max-width: 1023px) 640px, 576px" : sizes}
-      priority={priority}
-      unoptimized={directHero}
-      fetchPriority={priority ? "high" : "auto"}
-      decoding={priority ? "sync" : "async"}
-      className={`absolute inset-0 h-full w-full object-cover ${className}`}
-    />
+    <picture>
+      <source type="image/avif" srcSet={set("avif")} sizes={sizes} />
+      <source type="image/webp" srcSet={set("webp")} sizes={sizes} />
+      <img
+        src={srcFor(fallbackWidth, "webp")}
+        alt={alt}
+        width={960}
+        height={640}
+        sizes={sizes}
+        fetchPriority={priority ? "high" : "auto"}
+        decoding={priority ? "sync" : "async"}
+        loading={priority ? "eager" : "lazy"}
+        className={`absolute inset-0 h-full w-full object-cover ${className}`}
+      />
+    </picture>
   );
 }

@@ -12,9 +12,9 @@ export const acInstallation = defineService({
   eyebrow: "Replacement and new air conditioners",
   lede:
     "AC installation in Freeport, IL covers a new air conditioner or a replacement for an outdoor unit that can no longer cool the house. Summers here are shorter than the winters and they are humid. The job still has to work on the sticky afternoons, not only on a mild June morning. If the system died this week and might be repairable, start with AC repair.",
-  image: "/photos/heroes/outdoor-ac-condenser.webp",
+  image: "/photos/heroes/condenser-beside-house.webp",
   imageAlt:
-    "Outdoor air-conditioner condenser beside a house, the equipment AC installation in Freeport, IL replaces or adds.",
+    "Outdoor condenser on a concrete pad beside house siding, the kind of cabinet AC installation in Freeport, IL replaces.",
   sections: [
     {
       heading: "AC replacement after a long idle season",

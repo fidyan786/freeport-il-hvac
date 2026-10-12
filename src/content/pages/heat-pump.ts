@@ -12,9 +12,9 @@ export const heatPump = defineService({
   eyebrow: "Heating and cooling from one outdoor unit",
   lede:
     "Heat pump service in Freeport, IL covers repair, installation, and maintenance for equipment that has to heat through a Stephenson County winter, not only cool through a short summer. If the heat pump is your only heat and the house is getting cold, treat it with the same urgency as a furnace failure. This page replaces separate repair, installation, and maintenance writeups that said the same thing three times.",
-  image: "/photos/heroes/outdoor-ac-condenser.webp",
+  image: "/photos/heroes/wall-mounted-condenser.webp",
   imageAlt:
-    "Outdoor heat-pump or air-conditioner cabinet on a concrete pad, the equipment heat pump service in Freeport, IL is about.",
+    "Outdoor condenser mounted on brackets against a wall, the kind of cabinet a Freeport heat pump uses.",
   sections: [
     {
       heading: "Heat pump repair when the house will not heat",

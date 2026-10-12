@@ -29,7 +29,7 @@ export function PageHero({
   priority?: boolean;
 }) {
   return (
-    <section className="border-b border-line bg-white">
+    <section className="hero-panel border-b border-line bg-white">
       <div className="mx-auto grid max-w-6xl items-stretch lg:grid-cols-2">
         <div className="flex flex-col justify-center px-4 py-12 sm:px-6 sm:py-16">
           {eyebrow ? <p className="kicker mb-3">{eyebrow}</p> : null}
@@ -37,7 +37,7 @@ export function PageHero({
             {title}
           </h1>
           {deck ? <p className="mt-4 max-w-xl text-xl leading-snug text-navy">{deck}</p> : null}
-          <p className="mt-5 max-w-xl leading-relaxed text-muted">{lede}</p>
+          <p className="speakable mt-5 max-w-xl leading-relaxed text-muted">{lede}</p>
           <div className="mt-8">
             <PhoneCta location="hero" context={context} className="w-full sm:w-auto">
               <span className="inline-flex items-center gap-2">

@@ -29,8 +29,9 @@ const sections: Array<{
     title: "Emergency HVAC",
     intro:
       "No heat on a sub-freezing night, or no cooling when someone cannot safely wait. Gas leaks and carbon monoxide alarms start with 911 and Nicor, not with this page.",
-    image: "/photos/heroes/snow-street-oak-park-illinois.webp",
-    imageAlt: "Snow-covered houses along a residential street.",
+    image: "/photos/heroes/yerkes-house-oak-park-snow.webp",
+    imageAlt:
+      "A Prairie School house in Oak Park, Illinois, after a snowfall. This is not Freeport.",
     category: "emergency",
   },
   {
@@ -47,8 +48,8 @@ const sections: Array<{
     title: "Cooling",
     intro:
       "AC repair for a unit that will not cool after sitting all winter, and AC installation when that outdoor unit should be replaced.",
-    image: "/photos/heroes/outdoor-ac-condenser.webp",
-    imageAlt: "Outdoor air-conditioner condenser on a concrete pad beside a house.",
+    image: "/photos/heroes/condenser-beside-house.webp",
+    imageAlt: "Outdoor condenser on a concrete pad beside house siding.",
     category: "cooling",
   },
   {
@@ -65,8 +66,8 @@ const sections: Array<{
     title: "Heat Pumps",
     intro:
       "Ducted heat pumps that have to heat through Freeport nights in the teens, including repair, installation, and maintenance on one page.",
-    image: "/photos/heroes/outdoor-ac-condenser.webp",
-    imageAlt: "Outdoor heat pump or air conditioner cabinet on a concrete pad.",
+    image: "/photos/heroes/wall-mounted-condenser.webp",
+    imageAlt: "Outdoor condenser mounted on brackets against a wall.",
     category: "heat-pump",
   },
   {

@@ -137,4 +137,105 @@ export const IMAGE_CREDITS: ImageCredit[] = [
       "Center-cropped to 3:2, resized to 1200×800, and saved as WebP. The adapted file stays under CC BY-SA 3.0.",
     used: "Ductless mini-split pages",
   },
+  {
+    file: "condenser-beside-house.webp",
+    src: "/photos/condenser-beside-house.webp",
+    alt: "Outdoor condenser on a concrete pad beside house siding.",
+    author: "H Padleckas",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Condenser_unit_for_central_air_conditioning.JPG",
+    changes:
+      "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes. The adapted file stays under CC BY-SA 3.0.",
+    used: "AC installation and cooling sections",
+  },
+  {
+    file: "aging-split-condenser.webp",
+    src: "/photos/aging-split-condenser.webp",
+    alt: "Weathered outdoor condenser of a split air conditioner, with refrigerant lines at the cabinet.",
+    author: "Chris Hunkeler",
+    license: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Aging_Condenser_Unit_of_a_Split_Air_Conditioning_System_(7547606426).jpg",
+    changes:
+      "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes. The adapted file stays under CC BY-SA 2.0.",
+    used: "AC repair",
+  },
+  {
+    file: "wall-mounted-condenser.webp",
+    src: "/photos/wall-mounted-condenser.webp",
+    alt: "Outdoor condenser mounted on brackets against a wall.",
+    author: "Adoscam",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Wall_mounted_air_conditioning_condenser.jpg",
+    changes:
+      "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes. The adapted file stays under CC BY-SA 4.0.",
+    used: "Heat pump pages",
+  },
+  {
+    file: "touch-thermostat.webp",
+    src: "/photos/touch-thermostat.webp",
+    alt: "Touch-screen thermostat on an interior wall, in programming mode.",
+    author: "Flarn2006",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:A_touch-screen_programmable_thermostat.jpg",
+    changes:
+      "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes. The adapted file stays under CC BY-SA 3.0.",
+    used: "Thermostat guide",
+  },
+  {
+    file: "basement-sheet-metal-ducts.webp",
+    src: "/photos/basement-sheet-metal-ducts.webp",
+    alt: "Insulated and bare sheet-metal ducts in a building basement. This is not a Freeport house.",
+    author: "Achim Hering",
+    license: "CC BY 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/3.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Ottawa_marriott_basement_ductwork.jpg",
+    changes: "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes.",
+    used: "Poor-airflow guide. The basement is not in Freeport.",
+  },
+  {
+    file: "condensing-furnace-vent.webp",
+    src: "/photos/condensing-furnace-vent.webp",
+    alt: "White plastic exhaust vent on a high-efficiency gas furnace.",
+    author: "Wtshymanski",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Condensing_Furnace_Outlet.jpg",
+    changes:
+      "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes. The adapted file stays under CC BY-SA 4.0.",
+    used: "Furnace installation",
+  },
+  {
+    file: "dahinda-illinois-farmhouse.webp",
+    src: "/photos/dahinda-illinois-farmhouse.webp",
+    alt: "A farmhouse near Dahinda, Illinois, in January snow. This is not a Freeport street.",
+    author: "Robert Haugland",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Farmhouse_near_Dahinda_Illinois_USA.jpg",
+    changes:
+      "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes. The adapted file stays under CC BY-SA 4.0.",
+    used: "Emergency and no-heat pages. Dahinda is in Illinois, not Freeport.",
+  },
+  {
+    file: "yerkes-house-oak-park-snow.webp",
+    src: "/photos/yerkes-house-oak-park-snow.webp",
+    alt: "The Mary G. Yerkes House in Oak Park, Illinois, after a snowfall. This is not Freeport.",
+    author: "Sebastian Beaghen",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Yerkes_House_In_the_Snow.JPG",
+    changes:
+      "Center-cropped to 3:2 and saved as WebP, plus smaller WebP and AVIF sizes. The adapted file stays under CC BY-SA 3.0.",
+    used: "Winter pages. The house is in Oak Park, not Freeport.",
+  },
 ];

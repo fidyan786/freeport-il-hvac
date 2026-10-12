@@ -39,6 +39,13 @@ export type ServicePageContent = {
   sections: ServiceSection[];
   faqs: ServiceFaq[];
   related: string[];
+  directAnswer?: string;
+  decision?: {
+    heading: string;
+    paragraphs: string[];
+    links: { href: string; label: string }[];
+  };
+  checks?: { name: string; text: string }[];
 };
 
 export function defineService(

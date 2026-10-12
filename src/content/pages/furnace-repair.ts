@@ -54,6 +54,51 @@ export const furnaceRepair = defineService({
       ],
     },
   ],
+  directAnswer:
+    "Furnace repair in Freeport, IL is the call when a gas furnace will not light, will not stay lit, or the blower runs while the air stays cold. This website connects that call with an independent local professional. It does not diagnose the furnace and it does not promise an arrival time.",
+  decision: {
+    heading: "Repair this furnace, or plan a replacement",
+    paragraphs: [
+      "A furnace that locked out once after a packed filter is a repair conversation. A furnace that is rusted through and fails on every cold snap can become a furnace installation conversation after the house is warm enough to think. This page does not set an age cutoff. The person who opens the cabinet can say what they see.",
+      "If the rooms are already falling toward freezing, say so and use emergency HVAC. If the furnace still heats and you are planning ahead of next winter, maintenance is a seasonal check, not a no-heat visit.",
+    ],
+    links: [
+      {
+        href: "/services/furnace-installation-freeport-il/",
+        label: "Furnace installation in Freeport",
+      },
+      {
+        href: "/services/emergency-hvac-freeport-il/",
+        label: "Emergency HVAC in Freeport",
+      },
+      {
+        href: "/services/hvac-maintenance-freeport-il/",
+        label: "HVAC maintenance in Freeport",
+      },
+      {
+        href: "/guides/furnace-not-heating/",
+        label: "Furnace not heating",
+      },
+    ],
+  },
+  checks: [
+    {
+      name: "Thermostat",
+      text: "Confirm the mode is heat and the setpoint is above the room temperature. If the screen is blank, replace the batteries in a battery thermostat once.",
+    },
+    {
+      name: "Switch and filter",
+      text: "The furnace switch looks like a light switch and should be on. If the filter is packed with dust, replace that one filter and allow a single cycle.",
+    },
+    {
+      name: "One reset only",
+      text: "If the burners light and shut down again, stop resetting. Call and describe that pattern. Do not remove panels or bypass a safety switch.",
+    },
+    {
+      name: "Leave for gas or CO",
+      text: "A gas smell, a hiss, or a carbon monoxide alarm means leave the house. From outside, call 911 and Nicor Gas at 888-642-6748. Furnace repair comes after the house is cleared.",
+    },
+  ],
   faqs: [
     {
       q: "When should I call for furnace repair in Freeport?",
@@ -78,6 +123,12 @@ export const furnaceRepair = defineService({
       a: "Furnace repair is for a forced-air gas furnace. Heating repair is the page to start from when the house is cold and you are not sure the furnace is the equipment, or the heat is a boiler, baseboard, or heat pump. Both calls use the same phone number.",
       detail:
         "If you can see a furnace with a blower and ductwork, stay on this page. If you only know that the rooms are cold, the heating repair page explains what to say.",
+    },
+    {
+      q: "Should I repair or replace a furnace in Freeport?",
+      a: "Repair is the starting point when the furnace quit and might still run. Replacement belongs in the conversation when the cabinet is failing every cold snap and another Stephenson County winter is a poor bet. This site does not name an age or a price that forces either choice.",
+      detail:
+        "Get the house stable first. Furnace installation is the page for a planned replacement. Emergency HVAC is the page when the indoor temperature is already falling.",
     },
   ],
   related: [

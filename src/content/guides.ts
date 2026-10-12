@@ -234,9 +234,9 @@ const guideRecords: Guide[] = [
     lede:
       "Furnace not heating on a January night in Freeport starts with weather near 11°F and a house that will not coast until morning. Indoor temperatures fall fast in older houses, and pipes are not hypothetical. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
-    image: "/photos/snow-street-oak-park-illinois.webp",
+    image: "/photos/yerkes-house-oak-park-snow.webp",
     imageAlt:
-      "Snow-covered houses along a street in Oak Park, Illinois.",
+      "The Mary G. Yerkes House in Oak Park, Illinois, after a snowfall. This is not Freeport.",
     body: [
       {
         heading: "Leave first if the air is not safe",
@@ -434,9 +434,9 @@ const guideRecords: Guide[] = [
     lede:
       "Forced-air heat and cooling only work if air can complete a loop. Many Freeport houses were built around a basement furnace and a short list of returns. Starve that loop and you get cold rooms, iced coils, short cycling, and a blower that sounds busier than it is.",
     datePublished: "2026-09-13",
-    image: "/photos/sheet-metal-air-duct.webp",
+    image: "/photos/basement-sheet-metal-ducts.webp",
     imageAlt:
-      "Round sheet-metal air duct with a branch takeoff.",
+      "Insulated and bare sheet-metal ducts in a building basement. This is not a Freeport house.",
     body: [
       {
         heading: "Poor HVAC airflow is a system problem",

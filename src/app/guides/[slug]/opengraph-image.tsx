@@ -1,9 +1,15 @@
-import { getGuide } from "@/content/guides";
+import { getGuide, guides } from "@/content/guides";
 import { createOgImage, ogAlt, OG_CONTENT_TYPE, OG_SIZE } from "@/lib/og-template";
+
+export const dynamic = "force-static";
 
 export const alt = ogAlt("Freeport HVAC guide");
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
+
+export function generateStaticParams() {
+  return guides.map((guide) => ({ slug: guide.slug }));
+}
 
 export default async function Image({
   params,

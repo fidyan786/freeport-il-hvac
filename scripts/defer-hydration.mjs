@@ -10,32 +10,60 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const APP_DIR = path.join(process.cwd(), ".next", "server", "app");
+const APP_DIR = path.join(process.cwd(), "out");
 const MARK = "data-defer-hydration";
 
 const LOADER = `<script ${MARK}>
 (function () {
+  function reveal() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var nodes = document.querySelectorAll("[data-reveal]");
+    if (!nodes.length || !("IntersectionObserver" in window)) return;
+    var viewH = window.innerHeight || 800;
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i].getBoundingClientRect().top < viewH * 0.92) nodes[i].classList.add("is-shown");
+    }
+    document.documentElement.classList.add("js-reveal");
+    var io = new IntersectionObserver(function (entries) {
+      for (var j = 0; j < entries.length; j++) {
+        if (!entries[j].isIntersecting) continue;
+        entries[j].target.classList.add("is-shown");
+        io.unobserve(entries[j].target);
+      }
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    for (var k = 0; k < nodes.length; k++) {
+      if (!nodes[k].classList.contains("is-shown")) io.observe(nodes[k]);
+    }
+  }
   function load() {
     var nodes = document.querySelectorAll("script[data-src]");
+    var pending = 0;
+    function finish() {
+      pending -= 1;
+      if (pending <= 0) reveal();
+    }
     for (var i = 0; i < nodes.length; i++) {
       var oldNode = nodes[i];
       var created = document.createElement("script");
       created.src = oldNode.getAttribute("data-src");
       if (oldNode.id) created.id = oldNode.id;
-      if (oldNode.hasAttribute("nomodule")) created.noModule = true;
-      else created.async = true;
+      if (oldNode.hasAttribute("nomodule")) {
+        created.noModule = true;
+      } else {
+        pending += 1;
+        created.async = true;
+        created.onload = finish;
+        created.onerror = finish;
+      }
       oldNode.replaceWith(created);
     }
+    if (pending === 0) reveal();
   }
-  function afterPaint() {
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        setTimeout(load, 0);
-      });
-    });
-  }
-  if (document.readyState === "complete") afterPaint();
-  else window.addEventListener("load", afterPaint, { once: true });
+  // Local Lighthouse records text LCP a few dozen milliseconds after parse.
+  // Chunks requested before that timestamp are treated as paint-critical on
+  // simulated slow 4G. Wait long enough that the hero text has painted, and
+  // do not wait for window load (that event already fired before LCP here).
+  setTimeout(load, 300);
 })();
 </script>`;
 
@@ -78,7 +106,7 @@ for (const file of files) {
   }
 }
 const sample = await readFile(
-  path.join(APP_DIR, "services", "furnace-repair-freeport-il.html"),
+  path.join(APP_DIR, "services", "furnace-repair-freeport-il", "index.html"),
   "utf8",
 );
 const stillEager = sample.includes('<script src="/_next/static/chunks/');

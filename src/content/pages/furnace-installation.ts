@@ -12,9 +12,9 @@ export const furnaceInstallation = defineService({
   eyebrow: "Replacement and new furnaces",
   lede:
     "Furnace installation in Freeport, IL is the conversation when a gas furnace should not be asked to carry another Stephenson County winter. That includes a full replacement of a furnace that fails every cold snap, and a new furnace where the old one has already been condemned or removed. It is not the page for a furnace that quit tonight and might still be repaired.",
-  image: "/photos/heroes/gas-furnace-utility.webp",
+  image: "/photos/heroes/condensing-furnace-vent.webp",
   imageAlt:
-    "High-efficiency gas furnace in a utility space, the equipment furnace installation in Freeport, IL is about.",
+    "White plastic exhaust vent on a high-efficiency gas furnace, the venting furnace installation in Freeport, IL has to get right.",
   sections: [
     {
       heading: "Furnace replacement is a winter decision",

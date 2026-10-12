@@ -10,14 +10,18 @@ export function FaqList({ items }: { items: FaqItem[] }) {
               <span className="font-sans text-base font-semibold text-navy">
                 {item.q}
               </span>
-              <span aria-hidden="true" className="mt-0.5 shrink-0 text-navy">
+              <span aria-hidden="true" className="acc-icon mt-1 shrink-0 text-navy">
                 +
               </span>
             </span>
           </summary>
-          <div className="accordion-fade mt-3 max-w-3xl leading-relaxed text-muted">
-            <p>{item.a}</p>
-            {item.detail ? <p className="mt-3">{item.detail}</p> : null}
+          <div className="acc-panel">
+            <div>
+              <div className="max-w-3xl pt-3 leading-relaxed text-muted">
+                <p>{item.a}</p>
+                {item.detail ? <p className="mt-3">{item.detail}</p> : null}
+              </div>
+            </div>
           </div>
         </details>
       ))}
