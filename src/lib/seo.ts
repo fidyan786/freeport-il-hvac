@@ -3,8 +3,9 @@ import { BRAND, getSiteUrl, site } from "@/lib/site";
 
 export function absoluteUrl(path = "/", options?: { asset?: boolean }) {
   const base = getSiteUrl();
-  if (path === "/" || path === "") return `${base}/`;
-  const normalized = path.startsWith("/") ? path : `/${path}`;
+  const clean = path.split("?")[0]?.split("#")[0] ?? "/";
+  if (clean === "/" || clean === "") return `${base}/`;
+  const normalized = clean.startsWith("/") ? clean : `/${clean}`;
   if (options?.asset) {
     return `${base}${normalized.replace(/\/$/, "")}`;
   }

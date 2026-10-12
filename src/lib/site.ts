@@ -47,10 +47,11 @@ export type SiteConfig = typeof site;
  * Public canonical origin. Single source of truth for metadataBase,
  * canonical URLs, Open Graph URLs, sitemap, and robots.
  *
- * Never use VERCEL_URL — preview deployments must not become canonical.
- * Localhost is allowed only on a local development machine.
+ * Never use VERCEL_URL or VERCEL_PROJECT_PRODUCTION_URL — preview and
+ * vercel.app hosts must not become canonical. Localhost is allowed only
+ * on a local development machine.
  */
-export const PRODUCTION_HOST = "freeport-il-hvac.vercel.app";
+export const PRODUCTION_HOST = "freeporthvacil.com";
 export const PRODUCTION_ORIGIN = `https://${PRODUCTION_HOST}`;
 const FALLBACK_PRODUCTION_ORIGIN = PRODUCTION_ORIGIN;
 
@@ -72,7 +73,7 @@ function isLocalHostname(hostname: string) {
 }
 
 function isPreviewVercelHost(hostname: string) {
-  return hostname.endsWith(".vercel.app") && hostname !== PRODUCTION_HOST;
+  return hostname.endsWith(".vercel.app");
 }
 
 function finalizeCanonical(origin: string) {
@@ -107,12 +108,6 @@ export function getSiteUrl() {
     return finalizeCanonical(explicit);
   }
 
-  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
-  if (production) {
-    const host = production.replace(/^https?:\/\//, "").replace(/\/$/, "");
-    return finalizeCanonical(`https://${host}`);
-  }
-
   const onVercel = Boolean(process.env.VERCEL);
   const localDev = process.env.NODE_ENV !== "production" && !onVercel;
   if (localDev) {
@@ -144,8 +139,7 @@ export function getPublicOrigin() {
 }
 
 /**
- * HTML-tag token already present on live production
- * (https://freeport-il-hvac.vercel.app/). Do not invent a replacement.
+ * HTML-tag token already present on the live site. Do not invent a replacement.
  * Override with NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION when GSC issues a new one.
  * A matching HTML-file token also lives at /google7129b29a73db544e.html.
  */

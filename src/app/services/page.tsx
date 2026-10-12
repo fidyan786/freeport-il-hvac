@@ -65,8 +65,8 @@ const sections: Array<{
     title: "Maintenance",
     intro:
       "Seasonal checks catch failing parts before a January night or the first hot week. Maintenance is inspection and cleaning — not a substitute for repair.",
-    image: "/photos/hvac-technicians-servicing-unit.webp",
-    imageAlt: "Two technicians in work clothes servicing a packaged heating and cooling unit.",
+    image: "/photos/gas-furnace-utility.webp",
+    imageAlt: "High-efficiency gas furnace in a utility space.",
     category: "hvac",
   },
   {

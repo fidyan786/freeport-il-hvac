@@ -90,6 +90,11 @@ export function Footer() {
                 Image credits
               </Link>
             </li>
+            <li>
+              <Link className="hover:underline" href="/sitemap/">
+                Sitemap
+              </Link>
+            </li>
           </ul>
         </div>
 

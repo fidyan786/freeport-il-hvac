@@ -66,7 +66,7 @@ export const IMAGE_CREDITS: ImageCredit[] = [
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Condensing_Forced_Air_Gas_Furnace.jpg",
     changes:
       "Center-cropped to 3:2, resized to 1200×800, and saved as WebP. The adapted file stays under CC BY-SA 4.0.",
-    used: "Furnace and humidifier pages",
+    used: "Furnace, humidifier, and maintenance pages",
   },
   {
     file: "outdoor-ac-condenser.webp",
@@ -77,18 +77,7 @@ export const IMAGE_CREDITS: ImageCredit[] = [
     licenseUrl: "https://creativecommons.org/licenses/by/3.0",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Air_cond_ext_block.jpg",
     changes: "Center-cropped to 3:2, resized to 1200×800, and saved as WebP.",
-    used: "Air conditioner and heat pump pages",
-  },
-  {
-    file: "hvac-technicians-servicing-unit.webp",
-    src: "/photos/hvac-technicians-servicing-unit.webp",
-    alt: "Two technicians in work clothes servicing a packaged heating and cooling unit.",
-    author: "U.S. Air Force photo by Airman 1st Class Skylar Ellis",
-    license: "Public domain (U.S. government work)",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:HVAC_Technicians_Power_Mission_Success_(8850029).jpg",
-    changes: "Center-cropped to 3:2, resized to 1200×800, and saved as WebP.",
-    used: "Service and maintenance pages. These are not this website’s technicians.",
+    used: "Air conditioner, heat pump, and AC repair pages",
   },
   {
     file: "digital-wall-thermostat.webp",
@@ -124,7 +113,7 @@ export const IMAGE_CREDITS: ImageCredit[] = [
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Basement_(7029986093).jpg",
     changes:
       "Center-cropped to 3:2, resized to 1200×800, and saved as WebP. The adapted file stays under CC BY-SA 2.0.",
-    used: "Indoor-air pages",
+    used: "Indoor-air pages and the system-repair page",
   },
   {
     file: "rooftop-packaged-hvac-units.webp",

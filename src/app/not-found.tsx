@@ -30,23 +30,27 @@ export default function NotFound() {
         If you need heat or cooling help in Freeport, call to be connected
         with a local heating and cooling professional.
       </p>
-      <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <div className="mt-8 flex justify-center">
         <PhoneCta location="inline" context="404" className="w-full sm:w-auto">
           {primaryCtaLabel()}
         </PhoneCta>
-        <Link
-          href="/"
-          className="inline-flex min-h-12 items-center justify-center rounded-brand border border-navy px-5 py-3 text-sm font-semibold text-navy"
-        >
-          Home
-        </Link>
-        <Link
-          href="/services/"
-          className="inline-flex min-h-12 items-center justify-center rounded-brand border border-navy px-5 py-3 text-sm font-semibold text-navy"
-        >
-          Services
-        </Link>
       </div>
+      <ul className="mx-auto mt-8 grid max-w-md gap-2 text-left">
+        {[
+          { href: "/services/furnace-repair-freeport-il/", label: "Furnace repair" },
+          { href: "/services/ac-repair-freeport-il/", label: "AC repair" },
+          { href: "/services/heating-repair-freeport-il/", label: "Heating repair" },
+          { href: "/services/emergency-hvac-freeport-il/", label: "Urgent no-heat or no-cooling" },
+          { href: "/contact/", label: "Call" },
+          { href: "/services/", label: "All services" },
+        ].map((item) => (
+          <li key={item.href}>
+            <Link className="font-semibold text-navy underline underline-offset-2" href={item.href}>
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -48,9 +48,9 @@ export const services: ServicePageContent[] = [
     h1: "The first real cooling day is when Freeport air conditioners show their winter damage.",
     eyebrow: "Cooling repair · Freeport 61032",
     lede: "The outdoor unit made it through snow. That is not a diagnosis. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/hvac-technicians-servicing-unit.webp",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     problems: [
       {
         title: "Silent outdoor unit on a sticky afternoon",
@@ -1100,9 +1100,9 @@ export const services: ServicePageContent[] = [
     h1: "Sometimes the trouble is the whole system, not just the furnace or the AC.",
     eyebrow: "System repair · Stephenson County",
     lede: "The same blower, the same filter slot, and the same thermostat run both seasons. If comfort failed and you cannot honestly blame “only heat” or “only AC,” this is the repair page.",
-    image: "/photos/hvac-technicians-servicing-unit.webp",
+    image: "/photos/basement-flexible-ducts.webp",
     imageAlt:
-      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
+      "Flexible air ducts in an unfinished basement.",
     problems: [
       {
         title: "A blower that quit, taking both seasons with it",
@@ -1231,9 +1231,9 @@ export const services: ServicePageContent[] = [
     h1: "In a heating climate, maintenance is two seasons of work.",
     eyebrow: "Seasonal maintenance · 61032",
     lede: "A single “annual tune-up” copied from a milder town misses how Freeport actually uses equipment. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/hvac-technicians-servicing-unit.webp",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
+      "High-efficiency gas furnace in a utility space.",
     problems: [
       {
         title: "A furnace that was last touched after a no-heat call",

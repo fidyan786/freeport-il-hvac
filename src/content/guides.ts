@@ -98,9 +98,9 @@ export const guides: Guide[] = [
     lede:
       "A coil or suction line coated in frost in Stephenson County June is not “the system working too well.” Ice means heat is not moving the way it should. Keep running it and you can starve the compressor and soak the drain path.",
     datePublished: "2026-09-13",
-    image: "/photos/hvac-technicians-servicing-unit.webp",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     body: [
       {
         heading: "Frost means the coil is starving for heat",
@@ -546,9 +546,9 @@ export const guides: Guide[] = [
     lede:
       "A furnace that will face roughly 7,000 heating degree days needs a fall check. An air conditioner that sat under snow needs a spring check. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
-    image: "/photos/hvac-technicians-servicing-unit.webp",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
+      "High-efficiency gas furnace in a utility space.",
     body: [
       {
         heading: "Two seasons, two jobs",

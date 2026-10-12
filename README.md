@@ -18,7 +18,7 @@ Copy `.env.example`:
 | `NEXT_PUBLIC_PHONE_DISPLAY` | Public phone (default `(703) 703-7855`) |
 | `NEXT_PUBLIC_PHONE_TEL` | Digits for `tel:` (default `7037037855`, link `tel:+17037037855`) |
 | `NEXT_PUBLIC_BUSINESS_HOURS` | Optional hours string |
-| `NEXT_PUBLIC_SITE_URL` | Canonical origin |
+| `NEXT_PUBLIC_SITE_URL` | Optional canonical origin. Default is `https://freeporthvacil.com` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional GA4 |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional GSC HTML-tag token override |
 

@@ -71,6 +71,7 @@ export const megaGroups: MegaGroup[] = [
     items: pick([
       "heat-pump-repair-freeport-il",
       "heat-pump-installation-freeport-il",
+      "heat-pump-maintenance-freeport-il",
       "ductless-mini-split-freeport-il",
       "mini-split-repair-freeport-il",
       "mini-split-installation-freeport-il",
@@ -206,4 +207,5 @@ export const indexablePaths = [
   "/privacy-policy/",
   "/terms/",
   "/image-credits/",
+  "/sitemap/",
 ];

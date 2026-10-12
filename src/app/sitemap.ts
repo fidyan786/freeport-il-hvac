@@ -17,9 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (seen.has(url)) continue;
     seen.add(url);
     const published = guideDates.get(path);
-    entries.push(
-      published ? { url, lastModified: published } : { url },
-    );
+    entries.push({
+      url,
+      lastModified: published ?? "2026-10-12",
+    });
   }
 
   return entries;
