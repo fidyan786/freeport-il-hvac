@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/Icons";
+import { SitePhoto } from "@/components/SitePhoto";
 import { IMAGE_SIZES } from "@/lib/images";
 
 export function ServiceCard({
@@ -22,12 +22,11 @@ export function ServiceCard({
       className="card-lift group overflow-hidden rounded-brand border border-line bg-white"
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-line">
-        <Image
+        <SitePhoto
           src={image}
           alt={imageAlt}
-          fill
           sizes={IMAGE_SIZES.card}
-          className="card-image object-cover"
+          className="card-image"
         />
       </div>
       <div className="p-5">

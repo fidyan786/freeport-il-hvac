@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SitePhoto } from "@/components/SitePhoto";
 import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
 import { SectionCall } from "@/components/SectionCall";
@@ -35,11 +35,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative min-h-[16rem] lg:min-h-[22rem]">
-            <Image
-              src="/photos/maintenance.jpg"
-              alt="Outdoor heating and cooling equipment beside a house"
-              fill
-              className="object-cover"
+            <SitePhoto
+              src="/photos/stephenson-county-courthouse-freeport.webp"
+              alt="Stephenson County Courthouse in Freeport, Illinois."
+              priority
               sizes={IMAGE_SIZES.hero}
             />
           </div>

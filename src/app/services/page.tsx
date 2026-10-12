@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { SitePhoto } from "@/components/SitePhoto";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { FinalCta } from "@/components/FinalCta";
@@ -29,8 +29,8 @@ const sections: Array<{
     title: "Cooling",
     intro:
       "Air conditioners in Freeport spend most of the year idle. Repair, installation, replacement, and spring maintenance are different jobs — start with the one you actually need.",
-    image: "/photos/ac-outdoor.jpg",
-    imageAlt: "Outdoor air conditioner beside a brick Midwestern home",
+    image: "/photos/outdoor-ac-condenser.webp",
+    imageAlt: "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     category: "cooling",
   },
   {
@@ -38,8 +38,8 @@ const sections: Array<{
     title: "Heating",
     intro:
       "Furnaces and heating systems carry Stephenson County winters. No heat is not the same problem as a planned replacement or a fall tune-up.",
-    image: "/photos/furnace-service.jpg",
-    imageAlt: "HVAC technician servicing a residential furnace in a Midwestern home",
+    image: "/photos/gas-furnace-utility.webp",
+    imageAlt: "High-efficiency gas furnace in a utility space.",
     category: "heating",
   },
   {
@@ -47,8 +47,8 @@ const sections: Array<{
     title: "Residential HVAC",
     intro:
       "Most Freeport calls are houses: furnaces that carry winter, air conditioners that sat idle, and the shared blower and ducts between them. Start here for a home rather than a rooftop unit.",
-    image: "/photos/hero-home-winter.jpg",
-    imageAlt: "Snow-covered Freeport-area home that depends on residential heating and cooling",
+    image: "/photos/spring-jackson-freeport-illinois.webp",
+    imageAlt: "Houses at the corner of Spring and Jackson streets in Freeport, Illinois.",
     category: "residential",
   },
   {
@@ -56,8 +56,8 @@ const sections: Array<{
     title: "Heat Pumps",
     intro:
       "Heat pumps and ductless mini splits have to heat through real cold, not just shoulder-season weather. Repair, installation, and maintenance are listed separately.",
-    image: "/photos/heat-pump.jpg",
-    imageAlt: "Heat pump outdoor unit beside a ranch home",
+    image: "/photos/outdoor-ac-condenser.webp",
+    imageAlt: "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     category: "specialized",
   },
   {
@@ -65,8 +65,8 @@ const sections: Array<{
     title: "Maintenance",
     intro:
       "Seasonal checks catch failing parts before a January night or the first hot week. Maintenance is inspection and cleaning — not a substitute for repair.",
-    image: "/photos/maintenance.jpg",
-    imageAlt: "Technician performing outdoor HVAC maintenance",
+    image: "/photos/hvac-technicians-servicing-unit.webp",
+    imageAlt: "Two technicians in work clothes servicing a packaged heating and cooling unit.",
     category: "hvac",
   },
   {
@@ -74,8 +74,8 @@ const sections: Array<{
     title: "Indoor Air Quality",
     intro:
       "Closed-up Freeport houses recirculate whatever the returns pull. Filtration and humidity equipment are comfort tools, explained without medical claims.",
-    image: "/photos/iaq-filter.jpg",
-    imageAlt: "Furnace filter and indoor air equipment at a return plenum",
+    image: "/photos/basement-flexible-ducts.webp",
+    imageAlt: "Flexible air ducts in an unfinished basement.",
     category: "iaq",
   },
   {
@@ -83,8 +83,8 @@ const sections: Array<{
     title: "Commercial HVAC",
     intro:
       "Offices, shops, churches, and similar Freeport buildings. Rooftop units, business heating, and opening-day comfort — confirmed on the call.",
-    image: "/photos/commercial.jpg",
-    imageAlt: "Commercial rooftop HVAC units on a small-city building",
+    image: "/photos/rooftop-packaged-hvac-units.webp",
+    imageAlt: "Packaged rooftop heating and cooling units on a commercial roof.",
     category: "commercial",
   },
   {
@@ -92,8 +92,8 @@ const sections: Array<{
     title: "Emergency HVAC",
     intro:
       "Urgent no-heat and no-cooling calls. If you smell gas or a carbon monoxide alarm is sounding, leave the property first.",
-    image: "/photos/emergency-night.jpg",
-    imageAlt: "Winter night service visit at a Midwestern home",
+    image: "/photos/snow-street-oak-park-illinois.webp",
+    imageAlt: "Snow-covered houses along a street in Oak Park, Illinois.",
     category: "emergency",
   },
 ];
@@ -176,13 +176,10 @@ export default function ServicesIndexPage() {
                 className={`grid items-start gap-8 lg:grid-cols-2 ${imageRight ? "lg:[&>div:first-child]:order-2" : ""}`}
               >
                 <div className="relative aspect-[16/10] min-w-0 overflow-hidden rounded-brand bg-line">
-                  <Image
+                  <SitePhoto
                     src={section.image}
                     alt={section.imageAlt}
-                    fill
-                    priority={index === 0}
                     sizes={IMAGE_SIZES.split}
-                    className="object-cover"
                   />
                 </div>
                 <div className="min-w-0">

@@ -205,4 +205,5 @@ export const indexablePaths = [
   "/contact/",
   "/privacy-policy/",
   "/terms/",
+  "/image-credits/",
 ];

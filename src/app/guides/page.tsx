@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { SitePhoto } from "@/components/SitePhoto";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { FinalCta } from "@/components/FinalCta";
@@ -45,19 +45,17 @@ export default function GuidesIndexPage() {
         />
       </div>
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
-        {guides.map((guide, index) => (
+        {guides.map((guide) => (
           <Link
             key={guide.slug}
             href={guide.href}
             className="overflow-hidden rounded-brand border border-line bg-white hover:border-navy"
           >
             <div className="relative aspect-[16/10]">
-              <Image
+              <SitePhoto
                 src={guide.image}
                 alt={guide.imageAlt}
-                fill
-                priority={index === 0}
-                className="card-image object-cover"
+                className="card-image"
                 sizes={IMAGE_SIZES.card}
               />
             </div>

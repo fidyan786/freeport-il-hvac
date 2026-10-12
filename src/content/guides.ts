@@ -28,9 +28,9 @@ export const guides: Guide[] = [
     lede:
       "Warm air from the registers is not a thermostat misunderstanding. In Freeport the outdoor unit often sat idle from first frost to the first sticky week. The indoor blower can move air the whole time the refrigeration side does nothing.",
     datePublished: "2026-09-13",
-    image: "/photos/ac-outdoor.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Outdoor air conditioner beside a Freeport home after a long idle winter",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     body: [
       {
         heading: "Running is not the same as cooling",
@@ -98,9 +98,9 @@ export const guides: Guide[] = [
     lede:
       "A coil or suction line coated in frost in Stephenson County June is not “the system working too well.” Ice means heat is not moving the way it should. Keep running it and you can starve the compressor and soak the drain path.",
     datePublished: "2026-09-13",
-    image: "/photos/tech-ac-service.jpg",
+    image: "/photos/hvac-technicians-servicing-unit.webp",
     imageAlt:
-      "Technician checking an air conditioner that has been icing during a Freeport cooling call",
+      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
     body: [
       {
         heading: "Frost means the coil is starving for heat",
@@ -160,9 +160,9 @@ export const guides: Guide[] = [
     lede:
       "Freeport only books on the order of 690 cooling degree days. Those days are still sticky. A system can run a long afternoon and be doing its job — or it can run from breakfast to midnight because it cannot finish the job. The difference is whether the house actually gets cooler and drier.",
     datePublished: "2026-09-13",
-    image: "/photos/ac-outdoor.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Outdoor condenser running through a humid Freeport afternoon",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     body: [
       {
         heading: "Long runtimes can be honest weather",
@@ -222,9 +222,9 @@ export const guides: Guide[] = [
     lede:
       "January nights in Freeport sit near 11°F. Indoor temperatures fall fast in older houses, and pipes are not hypothetical. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
-    image: "/photos/hero-home-winter.jpg",
+    image: "/photos/snow-street-oak-park-illinois.webp",
     imageAlt:
-      "Freeport home in winter when indoor heat has to hold against a hard freeze",
+      "Snow-covered houses along a street in Oak Park, Illinois.",
     body: [
       {
         heading: "Leave first if the air is not safe",
@@ -291,9 +291,9 @@ export const guides: Guide[] = [
     lede:
       "In a heating-dominated climate, a furnace is supposed to run long enough to warm the heat exchanger, satisfy the thermostat, and shut down cleanly. Two minutes of flame, a pause, and another try is not thrift. It is a limit, a sensor, or a design problem interrupting the job.",
     datePublished: "2026-09-13",
-    image: "/photos/furnace-service.jpg",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "HVAC technician diagnosing a furnace that is not completing a full heat cycle",
+      "High-efficiency gas furnace in a utility space.",
     body: [
       {
         heading: "What a finished cycle looks like",
@@ -353,9 +353,9 @@ export const guides: Guide[] = [
     lede:
       "Forced-air equipment in older Freeport houses is rarely silent. A soft whoosh at startup is normal. A boom, a metal-on-metal grind, or a scream from the outdoor fan is not. Treat a new sound as a symptom, not as background for the winter.",
     datePublished: "2026-09-13",
-    image: "/photos/furnace.jpg",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "Furnace cabinet where startup booms and blower noises show up first",
+      "High-efficiency gas furnace in a utility space.",
     body: [
       {
         heading: "A sound you did not have last week matters",
@@ -422,9 +422,9 @@ export const guides: Guide[] = [
     lede:
       "Forced-air heat and cooling only work if air can complete a loop. Many Freeport houses were built around a basement furnace and a short list of returns. Starve that loop and you get cold rooms, iced coils, short cycling, and a blower that sounds busier than it is.",
     datePublished: "2026-09-13",
-    image: "/photos/iaq-filter.jpg",
+    image: "/photos/sheet-metal-air-duct.webp",
     imageAlt:
-      "Furnace filter that has loaded up and is restricting airflow",
+      "Round sheet-metal air duct with a branch takeoff.",
     body: [
       {
         heading: "Weak air is a system problem, not a “vent” problem",
@@ -484,9 +484,9 @@ export const guides: Guide[] = [
     lede:
       "A hallway sensor does not heat a converted attic or a parlor with three exterior walls. Uneven temperatures in Freeport are usually a building-and-duct story. Sometimes they are a failing blower or a heat pump in defrost. They are rarely solved by one more closed register.",
     datePublished: "2026-09-13",
-    image: "/photos/hero-home-winter.jpg",
+    image: "/photos/digital-wall-thermostat.webp",
     imageAlt:
-      "Two-story Freeport house where upstairs and downstairs rarely feel the same",
+      "Digital thermostat mounted on an interior wall.",
     body: [
       {
         heading: "Winter stacks heat. Summer stacks the opposite.",
@@ -546,9 +546,9 @@ export const guides: Guide[] = [
     lede:
       "A furnace that will face roughly 7,000 heating degree days needs a fall check. An air conditioner that sat under snow needs a spring check. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
-    image: "/photos/maintenance.jpg",
+    image: "/photos/hvac-technicians-servicing-unit.webp",
     imageAlt:
-      "Seasonal HVAC maintenance on equipment that has to face a Freeport winter",
+      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
     body: [
       {
         heading: "Two seasons, two jobs",
@@ -622,9 +622,9 @@ export const guides: Guide[] = [
     lede:
       "Age matters. A cracked heat exchanger, a cabinet that cannot keep the house livable on a design-cold night, and a parts chase every freeze matter more. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
-    image: "/photos/furnace.jpg",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "Older gas furnace that may be past honest repair in a Freeport basement",
+      "High-efficiency gas furnace in a utility space.",
     body: [
       {
         heading: "Safety closes the conversation",
@@ -691,9 +691,9 @@ export const guides: Guide[] = [
     lede:
       "Heat pumps move heat. In July that is simple. In January, when Freeport nights sit near 11°F, the outdoor air holds less heat and the unit has to work differently. If you do not understand defrost and backup heat, the machine will look broken on the nights it is doing its hardest job.",
     datePublished: "2026-09-13",
-    image: "/photos/heat-pump.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Heat pump outdoor unit that must heat through a northern Illinois winter",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     body: [
       {
         heading: "One outdoor unit, two seasons, unequal work",
@@ -760,9 +760,9 @@ export const guides: Guide[] = [
     lede:
       "Windows in Stephenson County stay closed for months. Snow season around 33 to 35 inches is not a ventilation plan. The furnace moves the same indoor air through the same filter and the same ducts. That can feel stale or dry even when the heat is working. This page is about comfort and equipment — not about treating any condition.",
     datePublished: "2026-09-13",
-    image: "/photos/humidifier.jpg",
+    image: "/photos/basement-flexible-ducts.webp",
     imageAlt:
-      "Whole-home humidifier on a Freeport furnace during the closed-window season",
+      "Flexible air ducts in an unfinished basement.",
     body: [
       {
         heading: "Closed-building season is the local fact",

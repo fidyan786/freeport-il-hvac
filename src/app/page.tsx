@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { SitePhoto } from "@/components/SitePhoto";
 import { FaqList } from "@/components/FaqList";
 import { FinalCta } from "@/components/FinalCta";
 import { PhoneIcon } from "@/components/Icons";
@@ -88,13 +88,11 @@ export default function HomePage() {
             </ul>
           </div>
           <div className="relative min-h-[18rem] overflow-hidden sm:min-h-[24rem] lg:min-h-full">
-            <Image
-              src="/photos/hero-home-winter.jpg"
-              alt="Snow-covered Freeport-area home with warm interior lights"
-              fill
+            <SitePhoto
+              src="/photos/downtown-freeport-illinois.webp"
+              alt="Downtown Freeport, Illinois, with brick storefronts along a main street."
               priority
               sizes={IMAGE_SIZES.hero}
-              className="object-cover"
             />
           </div>
         </div>
@@ -127,12 +125,10 @@ export default function HomePage() {
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <article className="grid gap-4 sm:grid-cols-[12rem_1fr]">
               <div className="relative aspect-[4/3] overflow-hidden rounded-brand">
-                <Image
-                  src="/photos/furnace-service.jpg"
-                  alt="Residential furnace in a basement"
-                  fill
+                <SitePhoto
+                  src="/photos/gas-furnace-utility.webp"
+                  alt="High-efficiency gas furnace in a utility space."
                   sizes={IMAGE_SIZES.thumb}
-                  className="object-cover"
                 />
               </div>
               <div>
@@ -157,12 +153,10 @@ export default function HomePage() {
             </article>
             <article className="grid gap-4 sm:grid-cols-[12rem_1fr]">
               <div className="relative aspect-[4/3] overflow-hidden rounded-brand">
-                <Image
-                  src="/photos/ac-outdoor.jpg"
-                  alt="Outdoor air conditioner beside a house"
-                  fill
+                <SitePhoto
+                  src="/photos/outdoor-ac-condenser.webp"
+                  alt="Outdoor air-conditioner condenser on a concrete pad beside a house."
                   sizes={IMAGE_SIZES.thumb}
-                  className="object-cover"
                 />
               </div>
               <div>

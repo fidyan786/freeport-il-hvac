@@ -48,9 +48,9 @@ export const services: ServicePageContent[] = [
     h1: "The first real cooling day is when Freeport air conditioners show their winter damage.",
     eyebrow: "Cooling repair · Freeport 61032",
     lede: "The outdoor unit made it through snow. That is not a diagnosis. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/tech-ac-service.jpg",
+    image: "/photos/hvac-technicians-servicing-unit.webp",
     imageAlt:
-      "Technician checking an outdoor air conditioner after winter idle in Freeport, Illinois",
+      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
     problems: [
       {
         title: "Silent outdoor unit on a sticky afternoon",
@@ -181,9 +181,9 @@ export const services: ServicePageContent[] = [
     h1: "A new air conditioner in Freeport has to fit the house, not a cooling-heavy catalog.",
     eyebrow: "Cooling installation · Stephenson County",
     lede: "This is not a market that needs a resort-sized condenser. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/ac-install.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "New outdoor air conditioner being set on a pad beside a Freeport home",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     problems: [
       {
         title: "A house that never had honest central cooling",
@@ -312,9 +312,9 @@ export const services: ServicePageContent[] = [
     h1: "What to know before you call",
     eyebrow: "Cooling tune-up · Freeport",
     lede: "You do not need a cooling “membership pitch.” You need the condenser checked after it sat through an Illinois winter, before the first afternoon the house actually asks it to run.",
-    image: "/photos/ac-outdoor.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Outdoor air conditioner beside a Freeport home after winter weather",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     problems: [
       {
         title: "A condenser that spent winter as a snowbank",
@@ -443,9 +443,9 @@ export const services: ServicePageContent[] = [
     h1: "Replacing an air conditioner here is about the coil, the ducts, and a short cooling season.",
     eyebrow: "Cooling replacement · 61032",
     lede: "A dead condenser is not automatically a shopping trip. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/ac-install.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Replacement air conditioner ready for a Freeport, Illinois home",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     problems: [
       {
         title: "A compressor that has already been rescued once",
@@ -574,9 +574,9 @@ export const services: ServicePageContent[] = [
     h1: "When a Freeport furnace quits, the house does not have time for guesswork.",
     eyebrow: "Gas furnace repair · Stephenson County",
     lede: "January nights near 11°F are not a theory. If the burners will not stay lit, the blower runs cold, or the furnace locks out after a few tries, call. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/furnace-service.jpg",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "HVAC technician servicing a residential furnace in a Midwestern basement",
+      "High-efficiency gas furnace in a utility space.",
     problems: [
       {
         title: "No heat after a normal evening",
@@ -707,9 +707,9 @@ export const services: ServicePageContent[] = [
     h1: "A furnace that matches an older Freeport house beats a bigger box in the basement.",
     eyebrow: "Furnace installation · 61032",
     lede: "Heating degree days here are the job. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/furnace-install.jpg",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "New furnace installation in a Freeport, Illinois utility space",
+      "High-efficiency gas furnace in a utility space.",
     problems: [
       {
         title: "A furnace that never had enough air to begin with",
@@ -838,9 +838,9 @@ export const services: ServicePageContent[] = [
     h1: "Fall service is how a furnace earns the right to run through January.",
     eyebrow: "Heating tune-up · Freeport",
     lede: "A furnace that sat quiet through a mild stretch still has a long job ahead. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/furnace-service.jpg",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "HVAC technician checking a residential furnace before the heating season",
+      "High-efficiency gas furnace in a utility space.",
     problems: [
       {
         title: "A flame sensor that is already tired",
@@ -969,9 +969,9 @@ export const services: ServicePageContent[] = [
     h1: "Heating repair when the house is cold",
     eyebrow: "Heating repair · Freeport",
     lede: "Not every cold house in Stephenson County is a textbook gas furnace story. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/hero-home-winter.jpg",
+    image: "/photos/snow-street-oak-park-illinois.webp",
     imageAlt:
-      "Freeport home in winter when indoor heat has to hold against the cold",
+      "Snow-covered houses along a street in Oak Park, Illinois.",
     problems: [
       {
         title: "The house is cold and the thermostat is not helping",
@@ -1100,9 +1100,9 @@ export const services: ServicePageContent[] = [
     h1: "Sometimes the trouble is the whole system, not just the furnace or the AC.",
     eyebrow: "System repair · Stephenson County",
     lede: "The same blower, the same filter slot, and the same thermostat run both seasons. If comfort failed and you cannot honestly blame “only heat” or “only AC,” this is the repair page.",
-    image: "/photos/maintenance.jpg",
+    image: "/photos/hvac-technicians-servicing-unit.webp",
     imageAlt:
-      "Indoor HVAC system that serves both heating and cooling in a Freeport home",
+      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
     problems: [
       {
         title: "A blower that quit, taking both seasons with it",
@@ -1231,9 +1231,9 @@ export const services: ServicePageContent[] = [
     h1: "In a heating climate, maintenance is two seasons of work.",
     eyebrow: "Seasonal maintenance · 61032",
     lede: "A single “annual tune-up” copied from a milder town misses how Freeport actually uses equipment. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/maintenance.jpg",
+    image: "/photos/hvac-technicians-servicing-unit.webp",
     imageAlt:
-      "Seasonal HVAC maintenance visit for a Freeport home’s heating and cooling",
+      "Two technicians in work clothes servicing a packaged heating and cooling unit.",
     problems: [
       {
         title: "A furnace that was last touched after a no-heat call",
@@ -1362,9 +1362,9 @@ export const services: ServicePageContent[] = [
     h1: "Replacing heat and cooling together only makes sense when the pieces no longer match.",
     eyebrow: "System replacement · Freeport",
     lede: "Piecemeal swaps leave a new condenser on a tired furnace, or a new furnace pushing air through a leftover coil. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/hero-home-winter.jpg",
+    image: "/photos/spring-jackson-freeport-illinois.webp",
     imageAlt:
-      "Freeport home that needs a matched heating and cooling system replacement",
+      "Houses at the corner of Spring and Jackson streets in Freeport, Illinois.",
     problems: [
       {
         title: "A new piece attached to a leftover piece",
@@ -1493,9 +1493,9 @@ export const services: ServicePageContent[] = [
     h1: "Urgent no-heat or no-cooling help starts with a phone call",
     eyebrow: "Urgent HVAC · Freeport 61032",
     lede: "If the furnace stopped on a Stephenson County night, or the AC died when the house was already hot, do not wait on a long form. Call to be connected with a local heating and cooling professional. Availability is confirmed on the phone.",
-    image: "/photos/emergency-night.jpg",
+    image: "/photos/snow-street-oak-park-illinois.webp",
     imageAlt:
-      "Freeport home at night when heating or cooling has failed and a call is needed",
+      "Snow-covered houses along a street in Oak Park, Illinois.",
     problems: [
       {
         title: "No heat while the outdoor temperature is already dangerous",
@@ -1628,9 +1628,9 @@ export const services: ServicePageContent[] = [
     h1: "A heat pump that struggles in Freeport cold is a diagnosis, not a slogan.",
     eyebrow: "Heat pump repair · northern Illinois",
     lede: "This climate will tell you quickly if the outdoor unit can still heat. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/heat-pump.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Air-source heat pump outside a Freeport home in a heating climate",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     problems: [
       {
         title: "Outdoor unit iced into a sculpture",
@@ -1759,9 +1759,9 @@ export const services: ServicePageContent[] = [
     h1: "If a heat pump is going to heat 61032, it has to be chosen for this winter.",
     eyebrow: "Heat pump installation · Stephenson County",
     lede: "Roughly 6,956 heating degree days versus 690 cooling degree days is the whole briefing. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/heat-pump.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Cold-climate heat pump installation discussion for a Freeport home",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     problems: [
       {
         title: "A furnace replacement that turned into a heat-pump question",
@@ -1889,9 +1889,9 @@ export const services: ServicePageContent[] = [
     h1: "Heat pumps here do not get an off-season. Service has to follow that.",
     eyebrow: "Heat pump service · Freeport",
     lede: "A Freeport air conditioner can sit from frost to lilacs. A heat pump cannot. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/heat-pump.jpg",
+    image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
-      "Heat pump outdoor unit that runs through Freeport winters and needs maintenance",
+      "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     problems: [
       {
         title: "A coil that has been heating and cooling without a look",
@@ -2020,9 +2020,9 @@ export const services: ServicePageContent[] = [
     h1: "Ductless heating and cooling for the rooms Freeport houses never quite served.",
     eyebrow: "Ductless systems · 61032",
     lede: "An enclosed porch, a finished attic, or an addition on a six-inch run is a Freeport story. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/mini-split.jpg",
+    image: "/photos/ductless-indoor-unit.webp",
     imageAlt:
-      "Ductless mini-split indoor head in a Freeport home without strong ductwork",
+      "Wall-mounted ductless indoor unit in a room.",
     problems: [
       {
         title: "A room the furnace never really owned",
@@ -2151,9 +2151,9 @@ export const services: ServicePageContent[] = [
     h1: "A silent head or a frozen outdoor unit is a mini-split problem, not a mystery.",
     eyebrow: "Ductless repair · Freeport",
     lede: "Wall heads talk in codes. Outdoor units sit in snow. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/mini-split.jpg",
+    image: "/photos/ductless-indoor-unit.webp",
     imageAlt:
-      "Ductless mini-split head being diagnosed in a Freeport, Illinois room",
+      "Wall-mounted ductless indoor unit in a room.",
     problems: [
       {
         title: "A head that beeps and does nothing useful",
@@ -2282,9 +2282,9 @@ export const services: ServicePageContent[] = [
     h1: "Line sets and honest room loads beat ripping plaster for new ducts.",
     eyebrow: "Ductless installation · Stephenson County",
     lede: "Hanging a head is the visible hour. Getting copper through an older Freeport wall, setting the outdoor unit above snow, and aiming air at the actual living space is the job. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/mini-split.jpg",
+    image: "/photos/ductless-indoor-unit.webp",
     imageAlt:
-      "Mini-split installation planning for an older Freeport house",
+      "Wall-mounted ductless indoor unit in a room.",
     problems: [
       {
         title: "A kit already sitting in the box",
@@ -2413,9 +2413,9 @@ export const services: ServicePageContent[] = [
     h1: "Closed-up Freeport winters recirculate whatever the furnace already moves.",
     eyebrow: "Indoor air · Stephenson County",
     lede: "From the first hard freeze until someone opens a window in April, the house is a closed box. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/iaq-filter.jpg",
+    image: "/photos/basement-flexible-ducts.webp",
     imageAlt:
-      "Furnace filter and indoor HVAC air path in a closed-up Freeport home",
+      "Flexible air ducts in an unfinished basement.",
     problems: [
       {
         title: "Air that feels used by afternoon",
@@ -2544,9 +2544,9 @@ export const services: ServicePageContent[] = [
     h1: "A thicker filter is not always a better filter in an older return.",
     eyebrow: "Filtration · Freeport homes",
     lede: "The filter slot in a 61032 furnace closet was often built for a thin media and a lot of air. Stuffing a dense pad into a leaky rack can starve the heat exchanger. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/iaq-filter.jpg",
+    image: "/photos/sheet-metal-air-duct.webp",
     imageAlt:
-      "Furnace filter rack and return in an older Freeport forced-air system",
+      "Round sheet-metal air duct with a branch takeoff.",
     problems: [
       {
         title: "A filter that has become a wall",
@@ -2675,9 +2675,9 @@ export const services: ServicePageContent[] = [
     h1: "January dryness and July stickiness are two different jobs in the same house.",
     eyebrow: "Humidity · 61032",
     lede: "Forced-air heat in a shut-up Stephenson County winter pulls moisture down. A humid July afternoon does the opposite. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/humidifier.jpg",
+    image: "/photos/gas-furnace-utility.webp",
     imageAlt:
-      "Whole-house humidifier on a Freeport furnace during the dry heating season",
+      "High-efficiency gas furnace in a utility space.",
     problems: [
       {
         title: "Static, dry wood, and a house that feels parched by February",
@@ -2806,9 +2806,9 @@ export const services: ServicePageContent[] = [
     h1: "A Freeport house needs heating that lasts winter and cooling that still works after it.",
     eyebrow: "Residential HVAC · Freeport 61032",
     lede: "Most calls in Stephenson County are homes: a furnace that quit, an air conditioner that sat through snow, or a system that never quite conditioned every room. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/hero-home-winter.jpg",
+    image: "/photos/spring-jackson-freeport-illinois.webp",
     imageAlt:
-      "Snow-covered Freeport-area home that depends on residential heating and cooling",
+      "Houses at the corner of Spring and Jackson streets in Freeport, Illinois.",
     problems: [
       {
         title: "A house that lives or dies on the furnace",
@@ -2937,9 +2937,9 @@ export const services: ServicePageContent[] = [
     h1: "Small Freeport businesses need equipment that holds overnight and through opening.",
     eyebrow: "Small commercial · 61032",
     lede: "A storefront on a corridor, a shop that cannot freeze over the weekend, an office that still has to be usable on Monday — that is the commercial work this page is written for. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/commercial.jpg",
+    image: "/photos/rooftop-packaged-hvac-units.webp",
     imageAlt:
-      "Small commercial rooftop HVAC equipment serving a Freeport business",
+      "Packaged rooftop heating and cooling units on a commercial roof.",
     problems: [
       {
         title: "A unit that failed before the doors opened",
@@ -3068,9 +3068,9 @@ export const services: ServicePageContent[] = [
     h1: "Shop and office systems fail on the day you cannot close. Plan before that.",
     eyebrow: "Commercial maintenance · Freeport",
     lede: "A rooftop that has not been opened since last August will pick a busy Saturday. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/commercial.jpg",
+    image: "/photos/rooftop-packaged-hvac-units.webp",
     imageAlt:
-      "Rooftop commercial HVAC equipment in Freeport being checked before a season",
+      "Packaged rooftop heating and cooling units on a commercial roof.",
     problems: [
       {
         title: "Filters that have been “someone else’s job” through two tenants",
@@ -3199,9 +3199,9 @@ export const services: ServicePageContent[] = [
     h1: "When the rooftop sits through winter, July is a rude reminder.",
     eyebrow: "Commercial cooling repair · 61032",
     lede: "A storefront condenser or rooftop that idle-slept through snow does not care about your Saturday traffic. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/commercial.jpg",
+    image: "/photos/rooftop-packaged-hvac-units.webp",
     imageAlt:
-      "Commercial air conditioning equipment on a Freeport business after winter idle",
+      "Packaged rooftop heating and cooling units on a commercial roof.",
     problems: [
       {
         title: "A rooftop that will not start on the first humid week",
@@ -3330,9 +3330,9 @@ export const services: ServicePageContent[] = [
     h1: "A cold shop on Monday morning is a heating call, not a wait-and-see.",
     eyebrow: "Commercial heating repair · Stephenson County",
     lede: "Weekend setbacks, unit heaters over a bay, rooftop gas heat over an office — when Monday is already cold, the building has used its slack. Call to be connected with a local heating and cooling professional.",
-    image: "/photos/commercial.jpg",
+    image: "/photos/rooftop-packaged-hvac-units.webp",
     imageAlt:
-      "Commercial heating equipment serving a Freeport shop or office in winter",
+      "Packaged rooftop heating and cooling units on a commercial roof.",
     problems: [
       {
         title: "A shop that lost heat over the weekend",

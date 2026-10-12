@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { PhoneIcon } from "@/components/Icons";
 import { PhoneCta } from "@/components/PhoneCta";
+import { SitePhoto } from "@/components/SitePhoto";
 import { IMAGE_SIZES } from "@/lib/images";
 import { primaryCtaLabel } from "@/lib/site";
 
@@ -13,7 +13,7 @@ export function PageHero({
   ctaLabel,
   image,
   imageAlt,
-  priority = false,
+  priority = true,
 }: {
   eyebrow?: string;
   title: string;
@@ -49,13 +49,11 @@ export function PageHero({
         </div>
         {image ? (
           <div className="relative min-h-[16rem] sm:min-h-[20rem] lg:min-h-full">
-            <Image
+            <SitePhoto
               src={image}
               alt={imageAlt ?? ""}
-              fill
               priority={priority}
               sizes={IMAGE_SIZES.hero}
-              className="object-cover"
             />
           </div>
         ) : null}

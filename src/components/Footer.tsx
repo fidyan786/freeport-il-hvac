@@ -85,6 +85,11 @@ export function Footer() {
                 Terms
               </Link>
             </li>
+            <li>
+              <Link className="hover:underline" href="/image-credits/">
+                Image credits
+              </Link>
+            </li>
           </ul>
         </div>
 
