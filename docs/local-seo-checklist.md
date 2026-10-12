@@ -5,7 +5,7 @@ Millrace Heating & Air (`freeporthvacil.com`) connects callers with independent 
 ## Do this
 
 - Keep the phone number in `src/lib/site.ts` as the only number on the site. Titles and descriptions pick it up from that config on service pages. If you change the number, recheck that meta descriptions are still 140–160 characters.
-- Keep one canonical host: `https://freeporthvacil.com`. `www` and `http` 301 to that apex from `public/.htaccess` on Hostinger. Do not add a second public site.
+- Keep one canonical host: `https://freeporthvacil.com`. `www` and `http` 301 to that apex from `src/proxy.ts` on the Hostinger Node.js app. Do not add a second public site.
 - Search Console: the verification meta tag and `google7129b29a73db544e.html` are already in the repo. After the domain is attached, submit `https://freeporthvacil.com/sitemap.xml`.
 - Leave the merged URLs as 301s. Do not rebuild thin city pages or the old split service URLs (separate mini-split repair, separate AC replacement, and so on).
 - When you change a guide, update the visible “Last updated” date (`GUIDES_LAST_UPDATED` or the guide’s `dateModified`).

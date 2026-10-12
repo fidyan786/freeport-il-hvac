@@ -47,8 +47,8 @@ export type SiteConfig = typeof site;
  * Public canonical origin. Single source of truth for metadataBase,
  * canonical URLs, Open Graph URLs, sitemap, and robots.
  *
- * The live site is the static export on Hostinger. A vercel.app host
- * must not become canonical. Localhost is allowed only in development.
+ * The live site is the Hostinger Node.js app on the apex domain. A vercel.app
+ * host must not become canonical. Localhost is allowed only in development.
  */
 export const PRODUCTION_HOST = "freeporthvacil.com";
 export const PRODUCTION_ORIGIN = `https://${PRODUCTION_HOST}`;

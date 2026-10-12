@@ -10,13 +10,13 @@ Items only the owner can confirm or finish. The site does not invent an address,
 
 ## Domain and hosting
 
-The site is a static export for Hostinger shared hosting, not a Node server and not Vercel. Follow `docs/deploy-hostinger.md`.
+The site is a Hostinger Node.js Web App (Next.js preset), not a static upload and not Vercel. Follow `docs/deploy-hostinger.md` for the exact hPanel fields.
 
-- Add GitHub Actions secrets `FTP_SERVER`, `FTP_USERNAME`, and `FTP_PASSWORD`. Set optional `FTP_DIR` to the domain’s `public_html/` if the FTP account does not already open there.
-- Point `freeporthvacil.com` DNS at Hostinger, then enable the free SSL certificate for the apex and `www`.
-- `www` and `http` redirect to `https://freeporthvacil.com` from `public/.htaccess`. Old URLs 301 in one hop to the current page.
+- Connect this GitHub repo’s `main` branch. Framework `next`, Node 22.x, build script `build`, output directory `.next`, entry file empty.
+- Point `freeporthvacil.com` DNS at Hostinger, then enable the free SSL certificate for the apex and `www`. In the domain panel, also force HTTPS and send `www` to the apex.
+- `www`, plain `http`, trailing slashes, and old URLs 301 in one hop from `src/proxy.ts`. Security headers come from `next.config.ts`.
 - Leave `NEXT_PUBLIC_SITE_URL` unset, or set it to `https://freeporthvacil.com`. Do not use any other host as the canonical origin.
-- After the first upload, delete leftover files in `public_html` that this project does not ship. The workflow does not wipe the folder.
+- Do not add the FTP secrets unless you mean to run the optional FTP workflow. The Node.js app does not produce an `out/` folder, so that workflow skips the upload.
 
 ## Analytics and Search Console
 

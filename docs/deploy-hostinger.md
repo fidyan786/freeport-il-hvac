@@ -1,49 +1,50 @@
 # Deploy on Hostinger
 
-This site is a static export. `npm run build` writes HTML, CSS, JavaScript, images, `sitemap.xml`, `robots.txt`, Open Graph images, and icons into `out/`. Nothing in the public site needs a Node.js server. Hostinger shared hosting (Apache or LiteSpeed, files in `public_html`) is the right plan. Hostinger Node.js hosting is unnecessary for this project.
+`freeporthvacil.com` is a Hostinger **Node.js Web App**, not a static site in `public_html`. Hostinger’s Next.js preset always builds in server mode. It wraps `next.config.ts` and sets `output: "standalone"` itself, then starts the server in `.next`. Setting `output: "export"` does nothing on that preset and does not create an `out/` directory.
 
-Redirects (www to the apex, http to https, old URLs, trailing slashes) and security headers live in `public/.htaccess`, which the build copies into `out/`. A missing page uses `ErrorDocument 404 /404.html`.
+`npm run build` is `next build --webpack`. Hostinger’s Turbopack build fails on `globals.css` (`TurbopackInternalError` in PostCSS). The webpack build is the one that succeeds there.
 
-## 1. Create the GitHub secrets
+Redirects (www to the apex, http to https when `X-Forwarded-Proto` is `http`, old URLs, lowercase paths, trailing slashes) are a single **301** from `src/proxy.ts`. Security headers are in `next.config.ts`. A missing page is the App Router `not-found` page (HTTP 404). `public/.htaccess` is comments only, so it cannot replace the proxy rules Hostinger writes in `public_html`.
 
-In the GitHub repository, open Settings → Secrets and variables → Actions → New repository secret.
+## Settings to enter when connecting the repo
 
-| Secret | Value |
+In hPanel: **Websites → Add Website → Node.js web app → Import Git repository**. Connect GitHub, pick this repo, and set:
+
+| Field | Enter this |
 | --- | --- |
-| `FTP_SERVER` | Hostname from Hostinger hPanel → Files → FTP Accounts. Use the hostname only, such as `ftp.freeporthvacil.com`. Do not include `ftp://`. |
-| `FTP_USERNAME` | The FTP username from that same screen. |
-| `FTP_PASSWORD` | The FTP password. |
-| `FTP_DIR` | Optional. The folder that is the site root, often `public_html/` or `./` if the FTP account already lands in `public_html`. Leave it unset to upload into the FTP login directory. Do not point this at your home directory if that directory holds other sites. |
+| Framework / application type | `next` (Next.js). Do not choose Other, and do not treat it as a static site. |
+| Branch | `main` |
+| Node.js version | `22.x` |
+| Root directory | `/` (the repository root; leave it empty if the form has no root field) |
+| Package manager | `npm` |
+| Install command | `npm install` (Hostinger’s default; do not change it) |
+| Build script / build command | `build` if the field is the npm script name, or `npm run build` if the field is the full command |
+| Output directory | `.next` |
+| Entry file | Leave empty. Hostinger ignores it for the Next.js preset and starts the standalone server. |
+| Environment variables | Leave `NEXT_PUBLIC_SITE_URL` unset, or set it to `https://freeporthvacil.com`. Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` only when a real GA4 property exists. |
 
-The workflow `.github/workflows/deploy-hostinger.yml` runs on every push to `main`, and when you start it by hand. It builds `out/` and uploads it with FTP over TLS. If the host only accepts plain FTP, change `protocol: ftps` to `protocol: ftp` in that file.
+Do not set the output directory to `out`. Do not add a start command unless the form requires one. If it does, leave the preset’s value. The official Next.js preset starts `.next/standalone` for you.
 
-The upload does not delete files that are no longer in `out/`. After the first successful deploy, remove any old site files in `public_html` that this project does not ship.
+Turn on automatic deploys for `main`. Each push installs, runs `npm run build`, and restarts the app.
 
-## 2. Point freeporthvacil.com at Hostinger
+## DNS and SSL
 
-In Hostinger hPanel, add the domain `freeporthvacil.com` if it is not already on the account.
+The domain is already on this Hostinger account. Confirm:
 
-At the registrar (or in Hostinger if the domain is registered there), set the domain to the nameservers Hostinger shows, or set these records if you are keeping DNS elsewhere:
+- `freeporthvacil.com` and `www` resolve to this Node.js app, not to an old `public_html` upload.
+- The free Let’s Encrypt certificate covers the apex and `www`.
+- In the domain panel, force HTTPS and send `www` to `https://freeporthvacil.com`. The app also 301s `www`, and 301s plain `http` when it sees `X-Forwarded-Proto: http`. It does not redirect when that header is missing, so Hostinger’s internal hop cannot loop.
 
-- `A` record for `@` (the apex) to the Hostinger server IP shown in hPanel.
-- `A` or `CNAME` for `www` to the same hosting. The `.htaccess` file sends `www` to `https://freeporthvacil.com`.
+## Verify after the first Git deploy
 
-Wait until both names resolve to Hostinger before you expect the certificate to issue.
-
-## 3. Turn on the free SSL certificate
-
-In hPanel, open SSL for `freeporthvacil.com` and enable the free Let’s Encrypt certificate. Cover the apex and `www`. After it is active, confirm HTTPS is forced. The `.htaccess` file also redirects `http` to `https://freeporthvacil.com`.
-
-## 4. Verify after the first deploy
-
-- `https://freeporthvacil.com/` returns the homepage, not a Hostinger placeholder.
+- `https://freeporthvacil.com/` returns the homepage.
 - `https://www.freeporthvacil.com/` returns **301** to `https://freeporthvacil.com/`.
-- `http://freeporthvacil.com/` returns **301** to the https apex. The rule skips the redirect when the request already has `X-Forwarded-Proto: https`, so a Hostinger TLS proxy does not loop.
+- `http://freeporthvacil.com/` returns **301** to the https apex.
 - `https://freeporthvacil.com/ac-repair-freeport-il` returns **301** to `https://freeporthvacil.com/services/ac-repair-freeport-il/`.
-- `https://freeporthvacil.com/this-page-does-not-exist/` returns **404** and shows the site’s own “Page not found” page.
-- `https://freeporthvacil.com/sitemap.xml` and `https://freeporthvacil.com/robots.txt` open as files.
+- `https://freeporthvacil.com/this-page-does-not-exist/` returns **404** and the site’s own “Page not found” page.
+- `https://freeporthvacil.com/sitemap.xml` and `https://freeporthvacil.com/robots.txt` open.
 - View source on the homepage and confirm the canonical URL is `https://freeporthvacil.com/`.
 
-## Phone and analytics
+## Optional FTP workflow
 
-The tracking number and GA4 measurement ID are not FTP secrets. Set `NEXT_PUBLIC_PHONE_DISPLAY`, `NEXT_PUBLIC_PHONE_TEL`, and `NEXT_PUBLIC_GA_MEASUREMENT_ID` as GitHub Actions repository variables or secrets only if you also wire them into the workflow `env:` block. Until then the defaults in `src/lib/site.ts` are baked in at build time. Do not set `NEXT_PUBLIC_SITE_URL` to any host other than `https://freeporthvacil.com`.
+`.github/workflows/deploy-hostinger.yml` still exists. It runs on pushes to `main` and when started by hand. If `FTP_SERVER`, `FTP_USERNAME`, and `FTP_PASSWORD` are not set, the job exits successfully and uploads nothing. If those secrets are set, it builds and uploads `out/` only when that folder exists. This Node.js app does not create `out/`, so the upload is skipped. Do not add those secrets for the Web App deploy.

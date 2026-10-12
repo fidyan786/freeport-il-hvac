@@ -1,5 +1,8 @@
 name: Deploy to Hostinger
 
+# Optional FTP upload. The live site is the Hostinger Node.js Web App, which
+# builds this repo itself. This workflow stays green when the FTP secrets are
+# unset, and it uploads only if a static out/ directory exists.
 on:
   push:
     branches: [main]
@@ -12,18 +15,46 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
 
+      - name: Decide whether FTP secrets are set
+        id: ftp
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ -n "$FTP_SERVER" ] && [ -n "$FTP_USERNAME" ] && [ -n "$FTP_PASSWORD" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "FTP secrets are not set. Skipping the optional FTP upload."
+          fi
+
       - name: Set up Node.js
+        if: steps.ftp.outputs.enabled == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Install and build the static export
+      - name: Install and build
+        if: steps.ftp.outputs.enabled == 'true'
         run: |
           npm ci
           npm run build
 
+      - name: See if a static export was produced
+        id: export
+        if: steps.ftp.outputs.enabled == 'true'
+        run: |
+          if [ -d out ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "No out/ directory. This app deploys as a Hostinger Node.js Web App, so FTP is skipped."
+          fi
+
       - name: Upload out/ to Hostinger
+        if: steps.ftp.outputs.enabled == 'true' && steps.export.outputs.ready == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}

@@ -6,7 +6,7 @@ Primary action: **call (703) 703-7855**. Override with `NEXT_PUBLIC_PHONE_DISPLA
 
 ## Stack
 
-Next.js App Router 16, React 19, TypeScript, Tailwind CSS 4. Static export deployed to Hostinger shared hosting. See `docs/deploy-hostinger.md`.
+Next.js App Router 16, React 19, TypeScript, Tailwind CSS 4. Hostinger Node.js Web App (`next build --webpack`, output directory `.next`). See `docs/deploy-hostinger.md`.
 
 ## Configure
 
