@@ -4,9 +4,8 @@ import {
   BRAND,
   getSiteUrl,
   isHoursConfigured,
-  isNameConfigured,
   isPhoneConfigured,
-  phoneE164,
+  phoneSchemaTelephone,
   site,
 } from "@/lib/site";
 
@@ -19,21 +18,14 @@ function areaServed() {
     {
       "@type": "City",
       name: site.city,
-      containedInPlace: [
-        {
-          "@type": "AdministrativeArea",
-          name: site.county,
-        },
-        {
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: site.county,
+        containedInPlace: {
           "@type": "State",
           name: site.state,
         },
-      ],
-    },
-    {
-      "@type": "PostalCode",
-      name: site.zip,
-      addressCountry: "US",
+      },
     },
     {
       "@type": "AdministrativeArea",
@@ -42,7 +34,10 @@ function areaServed() {
     ...nearbyCommunities.map((town) => ({
       "@type": "City",
       name: town.name,
-      postalCode: town.zip,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: site.county,
+      },
     })),
   ];
 }
@@ -51,11 +46,11 @@ export function localBusinessSchema() {
   const url = absoluteUrl("/");
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "HVACBusiness",
+    "@type": "Organization",
     "@id": businessId(),
     name: site.businessName,
     alternateName: BRAND.shortName,
-    description: `${BRAND.name} is an HVAC company in ${site.city}, ${site.state} (${site.zip}) offering furnace repair, air conditioning repair, heating and cooling service, and HVAC maintenance for homes and small businesses.`,
+    description: `${BRAND.name} connects callers with independent local heating and cooling professionals in ${site.city}, ${site.state} (${site.zip}). This website is not itself a heating and cooling contractor.`,
     url,
     image: absoluteUrl("/opengraph-image/"),
     logo: {
@@ -63,50 +58,12 @@ export function localBusinessSchema() {
       url: absoluteUrl("/apple-icon/"),
     },
     slogan: BRAND.tagline,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.city,
-      addressRegion: site.stateCode,
-      postalCode: site.zip,
-      addressCountry: "US",
-    },
     areaServed: areaServed(),
-    serviceType: serviceLinks.map((item) => item.label),
-    knowsAbout: [
-      "HVAC contractor",
-      "Residential HVAC",
-      "Commercial HVAC",
-      "Furnace repair",
-      "Furnace installation",
-      "Heating repair",
-      "Air conditioning repair",
-      "AC installation",
-      "Emergency HVAC",
-      "HVAC maintenance",
-      "Heat pumps",
-      "Ductless mini splits",
-      "Indoor air quality",
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `HVAC services in ${site.city}, ${site.stateCode}`,
-      itemListElement: serviceLinks.map((item) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: `${item.label} in ${site.city}, ${site.stateCode}`,
-          url: absoluteUrl(item.href),
-        },
-      })),
-    },
+    knowsAbout: serviceLinks.map((item) => item.label),
   };
 
-  if (site.address) {
-    (data.address as Record<string, unknown>).streetAddress = site.address;
-  }
-
   if (isPhoneConfigured()) {
-    data.telephone = phoneE164() ?? site.phoneDisplay;
+    data.telephone = phoneSchemaTelephone() ?? site.phoneDisplay;
   }
 
   if (isHoursConfigured()) {
@@ -122,9 +79,7 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${url}#website`,
-    name: isNameConfigured()
-      ? site.businessName
-      : `HVAC company in ${site.city}, ${site.stateCode}`,
+    name: site.businessName,
     alternateName: `${site.city} HVAC`,
     url,
     inLanguage: "en-US",
@@ -159,22 +114,23 @@ export function serviceSchema({
   serviceType?: string;
 }) {
   const provider: Record<string, unknown> = {
-    "@type": "HVACBusiness",
+    "@type": "Organization",
     "@id": businessId(),
     name: site.businessName,
     url: absoluteUrl("/"),
   };
 
   if (isPhoneConfigured()) {
-    provider.telephone = phoneE164() ?? site.phoneDisplay;
+    provider.telephone = phoneSchemaTelephone() ?? site.phoneDisplay;
   }
+  provider.description =
+    `${site.businessName} is a website that connects callers with independent local heating and cooling professionals. It is not itself a contractor and does not perform the repair.`;
 
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name,
     serviceType: serviceType ?? name,
-    category: "HVAC",
     description,
     url: absoluteUrl(path),
     areaServed: [
@@ -205,7 +161,9 @@ export function serviceListSchema() {
   };
 }
 
-export function faqSchema(items: Array<{ q: string; a: string }>) {
+export function faqSchema(
+  items: Array<{ q: string; a: string; detail?: string }>,
+) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -214,9 +172,64 @@ export function faqSchema(items: Array<{ q: string; a: string }>) {
       name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.a,
+        text: item.detail ? `${item.a} ${item.detail}` : item.a,
       },
     })),
+  };
+}
+
+export function howToSchema({
+  name,
+  description,
+  path,
+  steps,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  steps: Array<{ name: string; text: string }>;
+}) {
+  const page = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      url: `${page}#check-${index + 1}`,
+    })),
+  };
+}
+
+export function speakableWebPage({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  const page = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    description,
+    url: page,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable"],
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: site.businessName,
+      url: absoluteUrl("/"),
+    },
   };
 }
 
@@ -225,28 +238,41 @@ export function articleSchema({
   description,
   path,
   datePublished,
+  dateModified,
   image,
 }: {
   title: string;
   description: string;
   path: string;
   datePublished: string;
+  dateModified?: string;
   image?: string;
 }) {
+  const pageUrl = absoluteUrl(path);
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,
     datePublished,
-    mainEntityOfPage: absoluteUrl(path),
+    dateModified: dateModified ?? datePublished,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
     author: {
       "@type": "Organization",
       name: site.businessName,
       url: absoluteUrl("/"),
     },
     publisher: {
-      "@id": businessId(),
+      "@type": "Organization",
+      name: site.businessName,
+      url: absoluteUrl("/"),
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/apple-icon/"),
+      },
     },
   };
 

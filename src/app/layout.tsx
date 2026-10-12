@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
-import { ChatRoot } from "@/components/chat/ChatRoot";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -16,12 +15,9 @@ const sans = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-source-sans",
   display: "swap",
-});
-
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-source-serif",
-  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+  fallback: ["Arial", "Helvetica", "sans-serif"],
 });
 
 export const viewport: Viewport = {
@@ -31,9 +27,8 @@ export const viewport: Viewport = {
 };
 
 const defaultTitle =
-  "Freeport IL HVAC Repair | Furnace, AC & Urgent Help | Millrace";
-const defaultDescription =
-  "Furnace repair, AC repair, and heating and cooling help in Freeport, IL 61032. Call Millrace Heating & Air — describe the symptom and the ZIP.";
+  "Heating and Cooling in Freeport, IL | Millrace Heating";
+const defaultDescription = `Heating and cooling help for Freeport, IL 61032. Furnace trouble, an air conditioner that will not cool, or a system that will not start. Call ${site.phoneDisplay}.`;
 
 const googleVerification = googleSiteVerification();
 
@@ -75,7 +70,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable} h-full`}>
+    <html lang="en" className={`${sans.variable} h-full`}>
       <body className="min-h-full bg-cream font-sans text-ink antialiased">
         <a className="skip-link" href="#main">
           Skip to content
@@ -88,7 +83,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <StickyCallBar />
-        <ChatRoot />
         <Analytics />
       </body>
     </html>

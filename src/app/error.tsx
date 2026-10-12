@@ -13,8 +13,8 @@ export default function Error({
     <section className="mx-auto max-w-3xl px-4 py-20 text-center">
       <h1 className="font-serif text-3xl text-navy">Something went wrong</h1>
       <p className="mt-4 text-muted">
-        The page could not load. You can try again, or request HVAC help in
-        Freeport.
+        The page could not load. You can try again, or call to be connected
+        with a local heating and cooling professional in Freeport.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <button
@@ -24,7 +24,7 @@ export default function Error({
         >
           Try again
         </button>
-        <PhoneCta context="error-page" className="min-h-12">
+        <PhoneCta location="inline" context="error-page">
           {primaryCtaLabel()}
         </PhoneCta>
       </div>

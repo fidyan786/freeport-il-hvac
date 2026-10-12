@@ -5,53 +5,52 @@ const SERVICE_GUIDE_RULES: Array<{
   slugs: string[];
 }> = [
   {
-    test: (slug) => slug.startsWith("ac-") || slug.includes("commercial-ac"),
-    slugs: ["ac-blowing-warm-air", "ac-freezing-up", "ac-constantly-running"],
+    test: (slug) => slug.startsWith("ac-repair"),
+    slugs: ["ac-blowing-warm-air", "ac-not-turning-on", "poor-airflow"],
   },
   {
-    test: (slug) =>
-      slug.startsWith("furnace-") ||
-      slug.startsWith("heating-") ||
-      slug.includes("commercial-heating"),
-    slugs: [
-      "furnace-not-heating",
-      "furnace-short-cycling",
-      "furnace-replacement-signals",
-    ],
+    test: (slug) => slug.startsWith("ac-installation"),
+    slugs: ["prepare-ac-after-winter", "ac-blowing-warm-air", "furnace-replacement-signals"],
   },
   {
-    test: (slug) =>
-      slug.startsWith("hvac-repair") ||
-      slug.includes("emergency") ||
-      slug.includes("residential-hvac"),
-    slugs: ["furnace-not-heating", "ac-blowing-warm-air", "hvac-strange-noises"],
+    test: (slug) => slug.startsWith("furnace-repair"),
+    slugs: ["furnace-not-heating", "furnace-blowing-cold-air", "furnace-short-cycling"],
+  },
+  {
+    test: (slug) => slug.startsWith("furnace-installation"),
+    slugs: ["furnace-replacement-signals", "furnace-not-heating", "carbon-monoxide-safety"],
+  },
+  {
+    test: (slug) => slug.startsWith("heating-repair"),
+    slugs: ["no-heat-in-house", "furnace-not-heating", "thermostat-not-working"],
+  },
+  {
+    test: (slug) => slug.includes("emergency"),
+    slugs: ["furnace-not-heating", "no-heat-in-house", "carbon-monoxide-safety"],
   },
   {
     test: (slug) => slug.startsWith("hvac-maintenance"),
-    slugs: ["hvac-maintenance-checklist"],
-  },
-  {
-    test: (slug) => slug.startsWith("hvac-replacement"),
-    slugs: ["furnace-replacement-signals", "hvac-maintenance-checklist"],
+    slugs: ["changing-a-furnace-filter", "prepare-ac-after-winter", "furnace-short-cycling"],
   },
   {
     test: (slug) => slug.includes("heat-pump"),
-    slugs: ["heat-pump-basics-northern-illinois"],
+    slugs: ["heat-pump-basics-northern-illinois", "no-heat-in-house", "thermostat-not-working"],
   },
   {
     test: (slug) => slug.includes("mini-split") || slug.includes("ductless"),
-    slugs: ["heat-pump-basics-northern-illinois", "uneven-temperatures"],
+    slugs: ["uneven-temperatures", "heat-pump-basics-northern-illinois", "ac-not-turning-on"],
   },
   {
-    test: (slug) =>
-      slug.includes("indoor-air") ||
-      slug.includes("filtration") ||
-      slug.includes("humid"),
-    slugs: ["indoor-air-quality-closed-homes"],
+    test: (slug) => slug.includes("indoor-air"),
+    slugs: ["changing-a-furnace-filter", "poor-airflow", "carbon-monoxide-safety"],
   },
   {
     test: (slug) => slug.startsWith("commercial"),
-    slugs: ["hvac-maintenance-checklist", "uneven-temperatures"],
+    slugs: ["no-heat-in-house", "ac-blowing-warm-air", "hvac-strange-noises"],
+  },
+  {
+    test: (slug) => slug.startsWith("residential"),
+    slugs: ["uneven-temperatures", "furnace-not-heating", "ac-blowing-warm-air"],
   },
 ];
 

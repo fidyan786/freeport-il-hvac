@@ -20,8 +20,8 @@ function readPublic(name: string, fallback = "") {
 
 export const site = {
   businessName: readPublic("NEXT_PUBLIC_BUSINESS_NAME", BRAND.name),
-  phoneDisplay: readPublic("NEXT_PUBLIC_PHONE_DISPLAY", "888-989-8898"),
-  phoneTel: readPublic("NEXT_PUBLIC_PHONE_TEL", "8889898898"),
+  phoneDisplay: readPublic("NEXT_PUBLIC_PHONE_DISPLAY", "(703) 703-7855"),
+  phoneTel: readPublic("NEXT_PUBLIC_PHONE_TEL", "7037037855"),
   hours: readPublic("NEXT_PUBLIC_BUSINESS_HOURS"),
   city: "Freeport",
   state: "Illinois",
@@ -47,12 +47,11 @@ export type SiteConfig = typeof site;
  * Public canonical origin. Single source of truth for metadataBase,
  * canonical URLs, Open Graph URLs, sitemap, and robots.
  *
- * Never use VERCEL_URL — preview deployments must not become canonical.
- * Localhost is allowed only on a local development machine.
+ * The live site is the Hostinger Node.js app on the apex domain. A vercel.app
+ * host must not become canonical. Localhost is allowed only in development.
  */
-export const PRODUCTION_HOST = "freeport-il-hvac.vercel.app";
+export const PRODUCTION_HOST = "freeporthvacil.com";
 export const PRODUCTION_ORIGIN = `https://${PRODUCTION_HOST}`;
-const FALLBACK_PRODUCTION_ORIGIN = PRODUCTION_ORIGIN;
 
 function stripTrailingSlash(value: string) {
   return value.replace(/\/$/, "");
@@ -72,29 +71,28 @@ function isLocalHostname(hostname: string) {
 }
 
 function isPreviewVercelHost(hostname: string) {
-  return hostname.endsWith(".vercel.app") && hostname !== PRODUCTION_HOST;
+  return hostname.endsWith(".vercel.app");
 }
 
 function finalizeCanonical(origin: string) {
   const normalized = stripTrailingSlash(origin);
   const hostname = hostnameOf(normalized);
-  const vercelEnv = process.env.VERCEL_ENV;
 
   if (!hostname) {
     throw new Error(
-      "Canonical site URL is invalid. Set NEXT_PUBLIC_SITE_URL to the production origin.",
+      "Canonical site URL is invalid. Set NEXT_PUBLIC_SITE_URL to https://freeporthvacil.com.",
     );
   }
 
-  if (isLocalHostname(hostname) && (vercelEnv === "production" || vercelEnv === "preview")) {
+  if (isPreviewVercelHost(hostname)) {
     throw new Error(
-      "Canonical site URL cannot be localhost on a Vercel deployment. Set NEXT_PUBLIC_SITE_URL.",
+      "Canonical site URL cannot be a vercel.app host. Use https://freeporthvacil.com.",
     );
   }
 
-  if (isPreviewVercelHost(hostname) && vercelEnv === "production") {
+  if (isLocalHostname(hostname) && process.env.NODE_ENV === "production") {
     throw new Error(
-      "Canonical site URL cannot be a preview Vercel host in production. Set NEXT_PUBLIC_SITE_URL.",
+      "Canonical site URL cannot be localhost in a production build.",
     );
   }
 
@@ -107,35 +105,15 @@ export function getSiteUrl() {
     return finalizeCanonical(explicit);
   }
 
-  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
-  if (production) {
-    const host = production.replace(/^https?:\/\//, "").replace(/\/$/, "");
-    return finalizeCanonical(`https://${host}`);
-  }
-
-  const onVercel = Boolean(process.env.VERCEL);
-  const localDev = process.env.NODE_ENV !== "production" && !onVercel;
-  if (localDev) {
+  if (process.env.NODE_ENV !== "production") {
     return "http://localhost:3000";
   }
 
-  return finalizeCanonical(FALLBACK_PRODUCTION_ORIGIN);
+  return PRODUCTION_ORIGIN;
 }
 
 /** Origin for sitemap, robots, and Search Console. Never throws. */
 export function getPublicOrigin() {
-  if (process.env.VERCEL_ENV === "production") {
-    const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-    if (explicit && !explicit.includes("[")) {
-      try {
-        return finalizeCanonical(explicit);
-      } catch {
-        return PRODUCTION_ORIGIN;
-      }
-    }
-    return PRODUCTION_ORIGIN;
-  }
-
   try {
     return getSiteUrl();
   } catch {
@@ -144,8 +122,7 @@ export function getPublicOrigin() {
 }
 
 /**
- * HTML-tag token already present on live production
- * (https://freeport-il-hvac.vercel.app/). Do not invent a replacement.
+ * HTML-tag token already present on the live site. Do not invent a replacement.
  * Override with NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION when GSC issues a new one.
  * A matching HTML-file token also lives at /google7129b29a73db544e.html.
  */
@@ -181,6 +158,13 @@ export function isPhoneConfigured() {
 export function phoneE164() {
   const digits = phoneDigits();
   return digits ? `+1${digits}` : null;
+}
+
+/** Schema.org telephone. Example: +1-703-703-7855. tel: links stay compact via phoneE164(). */
+export function phoneSchemaTelephone() {
+  const digits = phoneDigits();
+  if (!digits) return null;
+  return `+1-${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
 }
 
 export function phoneHref() {
@@ -219,3 +203,6 @@ export function hoursLabel() {
 
 export const localLabel = `${site.city}, ${site.stateCode}`;
 export const marketLabel = `${site.city}, ${site.state}`;
+
+export const AFFILIATE_DISCLOSURE =
+  "This website connects callers with independent local service providers. It is not itself a heating and cooling contractor.";

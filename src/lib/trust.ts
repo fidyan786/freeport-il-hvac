@@ -24,7 +24,7 @@ export const verifiedPracticeSignals: TrustSignal[] = [
   {
     id: "plain-language",
     title: "Clear next steps",
-    text: "You hear what failed, what is safe to wait on, and what needs attention now — in plain language.",
+    text: "A local professional can explain what failed, what can wait, and what needs attention.",
     kind: "practice",
   },
   {

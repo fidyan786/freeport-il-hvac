@@ -1,0 +1,5 @@
+# freeporthvacil.com runs as a Hostinger Node.js Web App.
+# Hostinger writes the Apache proxy rules in public_html itself.
+# This file intentionally has no RewriteRules, redirects, ErrorDocument,
+# or security headers, so it cannot replace that proxy.
+# Redirects live in src/proxy.ts. Security headers live in next.config.ts.

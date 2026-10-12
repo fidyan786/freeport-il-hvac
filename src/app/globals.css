@@ -4,48 +4,31 @@
   --navy: #123047;
   --navy-deep: #0b1e2e;
   --navy-mid: #1c4a66;
-  --spruce: #123047;
-  --spruce-deep: #0b1e2e;
-  --spruce-mid: #1c4a66;
-  --ember: #c24a1b;
-  --ember-dark: #9e3a14;
-  --copper: #c24a1b;
-  --copper-dark: #9e3a14;
-  --brass: #c9a46c;
+  --ember: #9a3412;
+  --ember-dark: #7c2d12;
   --ink: #14202a;
-  --muted: #5b6670;
-  --paper: #f3efe6;
-  --cream: #f8f6f1;
+  --muted: #3e4c59;
+  --paper: #f4f6f8;
+  --cream: #f7f8fa;
   --white: #ffffff;
-  --line: #e2ddd3;
-  --ok: #2a6b4a;
-  --danger: #9b1c1c;
-  --shadow: 0 16px 40px -28px rgb(11 30 46 / 0.55);
+  --line: #d9dee5;
   --radius: 0.375rem;
 }
 
 @theme inline {
-  --color-spruce: var(--spruce);
-  --color-spruce-deep: var(--spruce-deep);
-  --color-spruce-mid: var(--spruce-mid);
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
   --color-navy-mid: var(--navy-mid);
-  --color-copper: var(--copper);
-  --color-copper-dark: var(--copper-dark);
   --color-ember: var(--ember);
   --color-ember-dark: var(--ember-dark);
-  --color-brass: var(--brass);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-paper: var(--paper);
   --color-cream: var(--cream);
   --color-white: var(--white);
   --color-line: var(--line);
-  --color-ok: var(--ok);
-  --color-danger: var(--danger);
-  --font-sans: var(--font-source-sans);
-  --font-serif: var(--font-source-serif);
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
   --radius-brand: var(--radius);
 }
 
@@ -57,7 +40,9 @@ html {
 body {
   background: var(--cream);
   color: var(--ink);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.65;
 }
 
 img,
@@ -71,18 +56,25 @@ h1,
 h2,
 h3,
 .font-serif {
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-sans);
+  font-weight: 600;
   letter-spacing: -0.02em;
+}
+
+a,
+button,
+summary {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    opacity 200ms ease;
 }
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
 summary:focus-visible {
-  outline: 3px solid var(--ember);
+  outline: 3px solid var(--navy);
   outline-offset: 3px;
 }
 
@@ -92,7 +84,7 @@ summary:focus-visible {
   top: -40px;
   z-index: 110;
   border-radius: var(--radius);
-  background: var(--ember);
+  background: var(--navy);
   color: white;
   padding: 0.5rem 0.75rem;
 }
@@ -101,23 +93,12 @@ summary:focus-visible {
   top: 1rem;
 }
 
-.container-page {
-  width: min(72rem, calc(100% - 2rem));
-  margin-inline: auto;
-}
-
-@media (min-width: 640px) {
-  .container-page {
-    width: min(72rem, calc(100% - 3rem));
-  }
-}
-
 .kicker {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--ember);
+  color: var(--navy);
 }
 
 .surface-card {
@@ -126,123 +107,84 @@ summary:focus-visible {
   border-radius: var(--radius);
 }
 
-.reveal {
-  animation: reveal-up 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.reveal-delay-1 {
-  animation-delay: 60ms;
-}
-.reveal-delay-2 {
-  animation-delay: 120ms;
-}
-.reveal-delay-3 {
-  animation-delay: 180ms;
-}
-.reveal-delay-4 {
-  animation-delay: 240ms;
+.hero-panel {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--white) 9rem);
 }
 
 .card-lift {
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
-.card-lift .card-image {
-  transition: transform 400ms ease;
+.card-lift:hover {
+  border-color: var(--navy);
+  box-shadow: 0 12px 28px rgb(18 48 71 / 0.08);
 }
 
-.card-lift .card-arrow {
-  transition: transform 180ms ease;
+.card-image {
+  transition: transform 280ms ease;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .card-lift:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: color-mix(in srgb, var(--navy) 28%, var(--line));
+.card-lift:hover .card-image {
+  transform: scale(1.03);
+}
+
+.symptom-link {
+  border-left: 3px solid transparent;
+}
+
+.symptom-link:hover {
+  border-color: var(--navy);
+  border-left-color: var(--ember);
+}
+
+.menu-fade {
+  animation: menu-slide 220ms ease;
+}
+
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 220ms ease;
+}
+
+details[open] > .acc-panel {
+  grid-template-rows: 1fr;
+}
+
+.acc-panel > div {
+  overflow: hidden;
+}
+
+.acc-icon {
+  display: inline-block;
+  transition: transform 200ms ease;
+}
+
+details[open] .acc-icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js-reveal [data-reveal]:not(.is-shown) {
+    opacity: 0;
+    transform: translateY(12px);
   }
 
-  .card-lift:hover .card-image {
-    transform: scale(1.04);
+  html.js-reveal [data-reveal].is-shown {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 480ms ease,
+      transform 480ms ease;
   }
-
-  .card-lift:hover .card-arrow {
-    transform: translateX(4px);
-  }
-}
-
-.cta-pulse {
-  transition:
-    transform 160ms ease,
-    background-color 160ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .cta-pulse:hover {
-    transform: translateY(-1px);
-  }
-}
-
-.mega-panel {
-  animation: mega-in 160ms ease-out;
-  isolation: isolate;
-}
-
-.drawer-in {
-  animation: drawer-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-body.hvac-chat-open [data-sticky-call] {
-  visibility: hidden;
-}
-
-.hvac-chat-launcher {
-  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
 }
 
 @media (max-width: 767px) {
   body:has([data-sticky-call]) {
-    padding-bottom: 4.75rem;
+    padding-bottom: 5.75rem;
   }
-
-  body:has([data-sticky-call]) .hvac-chat-launcher {
-    bottom: calc(4.75rem + 0.85rem + env(safe-area-inset-bottom, 0px));
-  }
-
-  .reveal {
-    animation: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .hvac-chat-launcher {
-    bottom: 1.5rem;
-  }
-}
-
-.hvac-chat-panel {
-  top: var(--chat-top, 0px);
-  height: var(--chat-height, 100dvh);
-}
-
-@media (min-width: 768px) {
-  .hvac-chat-panel {
-    top: auto;
-    height: min(42rem, calc(100dvh - 6.5rem));
-  }
-}
-
-.hvac-chat-launcher,
-.hvac-chat-panel {
-  animation: hvac-chat-in 160ms ease-out;
-}
-
-.hvac-chat-typing {
-  letter-spacing: 0.15em;
-  animation: hvac-chat-pulse 1s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -250,78 +192,51 @@ body.hvac-chat-open [data-sticky-call] {
     scroll-behavior: auto;
   }
 
-  .reveal,
-  .mega-panel,
-  .drawer-in,
-  .hvac-chat-launcher,
-  .hvac-chat-panel,
-  .hvac-chat-typing {
+  .menu-fade,
+  .accordion-fade {
     animation: none;
   }
 
   .card-lift,
-  .card-lift .card-image,
-  .card-lift .card-arrow,
-  .cta-pulse {
+  .card-image,
+  .acc-panel,
+  .acc-icon,
+  a,
+  button,
+  summary {
     transition: none;
   }
 
-  .card-lift:hover,
-  .cta-pulse:hover {
+  .card-lift:hover .card-image,
+  details[open] .acc-icon {
     transform: none;
   }
 }
 
-@keyframes reveal-up {
+@layer utilities {
+  .text-xs,
+  .text-sm {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menu-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;
     transform: none;
-  }
-}
-
-@keyframes mega-in {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes drawer-in {
-  from {
-    opacity: 0;
-    transform: translateX(16px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes hvac-chat-in {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes hvac-chat-pulse {
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 1;
   }
 }

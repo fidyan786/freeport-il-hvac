@@ -4,11 +4,14 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
-import { getGuide, guides } from "@/content/guides";
+import { SectionCall } from "@/components/SectionCall";
+import { getGuide, guides, GUIDES_LAST_UPDATED } from "@/content/guides";
 import { getService } from "@/content/services";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { primaryCtaLabel } from "@/lib/site";
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return guides.map((guide) => ({ slug: guide.slug }));
@@ -60,20 +63,19 @@ export default async function GuidePage({
           description: guide.metaDescription,
           path: guide.href,
           datePublished: guide.datePublished,
+          dateModified: guide.dateModified ?? GUIDES_LAST_UPDATED,
           image: guide.image,
         })}
       />
       <PageHero
         eyebrow="Freeport HVAC guide"
-        title={guide.metaTitle}
-        deck={guide.h1}
+        title={guide.h1}
         lede={guide.lede}
         context={`guide-${guide.slug}`}
         ctaLabel={primaryCtaLabel()}
-        secondaryHref="/contact/"
-        secondaryLabel="Request service"
         image={guide.image}
         imageAlt={guide.imageAlt}
+        priority={guide.image.startsWith("/photos/heroes/")}
       />
       <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
         <Breadcrumbs
@@ -83,6 +85,10 @@ export default async function GuidePage({
             { name: guide.title },
           ]}
         />
+        <p className="mt-4 text-sm text-muted">
+          Last updated{" "}
+          {formatUpdated(guide.dateModified ?? GUIDES_LAST_UPDATED)}.
+        </p>
         {guide.body.map((section) => (
           <section key={section.heading} className="mt-10">
             <h2 className="font-serif text-2xl text-navy sm:text-3xl">
@@ -93,6 +99,7 @@ export default async function GuidePage({
                 {paragraph}
               </p>
             ))}
+            <SectionCall context={`guide-${guide.slug}-${section.heading}`} />
           </section>
         ))}
         {relatedServices.length ? (
@@ -103,10 +110,30 @@ export default async function GuidePage({
                 service ? (
                   <li key={service.slug}>
                     <Link className="font-semibold text-navy underline underline-offset-2" href={service.href}>
-                      {service.navLabel}
+                      {service.navLabel} in Freeport
                     </Link>
                   </li>
                 ) : null,
+              )}
+              <li>
+                <Link
+                  className="font-semibold text-navy underline underline-offset-2"
+                  href="/service-area/"
+                >
+                  Freeport and Stephenson County service area
+                </Link>
+              </li>
+              {relatedServices.some(
+                (service) => service?.slug === "emergency-hvac-freeport-il",
+              ) ? null : (
+                <li>
+                  <Link
+                    className="font-semibold text-navy underline underline-offset-2"
+                    href="/services/emergency-hvac-freeport-il/"
+                  >
+                    Emergency HVAC in Freeport
+                  </Link>
+                </li>
               )}
             </ul>
           </section>
@@ -129,10 +156,30 @@ export default async function GuidePage({
         ) : null}
       </div>
       <FinalCta
-        title="If this sounds like your house, request HVAC help"
-        body="Guides explain the symptom. A technician still has to see the equipment."
+        title="If this sounds like the house, call"
+        body="These notes describe the symptom. Call to be connected with a local heating and cooling professional who can see the equipment."
         context={`guide-${guide.slug}-final`}
       />
     </>
   );
+}
+
+function formatUpdated(iso: string) {
+  const [year, month, day] = iso.split("-").map(Number);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  if (!year || !month || !day) return iso;
+  return `${months[month - 1]} ${day}, ${year}`;
 }

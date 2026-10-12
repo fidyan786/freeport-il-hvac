@@ -3,6 +3,8 @@ import { guides } from "@/content/guides";
 import { indexablePaths } from "@/lib/nav";
 import { getPublicOrigin } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 const guideDates = new Map(
   guides.map((guide) => [guide.href, guide.datePublished] as const),
 );
@@ -17,9 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (seen.has(url)) continue;
     seen.add(url);
     const published = guideDates.get(path);
-    entries.push(
-      published ? { url, lastModified: published } : { url },
-    );
+    entries.push({
+      url,
+      lastModified: published ?? "2026-10-12",
+    });
   }
 
   return entries;

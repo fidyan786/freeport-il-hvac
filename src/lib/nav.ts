@@ -43,25 +43,22 @@ function pick(slugs: string[]): NavLink[] {
 
 export const megaGroups: MegaGroup[] = [
   {
+    id: "heating",
+    title: "Heating",
+    href: "/services/#heating",
+    items: pick([
+      "furnace-repair-freeport-il",
+      "heating-repair-freeport-il",
+      "furnace-installation-freeport-il",
+    ]),
+  },
+  {
     id: "cooling",
     title: "Cooling",
     href: "/services/#cooling",
     items: pick([
       "ac-repair-freeport-il",
       "ac-installation-freeport-il",
-      "ac-replacement-freeport-il",
-      "ac-maintenance-freeport-il",
-    ]),
-  },
-  {
-    id: "heating",
-    title: "Heating",
-    href: "/services/#heating",
-    items: pick([
-      "furnace-repair-freeport-il",
-      "furnace-installation-freeport-il",
-      "furnace-maintenance-freeport-il",
-      "heating-repair-freeport-il",
     ]),
   },
   {
@@ -70,44 +67,25 @@ export const megaGroups: MegaGroup[] = [
     href: "/services/#heat-pumps",
     items: pick([
       "heat-pump-repair-freeport-il",
-      "heat-pump-installation-freeport-il",
       "ductless-mini-split-freeport-il",
-      "mini-split-repair-freeport-il",
-      "mini-split-installation-freeport-il",
     ]),
   },
   {
-    id: "iaq",
-    title: "Indoor Air Quality",
-    href: "/services/#iaq",
+    id: "whole-home",
+    title: "Whole Home",
+    href: "/services/#residential",
     items: pick([
+      "residential-hvac-freeport-il",
+      "hvac-maintenance-freeport-il",
       "indoor-air-quality-freeport-il",
-      "air-filtration-freeport-il",
-      "humidifiers-dehumidifiers-freeport-il",
+      "emergency-hvac-freeport-il",
     ]),
   },
   {
     id: "commercial",
     title: "Commercial",
     href: "/services/#commercial",
-    items: pick([
-      "commercial-hvac-freeport-il",
-      "commercial-ac-repair-freeport-il",
-      "commercial-heating-repair-freeport-il",
-      "commercial-hvac-maintenance-freeport-il",
-    ]),
-  },
-  {
-    id: "emergency",
-    title: "Urgent",
-    href: "/services/#emergency",
-    items: pick([
-      "emergency-hvac-freeport-il",
-      "residential-hvac-freeport-il",
-      "hvac-repair-freeport-il",
-      "hvac-maintenance-freeport-il",
-      "hvac-replacement-freeport-il",
-    ]),
+    items: pick(["commercial-hvac-freeport-il"]),
   },
 ];
 
@@ -124,14 +102,14 @@ export const primaryNav: NavLink[] = [
 ];
 
 export const footerServiceHighlights: NavLink[] = pick([
+  "emergency-hvac-freeport-il",
   "furnace-repair-freeport-il",
   "ac-repair-freeport-il",
   "heating-repair-freeport-il",
+  "furnace-installation-freeport-il",
   "ac-installation-freeport-il",
-  "emergency-hvac-freeport-il",
   "hvac-maintenance-freeport-il",
   "residential-hvac-freeport-il",
-  "commercial-hvac-freeport-il",
 ]);
 
 export const intentLinks: NavLink[] = [
@@ -144,24 +122,34 @@ export const intentLinks: NavLink[] = [
   { href: "/services/emergency-hvac-freeport-il/", label: "Emergency HVAC" },
   { href: "/services/residential-hvac-freeport-il/", label: "Residential HVAC" },
   { href: "/services/commercial-hvac-freeport-il/", label: "Commercial HVAC" },
-  { href: "/about/", label: "HVAC contractor" },
+  { href: "/about/", label: "About this site" },
 ];
 
 export const problemLinks: Array<NavLink & { text: string }> = [
+  {
+    href: "/guides/furnace-not-heating/",
+    label: "Furnace not heating",
+    text: "No ignition, weak heat, or a house that will not hold temperature.",
+  },
+  {
+    href: "/guides/furnace-blowing-cold-air/",
+    label: "Furnace blowing cold air",
+    text: "The blower runs, but the air from the registers never warms up.",
+  },
+  {
+    href: "/guides/no-heat-in-house/",
+    label: "No heat in the house",
+    text: "The rooms are cold and you are not sure which equipment quit.",
+  },
   {
     href: "/guides/ac-blowing-warm-air/",
     label: "AC blowing warm air",
     text: "The system runs, but supply vents feel like outdoor air.",
   },
   {
-    href: "/services/furnace-repair-freeport-il/",
-    label: "Furnace not heating",
-    text: "No ignition, weak heat, or a house that will not hold temperature.",
-  },
-  {
-    href: "/services/hvac-repair-freeport-il/",
-    label: "System won't turn on",
-    text: "No response from heat or cooling when the thermostat calls.",
+    href: "/guides/ac-not-turning-on/",
+    label: "AC not turning on",
+    text: "Nothing starts, or the breaker trips when cooling is called.",
   },
   {
     href: "/guides/hvac-strange-noises/",
@@ -169,24 +157,24 @@ export const problemLinks: Array<NavLink & { text: string }> = [
     text: "Banging, squealing, rattling, or grinding from the equipment.",
   },
   {
+    href: "/guides/furnace-short-cycling/",
+    label: "Furnace short cycling",
+    text: "The furnace starts, stops, and starts again before the house is warm.",
+  },
+  {
+    href: "/guides/uneven-temperatures/",
+    label: "Uneven temperatures",
+    text: "One room is comfortable and another never catches up.",
+  },
+  {
     href: "/guides/poor-airflow/",
     label: "Weak airflow",
     text: "Rooms starve for air even though the blower sounds busy.",
   },
   {
-    href: "/guides/uneven-temperatures/",
-    label: "Uneven temperatures",
-    text: "One floor is fine. Another is a different season.",
-  },
-  {
-    href: "/guides/ac-constantly-running/",
-    label: "System constantly running",
-    text: "The equipment never finishes a cycle, or short-cycles and starts again.",
-  },
-  {
-    href: "/guides/indoor-air-quality-closed-homes/",
-    label: "Poor indoor air quality",
-    text: "Dust, dryness, or stale air after months of closed windows.",
+    href: "/guides/thermostat-not-working/",
+    label: "Thermostat not working",
+    text: "The control on the wall does not match what the system does.",
   },
 ];
 
@@ -205,4 +193,6 @@ export const indexablePaths = [
   "/contact/",
   "/privacy-policy/",
   "/terms/",
+  "/image-credits/",
+  "/sitemap/",
 ];

@@ -2,11 +2,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
-import { site } from "@/lib/site";
+import { AFFILIATE_DISCLOSURE, site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Privacy Policy",
-  description: `How ${site.businessName} handles phone calls, service request forms, and on-site chat for HVAC inquiries in ${site.city}, ${site.state}.`,
+  title: "Privacy Policy | Millrace Heating, Freeport, Illinois",
+  description: `How Millrace Heating & Air handles calls, cookies, and analytics for visitors looking up heating and cooling in Freeport. Call ${site.phoneDisplay}.`,
   path: "/privacy-policy/",
 });
 
@@ -25,25 +25,24 @@ export default function PrivacyPage() {
           { name: "Privacy Policy" },
         ]}
       />
-      <h1 className="mt-6 font-serif text-4xl text-navy">Privacy Policy</h1>
+      <h1 className="mt-6 text-4xl text-navy">Privacy Policy</h1>
       <p className="mt-6">
-        This notice describes how {site.businessName} may handle information
-        submitted for HVAC inquiries in {site.city}, {site.state}.
+        {site.businessName} is an affiliate, pay-per-call advertising website.
+        {` ${AFFILIATE_DISCLOSURE}`} A call to the number on this site may be
+        routed to an independent local service provider, and the site operator
+        may be paid when that call is connected.
       </p>
       <p className="mt-4">
-        If you call, your phone provider processes that call. If you use the
-        request form, we collect name, phone, ZIP, service needed, and message
-        so we can respond. If you use the on-site help chat, we may collect the
-        HVAC issue, ZIP, property type, timeline, and any name or phone you
-        choose to share, plus the page you were on.
+        If you call, your phone provider and the independent provider who
+        receives the call process that call. This website does not collect
+        names, messages, or service requests through a form or chat.
       </p>
       <p className="mt-4">
-        Form submissions and chat messages are used to respond to your request.
-        We do not sell that information.
+        If analytics are enabled, a call-button click may be recorded with the
+        place on the page where it happened, such as the header or the footer.
+        That measurement does not include the content of the phone call.
       </p>
-      <p className="mt-4">
-        This notice is informational and is not legal advice.
-      </p>
+      <p className="mt-4">This notice is informational and is not legal advice.</p>
     </article>
   );
 }
