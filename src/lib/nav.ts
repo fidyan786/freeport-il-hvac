@@ -157,6 +157,16 @@ export const problemLinks: Array<NavLink & { text: string }> = [
     text: "Banging, squealing, rattling, or grinding from the equipment.",
   },
   {
+    href: "/guides/furnace-short-cycling/",
+    label: "Furnace short cycling",
+    text: "The furnace starts, stops, and starts again before the house is warm.",
+  },
+  {
+    href: "/guides/uneven-temperatures/",
+    label: "Uneven temperatures",
+    text: "One room is comfortable and another never catches up.",
+  },
+  {
     href: "/guides/poor-airflow/",
     label: "Weak airflow",
     text: "Rooms starve for air even though the blower sounds busy.",

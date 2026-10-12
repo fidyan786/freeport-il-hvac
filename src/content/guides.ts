@@ -338,15 +338,15 @@ const guideRecords: Guide[] = [
       {
         heading: "Oversizing is a diagnosis, not a sales pitch",
         paragraphs: [
-          "A furnace that is too large for the load can satisfy a hallway thermostat before distant rooms move. It then sits, the house drifts, and it fires again. Replacement might be the answer later. So might duct changes or a control problem. Call to be connected with a local heating and cooling professional.",
+          "A furnace that is too large for the load can satisfy a hallway thermostat before distant rooms move. It then sits, the house drifts, and it fires again. Replacement might be the answer later. So might duct changes or a control problem. An air conditioner that starts, stops, and starts again without the rooms getting cooler is the cooling version of this pattern. That visit is AC repair, not a furnace call.",
           "Repeated lockouts on a design-cold night are urgent. A mild short cycle that started last week is still a repair visit. Neither one is a DIY board reset ritual.",
         ],
       },
     ],
     relatedServices: [
       "furnace-repair-freeport-il",
-      "furnace-maintenance-freeport-il",
-      "furnace-installation-freeport-il",
+      "emergency-hvac-freeport-il",
+      "ac-repair-freeport-il",
     ],
     relatedGuides: [
       "furnace-not-heating",
@@ -413,9 +413,9 @@ const guideRecords: Guide[] = [
       },
     ],
     relatedServices: [
-      "residential-hvac-freeport-il",
       "furnace-repair-freeport-il",
       "ac-repair-freeport-il",
+      "emergency-hvac-freeport-il",
     ],
     relatedGuides: [
       "furnace-not-heating",
@@ -476,8 +476,8 @@ const guideRecords: Guide[] = [
     ],
     relatedServices: [
       "residential-hvac-freeport-il",
-      "hvhvac-maintenance-freeport-il",
-      "indoor-air-quality-freeport-il",
+      "emergency-hvac-freeport-il",
+      "hvac-maintenance-freeport-il",
     ],
     relatedGuides: [
       "uneven-temperatures",
@@ -538,8 +538,8 @@ const guideRecords: Guide[] = [
     ],
     relatedServices: [
       "residential-hvac-freeport-il",
+      "emergency-hvac-freeport-il",
       "ductless-mini-split-freeport-il",
-      "furnace-repair-freeport-il",
     ],
     relatedGuides: [
       "poor-airflow",
@@ -669,7 +669,7 @@ const guideRecords: Guide[] = [
       {
         heading: "A heat pump can be part of the same talk",
         paragraphs: [
-          "If the furnace is at the end, you can ask whether a cold-climate heat pump, a dual-fuel pair, or another gas furnace fits this house. That question is climate math — about 6,956 heating degree days versus about 690 cooling degree days — not a rebate flyer.",
+          "If the furnace is at the end, you can ask whether a cold-climate heat pump, a dual-fuel pair, or another gas furnace fits this house. That question is climate math — about 6,956 heating degree days versus about 690 cooling degree days.",
           "A heat pump that cannot heat near Freeport’s January nights is the wrong machine. Say you want that said out loud. Call to be connected with a local heating and cooling professional.",
         ],
       },

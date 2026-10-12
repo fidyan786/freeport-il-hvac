@@ -59,14 +59,14 @@ export const residentialHvac = defineService({
         "This site does not take work orders from a landlord portal. The phone call is the request, and the professional you reach decides whether they can help.",
     },
     {
-      q: "We are thinking about replacing everything. Where do we start?",
+      q: "What if both the furnace and the air conditioner need to be replaced?",
       a: "If the furnace and the air conditioner are both at the end, say that, and expect the conversation to include ducts as well as both machines. Furnace installation and AC installation are the detailed pages. This overview is only the front door.",
       detail:
         "If one of them has failed and the house is uncomfortable now, repair comes before a replacement plan. Get the house stable, then talk about what should not stay.",
     },
     {
       q: "Are you the HVAC company?",
-      a: "No. Millrace Heating & Air is a Freeport website that connects callers with independent local heating and cooling professionals. It does not hold itself out as the contractor, and it does not publish an address, a license, or a review score.",
+      a: "No. Millrace Heating & Air is a Freeport website that connects callers with independent local heating and cooling professionals. It does not hold itself out as the contractor, and it does not publish an address or a review score.",
       detail:
         "The person who does the work is the one who can tell you what they found. Use this site to reach that conversation, then judge the work by what they explain on site.",
     },
