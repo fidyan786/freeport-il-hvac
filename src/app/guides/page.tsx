@@ -8,11 +8,11 @@ import { guides } from "@/content/guides";
 import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "HVAC Guides for Freeport, IL | Millrace",
-  description:
-    "HVAC guides for Freeport, Illinois homes: AC blowing warm air, furnace not heating, airflow, heat pumps, and indoor air in 61032.",
+  title: "HVAC Guides for Freeport, Illinois | Millrace Heating",
+  description: `Heating and cooling guides for Freeport, IL homes: no heat, warm AC air, noises, airflow, thermostats, and winter safety. Call ${site.phoneDisplay}.`,
   path: "/guides/",
 });
 

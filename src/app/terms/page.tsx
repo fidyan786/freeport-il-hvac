@@ -5,8 +5,8 @@ import { pageMetadata } from "@/lib/seo";
 import { AFFILIATE_DISCLOSURE, site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Terms of Use",
-  description: `Terms for the ${site.businessName} website in ${site.city}, ${site.state}. The site is an affiliate pay-per-call directory and is not a contractor.`,
+  title: "Terms of Use | Millrace Heating, Freeport, Illinois",
+  description: `Terms for using the Millrace Heating & Air website, a Freeport call connector for independent heating and cooling help. Call ${site.phoneDisplay}.`,
   path: "/terms/",
 });
 

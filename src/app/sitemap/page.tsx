@@ -6,11 +6,11 @@ import { services } from "@/content/services";
 import { indexablePaths } from "@/lib/nav";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Sitemap",
-  description:
-    "HTML sitemap for the Freeport heating and cooling website: services, guides, and site pages.",
+  title: "HTML Sitemap | Millrace Heating, Freeport, Illinois",
+  description: `Every public page on Millrace Heating & Air, from Freeport furnace and AC topics to the guides and the Stephenson County service area. Call ${site.phoneDisplay}.`,
   path: "/sitemap/",
 });
 

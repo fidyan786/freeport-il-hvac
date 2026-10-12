@@ -48,7 +48,7 @@ export function PageHero({
           </div>
         </div>
         {image ? (
-          <div className="relative min-h-[16rem] sm:min-h-[20rem] lg:min-h-full">
+          <div className="relative h-36 overflow-hidden sm:h-48 lg:h-auto lg:min-h-full">
             <SitePhoto
               src={image}
               alt={imageAlt ?? ""}

@@ -1,4 +1,15 @@
 import { NICOR_GAS } from "@/lib/safety-contacts";
+import { extraGuides } from "@/content/guide-extra";
+import { withCallPhone } from "@/lib/phone-meta";
+
+export const GUIDES_LAST_UPDATED = "2026-10-12";
+
+const RETIRED_GUIDE_SLUGS = new Set([
+  "ac-freezing-up",
+  "ac-constantly-running",
+  "hvac-maintenance-checklist",
+  "indoor-air-quality-closed-homes",
+]);
 
 export type Guide = {
   slug: string;
@@ -9,6 +20,7 @@ export type Guide = {
   h1: string;
   lede: string;
   datePublished: string;
+  dateModified?: string;
   image: string;
   imageAlt: string;
   body: { heading: string; paragraphs: string[] }[];
@@ -16,24 +28,24 @@ export type Guide = {
   relatedGuides: string[];
 };
 
-export const guides: Guide[] = [
+const guideRecords: Guide[] = [
   {
     slug: "ac-blowing-warm-air",
     href: "/guides/ac-blowing-warm-air/",
     title: "AC blowing warm air in Freeport",
-    metaTitle: "AC Blowing Warm Air in Freeport, IL",
+    metaTitle: "AC Blowing Warm Air in Freeport, IL | Millrace Heating",
     metaDescription:
-      "When a Freeport air conditioner runs but the supply air stays warm, the blower is not the cooling system. Safe checks, local causes, and when to call.",
-    h1: "The AC is on. The air still feels like a Stephenson County July.",
+      "AC blowing warm air in Freeport means the fan is running and the coil is not cooling. What to check, then when to call. Call (703) 703-7855.",
+    h1: "AC blowing warm air in Freeport, IL",
     lede:
-      "Warm air from the registers is not a thermostat misunderstanding. In Freeport the outdoor unit often sat idle from first frost to the first sticky week. The indoor blower can move air the whole time the refrigeration side does nothing.",
+      "AC blowing warm air in Freeport is the indoor fan moving air the coil is not cooling. Warm air from the registers is not a thermostat misunderstanding. In Freeport the outdoor unit often sat idle from first frost to the first sticky week. The indoor blower can move air the whole time the refrigeration side does nothing.",
     datePublished: "2026-09-13",
     image: "/photos/outdoor-ac-condenser.webp",
     imageAlt:
       "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     body: [
       {
-        heading: "Running is not the same as cooling",
+        heading: "AC blowing warm air: running is not cooling",
         paragraphs: [
           "Homeowners often report that the system is “working” because they hear the indoor fan. That fan only circulates whatever the coil is doing. If the coil is not getting cold, the air that reaches a west-facing bedroom on an 82°F afternoon will feel like it came from outdoors.",
           "A silent outdoor unit, a humming outdoor unit that never spins, or a fan that spins while the house still climbs are three different failures. Call to be connected with a local heating and cooling professional.",
@@ -78,12 +90,12 @@ export const guides: Guide[] = [
     ],
     relatedServices: [
       "ac-repair-freeport-il",
-      "ac-maintenance-freeport-il",
+      "hvac-maintenance-freeport-il",
       "emergency-hvac-freeport-il",
     ],
     relatedGuides: [
-      "ac-freezing-up",
-      "ac-constantly-running",
+      "ac-not-turning-on",
+      "furnace-short-cycling",
       "poor-airflow",
     ],
   },
@@ -140,13 +152,13 @@ export const guides: Guide[] = [
     ],
     relatedServices: [
       "ac-repair-freeport-il",
-      "hvac-repair-freeport-il",
-      "ac-maintenance-freeport-il",
+      "residential-hvac-freeport-il",
+      "hvac-maintenance-freeport-il",
     ],
     relatedGuides: [
       "ac-blowing-warm-air",
       "poor-airflow",
-      "ac-constantly-running",
+      "furnace-short-cycling",
     ],
   },
   {
@@ -203,24 +215,24 @@ export const guides: Guide[] = [
     relatedServices: [
       "ac-repair-freeport-il",
       "ac-replacement-freeport-il",
-      "hvac-maintenance-freeport-il",
+      "hvhvac-maintenance-freeport-il",
     ],
     relatedGuides: [
       "ac-blowing-warm-air",
       "uneven-temperatures",
-      "hvac-maintenance-checklist",
+      "changing-a-furnace-filter",
     ],
   },
   {
     slug: "furnace-not-heating",
     href: "/guides/furnace-not-heating/",
     title: "Furnace not heating in a Freeport winter",
-    metaTitle: "Furnace Not Heating in Freeport, IL",
+    metaTitle: "Furnace Not Heating in Freeport, IL | Millrace Heating",
     metaDescription:
-      "If a Freeport furnace will not heat, treat gas and carbon monoxide first. Then use the safe checks, know what lockouts look like, and call about heating.",
-    h1: "A dark furnace on an 11°F night is a safety problem first.",
+      "Furnace not heating in Freeport: treat gas and carbon monoxide first, then the safe checks, and call while the house can still recover. Call (703) 703-7855.",
+    h1: "Furnace not heating on a Freeport winter night",
     lede:
-      "January nights in Freeport sit near 11°F. Indoor temperatures fall fast in older houses, and pipes are not hypothetical. Call to be connected with a local heating and cooling professional.",
+      "Furnace not heating on a January night in Freeport starts with weather near 11°F and a house that will not coast until morning. Indoor temperatures fall fast in older houses, and pipes are not hypothetical. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
     image: "/photos/snow-street-oak-park-illinois.webp",
     imageAlt:
@@ -234,7 +246,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "“Not heating” is several different failures",
+        heading: "Furnace not heating is several different failures",
         paragraphs: [
           "The furnace may be completely silent. It may try, click, and lock out. It may run the blower and push cold air. It may heat for a minute and quit. Those are different paths: ignition, safety switches, heat exchanger limits, or a thermostat that is not actually calling for heat.",
           "Stephenson County weather makes the distinction urgent. A lockout that would be annoying in October becomes a pipe-risk problem when the low is in the teens and the house has been closed for months.",
@@ -284,10 +296,10 @@ export const guides: Guide[] = [
     slug: "furnace-short-cycling",
     href: "/guides/furnace-short-cycling/",
     title: "Furnace short cycling in Freeport cold weather",
-    metaTitle: "Furnace Short Cycling in Freeport, IL",
+    metaTitle: "Furnace Short Cycling in Freeport, IL | Millrace Heating",
     metaDescription:
-      "A Freeport furnace that fires, stops, and repeats is not saving energy. What a full cycle should look like, why deep cold exposes it, and when to call.",
-    h1: "A furnace that chatters on and off is failing the cycle.",
+      "Furnace short cycling in Freeport is a unit that fires, stops, and repeats. What a full cycle should do in deep cold, and when to call. Call (703) 703-7855.",
+    h1: "Furnace short cycling in Freeport cold weather",
     lede:
       "In a heating-dominated climate, a furnace is supposed to run long enough to warm the heat exchanger, satisfy the thermostat, and shut down cleanly. Two minutes of flame, a pause, and another try is not thrift. It is a limit, a sensor, or a design problem interrupting the job.",
     datePublished: "2026-09-13",
@@ -296,7 +308,7 @@ export const guides: Guide[] = [
       "High-efficiency gas furnace in a utility space.",
     body: [
       {
-        heading: "What a finished cycle looks like",
+        heading: "Furnace short cycling versus a finished cycle",
         paragraphs: [
           "A healthy winter cycle is boring. The inducer starts, ignition happens, burners stay lit, the blower comes in, and the system runs until the house actually gains heat. Then it stops. You should not be counting restarts from the kitchen.",
           "Short cycling is the pattern: flame for a short burst, shutdown, repeat. Sometimes you hear a click and a whoosh. Sometimes you only notice that rooms never get comfortable even though the furnace “keeps coming on.”",
@@ -346,10 +358,10 @@ export const guides: Guide[] = [
     slug: "hvac-strange-noises",
     href: "/guides/hvac-strange-noises/",
     title: "Strange HVAC noises in Freeport homes",
-    metaTitle: "Strange HVAC Noises in Freeport, IL",
+    metaTitle: "Strange HVAC Noises in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Booms, squeals, rattles, and bangs from a Freeport furnace or air conditioner are information. Which sounds can wait for service, and which mean stop and leave.",
-    h1: "New noises from the furnace or AC are the system talking.",
+      "Strange HVAC noises in Freeport, from booms to squeals, are information. Which sounds can wait for a visit, and which mean stop and leave. Call (703) 703-7855.",
+    h1: "Strange HVAC noises in a Freeport house",
     lede:
       "Forced-air equipment in older Freeport houses is rarely silent. A soft whoosh at startup is normal. A boom, a metal-on-metal grind, or a scream from the outdoor fan is not. Treat a new sound as a symptom, not as background for the winter.",
     datePublished: "2026-09-13",
@@ -358,7 +370,7 @@ export const guides: Guide[] = [
       "High-efficiency gas furnace in a utility space.",
     body: [
       {
-        heading: "A sound you did not have last week matters",
+        heading: "Strange HVAC noises you did not have last week",
         paragraphs: [
           "Houses in 61032 expand and contract through huge temperature swings. Duct ticks on the first heat of the day can be metal moving. A repeatable bang at ignition, a squeal that follows the blower, or a rattle that tracks the outdoor fan is mechanical wear, debris, or delayed ignition.",
           "Note whether the noise is at the furnace, in the ceiling, or outside. That single sentence is more useful than “it sounds bad.”",
@@ -401,7 +413,7 @@ export const guides: Guide[] = [
       },
     ],
     relatedServices: [
-      "hvac-repair-freeport-il",
+      "residential-hvac-freeport-il",
       "furnace-repair-freeport-il",
       "ac-repair-freeport-il",
     ],
@@ -415,10 +427,10 @@ export const guides: Guide[] = [
     slug: "poor-airflow",
     href: "/guides/poor-airflow/",
     title: "Poor airflow in Freeport forced-air homes",
-    metaTitle: "Poor HVAC Airflow in Freeport, IL",
+    metaTitle: "Poor HVAC Airflow in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Weak air at the register in a Freeport house is usually a filter, return, duct, or blower problem. Why closed rooms and dense filters make winter and summer worse.",
-    h1: "If the register barely breathes, the equipment is already in trouble.",
+      "Poor HVAC airflow in a Freeport house starts with the filter, the return, or the ducts. Why closed rooms make winter and summer worse. Call (703) 703-7855.",
+    h1: "Poor HVAC airflow in a Freeport house",
     lede:
       "Forced-air heat and cooling only work if air can complete a loop. Many Freeport houses were built around a basement furnace and a short list of returns. Starve that loop and you get cold rooms, iced coils, short cycling, and a blower that sounds busier than it is.",
     datePublished: "2026-09-13",
@@ -427,7 +439,7 @@ export const guides: Guide[] = [
       "Round sheet-metal air duct with a branch takeoff.",
     body: [
       {
-        heading: "Weak air is a system problem, not a “vent” problem",
+        heading: "Poor HVAC airflow is a system problem",
         paragraphs: [
           "Homeowners often hunt for one closed damper. The more common Freeport pattern is a filter that has become a wall, a return blocked by storage, or a blower that can no longer move the design amount of air. One weak bedroom can be a crushed run. Every register feeling soft is the air handler or the filter.",
           "Hold a piece of tissue at the return. If it does not pull, the system is not circulating. That is worth a call even if the furnace still makes heat.",
@@ -463,13 +475,13 @@ export const guides: Guide[] = [
       },
     ],
     relatedServices: [
-      "hvac-repair-freeport-il",
-      "hvac-maintenance-freeport-il",
+      "residential-hvac-freeport-il",
+      "hvhvac-maintenance-freeport-il",
       "indoor-air-quality-freeport-il",
     ],
     relatedGuides: [
       "uneven-temperatures",
-      "ac-freezing-up",
+      "ac-not-turning-on",
       "furnace-short-cycling",
     ],
   },
@@ -477,10 +489,10 @@ export const guides: Guide[] = [
     slug: "uneven-temperatures",
     href: "/guides/uneven-temperatures/",
     title: "Uneven temperatures in Freeport houses",
-    metaTitle: "Uneven Temperatures in Freeport, IL",
+    metaTitle: "Uneven Temperatures in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Why one Freeport room stays cold in January or hot in July while the thermostat is happy. Ducts, two-story stacks, additions, and when a mini split is the honest tool.",
-    h1: "The thermostat can be comfortable while the back bedroom is not.",
+      "Uneven temperatures in a Freeport house: one room cold in January or hot in July. Ducts, additions, and what to tell the call. Call (703) 703-7855.",
+    h1: "Uneven temperatures in a Freeport house",
     lede:
       "A hallway sensor does not heat a converted attic or a parlor with three exterior walls. Uneven temperatures in Freeport are usually a building-and-duct story. Sometimes they are a failing blower or a heat pump in defrost. They are rarely solved by one more closed register.",
     datePublished: "2026-09-13",
@@ -489,7 +501,7 @@ export const guides: Guide[] = [
       "Digital thermostat mounted on an interior wall.",
     body: [
       {
-        heading: "Winter stacks heat. Summer stacks the opposite.",
+        heading: "Uneven temperatures: winter stacks heat, summer the opposite",
         paragraphs: [
           "In a two-story house, warm air wants the upstairs. During a long Stephenson County heating season that can leave the first floor chasing the thermostat while bedrooms overshoot. In July the upstairs holds the day’s heat and the basement feels fine.",
           "That pattern is physics plus duct layout. It is not proof the furnace is “too small” or the AC is “too big” until someone looks at both the load and the air path.",
@@ -525,14 +537,14 @@ export const guides: Guide[] = [
       },
     ],
     relatedServices: [
-      "hvac-repair-freeport-il",
+      "residential-hvac-freeport-il",
       "ductless-mini-split-freeport-il",
       "furnace-repair-freeport-il",
     ],
     relatedGuides: [
       "poor-airflow",
       "heat-pump-basics-northern-illinois",
-      "indoor-air-quality-closed-homes",
+      "changing-a-furnace-filter",
     ],
   },
   {
@@ -601,24 +613,24 @@ export const guides: Guide[] = [
       },
     ],
     relatedServices: [
-      "hvac-maintenance-freeport-il",
+      "hvhvac-maintenance-freeport-il",
       "furnace-maintenance-freeport-il",
-      "ac-maintenance-freeport-il",
+      "hvac-maintenance-freeport-il",
     ],
     relatedGuides: [
       "furnace-replacement-signals",
       "ac-blowing-warm-air",
-      "indoor-air-quality-closed-homes",
+      "changing-a-furnace-filter",
     ],
   },
   {
     slug: "furnace-replacement-signals",
     href: "/guides/furnace-replacement-signals/",
     title: "When a Freeport furnace is telling you it is done",
-    metaTitle: "Furnace Replacement Signals in Freeport, IL",
+    metaTitle: "Furnace Replacement Signs, Freeport IL | Millrace Heating",
     metaDescription:
-      "Replacement signals for a Freeport furnace: safety, repeat failures, rooms that never recover, and equipment that cannot face another Stephenson County winter. Call to be connected with a local heating and cooling professional.",
-    h1: "Replacement is a reliability decision, not a birthday party for the furnace.",
+      "Furnace replacement signals in Freeport: repeat failures, a heat exchanger concern, and a unit that cannot face another long winter. Call (703) 703-7855.",
+    h1: "Furnace replacement signals in Freeport, IL",
     lede:
       "Age matters. A cracked heat exchanger, a cabinet that cannot keep the house livable on a design-cold night, and a parts chase every freeze matter more. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
@@ -627,7 +639,7 @@ export const guides: Guide[] = [
       "High-efficiency gas furnace in a utility space.",
     body: [
       {
-        heading: "Safety closes the conversation",
+        heading: "Furnace replacement signals start with safety",
         paragraphs: [
           `A heat exchanger that is cracked, a furnace that spills combustion products, or a unit that cannot vent correctly is not a “repair vs replace” debate you shop around. The house has to be safe. If gas odor or a carbon monoxide alarm is involved, leave first, then 911 and Nicor Gas at ${NICOR_GAS.display}.`,
           "After the property is safe, the equipment decision is simple: it does not go back into service in that condition. How you heat the house next is a separate, on-site talk.",
@@ -671,7 +683,7 @@ export const guides: Guide[] = [
     ],
     relatedServices: [
       "furnace-installation-freeport-il",
-      "hvac-replacement-freeport-il",
+      "furnace-installation-freeport-il",
       "furnace-repair-freeport-il",
     ],
     relatedGuides: [
@@ -684,10 +696,10 @@ export const guides: Guide[] = [
     slug: "heat-pump-basics-northern-illinois",
     href: "/guides/heat-pump-basics-northern-illinois/",
     title: "Heat pump basics for northern Illinois",
-    metaTitle: "Heat Pump Basics for Freeport, IL",
+    metaTitle: "Heat Pump Basics for Freeport, IL | Millrace Heating",
     metaDescription:
-      "How heat pumps actually heat a Freeport house: capacity in the cold, defrost, backup heat, and dual fuel. Written for Stephenson County winters, not a mild-climate brochure.",
-    h1: "A heat pump in Freeport has to heat. Cooling is the easy half.",
+      "Heat pump basics for Freeport: heating in the cold, defrost, and backup heat. Written for Stephenson County winters, not a mild brochure. Call (703) 703-7855.",
+    h1: "Heat pump basics for a Freeport winter",
     lede:
       "Heat pumps move heat. In July that is simple. In January, when Freeport nights sit near 11°F, the outdoor air holds less heat and the unit has to work differently. If you do not understand defrost and backup heat, the machine will look broken on the nights it is doing its hardest job.",
     datePublished: "2026-09-13",
@@ -696,7 +708,7 @@ export const guides: Guide[] = [
       "Outdoor air-conditioner condenser on a concrete pad beside a house.",
     body: [
       {
-        heading: "One outdoor unit, two seasons, unequal work",
+        heading: "Heat pump basics: one outdoor unit, unequal seasons",
         paragraphs: [
           "A heat pump cools like an air conditioner and heats by reversing that cycle. Stephenson County’s year is not balanced. Heating degree days dwarf cooling degree days. Equipment, backup heat, and duct design have to be chosen for the long season, not for a shoulder-week demo.",
           "If someone talks only about summer efficiency, they are not talking about 61032.",
@@ -740,13 +752,13 @@ export const guides: Guide[] = [
     ],
     relatedServices: [
       "heat-pump-repair-freeport-il",
-      "heat-pump-installation-freeport-il",
-      "heat-pump-maintenance-freeport-il",
+      "heat-pump-repair-freeport-il",
+      "hvac-maintenance-freeport-il",
     ],
     relatedGuides: [
       "furnace-replacement-signals",
       "uneven-temperatures",
-      "hvac-maintenance-checklist",
+      "changing-a-furnace-filter",
     ],
   },
   {
@@ -809,16 +821,24 @@ export const guides: Guide[] = [
     ],
     relatedServices: [
       "indoor-air-quality-freeport-il",
-      "air-filtration-freeport-il",
-      "humidifiers-dehumidifiers-freeport-il",
+      "indoor-air-quality-freeport-il",
+      "hvac-maintenance-freeport-il",
     ],
     relatedGuides: [
-      "hvac-maintenance-checklist",
+      "changing-a-furnace-filter",
       "poor-airflow",
       "uneven-temperatures",
     ],
   },
 ];
+
+export const guides: Guide[] = [
+  ...guideRecords.filter((guide) => !RETIRED_GUIDE_SLUGS.has(guide.slug)),
+  ...extraGuides,
+].map((guide) => ({
+  ...guide,
+  metaDescription: withCallPhone(guide.metaDescription),
+}));
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((guide) => guide.slug === slug);

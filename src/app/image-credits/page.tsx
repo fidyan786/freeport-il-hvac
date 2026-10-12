@@ -3,11 +3,11 @@ import { JsonLd } from "@/components/JsonLd";
 import { IMAGE_CREDITS } from "@/lib/image-credits";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Image credits",
-  description:
-    "Photograph sources and licenses for the Freeport heating and cooling website. Images are not pictures of this site’s jobs or technicians.",
+  title: "Image Credits | Millrace Heating, Freeport, Illinois",
+  description: `Photo credits for the Freeport, IL heating and cooling pages, including Wikimedia Commons sources, authors, and licenses. Call ${site.phoneDisplay}.`,
   path: "/image-credits/",
 });
 
@@ -28,9 +28,10 @@ export default function ImageCreditsPage() {
       />
       <h1 className="mt-6 text-4xl text-navy">Image credits</h1>
       <p className="mt-6">
-        Photographs on this site are licensed files from Wikimedia Commons. They
-        show real equipment and real places. They are not photos of a Freeport
-        service call, and the people in them are not this website’s technicians.
+        Photographs on this site come from Wikimedia Commons under the licenses
+        listed below. They show real equipment and real places. They are not
+        photos of a Freeport service call. Smaller files under /photos/heroes/
+        are the same photographs, resized for page heroes.
       </p>
       <ul className="mt-8 grid gap-6">
         {IMAGE_CREDITS.map((item) => (

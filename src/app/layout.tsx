@@ -15,6 +15,9 @@ const sans = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-source-sans",
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+  fallback: ["Arial", "Helvetica", "sans-serif"],
 });
 
 export const viewport: Viewport = {
@@ -24,9 +27,8 @@ export const viewport: Viewport = {
 };
 
 const defaultTitle =
-  "Freeport IL Heating and Cooling Help | Millrace";
-const defaultDescription =
-  "Call to be connected with a local heating and cooling professional in Freeport, IL 61032.";
+  "Heating and Cooling in Freeport, IL | Millrace Heating";
+const defaultDescription = `Heating and cooling help for Freeport, IL 61032. Furnace trouble, an air conditioner that will not cool, or a system that will not start. Call ${site.phoneDisplay}.`;
 
 const googleVerification = googleSiteVerification();
 

@@ -5,8 +5,8 @@ import { pageMetadata } from "@/lib/seo";
 import { AFFILIATE_DISCLOSURE, site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Privacy Policy",
-  description: `How ${site.businessName} handles phone calls from heating and cooling inquiries in ${site.city}, ${site.state}.`,
+  title: "Privacy Policy | Millrace Heating, Freeport, Illinois",
+  description: `How Millrace Heating & Air handles calls, cookies, and analytics for visitors looking up heating and cooling in Freeport. Call ${site.phoneDisplay}.`,
   path: "/privacy-policy/",
 });
 

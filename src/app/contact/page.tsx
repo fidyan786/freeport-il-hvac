@@ -8,9 +8,8 @@ import { pageMetadata } from "@/lib/seo";
 import { phoneDisplayLabel, primaryCtaLabel, site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Call for Heating and Cooling Help in Freeport, IL",
-  description:
-    "Call to be connected with a local heating and cooling professional in Freeport, Illinois 61032. This site does not take online requests.",
+  title: "Call for HVAC Help in Freeport, Illinois | Millrace Heating",
+  description: `Call to be connected with a local heating and cooling professional in Freeport, Illinois 61032. This site takes no forms. Call ${site.phoneDisplay}.`,
   path: "/contact/",
 });
 

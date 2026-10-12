@@ -1,6 +1,6 @@
 # Image credits
 
-Photographs on this site come from Wikimedia Commons. They are real places and real equipment. They are not photos of a Freeport service call, and the people in them are not this website’s technicians. Each file was center-cropped to 3:2, resized to 1200×800, and saved as WebP. CC BY-SA adaptations stay under the same license.
+Photographs on this site come from Wikimedia Commons. They are real places and real equipment. They are not photos of a Freeport service call, and the people in them are not this website’s technicians. Each file was center-cropped to 3:2, resized to 1200×800, and saved as WebP. CC BY-SA adaptations stay under the same license. Files in `public/photos/heroes/` are 640-pixel-wide copies of the same photographs, used as page heroes.
 
 | File | Alt text | Author | License | Source | Where used |
 | --- | --- | --- | --- | --- | --- |

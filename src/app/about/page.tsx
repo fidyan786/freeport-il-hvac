@@ -6,12 +6,12 @@ import { SectionCall } from "@/components/SectionCall";
 import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
+import { NICOR_GAS } from "@/lib/safety-contacts";
 import { AFFILIATE_DISCLOSURE, phoneDisplayLabel, site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "About Millrace Heating & Air | Freeport, IL",
-  description:
-    "Millrace Heating & Air is a Freeport, Illinois website that connects callers with independent local heating and cooling professionals. It is not itself a contractor.",
+  title: "About Millrace Heating & Air in Freeport, Illinois",
+  description: `Millrace Heating & Air connects Freeport callers with independent local heating and cooling professionals. Not a contractor. Call ${site.phoneDisplay}.`,
   path: "/about/",
 });
 
@@ -75,7 +75,12 @@ export default function AboutPage() {
           <li>County: {site.county}</li>
           <li>Phone: {phoneDisplayLabel()}</li>
         </ul>
-        <SectionCall context="about-facts" />
+        <p className="mt-6 text-sm text-muted">
+          Last reviewed October 12, 2026. The Nicor Gas emergency number on
+          this site, {NICOR_GAS.display}, was checked against Nicor&apos;s
+          emergency page at nicorgas.com that day. This page does not invent
+          years in business, a staff list, or a license.
+        </p>
       </div>
       <FinalCta
         title="Call for heating and cooling help in Freeport"

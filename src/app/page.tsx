@@ -17,34 +17,45 @@ import { localLabel, primaryCtaLabel, site } from "@/lib/site";
 const faqs = [
   {
     q: "Is Freeport, Illinois covered?",
-    a: "Freeport (ZIP 61032) in Stephenson County is the city this site is written for. Nearby towns can be confirmed on the call.",
+    a: "Freeport, ZIP 61032, in Stephenson County is the city these pages are written for. Nearby towns can often be reached, and that is confirmed on the call rather than assumed from a map. Say the town and the ZIP when you dial.",
+    detail:
+      "Lena, Cedarville, Dakota, Pearl City, and the other Stephenson County towns are listed on the service area page so you can name yours. Listing a town is not a promise that a visit is already scheduled.",
   },
   {
     q: "Is this website a heating and cooling contractor?",
-    a: "No. This website connects callers with independent local service providers. It is not itself a heating and cooling contractor.",
+    a: "No. Millrace Heating & Air is a website that connects callers with independent local heating and cooling professionals. It is not itself a contractor, it does not employ technicians, and it does not publish a street address or a review score.",
+    detail:
+      "The person who answers can say whether they work on the equipment you described. Judge the visit by what they explain on site, not by a claim on this website.",
   },
   {
     q: "What should I do if the furnace stops working?",
-    a: "If you smell gas or a carbon monoxide alarm is sounding, leave and call 911 and Nicor Gas. If the home is otherwise safe, check the thermostat, the furnace switch, and the filter, then call to be connected with a local heating and cooling professional.",
+    a: "If you smell gas or a carbon monoxide alarm is sounding, leave and call 911 and Nicor Gas at 888-642-6748. If the home is otherwise safe, check the thermostat mode, the furnace switch, and the filter once, then call to be connected with a local professional.",
+    detail:
+      "Do not keep resetting a furnace that locks out. A blower pushing cold air is still a no-heat problem. Furnace repair is the page for a gas furnace you can identify.",
   },
   {
     q: "What should I do if the air conditioner stops cooling?",
-    a: "Make sure the thermostat is set to cool, the outdoor disconnect is on, and the filter is not clogged. If the outdoor unit runs but the indoor air is warm, call to be connected with a local heating and cooling professional.",
+    a: "Set the thermostat to cool, below the room temperature, and check the filter and the outdoor disconnect once. If the outdoor unit is silent, humming, or running while the indoor air stays warm, stop resetting a tripped breaker and call.",
+    detail:
+      "Freeport condensers sit idle all winter, so the first humid week is when failures show up. AC repair is the page for that visit. Do not add refrigerant from a can.",
   },
   {
     q: "What if the house has no heat or no cooling right now?",
-    a: "Call and describe the symptom and the ZIP. The person who answers can say whether a local professional is available.",
+    a: "Call and say no heat or no cooling, the indoor temperature, and the ZIP. If the house is getting colder in sub-freezing weather, or someone cannot safely wait through the heat, describe it as emergency HVAC. This site connects the call. It does not promise an arrival time.",
+    detail:
+      "Availability is whatever the independent local professional can actually do. A mild complaint can wait for furnace repair or AC repair. A falling indoor temperature should not.",
   },
   {
     q: "Does the call cover homes and small businesses?",
-    a: "Say whether the building is a house, shop, or office, and describe the equipment. Coverage is confirmed on the call.",
+    a: "Say whether the building is a house, a shop, an office, or a church, and describe the equipment if you can. Houses belong with residential HVAC. Rooftop and packaged units belong with commercial HVAC. Coverage is confirmed on the call, including access to a roof.",
+    detail:
+      "A home office is still a house. A storefront with a unit on the roof is not. The distinction saves a visit that cannot reach the equipment.",
   },
 ];
 
 export const metadata = pageMetadata({
-  title: "Freeport IL Heating and Cooling Help | Millrace",
-  description:
-    "Call to be connected with a local heating and cooling professional in Freeport, IL 61032 for furnace, air conditioning, and no-heat or no-cooling problems.",
+  title: "Heating and Cooling in Freeport, IL | Millrace Heating",
+  description: `Heating and cooling help for Freeport, IL 61032. Furnace trouble, an air conditioner that will not cool, or a system that will not start. Call ${site.phoneDisplay}.`,
   path: "/",
 });
 
@@ -89,7 +100,7 @@ export default function HomePage() {
           </div>
           <div className="relative min-h-[18rem] overflow-hidden sm:min-h-[24rem] lg:min-h-full">
             <SitePhoto
-              src="/photos/downtown-freeport-illinois.webp"
+              src="/photos/heroes/downtown-freeport-illinois.webp"
               alt="Downtown Freeport, Illinois, with brick storefronts along a main street."
               priority
               sizes={IMAGE_SIZES.hero}

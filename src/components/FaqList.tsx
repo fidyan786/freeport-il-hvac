@@ -1,4 +1,6 @@
-export function FaqList({ items }: { items: Array<{ q: string; a: string }> }) {
+export type FaqItem = { q: string; a: string; detail?: string };
+
+export function FaqList({ items }: { items: FaqItem[] }) {
   return (
     <div className="divide-y divide-line overflow-hidden rounded-brand border border-line bg-white">
       {items.map((item) => (
@@ -8,17 +10,15 @@ export function FaqList({ items }: { items: Array<{ q: string; a: string }> }) {
               <span className="font-sans text-base font-semibold text-navy">
                 {item.q}
               </span>
-              <span
-                aria-hidden="true"
-                className="mt-0.5 shrink-0 text-navy"
-              >
+              <span aria-hidden="true" className="mt-0.5 shrink-0 text-navy">
                 +
               </span>
             </span>
           </summary>
-          <p className="accordion-fade mt-3 max-w-3xl leading-relaxed text-muted">
-            {item.a}
-          </p>
+          <div className="accordion-fade mt-3 max-w-3xl leading-relaxed text-muted">
+            <p>{item.a}</p>
+            {item.detail ? <p className="mt-3">{item.detail}</p> : null}
+          </div>
         </details>
       ))}
     </div>

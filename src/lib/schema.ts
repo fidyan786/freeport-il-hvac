@@ -4,7 +4,6 @@ import {
   BRAND,
   getSiteUrl,
   isHoursConfigured,
-  isNameConfigured,
   isPhoneConfigured,
   phoneSchemaTelephone,
   site,
@@ -19,21 +18,14 @@ function areaServed() {
     {
       "@type": "City",
       name: site.city,
-      containedInPlace: [
-        {
-          "@type": "AdministrativeArea",
-          name: site.county,
-        },
-        {
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: site.county,
+        containedInPlace: {
           "@type": "State",
           name: site.state,
         },
-      ],
-    },
-    {
-      "@type": "PostalCode",
-      name: site.zip,
-      addressCountry: "US",
+      },
     },
     {
       "@type": "AdministrativeArea",
@@ -42,7 +34,10 @@ function areaServed() {
     ...nearbyCommunities.map((town) => ({
       "@type": "City",
       name: town.name,
-      postalCode: town.zip,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: site.county,
+      },
     })),
   ];
 }
@@ -63,20 +58,9 @@ export function localBusinessSchema() {
       url: absoluteUrl("/apple-icon/"),
     },
     slogan: BRAND.tagline,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.city,
-      addressRegion: site.stateCode,
-      postalCode: site.zip,
-      addressCountry: "US",
-    },
     areaServed: areaServed(),
     knowsAbout: serviceLinks.map((item) => item.label),
   };
-
-  if (site.address) {
-    (data.address as Record<string, unknown>).streetAddress = site.address;
-  }
 
   if (isPhoneConfigured()) {
     data.telephone = phoneSchemaTelephone() ?? site.phoneDisplay;
@@ -95,9 +79,7 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${url}#website`,
-    name: isNameConfigured()
-      ? site.businessName
-      : `HVAC company in ${site.city}, ${site.stateCode}`,
+    name: site.businessName,
     alternateName: `${site.city} HVAC`,
     url,
     inLanguage: "en-US",
@@ -141,13 +123,14 @@ export function serviceSchema({
   if (isPhoneConfigured()) {
     provider.telephone = phoneSchemaTelephone() ?? site.phoneDisplay;
   }
+  provider.description =
+    `${site.businessName} is a website that connects callers with independent local heating and cooling professionals. It is not itself a contractor and does not perform the repair.`;
 
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name,
     serviceType: serviceType ?? name,
-    category: "HVAC",
     description,
     url: absoluteUrl(path),
     areaServed: [
@@ -178,7 +161,9 @@ export function serviceListSchema() {
   };
 }
 
-export function faqSchema(items: Array<{ q: string; a: string }>) {
+export function faqSchema(
+  items: Array<{ q: string; a: string; detail?: string }>,
+) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -187,7 +172,7 @@ export function faqSchema(items: Array<{ q: string; a: string }>) {
       name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.a,
+        text: item.detail ? `${item.a} ${item.detail}` : item.a,
       },
     })),
   };
@@ -198,28 +183,41 @@ export function articleSchema({
   description,
   path,
   datePublished,
+  dateModified,
   image,
 }: {
   title: string;
   description: string;
   path: string;
   datePublished: string;
+  dateModified?: string;
   image?: string;
 }) {
+  const pageUrl = absoluteUrl(path);
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,
     datePublished,
-    mainEntityOfPage: absoluteUrl(path),
+    dateModified: dateModified ?? datePublished,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
     author: {
       "@type": "Organization",
       name: site.businessName,
       url: absoluteUrl("/"),
     },
     publisher: {
-      "@id": businessId(),
+      "@type": "Organization",
+      name: site.businessName,
+      url: absoluteUrl("/"),
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/apple-icon/"),
+      },
     },
   };
 

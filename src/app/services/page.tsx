@@ -4,15 +4,15 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { FinalCta } from "@/components/FinalCta";
 import { SectionCall } from "@/components/SectionCall";
-import { getService, servicesByCategory, type ServiceCategory, type ServicePageContent } from "@/content/services";
+import { servicesByCategory, type ServiceCategory } from "@/content/services";
 import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema, serviceListSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "HVAC Services in Freeport, IL | Millrace",
-  description:
-    "HVAC services in Freeport, IL: furnace repair, AC repair, installation, maintenance, emergency HVAC, residential HVAC, and commercial HVAC for 61032.",
+  title: "HVAC Services in Freeport, Illinois | Millrace Heating",
+  description: `HVAC services in Freeport, IL: furnace repair, AC repair, installation, maintenance, heat pumps, and emergency no-heat calls. Call ${site.phoneDisplay}.`,
   path: "/services/",
 });
 
@@ -22,116 +22,94 @@ const sections: Array<{
   intro: string;
   image: string;
   imageAlt: string;
-  category: ServiceCategory | "specialized" | "emergency" | "residential";
+  category: ServiceCategory;
 }> = [
   {
-    id: "cooling",
-    title: "Cooling",
+    id: "emergency",
+    title: "Emergency HVAC",
     intro:
-      "Air conditioners in Freeport spend most of the year idle. Repair, installation, replacement, and spring maintenance are different jobs — start with the one you actually need.",
-    image: "/photos/outdoor-ac-condenser.webp",
-    imageAlt: "Outdoor air-conditioner condenser on a concrete pad beside a house.",
-    category: "cooling",
+      "No heat on a sub-freezing night, or no cooling when someone cannot safely wait. Gas leaks and carbon monoxide alarms start with 911 and Nicor, not with this page.",
+    image: "/photos/heroes/snow-street-oak-park-illinois.webp",
+    imageAlt: "Snow-covered houses along a residential street.",
+    category: "emergency",
   },
   {
     id: "heating",
     title: "Heating",
     intro:
-      "Furnaces and heating systems carry Stephenson County winters. No heat is not the same problem as a planned replacement or a fall tune-up.",
-    image: "/photos/gas-furnace-utility.webp",
-    imageAlt: "High-efficiency gas furnace in a utility space.",
+      "Furnace repair, heating repair when the equipment is unclear, and furnace installation when this unit should not carry another Stephenson County winter.",
+    image: "/photos/heroes/gas-furnace-utility.webp",
+    imageAlt: "Gas furnace in a utility space.",
     category: "heating",
   },
   {
-    id: "residential",
-    title: "Residential HVAC",
+    id: "cooling",
+    title: "Cooling",
     intro:
-      "Most Freeport calls are houses: furnaces that carry winter, air conditioners that sat idle, and the shared blower and ducts between them. Start here for a home rather than a rooftop unit.",
-    image: "/photos/spring-jackson-freeport-illinois.webp",
-    imageAlt: "Houses at the corner of Spring and Jackson streets in Freeport, Illinois.",
-    category: "residential",
-  },
-  {
-    id: "heat-pumps",
-    title: "Heat Pumps",
-    intro:
-      "Heat pumps and ductless mini splits have to heat through real cold, not just shoulder-season weather. Repair, installation, and maintenance are listed separately.",
-    image: "/photos/outdoor-ac-condenser.webp",
+      "AC repair for a unit that will not cool after sitting all winter, and AC installation when that outdoor unit should be replaced.",
+    image: "/photos/heroes/outdoor-ac-condenser.webp",
     imageAlt: "Outdoor air-conditioner condenser on a concrete pad beside a house.",
-    category: "specialized",
+    category: "cooling",
   },
   {
     id: "maintenance",
     title: "Maintenance",
     intro:
-      "Seasonal checks catch failing parts before a January night or the first hot week. Maintenance is inspection and cleaning — not a substitute for repair.",
-    image: "/photos/gas-furnace-utility.webp",
-    imageAlt: "High-efficiency gas furnace in a utility space.",
-    category: "hvac",
+      "A seasonal check of the furnace before the long cold, and of the air conditioner before the first humid week. Not a substitute for a breakdown.",
+    image: "/photos/heroes/gas-furnace-utility.webp",
+    imageAlt: "Gas furnace scheduled for seasonal maintenance.",
+    category: "maintenance",
+  },
+  {
+    id: "heat-pumps",
+    title: "Heat Pumps",
+    intro:
+      "Ducted heat pumps that have to heat through Freeport nights in the teens, including repair, installation, and maintenance on one page.",
+    image: "/photos/heroes/outdoor-ac-condenser.webp",
+    imageAlt: "Outdoor heat pump or air conditioner cabinet on a concrete pad.",
+    category: "heat-pump",
+  },
+  {
+    id: "ductless",
+    title: "Ductless Mini Splits",
+    intro:
+      "A wall or ceiling head for an addition or upstairs room the original ducts never served well.",
+    image: "/photos/heroes/ductless-indoor-unit.webp",
+    imageAlt: "Wall-mounted ductless indoor unit.",
+    category: "ductless",
   },
   {
     id: "iaq",
     title: "Indoor Air Quality",
     intro:
-      "Closed-up Freeport houses recirculate whatever the returns pull. Filtration and humidity equipment are comfort tools, explained without medical claims.",
-    image: "/photos/basement-flexible-ducts.webp",
+      "Filters and humidity equipment for houses that stay closed from late fall through March. Not a medical claim.",
+    image: "/photos/heroes/basement-flexible-ducts.webp",
     imageAlt: "Flexible air ducts in an unfinished basement.",
     category: "iaq",
+  },
+  {
+    id: "residential",
+    title: "Residential HVAC",
+    intro:
+      "The overview for a Freeport house: furnace, air conditioner, and the ducts between them, when you are not sure which page fits.",
+    image: "/photos/heroes/spring-jackson-freeport-illinois.webp",
+    imageAlt: "Houses at the corner of Spring and Jackson streets in Freeport, Illinois.",
+    category: "residential",
   },
   {
     id: "commercial",
     title: "Commercial HVAC",
     intro:
-      "Offices, shops, churches, and similar Freeport buildings. Rooftop units, business heating, and opening-day comfort — confirmed on the call.",
-    image: "/photos/rooftop-packaged-hvac-units.webp",
+      "Shops, offices, churches, and similar buildings, usually with rooftop or packaged equipment rather than a basement furnace.",
+    image: "/photos/heroes/rooftop-packaged-hvac-units.webp",
     imageAlt: "Packaged rooftop heating and cooling units on a commercial roof.",
     category: "commercial",
   },
-  {
-    id: "emergency",
-    title: "Emergency HVAC",
-    intro:
-      "Urgent no-heat and no-cooling calls. If you smell gas or a carbon monoxide alarm is sounding, leave the property first.",
-    image: "/photos/snow-street-oak-park-illinois.webp",
-    imageAlt: "Snow-covered houses along a street in Oak Park, Illinois.",
-    category: "emergency",
-  },
 ];
 
-function bySlugs(slugs: string[]): ServicePageContent[] {
-  return slugs
-    .map((slug) => getService(slug))
-    .filter((service): service is ServicePageContent => Boolean(service));
-}
-
-function itemsFor(category: ServiceCategory | "specialized" | "emergency" | "residential") {
-  if (category === "specialized") {
-    return [...servicesByCategory("heat-pump"), ...servicesByCategory("ductless")];
-  }
-  if (category === "emergency") {
-    return bySlugs(["emergency-hvac-freeport-il", "hvac-repair-freeport-il"]);
-  }
-  if (category === "residential") {
-    return bySlugs([
-      "residential-hvac-freeport-il",
-      "furnace-repair-freeport-il",
-      "ac-repair-freeport-il",
-      "hvac-maintenance-freeport-il",
-    ]);
-  }
-  if (category === "hvac") {
-    return bySlugs([
-      "hvac-maintenance-freeport-il",
-      "ac-maintenance-freeport-il",
-      "furnace-maintenance-freeport-il",
-      "heat-pump-maintenance-freeport-il",
-      "commercial-hvac-maintenance-freeport-il",
-      "hvac-replacement-freeport-il",
-    ]);
-  }
+function itemsFor(category: ServiceCategory) {
   return servicesByCategory(category);
 }
-
 export default function ServicesIndexPage() {
   return (
     <>

@@ -16,7 +16,7 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return {};
   return pageMetadata({
-    title: `${service.navLabel} in Freeport, IL`,
+    title: service.metaTitle,
     description: service.metaDescription,
     path: service.href,
   });
