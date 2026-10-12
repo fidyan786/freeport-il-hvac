@@ -6,7 +6,7 @@ import {
   isHoursConfigured,
   isNameConfigured,
   isPhoneConfigured,
-  phoneE164,
+  phoneSchemaTelephone,
   site,
 } from "@/lib/site";
 
@@ -106,7 +106,7 @@ export function localBusinessSchema() {
   }
 
   if (isPhoneConfigured()) {
-    data.telephone = phoneE164() ?? site.phoneDisplay;
+    data.telephone = phoneSchemaTelephone() ?? site.phoneDisplay;
   }
 
   if (isHoursConfigured()) {
@@ -166,7 +166,7 @@ export function serviceSchema({
   };
 
   if (isPhoneConfigured()) {
-    provider.telephone = phoneE164() ?? site.phoneDisplay;
+    provider.telephone = phoneSchemaTelephone() ?? site.phoneDisplay;
   }
 
   return {

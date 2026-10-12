@@ -1,3 +1,5 @@
+import { NICOR_GAS } from "@/lib/safety-contacts";
+
 export type ServiceCategory =
   | "heating"
   | "cooling"
@@ -604,7 +606,7 @@ export const services: ServicePageContent[] = [
     explanation: [
       "A gas furnace in Freeport works a long season. Igniters, flame sensors, inducers, and pressure switches accumulate cycles that milder towns never ask for. When one of those parts fails, the symptom is simple: the house cools off.",
       "Safe homeowner checks are short. Thermostat on heat, furnace switch on, filter not a wall. After that, the burner compartment is not a weekend project. Do not bypass a limit or a pressure switch to “get through the night.”",
-      "If you smell rotten-egg gas or a carbon monoxide alarm is sounding, this page is not the next step. Leave. From outside, call 911 and Nicor Gas at 888-642-6748. Furnace repair starts after the house is safe.",
+      `If you smell rotten-egg gas or a carbon monoxide alarm is sounding, this page is not the next step. Leave. From outside, call 911 and Nicor Gas at ${NICOR_GAS.display}. Furnace repair starts after the house is safe.`,
     ],
     causes: [
       {
@@ -650,7 +652,7 @@ export const services: ServicePageContent[] = [
       "You have already checked the thermostat, switch, and filter",
     ],
     nextSteps: [
-      "If you smell gas or a CO alarm sounds, leave and call 911 and Nicor Gas at 888-642-6748.",
+      `If you smell gas or a CO alarm sounds, leave and call 911 and Nicor Gas at ${NICOR_GAS.display}.`,
       "If the house is otherwise safe, check thermostat, furnace switch, and filter, then stop.",
       "Call for furnace repair. Say whether you have any heat at all.",
     ],
@@ -998,7 +1000,7 @@ export const services: ServicePageContent[] = [
     explanation: [
       "This page exists because homeowners should not have to name the appliance correctly to get help. Heating repair in Freeport means: the house is not holding temperature, and we will identify the machine before we start swapping parts.",
       "A gas furnace, a heat pump in heating mode, electric strip heat, or a ductless head in an addition can all present as “the heat died.” The safe checks overlap — thermostat, power, filter — then the paths split. We would rather you call than guess the wrong YouTube video.",
-      "If the smell is gas or a CO alarm is sounding, stop being a detective. Leave and call 911 and Nicor Gas at 888-642-6748. Heating repair is for a house that is safe to occupy.",
+      `If the smell is gas or a CO alarm is sounding, stop being a detective. Leave and call 911 and Nicor Gas at ${NICOR_GAS.display}. Heating repair is for a house that is safe to occupy.`,
     ],
     causes: [
       {
@@ -1043,7 +1045,7 @@ export const services: ServicePageContent[] = [
       "You already checked the thermostat batteries and the filter",
     ],
     nextSteps: [
-      "If gas or CO is involved, leave and use 911 and Nicor Gas at 888-642-6748.",
+      `If gas or CO is involved, leave and use 911 and Nicor Gas at ${NICOR_GAS.display}.`,
       "Look at the thermostat. Note whether it says heat, aux, or emergency heat.",
       "Call and describe the equipment in ordinary words. Brand stickers help if you can read them safely.",
     ],
@@ -1521,7 +1523,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Emergency HVAC on this site means: the house is already in trouble and the next action is a phone call. It does not mean a promised arrival window, a 24-hour shop, or a guarantee we can be everywhere at once. Those claims stay off the page unless they are later verified as business facts.",
-      "Safety still outranks comfort. Rotten-egg gas, hissing at the meter, or a sounding CO alarm means you leave. From outside, call 911 and Nicor Gas at 888-642-6748. Do not keep resetting a furnace to “see.”",
+      `Safety still outranks comfort. Rotten-egg gas, hissing at the meter, or a sounding CO alarm means you leave. From outside, call 911 and Nicor Gas at ${NICOR_GAS.display}. Do not keep resetting a furnace to “see.”`,
       "If the house is safe, the useful homeowner checks are short: thermostat, power switch, filter. Then call. Describe whether you have any heat or cooling at all, and what you already tried.",
     ],
     causes: [
@@ -1567,7 +1569,7 @@ export const services: ServicePageContent[] = [
       "You smell gas or a CO alarm is sounding — after you are outside and have called 911 and Nicor Gas",
     ],
     nextSteps: [
-      "If you smell gas or a CO alarm sounds, leave. Call 911 and Nicor Gas at 888-642-6748.",
+      `If you smell gas or a CO alarm sounds, leave. Call 911 and Nicor Gas at ${NICOR_GAS.display}.`,
       "If the house is safe, check thermostat, furnace or air-handler switch, and filter. Then stop opening panels.",
       "Call. Say you have no heat or no cooling and whether anyone is at risk in the house.",
     ],
@@ -2441,7 +2443,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Indoor air quality on this site means the HVAC side of a closed Freeport house: filtration, humidity, coil cleanliness, and whether the system is short-cycling instead of moving a full pass of air. It does not mean we treat, cure, or prevent illness.",
-      "Carbon monoxide and gas odors are not indoor-air accessories. They are leave-the-house emergencies. 911 and Nicor Gas at 888-642-6748 come first. After the house is safe, combustion and venting can be part of a heating visit.",
+      `Carbon monoxide and gas odors are not indoor-air accessories. They are leave-the-house emergencies. 911 and Nicor Gas at ${NICOR_GAS.display} come first. After the house is safe, combustion and venting can be part of a heating visit.`,
       "A lot of “air quality” calls start with maintenance. A packed filter and a filthy coil will make any house feel stale. Add-on products come after that look, not before.",
     ],
     causes: [
@@ -2487,7 +2489,7 @@ export const services: ServicePageContent[] = [
       "A filter or humidifier is already installed and nobody services it",
     ],
     nextSteps: [
-      "If a CO alarm sounds or you smell gas, leave and call 911 and Nicor Gas at 888-642-6748.",
+      `If a CO alarm sounds or you smell gas, leave and call 911 and Nicor Gas at ${NICOR_GAS.display}.`,
       "Check whether the filter actually seals in the rack.",
       "Request an indoor air visit as HVAC work. Bring your real complaint: dust, odor, or dryness.",
     ],
@@ -2880,7 +2882,7 @@ export const services: ServicePageContent[] = [
       "You need seasonal maintenance for a 61032 house",
     ],
     nextSteps: [
-      "If you smell gas or a CO alarm sounds, leave. Call 911 and Nicor Gas at 888-642-6748.",
+      `If you smell gas or a CO alarm sounds, leave. Call 911 and Nicor Gas at ${NICOR_GAS.display}.`,
       "If the house is safe, note thermostat mode, whether the outdoor unit or furnace is trying, and the ZIP.",
       "Call. Say it is a home. Ask for furnace repair, AC repair, or emergency HVAC if you already know which one you need.",
     ],
@@ -3404,7 +3406,7 @@ export const services: ServicePageContent[] = [
       "You found the building much colder than the set point after a weekend",
     ],
     nextSteps: [
-      "If you smell gas or a CO alarm sounds, leave and call 911 and Nicor Gas at 888-642-6748.",
+      `If you smell gas or a CO alarm sounds, leave and call 911 and Nicor Gas at ${NICOR_GAS.display}.`,
       "If the building is safe, note which areas are cold and what equipment you can name.",
       "Call and say it is commercial heat. Mention pipes, occupancy, and access.",
     ],

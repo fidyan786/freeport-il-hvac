@@ -1,3 +1,5 @@
+import { NICOR_GAS } from "@/lib/safety-contacts";
+
 export type Guide = {
   slug: string;
   href: string;
@@ -227,7 +229,7 @@ export const guides: Guide[] = [
       {
         heading: "Leave first if the air is not safe",
         paragraphs: [
-          "If you smell rotten-egg gas, hear hissing near the meter or furnace, or a carbon monoxide alarm is sounding, get everyone out. Do not flip light switches, use a garage door opener, or call from inside the house. From a safe place, call 911 and Nicor Gas at 888-642-6748.",
+          `If you smell rotten-egg gas, hear hissing near the meter or furnace, or a carbon monoxide alarm is sounding, get everyone out. Do not flip light switches, use a garage door opener, or call from inside the house. From a safe place, call 911 and Nicor Gas at ${NICOR_GAS.display}.`,
           "HVAC troubleshooting starts only after emergency personnel say the property is safe. A no-heat call is not more important than a combustion emergency.",
         ],
       },
@@ -386,7 +388,7 @@ export const guides: Guide[] = [
       {
         heading: "Noise plus smell is not a tuning problem",
         paragraphs: [
-          "Burning dust on the first heat of the fall can last a short time and fade. A sharp electrical smell, hot insulation, or anything like gas is a stop-and-leave moment if gas or carbon monoxide is in play. Out of the house, then 911 and Nicor Gas at 888-642-6748.",
+          `Burning dust on the first heat of the fall can last a short time and fade. A sharp electrical smell, hot insulation, or anything like gas is a stop-and-leave moment if gas or carbon monoxide is in play. Out of the house, then 911 and Nicor Gas at ${NICOR_GAS.display}.`,
           "If the house is safe and the smell is “hot dust” that does not clear, still request service. Do not keep running a furnace that smells like wiring.",
         ],
       },
@@ -559,7 +561,7 @@ export const guides: Guide[] = [
         heading: "Fall tasks that stay on your side of the cabinet",
         paragraphs: [
           "Replace a loaded filter. Make sure the furnace switch is on and the thermostat can call for heat. Keep storage, paint cans, and cardboard off the sides of the furnace and away from the vent path. Walk the outdoor vent termination after the first wet snow and keep it visible — from the ground, not from a ladder on ice.",
-          "Test carbon monoxide alarms with their own buttons. That is household safety, not HVAC repair. If an alarm sounds for real, leave and use 911 and Nicor Gas at 888-642-6748.",
+          `Test carbon monoxide alarms with their own buttons. That is household safety, not HVAC repair. If an alarm sounds for real, leave and use 911 and Nicor Gas at ${NICOR_GAS.display}.`,
         ],
       },
       {
@@ -627,7 +629,7 @@ export const guides: Guide[] = [
       {
         heading: "Safety closes the conversation",
         paragraphs: [
-          "A heat exchanger that is cracked, a furnace that spills combustion products, or a unit that cannot vent correctly is not a “repair vs replace” debate you shop around. The house has to be safe. If gas odor or a carbon monoxide alarm is involved, leave first, then 911 and Nicor Gas at 888-642-6748.",
+          `A heat exchanger that is cracked, a furnace that spills combustion products, or a unit that cannot vent correctly is not a “repair vs replace” debate you shop around. The house has to be safe. If gas odor or a carbon monoxide alarm is involved, leave first, then 911 and Nicor Gas at ${NICOR_GAS.display}.`,
           "After the property is safe, the equipment decision is simple: it does not go back into service in that condition. How you heat the house next is a separate, on-site talk.",
         ],
       },
@@ -793,7 +795,7 @@ export const guides: Guide[] = [
       {
         heading: "Gas and carbon monoxide are not an accessory",
         paragraphs: [
-          "A combustion problem is not an indoor-air upgrade. If you smell gas or a carbon monoxide alarm sounds, leave. Call 911 and Nicor Gas at 888-642-6748 from outside. Do not unbox a filter or a humidifier on the way out.",
+          `A combustion problem is not an indoor-air upgrade. If you smell gas or a carbon monoxide alarm sounds, leave. Call 911 and Nicor Gas at ${NICOR_GAS.display} from outside. Do not unbox a filter or a humidifier on the way out.`,
           "Soot, spilled fumes, or a furnace that smells like exhaust belong on emergency or heating repair after the house is cleared. They do not belong on a product page.",
         ],
       },
