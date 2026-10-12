@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
+import { SectionCall } from "@/components/SectionCall";
 import { getGuide, guides } from "@/content/guides";
 import { getService } from "@/content/services";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
@@ -70,8 +71,6 @@ export default async function GuidePage({
         lede={guide.lede}
         context={`guide-${guide.slug}`}
         ctaLabel={primaryCtaLabel()}
-        secondaryHref="/contact/"
-        secondaryLabel="Request service"
         image={guide.image}
         imageAlt={guide.imageAlt}
       />
@@ -93,6 +92,7 @@ export default async function GuidePage({
                 {paragraph}
               </p>
             ))}
+            <SectionCall context={`guide-${guide.slug}-${section.heading}`} />
           </section>
         ))}
         {relatedServices.length ? (
@@ -129,8 +129,8 @@ export default async function GuidePage({
         ) : null}
       </div>
       <FinalCta
-        title="If this sounds like your house, request HVAC help"
-        body="Guides explain the symptom. A technician still has to see the equipment."
+        title="If this sounds like the house, call"
+        body="These notes describe the symptom. Call to be connected with a local heating and cooling professional who can see the equipment."
         context={`guide-${guide.slug}-final`}
       />
     </>

@@ -144,7 +144,7 @@ export const intentLinks: NavLink[] = [
   { href: "/services/emergency-hvac-freeport-il/", label: "Emergency HVAC" },
   { href: "/services/residential-hvac-freeport-il/", label: "Residential HVAC" },
   { href: "/services/commercial-hvac-freeport-il/", label: "Commercial HVAC" },
-  { href: "/about/", label: "HVAC contractor" },
+  { href: "/about/", label: "About this site" },
 ];
 
 export const problemLinks: Array<NavLink & { text: string }> = [

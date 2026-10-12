@@ -44,10 +44,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Cooling that failed after sitting through winter.",
     metaTitle: "AC Repair in Freeport, IL",
     metaDescription:
-      "Air conditioning repair in Freeport, IL for units that sat idle through winter. Call Millrace Heating & Air in 61032 when the AC will not cool.",
+      "Air conditioning repair in Freeport, IL for units that sat idle through winter. Call to be connected with a local heating and cooling professional.",
     h1: "The first real cooling day is when Freeport air conditioners show their winter damage.",
     eyebrow: "Cooling repair · Freeport 61032",
-    lede: "The outdoor unit made it through snow. That is not a diagnosis. If the thermostat is on cool and the house still climbs, Millrace Heating & Air will find whether the refrigeration circuit is actually working.",
+    lede: "The outdoor unit made it through snow. That is not a diagnosis. Call to be connected with a local heating and cooling professional.",
     image: "/photos/tech-ac-service.jpg",
     imageAlt:
       "Technician checking an outdoor air conditioner after winter idle in Freeport, Illinois",
@@ -80,7 +80,7 @@ export const services: ServicePageContent[] = [
     explanation: [
       "Cooling equipment in Stephenson County lives most of the year off. Snow, ice, and unused start components sit on the pad from the last useful August through the first useful June. Capacitors weaken. Contactors pit. Insects and debris take the condenser. None of that announces itself until someone finally asks the machine to reject heat.",
       "Repair starts with the obvious and safe: thermostat mode, filter, breaker, and whether the outdoor fan and compressor are even trying. After that, guessing refrigerant from a can is not a plan. Charge problems hide leaks. A locked compressor is not a DIY capacitor swap.",
-      "If the unit is old, we will still diagnose it. Age is a fact. It is not an automatic sales script. Some first-hot-day failures are a failed start component. Some are a system that has been leaking slowly for years. You get the difference in plain language.",
+      "Call to be connected with a local heating and cooling professional. Age is a fact. It is not an automatic sales script. Some first-hot-day failures are a failed start component. Some are a system that has been leaking slowly for years. You get the difference in plain language.",
     ],
     causes: [
       {
@@ -103,7 +103,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Confirm it is actually a cooling call",
-        text: "We check mode, set point, power, and whether the indoor blower is the only thing running.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Look at the outdoor unit as found",
@@ -128,12 +128,12 @@ export const services: ServicePageContent[] = [
     nextSteps: [
       "Set the thermostat to cool and note whether the outdoor unit starts.",
       "Check the filter. If it is packed, replace it, then stop opening panels.",
-      "Call or request service. Describe what you hear at the outdoor unit.",
+      "Call to be connected with a local heating and cooling professional. Describe what you hear at the outdoor unit.",
     ],
     why: [
-      "We treat “it worked last August” as a history note, not a diagnosis.",
-      "Refrigerant is not a top-off product. If charge is wrong, we look for why.",
-      "You hear repair versus replacement after the test, not before we arrive.",
+      "Call to be connected with a local heating and cooling professional.",
+      "Refrigerant is not a top-off product. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Freeport’s cooling season is short next to the heat. Roughly 690 cooling degree days still produce real July afternoons near 82°F, and humidity does the rest.",
@@ -155,11 +155,11 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Is ice on the lines a good sign in summer?",
-        a: "No. Ice usually means airflow or charge trouble. Turn the system off if the coil is a block of ice and request service.",
+        a: "No. Ice usually means airflow or charge trouble. Turn the system off if the coil is a block of ice and call.",
       },
       {
-        q: "Do you only work on brand-new equipment?",
-        a: "No. We diagnose the unit that is on the pad. Age matters for parts and remaining life. It does not decide the visit before we test.",
+        q: "Can a caller ask a local professional whether they only work on brand-new equipment?",
+        a: "No. Call to be connected with a local heating and cooling professional. Age matters for parts and remaining life. Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -180,7 +180,7 @@ export const services: ServicePageContent[] = [
       "New air conditioning in Freeport has to match older ducts and a heating-first climate. Talk through AC installation for a 61032 house before you buy a box.",
     h1: "A new air conditioner in Freeport has to fit the house, not a cooling-heavy catalog.",
     eyebrow: "Cooling installation · Stephenson County",
-    lede: "This is not a market that needs a resort-sized condenser. Millrace Heating & Air sizes cooling for the house you have, the ducts already in the walls, and the handful of weeks Freeport actually asks the system to dehumidify.",
+    lede: "This is not a market that needs a resort-sized condenser. Call to be connected with a local heating and cooling professional.",
     image: "/photos/ac-install.jpg",
     imageAlt:
       "New outdoor air conditioner being set on a pad beside a Freeport home",
@@ -211,8 +211,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Installing air conditioning in a heating-dominated town is a restraint problem. The machine has to dehumidify on 82°F afternoons without being so oversized that it short-cycles and leaves the house clammy. Catalog tonnage from a hotter climate is the wrong starting point.",
-      "The indoor side matters as much as the box on the pad. Coil match, drain, furnace airflow, and return size decide whether a new condenser is a comfort upgrade or an expensive outdoor sculpture. We look at the house before we talk model numbers.",
-      "If a ductless head is the cleaner answer for a room the trunks will never serve, we will say that. Installation is not loyalty to one product shape.",
+      "The indoor side matters as much as the box on the pad. Coil match, drain, furnace airflow, and return size decide whether a new condenser helps the house. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional. Installation is not loyalty to one product shape.",
     ],
     causes: [
       {
@@ -235,7 +235,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Walk the house, not just the pad",
-        text: "We look at ducts, returns, electrical, drain path, and how the second floor actually behaves in heat.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Match indoor and outdoor as a pair",
@@ -259,22 +259,22 @@ export const services: ServicePageContent[] = [
     nextSteps: [
       "Note which rooms fail first on a warm afternoon.",
       "If you know the furnace age or have a photo of the current coil, have that ready.",
-      "Request service to walk the house. Do not buy a condenser from a flyer first.",
+      "Call to walk the house. Do not buy a condenser from a flyer first.",
     ],
     why: [
-      "We size for Stephenson County weather, not a cooling-heavy brochure.",
+      "Call to be connected with a local heating and cooling professional.",
       "The indoor coil and the ducts are part of the install, not extras.",
-      "If a mini-split is the honest room fix, we say so instead of forcing a trunk.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Freeport books far more heating degree days than cooling degree days. A new AC still has to handle July humidity, but it should not be sized like a city that cools from May through October.",
       "A lot of 61032 housing is older forced-air stock. The condenser is the easy photo. The return and the upstairs run are the hard part.",
-      "Nearby towns such as Lena or Cedarville are confirmed on the phone. We do not pretend every driveway is automatically on the route.",
+      "Nearby towns such as Lena or Cedarville are confirmed on the phone. Call to be connected with a local heating and cooling professional.",
     ],
     faqs: [
       {
-        q: "Can you just set a new condenser on the old pad?",
-        a: "Sometimes the pad, circuit, and coil are fit to reuse. Often they are not. The visit is how we find out, not a website promise.",
+        q: "Can a caller ask a local professional whether they just set a new condenser on the old pad?",
+        a: "Sometimes the pad, circuit, and coil are fit to reuse. Often they are not. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Should I buy the biggest AC I can fit?",
@@ -289,7 +289,7 @@ export const services: ServicePageContent[] = [
         a: "That is often a ductless conversation, not a bigger condenser. See the mini-split pages if a room was never on the trunks.",
       },
       {
-        q: "Will you install a unit I already bought?",
+        q: "Can a caller ask a local professional whether they install a unit I already bought?",
         a: "Ask on the call. An unmatched box sitting in the garage can be a problem, not a head start.",
       },
     ],
@@ -309,7 +309,7 @@ export const services: ServicePageContent[] = [
     metaTitle: "AC Maintenance in Freeport, IL",
     metaDescription:
       "Spring AC maintenance in Freeport finds winter damage before the first sticky week. Request a spring cooling check after snow season in Stephenson County.",
-    h1: "Spring is when we find what snow and idle months did to the outdoor unit.",
+    h1: "What to know before you call",
     eyebrow: "Cooling tune-up · Freeport",
     lede: "You do not need a cooling “membership pitch.” You need the condenser checked after it sat through an Illinois winter, before the first afternoon the house actually asks it to run.",
     image: "/photos/ac-outdoor.jpg",
@@ -330,7 +330,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Electrical parts that never cycled",
-        text: "A maintenance visit is the cheap time to find a swollen capacitor. The expensive time is a Saturday in July.",
+        text: "Spring is the useful time to find a swollen capacitor. July is when that same part stops the cooling.",
       },
     ],
     symptoms: [
@@ -342,8 +342,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Maintenance on a Freeport air conditioner is mostly an after-winter inspection. The machine did not work for months. That is the opposite of a southern system that runs half the year and tells on itself. Here, neglect is quiet until it is not.",
-      "A real check is not a filter slap and a handshake. We look at the outdoor coil, electrical start parts, indoor coil access if we can reach it, the condensate path, and a measured cooling cycle when weather allows.",
-      "If we find a repair, we say so. Maintenance is not a promise that nothing will fail in July. It is how you stop discovering failures only when guests are already sweating.",
+      "A real check is not a filter slap and a handshake. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional. Maintenance is not a promise that nothing will fail in July. It is how you stop discovering failures only when guests are already sweating.",
     ],
     causes: [
       {
@@ -365,7 +365,7 @@ export const services: ServicePageContent[] = [
     ],
     process: [
       {
-        title: "Clear and look before we run it",
+        title: "What to know before you call",
         text: "Debris, winter damage, and obvious electrical issues get found before a blind start.",
       },
       {
@@ -374,11 +374,11 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Open the condensate path",
-        text: "A dry winter drain is not assumed to be open. We treat it as a cooling-season part.",
+        text: "A dry winter drain is not assumed to be open. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Run a cooling cycle if the day allows",
-        text: "When outdoor temperature cooperates, we want to see the system actually take heat out of the house.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
     ],
     whenToCall: [
@@ -393,9 +393,9 @@ export const services: ServicePageContent[] = [
       "Request a spring cooling check. Do not wait for the first 85-degree day.",
     ],
     why: [
-      "Idle equipment hides problems. We look for those on purpose.",
-      "A spring visit is about the machine you have, not a coupon booklet.",
-      "If the unit is already failing, we switch to repair talk instead of pretending a rinse fixed it.",
+      "Idle equipment hides problems. Call to be connected with a local heating and cooling professional.",
+      "A spring visit is about the machine you have.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Outdoor AC in Freeport sits unused through a long snow season. A spring check is how you meet the machine before humidity does.",
@@ -416,12 +416,12 @@ export const services: ServicePageContent[] = [
         a: "No. Systems that are tight do not need annual gas. “Recharge” as a ritual usually means someone is not looking for a leak.",
       },
       {
-        q: "What if you find a bad capacitor in April?",
-        a: "Then we talk repair while you still have time. That is the point of looking before July.",
+        q: "What if an April check finds a bad capacitor?",
+        a: "Call to be connected with a local heating and cooling professional. That is the point of looking before July.",
       },
       {
-        q: "Do you maintain window units?",
-        a: "This page is for central air. Ask on the phone if you have a different setup. We will not invent a service we cannot do.",
+        q: "Can a caller ask a local professional whether they maintain window units?",
+        a: "This page is for central air. Ask on the phone if you have a different setup. Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -442,7 +442,7 @@ export const services: ServicePageContent[] = [
       "Replace a tired Freeport air conditioner when repairs stack up or the coil no longer matches. Talk through AC replacement for a 61032 house after a diagnosis.",
     h1: "Replacing an air conditioner here is about the coil, the ducts, and a short cooling season.",
     eyebrow: "Cooling replacement · 61032",
-    lede: "A dead condenser is not automatically a shopping trip. Millrace Heating & Air will say when a repair still holds, and when the outdoor unit and indoor coil are too far gone to keep pairing.",
+    lede: "A dead condenser is not automatically a shopping trip. Call to be connected with a local heating and cooling professional.",
     image: "/photos/ac-install.jpg",
     imageAlt:
       "Replacement air conditioner ready for a Freeport, Illinois home",
@@ -472,9 +472,9 @@ export const services: ServicePageContent[] = [
       "The outdoor cabinet is rotting, leaning, or oil-stained at the joints",
     ],
     explanation: [
-      "Replacement is a decision, not a default. In a town with a short cooling season, people keep old condensers alive for good reasons. We respect that. We also say when the indoor coil, the leak rate, or the electrical parts are writing the same ending.",
-      "A Freeport replacement has to survive winter idle after we leave. Clearances, a pad that will not sink under snow load, and a coil match that can dry the house on an 82°F afternoon matter more than a brochure SEER argument.",
-      "If the furnace is the weak half of the pair, we will not pretend a new condenser fixes heat. That becomes an HVAC replacement talk instead of an AC-only swap.",
+      "Replacement is a decision, not a default. In a town with a short cooling season, people keep old condensers alive for good reasons. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional. Clearances, a pad that will not sink under snow load, and a coil match that can dry the house on an 82°F afternoon matter more than a brochure SEER argument.",
+      "Call to be connected with a local heating and cooling professional. That becomes an HVAC replacement talk instead of an AC-only swap.",
     ],
     causes: [
       {
@@ -497,19 +497,19 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Diagnose the unit you already have",
-        text: "We do not skip the test to get to a proposal. Some “replacement” calls are still a capacitor.",
+        text: "Call to be connected with a local heating and cooling professional. Some “replacement” calls are still a capacitor.",
       },
       {
         title: "Look at the pair, not the pad",
         text: "Coil condition, furnace airflow, drain, and ducts decide whether this is an AC swap or a larger job.",
       },
       {
-        title: "Price the honest scope",
+        title: "What to know before you call",
         text: "If the coil, pad, or circuit has to change, that is in the conversation. No surprise outdoor-only story.",
       },
       {
         title: "Install so next winter does not punish it",
-        text: "The new unit still has to sit idle through snow. We set it like that matters.",
+        text: "The new unit still has to sit idle through snow. Call to be connected with a local heating and cooling professional.",
       },
     ],
     whenToCall: [
@@ -524,19 +524,19 @@ export const services: ServicePageContent[] = [
       "Call for a diagnosis. Replacement talk comes after that.",
     ],
     why: [
-      "We will still repair a unit that deserves a repair.",
+      "Call to be connected with a local heating and cooling professional.",
       "Coil match is part of replacement here, not fine print.",
-      "If the furnace is the real problem, we will not hide that behind a new condenser.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Because cooling sits idle so long in 61032, replacement often follows a first-hot-day failure that exposed years of quiet decline, not a mid-August breakdown.",
       "Older Freeport duct systems were frequently built around heat. A replacement visit is a chance to say whether a new condenser can even use those trunks well.",
-      "Orangeville, Dakota, and other nearby towns are confirmed when you call. Replacement scheduling is not an automatic county-wide claim.",
+      "Orangeville, Dakota, and other nearby towns are confirmed when you call. Replacement scheduling is not assumed for every town.",
     ],
     faqs: [
       {
-        q: "Can you replace only the outdoor unit?",
-        a: "Sometimes, if the indoor coil and refrigerant circuit truly match. Often the honest job includes the coil. We will say which case you are in.",
+        q: "Can a caller ask a local professional whether they replace only the outdoor unit?",
+        a: "Sometimes, if the indoor coil and refrigerant circuit truly match. Often the honest job includes the coil. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "The unit still cools a little. Is replacement wasteful?",
@@ -544,15 +544,15 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Will a new AC lower my bills in Freeport?",
-        a: "It can, especially if the old unit was short-cycling or running blind. This climate’s big energy story is still heat. We will not oversell cooling savings.",
+        a: "It can, especially if the old unit was short-cycling or running blind. This climate’s big energy story is still heat. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Should I replace heat and cooling at the same time?",
-        a: "When both halves are tired or mismatched, yes, that conversation belongs on the HVAC replacement page. When only the condenser is done, we stay on this one.",
+        a: "When both halves are tired or mismatched, yes, that conversation belongs on the HVAC replacement page. Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "Do you push one brand?",
-        a: "We talk about what fits the house and what we can support. We do not invent factory partnerships or badge loyalty on this site.",
+        q: "Can a caller ask a local professional whether they push one brand?",
+        a: "Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -570,10 +570,10 @@ export const services: ServicePageContent[] = [
     navDescription: "No heat, weak heat, or a furnace that will not stay on.",
     metaTitle: "Furnace Repair in Freeport, IL",
     metaDescription:
-      "No heat, a furnace that will not ignite, or short cycling on a Freeport night is a repair call. Millrace Heating & Air diagnoses gas furnaces in 61032.",
+      "No heat, a furnace that will not ignite, or short cycling on a Freeport night is a repair call. Call to be connected with a local heating and cooling professional.",
     h1: "When a Freeport furnace quits, the house does not have time for guesswork.",
     eyebrow: "Gas furnace repair · Stephenson County",
-    lede: "January nights near 11°F are not a theory. If the burners will not stay lit, the blower runs cold, or the furnace locks out after a few tries, call. We diagnose the cabinet in the basement, not a symptom list from a forum.",
+    lede: "January nights near 11°F are not a theory. If the burners will not stay lit, the blower runs cold, or the furnace locks out after a few tries, call. Call to be connected with a local heating and cooling professional.",
     image: "/photos/furnace-service.jpg",
     imageAlt:
       "HVAC technician servicing a residential furnace in a Midwestern basement",
@@ -637,7 +637,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Watch a full heat sequence",
-        text: "Inducer, igniter, flame, and blower each have a moment they can fail. We watch the sequence, not a guess.",
+        text: "Inducer, igniter, flame, and blower each have a moment they can fail. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Explain repair against remaining life",
@@ -657,7 +657,7 @@ export const services: ServicePageContent[] = [
       "Call for furnace repair. Say whether you have any heat at all.",
     ],
     why: [
-      "We diagnose the sequence. We do not start at replacement.",
+      "Call to be connected with a local heating and cooling professional.",
       "Safety switches get respected. They are not nuisances to jump out.",
       "Older furnaces still get an honest repair-versus-replace talk based on the heat exchanger and parts, not a birthday.",
     ],
@@ -673,14 +673,14 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Is weak heat always a dying furnace?",
-        a: "No. Filters, blowers, and leaky or starved ducts can steal heat from a furnace that is still lighting correctly. That is why we test.",
+        a: "No. Filters, blowers, and leaky or starved ducts can steal heat from a furnace that is still lighting correctly. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Can I tap the furnace or reset it all night?",
         a: "A single reset after a safe check is one thing. Repeated resets hide a lockout. Call instead of training the board to fail at 2 a.m.",
       },
       {
-        q: "Do you work on older furnaces?",
+        q: "Can a caller ask a local professional whether they work on older furnaces?",
         a: "Yes. Heat exchanger condition and parts availability matter more than a round age. Some older units are repairable. Some are not.",
       },
       {
@@ -706,7 +706,7 @@ export const services: ServicePageContent[] = [
       "A new furnace in Freeport has to fit older ducts, venting, and a long heating season. Talk through furnace installation for a 61032 house before you pick a box.",
     h1: "A furnace that matches an older Freeport house beats a bigger box in the basement.",
     eyebrow: "Furnace installation · 61032",
-    lede: "Heating degree days here are the job. Millrace Heating & Air treats a new furnace as a fit to the ducts, the venting, and the way this house actually loses heat — not a bigger burner because January is cold.",
+    lede: "Heating degree days here are the job. Call to be connected with a local heating and cooling professional.",
     image: "/photos/furnace-install.jpg",
     imageAlt:
       "New furnace installation in a Freeport, Illinois utility space",
@@ -737,7 +737,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Installing a furnace in 61032 is a winter-first job. The machine will run for months. Sizing, venting, gas, condensate (when it is a high-efficiency unit), and the existing ducts all have to be honest on a night that actually gets below freezing.",
-      "Bigger is not warmer. An oversized furnace in an older house short-cycles, never evens out the rooms, and still leaves the far bedrooms behind. We would rather match the house than impress the basement.",
+      "Bigger is not warmer. An oversized furnace in an older house short-cycles, never evens out the rooms, and still leaves the far bedrooms behind. Call to be connected with a local heating and cooling professional.",
       "If a heat pump or dual-fuel setup is on the table, say that on the call. This page is for people who want a furnace installed as furnace work, with the cooling coil treated as a neighbor, not an afterthought.",
     ],
     causes: [
@@ -773,7 +773,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Fire it into a real heat call",
-        text: "We want a completed sequence, even heat at the supplies, and a homeowner who knows the new sounds.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
     ],
     whenToCall: [
@@ -788,14 +788,14 @@ export const services: ServicePageContent[] = [
       "Request a house visit. Do not order a furnace from a square-foot chart.",
     ],
     why: [
-      "We size for Freeport winter, not a round cabinet number.",
+      "Call to be connected with a local heating and cooling professional.",
       "Venting and combustion air are part of the job, not extras.",
-      "If dual-fuel or a heat pump is the better heating plan, we will say so instead of forcing a furnace-only story.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Older Freeport houses often already have forced-air furnaces. Installation is frequently a replacement-in-kind with better fit, not a first heating system.",
       "Nights at or below freezing are routine here. A new furnace has to vent and drain in that weather, not only on a 40-degree install day.",
-      "German Valley, Davis, and other nearby towns are confirmed by phone. We do not treat the county line as an automatic yes.",
+      "German Valley, Davis, and other nearby towns are confirmed by phone. Call to be connected with a local heating and cooling professional.",
     ],
     faqs: [
       {
@@ -803,8 +803,8 @@ export const services: ServicePageContent[] = [
         a: "No. Cold weather is already in the load. An oversized furnace short-cycles and still leaves rooms uneven. The house decides the size.",
       },
       {
-        q: "Can you reuse my old chimney or vent?",
-        a: "Sometimes. Newer furnaces often need different venting. We will not reuse a vent that cannot do the job just because it is already there.",
+        q: "Can a caller ask a local professional whether they reuse my old chimney or vent?",
+        a: "Sometimes. Newer furnaces often need different venting. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "What happens to my air conditioner if I replace the furnace?",
@@ -812,10 +812,10 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Is this the same as an emergency swap tonight?",
-        a: "This page is planned installation. If you have no heat tonight, call about emergency HVAC and furnace repair first. We do not invent swap timelines here.",
+        a: "This page is planned installation. If you have no heat tonight, call about emergency HVAC and furnace repair first. Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "Do you install oil or propane furnaces?",
+        q: "Can a caller ask a local professional whether they install oil or propane furnaces?",
         a: "Say what you have on the call. This page is written around the common Freeport gas forced-air setup. Other fuels are confirmed, not assumed.",
       },
     ],
@@ -834,10 +834,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Fall service before nights settle at or below freezing.",
     metaTitle: "Furnace Maintenance in Freeport, IL",
     metaDescription:
-      "Fall furnace maintenance in Freeport is a heating-season check, not a coupon ritual. Request service before Stephenson County nights settle below freezing.",
+      "Fall furnace maintenance in Freeport is a heating-season check. Call before Stephenson County nights settle below freezing.",
     h1: "Fall service is how a furnace earns the right to run through January.",
     eyebrow: "Heating tune-up · Freeport",
-    lede: "A furnace that sat quiet through a mild stretch still has a long job ahead. Millrace Heating & Air uses fall maintenance to watch a heat sequence on purpose — before a lockout happens on an 11°F night.",
+    lede: "A furnace that sat quiet through a mild stretch still has a long job ahead. Call to be connected with a local heating and cooling professional.",
     image: "/photos/furnace-service.jpg",
     imageAlt:
       "HVAC technician checking a residential furnace before the heating season",
@@ -852,7 +852,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "A drain or collector box you only notice when it freezes",
-        text: "High-efficiency furnaces make water. Fall is when we want to see that path before it ices or backs up.",
+        text: "High-efficiency furnaces make water. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Venting that looks fine until the wind and cold arrive",
@@ -868,7 +868,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Furnace maintenance in a heating-dominated climate is not optional theater. The machine will run for months. The useful time to find a weak igniter, a dirty flame sensor, or a restricted filter is October, not the night the pipes become the topic.",
-      "We watch a complete heat call: inducer, ignition, flame signal, blower, and venting. We look at the filter setup the house actually uses. If the heat exchanger raises a concern, that becomes a direct conversation — not a scare line and not a shrug.",
+      "Call to be connected with a local heating and cooling professional. If the heat exchanger raises a concern, that becomes a direct conversation — not a scare line and not a shrug.",
       "Maintenance does not make a cracked exchanger safe. It does not promise a winter without repairs. It is how you stop meeting the furnace only when it has already quit.",
     ],
     causes: [
@@ -886,21 +886,21 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "A condensate path that sat dry",
-        text: "High-efficiency drains and traps need to work when heat returns. Fall is when we treat them as live parts.",
+        text: "High-efficiency drains and traps need to work when heat returns. Call to be connected with a local heating and cooling professional.",
       },
     ],
     process: [
       {
         title: "Inspect as found",
-        text: "Filter, venting, cabinet, and obvious rust or water get noted before we start changing things.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Clean the parts that fail dirty",
-        text: "Flame sensors and burners that we can service get attention. We do not “tune” a safety out of the system.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Run a real heat sequence",
-        text: "We want to see ignition and a stable flame, not a two-second burner flash.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Leave you with the honest list",
@@ -919,35 +919,35 @@ export const services: ServicePageContent[] = [
       "Request fall furnace maintenance before nights settle below freezing.",
     ],
     why: [
-      "We would rather find a weak igniter in daylight than explain a lockout after midnight.",
+      "Call to be connected with a local heating and cooling professional.",
       "Maintenance is a look at your furnace, not a script of upsells.",
-      "If the heat exchanger is the story, we say that in ordinary words.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Many Freeport nights sit at or below freezing. Fall maintenance is timed for that stretch, not for a climate where heat is occasional.",
       "About 35 inches of snow and a long idle-to-work swing for the rest of the HVAC system make the furnace the machine that cannot wait until “sometime.”",
-      "If you are in Winslow, Rock City, or another nearby town, mention it when you request service. Those visits are confirmed, not auto-routed.",
+      "If you are in Winslow, Rock City, or another nearby town, mention it when you call. Those visits are confirmed, not assumed.",
     ],
     faqs: [
       {
         q: "Is a fall furnace check actually different from a sticker visit?",
-        a: "It should be. We want a completed heat sequence, venting, filter reality, and any drain the unit uses — not a logo on the cabinet.",
+        a: "It should be. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Can I skip a year if the furnace “sounds fine”?",
         a: "You can skip anything. The risk in this climate is that “sounds fine” in November becomes a lockout in January when run time triples.",
       },
       {
-        q: "Do you clean the heat exchanger on every visit?",
-        a: "We inspect what we can reach and we do not invent a teardown as routine maintenance. If something looks wrong, that becomes its own job.",
+        q: "Can a caller ask a local professional whether they clean the heat exchanger on every visit?",
+        a: "Call to be connected with a local heating and cooling professional. If something looks wrong, that becomes its own job.",
       },
       {
         q: "Should I run the furnace in September to “test it”?",
         a: "A short heat call on a cool day is useful. It is not a substitute for looking at ignition parts, venting, and the filter.",
       },
       {
-        q: "What if you find a problem during maintenance?",
-        a: "We stop calling it a tune-up and tell you what failed. You decide on repair. We do not hide a needed part inside a maintenance price.",
+        q: "What if a maintenance visit finds a problem?",
+        a: "Call to be connected with a local heating and cooling professional. You decide on repair. Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -966,9 +966,9 @@ export const services: ServicePageContent[] = [
     metaTitle: "Heating Repair in Freeport, IL",
     metaDescription:
       "Heat failed in Freeport and you may not care what the machine is called. Call for heating repair in 61032 — furnace, heat pump, or another system on site.",
-    h1: "Heat failed. The equipment type is our problem, not yours.",
+    h1: "Heating repair when the house is cold",
     eyebrow: "Heating repair · Freeport",
-    lede: "Not every cold house in Stephenson County is a textbook gas furnace story. If the rooms are losing degrees, tell us what you see and hear. Millrace Heating & Air will sort furnace, heat pump, electric backup, or a hybrid once we are looking at it.",
+    lede: "Not every cold house in Stephenson County is a textbook gas furnace story. Call to be connected with a local heating and cooling professional.",
     image: "/photos/hero-home-winter.jpg",
     imageAlt:
       "Freeport home in winter when indoor heat has to hold against the cold",
@@ -987,7 +987,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "A building that has more than one heat source",
-        text: "Basement furnace plus a shop heater plus a ductless head is a Freeport reality. We need to know which one quit.",
+        text: "Basement furnace plus a shop heater plus a ductless head is a Freeport reality. Call to be connected with a local heating and cooling professional.",
       },
     ],
     symptoms: [
@@ -998,8 +998,8 @@ export const services: ServicePageContent[] = [
       "Some rooms hold; a wing or an addition does not",
     ],
     explanation: [
-      "This page exists because homeowners should not have to name the appliance correctly to get help. Heating repair in Freeport means: the house is not holding temperature, and we will identify the machine before we start swapping parts.",
-      "A gas furnace, a heat pump in heating mode, electric strip heat, or a ductless head in an addition can all present as “the heat died.” The safe checks overlap — thermostat, power, filter — then the paths split. We would rather you call than guess the wrong YouTube video.",
+      "This page exists because homeowners should not have to name the appliance correctly to get help. Call to be connected with a local heating and cooling professional.",
+      "A gas furnace, a heat pump in heating mode, electric strip heat, or a ductless head in an addition can all present as “the heat died.” The safe checks overlap — thermostat, power, filter — then the paths split. Call to be connected with a local heating and cooling professional.",
       `If the smell is gas or a CO alarm is sounding, stop being a detective. Leave and call 911 and Nicor Gas at ${NICOR_GAS.display}. Heating repair is for a house that is safe to occupy.`,
     ],
     causes: [
@@ -1013,7 +1013,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "A primary unit down and a forgotten backup",
-        text: "Space heaters are not a heating system. If the primary failed, we fix that rather than normalizing the workaround.",
+        text: "Space heaters are not a heating system. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Airflow or distribution, not burner trouble",
@@ -1023,11 +1023,11 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Identify the actual heating plant",
-        text: "Furnace, heat pump, dual-fuel, electric, or something else. We start by naming the machine correctly.",
+        text: "Furnace, heat pump, dual-fuel, electric, or something else. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "See which stage is missing",
-        text: "In this climate, “it runs” is not enough. We check whether the heat that should be on at this outdoor temperature is on.",
+        text: "In this climate, “it runs” is not enough. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Repair the failed piece, not the whole label",
@@ -1035,7 +1035,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Point you to the tighter page if you need it",
-        text: "Once we know it is a furnace or a heat pump, the follow-up may live on those pages. This one gets you in the door.",
+        text: "Call to be connected with a local heating and cooling professional. This one gets you in the door.",
       },
     ],
     whenToCall: [
@@ -1051,13 +1051,13 @@ export const services: ServicePageContent[] = [
     ],
     why: [
       "You should not need the right noun to get a heating visit.",
-      "We identify the system on site instead of selling the first matching page.",
+      "Call to be connected with a local heating and cooling professional.",
       "Safety still comes first. Comfort work starts after the house is safe.",
     ],
     local: [
       "Freeport winters are long enough that “some kind of heat” is the household priority. The county’s heating load dwarfs its cooling load, so this page stays heating-first.",
       "Housing stock here mixes furnaces, later heat pumps, and room systems in additions. A single label on a website would miss half the phone calls.",
-      "Lena, Cedarville, and similar towns are confirmed when you call. Heating repair does not auto-dispatch across the map.",
+      "Lena, Cedarville, and similar towns are confirmed when you call. Heating repair is confirmed on the call.",
     ],
     faqs: [
       {
@@ -1069,16 +1069,16 @@ export const services: ServicePageContent[] = [
         a: "Auxiliary heat can be normal in Freeport cold on a heat pump. It can also mean the outdoor unit gave up. If the house is still losing temperature, call.",
       },
       {
-        q: "We have a wood stove going. Do we still need the furnace?",
+        q: "A wood stove is running. Does the furnace still matter?",
         a: "A stove can hold a room. Pipes and far bedrooms still follow the central system. Do not treat a stove as a completed repair.",
       },
       {
-        q: "Can you repair electric baseboard?",
-        a: "Ask on the phone. Some electric heat is an HVAC visit; some is a different trade. We will not claim work we cannot do.",
+        q: "Can a caller ask a local professional whether they repair electric baseboard?",
+        a: "Ask on the phone. Some electric heat is an HVAC visit; some is a different trade. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "The addition has a wall unit and the main house has a furnace. Who do I call?",
-        a: "Us, if either side is HVAC equipment. Say that you have two systems. We would rather know that on the first call.",
+        a: "Call to be connected with a local heating and cooling professional. Say that you have two systems. Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -1096,7 +1096,7 @@ export const services: ServicePageContent[] = [
     navDescription: "Shared blowers, thermostats, and ducts that fail both ways.",
     metaTitle: "HVAC Repair in Freeport, IL",
     metaDescription:
-      "When the blower, thermostat, or ducts fail, Freeport homes lose heat and cooling together. Call Millrace Heating & Air for system-level HVAC repair in 61032.",
+      "When the blower, thermostat, or ducts fail, Freeport homes lose heat and cooling together. Call to be connected with a local heating and cooling professional.",
     h1: "Sometimes the trouble is the whole system, not just the furnace or the AC.",
     eyebrow: "System repair · Stephenson County",
     lede: "The same blower, the same filter slot, and the same thermostat run both seasons. If comfort failed and you cannot honestly blame “only heat” or “only AC,” this is the repair page.",
@@ -1130,7 +1130,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "HVAC repair is the unglamorous middle. Homeowners get sent to furnace pages or AC pages and still have a shared component problem. In older Freeport forced-air houses, that shared heart is usually the air handler side of the furnace: blower, filter, limit, and the ducts attached to it.",
-      "We start by asking what the system does in both modes, even if you only noticed today’s season. A blower that died in May was already the heating system. A thermostat that cannot hold a call will ruin January and July equally.",
+      "Call to be connected with a local heating and cooling professional. A blower that died in May was already the heating system. A thermostat that cannot hold a call will ruin January and July equally.",
       "This is still diagnosis first. “HVAC repair” is not a license to replace everything in the closet. It is permission to look at the system as a system.",
     ],
     causes: [
@@ -1158,7 +1158,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Test the shared pieces first",
-        text: "Airflow, thermostat, power, and safety limits get attention before we pick a specialty page.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Split the job only when the evidence does",
@@ -1182,7 +1182,7 @@ export const services: ServicePageContent[] = [
     ],
     why: [
       "Shared parts deserve a shared diagnosis.",
-      "We will send you to a tighter page when the failed part is clearly one season.",
+      "Call to be connected with a local heating and cooling professional.",
       "Ducts get named when they are the problem. Equipment does not get blamed by default.",
     ],
     local: [
@@ -1204,8 +1204,8 @@ export const services: ServicePageContent[] = [
         a: "If the house is already dangerously cold or dangerously hot, use the emergency HVAC page and call. This page is the system-level diagnosis once you can talk through symptoms.",
       },
       {
-        q: "Do you repair ducts?",
-        a: "We look for disconnected, crushed, or obviously leaking runs we can reach. A full redesign is a different scope and we will say so if that is what you need.",
+        q: "Can a caller ask a local professional whether they repair ducts?",
+        a: "Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "My heat works and my AC does not. Is that still HVAC repair?",
@@ -1228,16 +1228,16 @@ export const services: ServicePageContent[] = [
     metaTitle: "HVAC Maintenance in Freeport, IL",
     metaDescription:
       "Freeport HVAC maintenance is fall heat and spring cooling, because the climate is not one season. Request a two-visit seasonal check for a 61032 house.",
-    h1: "In a heating climate, maintenance is two seasons of work, not one coupon visit.",
+    h1: "In a heating climate, maintenance is two seasons of work.",
     eyebrow: "Seasonal maintenance · 61032",
-    lede: "A single “annual tune-up” copied from a milder town misses how Freeport actually uses equipment. Millrace Heating & Air treats maintenance as a fall heating check and a spring cooling check — two different machines, one house.",
+    lede: "A single “annual tune-up” copied from a milder town misses how Freeport actually uses equipment. Call to be connected with a local heating and cooling professional.",
     image: "/photos/maintenance.jpg",
     imageAlt:
       "Seasonal HVAC maintenance visit for a Freeport home’s heating and cooling",
     problems: [
       {
         title: "A furnace that was last touched after a no-heat call",
-        text: "Crisis service is not a maintenance plan. Fall is when we want the heat sequence on purpose.",
+        text: "Crisis service is not a maintenance plan. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "An air conditioner that has not run since last August",
@@ -1262,7 +1262,7 @@ export const services: ServicePageContent[] = [
     explanation: [
       "HVAC maintenance in Stephenson County has a calendar. Heat is the long job. Cooling is the idle job. Checking a condenser in November tells you almost nothing. Skipping the furnace until January is how lockouts get scheduled by the weather.",
       "A combined maintenance visit in one day can make sense when both machines are accessible and the weather cooperates. Often the honest plan is still two trips: heat before the freeze, cooling after the snow.",
-      "Seasonal service is available. If we find a repair, it is named as a repair.",
+      "Seasonal service is available. Call to be connected with a local heating and cooling professional.",
     ],
     causes: [
       {
@@ -1285,7 +1285,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Pick the season that is actually coming",
-        text: "We do not pretend a cooling rinse is furnace work. The visit matches the weather ahead.",
+        text: "Call to be connected with a local heating and cooling professional. The visit matches the weather ahead.",
       },
       {
         title: "Inspect the shared cabinet every time",
@@ -1312,31 +1312,31 @@ export const services: ServicePageContent[] = [
       "Request HVAC maintenance and say what equipment is in the house.",
     ],
     why: [
-      "We schedule maintenance against Freeport weather, not a generic annual sticker.",
+      "Call to be connected with a local heating and cooling professional.",
       "Repairs found on a check get named as repairs.",
       "The shared blower and filter are never “someone else’s season.”",
     ],
     local: [
       "A climate with roughly 6,956 heating degree days and 690 cooling degree days does not get one identical visit. The furnace needs fall. The condenser needs spring.",
-      "Snow around 35 inches is why we do not treat the outdoor unit as a year-round machine. It has to be found again after winter.",
-      "Orangeville, Dakota, and other nearby towns are confirmed when you request service. Maintenance routes are not an automatic claim.",
+      "Call to be connected with a local heating and cooling professional. It has to be found again after winter.",
+      "Orangeville, Dakota, and other nearby towns are confirmed when you call. Maintenance routes are not assumed.",
     ],
     faqs: [
       {
-        q: "Can you check heat and AC maintenance in one visit?",
-        a: "Sometimes, if both can be tested honestly. A 30-degree day is a poor cooling test. We would rather split the visits than fake a season.",
+        q: "Can a caller ask a local professional whether they check heat and AC maintenance in one visit?",
+        a: "Sometimes, if both can be tested honestly. A 30-degree day is a poor cooling test. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Is this a membership or a club?",
-        a: "No. This page is seasonal service you can request. We do not invent a plan name, perks, or a service club here.",
+        a: "No. This page describes seasonal checks. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "What should I do between visits?",
         a: "Keep the filter honest, keep the outdoor unit clear of snow and weeds, and call if the system starts failing a cycle instead of waiting for the next season.",
       },
       {
-        q: "Do you maintain heat pumps on this visit type?",
-        a: "Heat pumps need their own year-round logic. See heat pump maintenance. We will not copy a furnace-and-AC checklist onto a reversing system.",
+        q: "Can a caller ask a local professional whether they maintain heat pumps on this visit type?",
+        a: "Heat pumps need their own year-round logic. See heat pump maintenance. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Will maintenance prevent every breakdown?",
@@ -1358,10 +1358,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Matched heating and cooling when piecemeal repairs pile up.",
     metaTitle: "HVAC Replacement in Freeport, IL",
     metaDescription:
-      "Replace heating and cooling together in Freeport when the pair no longer matches. Millrace Heating & Air talks through whole-system HVAC replacement in 61032.",
+      "Replace heating and cooling together in Freeport when the pair no longer matches. Call to be connected with a local heating and cooling professional.",
     h1: "Replacing heat and cooling together only makes sense when the pieces no longer match.",
     eyebrow: "System replacement · Freeport",
-    lede: "Piecemeal swaps leave a new condenser on a tired furnace, or a new furnace pushing air through a leftover coil. When both halves are done, Millrace Heating & Air will talk about the system — still after a diagnosis, still sized for a heating-first town.",
+    lede: "Piecemeal swaps leave a new condenser on a tired furnace, or a new furnace pushing air through a leftover coil. Call to be connected with a local heating and cooling professional.",
     image: "/photos/hero-home-winter.jpg",
     imageAlt:
       "Freeport home that needs a matched heating and cooling system replacement",
@@ -1392,12 +1392,12 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Whole-system replacement is for when the house has outgrown frankensteined equipment. It is not the default ending of every repair visit. In Freeport, the heating half still carries the year. Any replacement plan that treats cooling as the main character has the climate backwards.",
-      "The useful conversation is match and load. Furnace and coil and condenser, or a heat pump and backup, plus the ducts that have to move the air. We would rather walk the house than quote a package from a flyer.",
-      "If only one half is finished, we will send you to furnace installation or AC replacement. Honesty about scope is the whole point of this page.",
+      "The useful conversation is match and load. Furnace and coil and condenser, or a heat pump and backup, plus the ducts that have to move the air. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional. Honesty about scope is the whole point of this page.",
     ],
     causes: [
       {
-        title: "Years of replacing the cheaper half",
+        title: "Years of replacing only one half",
         text: "The surviving half eventually cannot partner with anything new.",
       },
       {
@@ -1416,7 +1416,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Decide whether this is really a pair",
-        text: "We will not replace a healthy furnace to decorate a condenser sale.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Choose the heating strategy first",
@@ -1443,7 +1443,7 @@ export const services: ServicePageContent[] = [
       "Request a system visit. Bring your questions about furnace versus heat pump if you have them.",
     ],
     why: [
-      "We will still repair a half that deserves a repair.",
+      "Call to be connected with a local heating and cooling professional.",
       "Heating climate math goes first. Cooling is matched, not featured.",
       "Ducts and controls are in the conversation or the new pair inherits the old complaints.",
     ],
@@ -1455,7 +1455,7 @@ export const services: ServicePageContent[] = [
     faqs: [
       {
         q: "Do I have to replace heat and AC together?",
-        a: "No. Together is for mismatched or jointly failing pairs. A sound furnace can stay. A sound condenser can stay. We will say which case you have.",
+        a: "No. Together is for mismatched or jointly failing pairs. A sound furnace can stay. A sound condenser can stay. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Is a heat pump the automatic replacement now?",
@@ -1463,15 +1463,15 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Will new equipment fix the cold upstairs bedroom?",
-        a: "Only if we treat the ducts and returns as part of the job. A matched pair on starved trunks repeats the same room complaint.",
+        a: "Call to be connected with a local heating and cooling professional. A matched pair on starved trunks repeats the same room complaint.",
       },
       {
         q: "Can I replace now and worry about cooling next year?",
         a: "You can stage work, but the coil and furnace still have to match. Staging without a plan is how leftover mismatches get built.",
       },
       {
-        q: "Do you quote a package sight unseen?",
-        a: "No. The house, the existing pair, and the rooms that already fail decide the scope. Call or request a visit.",
+        q: "Can equipment be chosen without seeing the house?",
+        a: "No. The house, the existing equipment, and the rooms that already fail decide the scope. Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -1490,9 +1490,9 @@ export const services: ServicePageContent[] = [
     metaTitle: "Emergency HVAC in Freeport, IL",
     metaDescription:
       "Emergency HVAC in Freeport, IL starts with a phone call: no heat, no cooling, or a system that will not start. Availability is confirmed when you call.",
-    h1: "Call first. We will sort heat, cooling, and whether the house is safe.",
+    h1: "Urgent no-heat or no-cooling help starts with a phone call",
     eyebrow: "Urgent HVAC · Freeport 61032",
-    lede: "If the furnace stopped on a Stephenson County night, or the AC died when the house was already hot, do not wait on a long form. Call Millrace Heating & Air. Availability is confirmed on the phone.",
+    lede: "If the furnace stopped on a Stephenson County night, or the AC died when the house was already hot, do not wait on a long form. Call to be connected with a local heating and cooling professional. Availability is confirmed on the phone.",
     image: "/photos/emergency-night.jpg",
     imageAlt:
       "Freeport home at night when heating or cooling has failed and a call is needed",
@@ -1522,7 +1522,7 @@ export const services: ServicePageContent[] = [
       "Water flooding a furnace closet during a cooling call",
     ],
     explanation: [
-      "Emergency HVAC on this site means: the house is already in trouble and the next action is a phone call. It does not mean a promised arrival window, a 24-hour shop, or a guarantee we can be everywhere at once. Those claims stay off the page unless they are later verified as business facts.",
+      "Emergency HVAC on this site means: the house is already in trouble and the next action is a phone call. Call to be connected with a local heating and cooling professional. Those claims stay off the page unless they are later verified as business facts.",
       `Safety still outranks comfort. Rotten-egg gas, hissing at the meter, or a sounding CO alarm means you leave. From outside, call 911 and Nicor Gas at ${NICOR_GAS.display}. Do not keep resetting a furnace to “see.”`,
       "If the house is safe, the useful homeowner checks are short: thermostat, power switch, filter. Then call. Describe whether you have any heat or cooling at all, and what you already tried.",
     ],
@@ -1547,10 +1547,10 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Safety first, always",
-        text: "Gas and CO change the script. We do not troubleshoot a house that should be empty.",
+        text: "Gas and CO change the script. Call to be connected with a local heating and cooling professional.",
       },
       {
-        title: "Stabilize what we can",
+        title: "What to know before you call",
         text: "The first job is usable heat or cooling if the equipment and the house allow it.",
       },
       {
@@ -1574,23 +1574,23 @@ export const services: ServicePageContent[] = [
       "Call. Say you have no heat or no cooling and whether anyone is at risk in the house.",
     ],
     why: [
-      "We would rather you call than keep resetting a locked-out furnace.",
-      "We will not advertise response times or round-the-clock coverage we cannot keep.",
+      "Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional.",
       "Safety contacts for gas and carbon monoxide stay on this page because they matter before any HVAC visit.",
     ],
     local: [
       "Freeport January nights average near 11°F. A dead heating system is a pipes-and-people problem before it is a parts problem.",
       "Older 61032 houses lose heat quickly. Waiting until morning is sometimes a choice you do not actually have.",
-      "Nearby towns are confirmed when you call. An urgent request from Lena or Cedarville is not an automatic dispatch.",
+      "Nearby towns are confirmed when you call. An urgent request from Lena or Cedarville is not assumed.",
     ],
     faqs: [
       {
-        q: "Do you offer 24 hour HVAC in Freeport?",
-        a: "Call and ask what we can do with the situation you have. Availability is confirmed on the phone. We do not advertise round-the-clock coverage we cannot keep.",
+        q: "What should I say if the house has no heat tonight?",
+        a: "Say whether the house is safe, how cold it is, and who is home. Availability is confirmed on the phone.",
       },
       {
-        q: "Do you offer after-hours emergency service?",
-        a: "Call and ask what we can do with the situation you have. Availability is confirmed on the phone. We do not advertise round-the-clock coverage we cannot keep.",
+        q: "Is after-hours help available?",
+        a: "Ask on the call. Availability is confirmed on the phone. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "What counts as an HVAC emergency?",
@@ -1602,11 +1602,11 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "The house is cold but I do not smell gas. Still call?",
-        a: "Yes. A safe house can still lose heat fast enough to matter. Request service and say how cold it already is inside.",
+        a: "Yes. A safe house can still lose heat fast enough to matter. Call and say how cold it already is inside.",
       },
       {
-        q: "Can I request a callback instead of calling?",
-        a: "You can, but if the house is already losing heat or overheating, the phone is the faster path. Forms wait on people. Weather does not.",
+        q: "Is there a form instead of calling?",
+        a: "No. This website is call-only. Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -1627,7 +1627,7 @@ export const services: ServicePageContent[] = [
       "A heat pump that ices up, blows cool air, or leans on backup heat in Freeport needs an on-site diagnosis. Call for heat pump repair in Stephenson County.",
     h1: "A heat pump that struggles in Freeport cold is a diagnosis, not a slogan.",
     eyebrow: "Heat pump repair · northern Illinois",
-    lede: "This climate will tell you quickly if the outdoor unit can still heat. If the house is cool, the unit is a block of ice, or auxiliary heat never stops, Millrace Heating & Air will test the machine you have — including whether it was ever the right machine.",
+    lede: "This climate will tell you quickly if the outdoor unit can still heat. Call to be connected with a local heating and cooling professional.",
     image: "/photos/heat-pump.jpg",
     imageAlt:
       "Air-source heat pump outside a Freeport home in a heating climate",
@@ -1658,8 +1658,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Heat pump repair in Freeport has to respect January normals near 11°F. A unit that heated fine in October can fail defrost, lose charge, or lean entirely on electric strips once the real winter arrives. That is a test, not a lecture about heat pumps in general.",
-      "We separate “this is how a heat pump feels” from “this heat pump is not heating.” Supply air in the 90s can be normal. A house that cannot hold temperature is not. Backup heat that runs all day on a 35-degree afternoon is a clue, not a lifestyle.",
-      "If the equipment was selected for a milder catalog climate, we will say that after we diagnose the failure. Repair still comes first. Replacement talk waits on facts.",
+      "Call to be connected with a local heating and cooling professional. A house that cannot hold temperature is not. Backup heat that runs all day on a 35-degree afternoon is a clue, not a lifestyle.",
+      "Call to be connected with a local heating and cooling professional. Repair still comes first. Replacement talk waits on facts.",
     ],
     causes: [
       {
@@ -1690,7 +1690,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Test the refrigeration and defrost path",
-        text: "We diagnose. We do not “add heat” as a personality fix.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Check that backup heat can still do its job",
@@ -1709,14 +1709,14 @@ export const services: ServicePageContent[] = [
       "Call for heat pump repair. Say how cold it is inside and outside if you know.",
     ],
     why: [
-      "We distinguish normal heat-pump air from a unit that is not heating.",
+      "Call to be connected with a local heating and cooling professional.",
       "Defrost and backup heat get tested because this climate uses both.",
       "A poorly selected machine still gets a diagnosis before a sales talk.",
     ],
     local: [
       "Heat pumps in 61032 have to heat through a season measured in thousands of heating degree days, not a few frosty mornings.",
       "Defrost behavior that looks dramatic on a damp 25°F day is common here. A coil that never clears is not.",
-      "If you are in Dakota or Orangeville, say so when you call. Heat pump repair is confirmed, not auto-served.",
+      "If you are in Dakota or Orangeville, say so when you call. Heat pump repair is confirmed, not assumed.",
     ],
     faqs: [
       {
@@ -1732,8 +1732,8 @@ export const services: ServicePageContent[] = [
         a: "If the house is losing temperature and you know how your control works, emergency heat can be a temporary hold. It is not a repair. Call either way.",
       },
       {
-        q: "Can you repair a heat pump that was never right for this winter?",
-        a: "We can often restore what the machine is capable of. Capability and climate match are separate sentences. You will hear both.",
+        q: "Can a caller ask a local professional whether they repair a heat pump that was never right for this winter?",
+        a: "Call to be connected with a local heating and cooling professional. Capability and climate match are separate sentences. You will hear both.",
       },
       {
         q: "The outdoor unit is steaming. Is it on fire?",
@@ -1758,7 +1758,7 @@ export const services: ServicePageContent[] = [
       "Installing a heat pump in Freeport only makes sense if the machine can heat here. Talk through cold-climate or dual-fuel installation for a 61032 house.",
     h1: "If a heat pump is going to heat 61032, it has to be chosen for this winter.",
     eyebrow: "Heat pump installation · Stephenson County",
-    lede: "Roughly 6,956 heating degree days versus 690 cooling degree days is the whole briefing. Millrace Heating & Air will not install a mild-climate heat pump and hope January is polite.",
+    lede: "Roughly 6,956 heating degree days versus 690 cooling degree days is the whole briefing. Call to be connected with a local heating and cooling professional.",
     image: "/photos/heat-pump.jpg",
     imageAlt:
       "Cold-climate heat pump installation discussion for a Freeport home",
@@ -1788,7 +1788,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Heat pump installation in Freeport is a heating conversation that also cools. The outdoor unit will run in weather that shuts a normal air conditioner down for the season. Pad height, defrost drainage, line-set protection, and backup heat are part of the install, not accessories.",
-      "Some houses do well with a cold-climate heat pump. Some do better with dual-fuel — a heat pump for the shoulder months and gas when the math and the comfort say so. Some houses should keep a furnace as the primary plant. We would rather say that on the visit than force a product.",
+      "Some houses do well with a cold-climate heat pump. Some do better with dual-fuel — a heat pump for the shoulder months and gas when the math and the comfort say so. Some houses should keep a furnace as the primary plant. Call to be connected with a local heating and cooling professional.",
       "If a room was never on the ducts, a ductless head may be the cleaner install than asking a new heat pump to fix an addition through a six-inch run.",
     ],
     causes: [
@@ -1812,7 +1812,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Start with the heating load",
-        text: "We care how the house loses heat on a design-cold night, not only how it feels in July.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Pick a strategy the house can support",
@@ -1841,12 +1841,12 @@ export const services: ServicePageContent[] = [
     why: [
       "Climate math goes first. Marketing copy does not.",
       "Backup heat is part of the install conversation in 61032.",
-      "We will recommend a furnace-primary plan when that is the honest fit.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "January highs near 28°F and lows near 11°F are normal here. A heat pump install that cannot speak to those numbers is not finished thinking.",
       "Unlike a Freeport air conditioner, a heat pump outdoor unit does not get a long idle winter. It has to run, defrost, and stay above the snow.",
-      "Rock City, Winslow, and other nearby towns are confirmed when you call. Installation scheduling is not an automatic county claim.",
+      "Rock City, Winslow, and other nearby towns are confirmed when you call. Installation scheduling is not assumed.",
     ],
     faqs: [
       {
@@ -1862,7 +1862,7 @@ export const services: ServicePageContent[] = [
         a: "The heat pump handles the milder days. A gas furnace takes over when it is the better heat. The thermostat has to be set up for that on purpose.",
       },
       {
-        q: "Will you install any heat pump I buy online?",
+        q: "Can a caller ask a local professional whether they install any heat pump I buy online?",
         a: "Ask on the call. An unmatched or mild-climate unit sitting in the garage can be a problem, not a head start.",
       },
       {
@@ -1888,7 +1888,7 @@ export const services: ServicePageContent[] = [
       "Heat pumps in Freeport run through winter, not only through summer. Request seasonal heat pump maintenance in 61032 for defrost, coils, and backup heat checks.",
     h1: "Heat pumps here do not get an off-season. Service has to follow that.",
     eyebrow: "Heat pump service · Freeport",
-    lede: "A Freeport air conditioner can sit from frost to lilacs. A heat pump cannot. Millrace Heating & Air maintains the outdoor unit, the indoor airflow, and the backup heat because all three work in this climate.",
+    lede: "A Freeport air conditioner can sit from frost to lilacs. A heat pump cannot. Call to be connected with a local heating and cooling professional.",
     image: "/photos/heat-pump.jpg",
     imageAlt:
       "Heat pump outdoor unit that runs through Freeport winters and needs maintenance",
@@ -1919,8 +1919,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Heat pump maintenance is not AC maintenance with a different title. The machine heats through Stephenson County winter, defrosts, and still has to cool in July. A spring-only visit leaves the heating half unexamined. A fall-only visit leaves the cooling half unexamined.",
-      "A useful visit looks at both coils, airflow, electrical start parts, defrost operation as conditions allow, and whether backup heat still answers. We will not invent a special brand of plan. We will look at the unit you have.",
-      "If we find a failing reversing valve or a leak, that becomes repair talk. Maintenance is how you meet those problems in daylight.",
+      "A useful visit looks at both coils, airflow, electrical start parts, defrost operation as conditions allow, and whether backup heat still answers. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional. Maintenance is how you meet those problems in daylight.",
     ],
     causes: [
       {
@@ -1943,7 +1943,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Treat it as a year-round plant",
-        text: "We ask how it heated last winter and how it cooled last summer. Both answers matter.",
+        text: "Call to be connected with a local heating and cooling professional. Both answers matter.",
       },
       {
         title: "Clean and inspect both coils as access allows",
@@ -1951,7 +1951,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Check defrost and backup on purpose",
-        text: "If weather allows a real observation, we take it. If not, we still test the parts we can.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Leave a list that names heating and cooling risks",
@@ -1970,14 +1970,14 @@ export const services: ServicePageContent[] = [
       "Request heat pump maintenance and say whether winter or summer is your bigger worry.",
     ],
     why: [
-      "We will not copy an air-conditioner checklist onto a machine that heats January.",
+      "Call to be connected with a local heating and cooling professional.",
       "Backup heat gets checked because Freeport uses it.",
       "Problems become repairs when they are repairs. Maintenance stays a look-and-test visit.",
     ],
     local: [
       "A heat pump in Freeport is a winter machine that also cools. That is the reverse of how most 61032 condensers live.",
       "Nights at or below freezing are routine. Defrost and backup heat are maintenance topics here, not rarities.",
-      "Cedarville, Pearl City, and other nearby towns are confirmed on the phone. We do not auto-route those visits.",
+      "Cedarville, Pearl City, and other nearby towns are confirmed on the phone. Call to be connected with a local heating and cooling professional.",
     ],
     faqs: [
       {
@@ -1989,11 +1989,11 @@ export const services: ServicePageContent[] = [
         a: "Before the heating season is the high-value time in this climate. A second look before cooling season still helps. Ask when you call.",
       },
       {
-        q: "Can you maintain a dual-fuel system?",
-        a: "Yes, as a system — heat pump plus the furnace stage. Say that you have dual-fuel so we do not treat it like a single box.",
+        q: "Can a caller ask a local professional whether they maintain a dual-fuel system?",
+        a: "Yes, as a system — heat pump plus the furnace stage. Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "Do you recharge heat pumps every year?",
+        q: "Can a caller ask a local professional whether they recharge heat pumps every year?",
         a: "No. A tight system does not need a seasonal charge. Repeated “recharge” usually means a leak is being ignored.",
       },
       {
@@ -2019,7 +2019,7 @@ export const services: ServicePageContent[] = [
       "Ductless mini splits in Freeport heat and cool rooms older trunks never served. Talk through heads, outdoor units, and whether ducts are the wrong project.",
     h1: "Ductless heating and cooling for the rooms Freeport houses never quite served.",
     eyebrow: "Ductless systems · 61032",
-    lede: "An enclosed porch, a finished attic, or an addition on a six-inch run is a Freeport story. Millrace Heating & Air uses this page for the whole ductless conversation — when a wall head is the honest tool, and when it is not.",
+    lede: "An enclosed porch, a finished attic, or an addition on a six-inch run is a Freeport story. Call to be connected with a local heating and cooling professional.",
     image: "/photos/mini-split.jpg",
     imageAlt:
       "Ductless mini-split indoor head in a Freeport home without strong ductwork",
@@ -2051,7 +2051,7 @@ export const services: ServicePageContent[] = [
     explanation: [
       "Ductless mini-splits are heat pumps with indoor heads. In Freeport they have to heat, not only cool a bedroom in July. That means outdoor placement, winter run time, and a head location that actually throws air across the room you care about.",
       "This page is the overview. Repair and installation have their own pages because a leaking line set and a first-time layout are different jobs. If you are not sure which one you need, start here and say what the room does today.",
-      "Ductless is not automatically better than ducts. If the existing trunks can be made to work, that can still be the quieter house. We would rather tell you that than hang a head for sport.",
+      "Ductless is not automatically better than ducts. If the existing trunks can be made to work, that can still be the quieter house. Call to be connected with a local heating and cooling professional.",
     ],
     causes: [
       {
@@ -2060,7 +2060,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Ducts that were always heating-first",
-        text: "A second floor that starves in July is sometimes a ductless candidate, sometimes a return problem. We look before we pick.",
+        text: "A second floor that starves in July is sometimes a ductless candidate, sometimes a return problem. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "A desire to condition one room hard",
@@ -2078,7 +2078,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "See whether ducts can still win",
-        text: "If a trunk fix is honest, we say so. Ductless is a tool, not a default.",
+        text: "Call to be connected with a local heating and cooling professional. Ductless is a tool, not a default.",
       },
       {
         title: "Talk heads, outdoor location, and line-set path",
@@ -2091,7 +2091,7 @@ export const services: ServicePageContent[] = [
     ],
     whenToCall: [
       "A room is unlivable in January or July and the main system cannot reach it",
-      "You were quoted a whole-house duct job and want a second look",
+      "You were told the house needs all-new ducts and want a second look",
       "You already own a mini-split and need to know if it is a repair or a poor layout",
       "You want heating and cooling in a space that has no ducts",
     ],
@@ -2101,27 +2101,27 @@ export const services: ServicePageContent[] = [
       "Call and describe the space. Bring the install page or the repair page if you already know the job.",
     ],
     why: [
-      "We will not hang a head to avoid telling you the ducts can be fixed.",
+      "Call to be connected with a local heating and cooling professional.",
       "Heating performance in Freeport winter is part of the ductless talk, not a footnote.",
       "Overview, repair, and installation stay separate so the page matches the job.",
     ],
     local: [
       "Older 61032 houses often have a room that was never on the original forced-air plan. That is the usual ductless conversation here.",
       "A mini-split outdoor unit in Freeport still sits through snow. Placement cannot be “wherever the line set was shortest.”",
-      "Lena, Ridott, and other nearby towns are confirmed when you call. Ductless work is not auto-dispatched.",
+      "Lena, Ridott, and other nearby towns are confirmed when you call. Ductless work is not assumed.",
     ],
     faqs: [
       {
         q: "Can a mini-split heat a room through a Freeport winter?",
-        a: "A properly selected and placed head can heat a room. A decorative cooling-only leftover cannot. We talk about the room and the outdoor unit, not a slogan.",
+        a: "A properly selected and placed head can heat a room. A decorative cooling-only leftover cannot. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Do I still need my furnace if I add ductless?",
         a: "Usually yes, for the rest of the house. A head is often a room tool, not a whole-house replacement.",
       },
       {
-        q: "Is ductless cheaper than new ducts?",
-        a: "Sometimes. Plaster, path, electrical, and how many rooms you want conditioned decide that. Ask on the call.",
+        q: "When is ductless a better fit than new ducts?",
+        a: "Plaster, path, electrical, and how many rooms you want conditioned decide that. Ask on the call.",
       },
       {
         q: "Can one outdoor unit serve several rooms?",
@@ -2147,10 +2147,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Heads that freeze, error out, or blow without comfort.",
     metaTitle: "Mini-Split Repair in Freeport, IL",
     metaDescription:
-      "A mini-split that errors out, ices up, or blows without changing the room is a repair call. Millrace Heating & Air diagnoses ductless systems in Freeport.",
+      "A mini-split that errors out, ices up, or blows without changing the room is a repair call. Call to be connected with a local heating and cooling professional.",
     h1: "A silent head or a frozen outdoor unit is a mini-split problem, not a mystery.",
     eyebrow: "Ductless repair · Freeport",
-    lede: "Wall heads talk in codes. Outdoor units sit in snow. If the room is not heating or cooling, Millrace Heating & Air will read the system instead of treating it like a window unit with extra wires.",
+    lede: "Wall heads talk in codes. Outdoor units sit in snow. Call to be connected with a local heating and cooling professional.",
     image: "/photos/mini-split.jpg",
     imageAlt:
       "Ductless mini-split head being diagnosed in a Freeport, Illinois room",
@@ -2182,7 +2182,7 @@ export const services: ServicePageContent[] = [
     explanation: [
       "Mini-split repair is still HVAC diagnosis. The difference is the communication between head and outdoor unit, the tiny condensate path, and an outdoor machine that may have spent January trying to heat a sunroom through a snowbank.",
       "Homeowner checks stay small: remote batteries, set mode, a washable filter in the head if you can reach it without forcing plastic. After that, opening a charge port or “topping off” a mini-split is a good way to hide a leak.",
-      "If the unit never heated the room even when it was new, say that. Repair cannot invent a load the head never had. That becomes a placement or sizing talk after we see why it is failing today.",
+      "If the unit never heated the room even when it was new, say that. Repair cannot invent a load the head never had. Call to be connected with a local heating and cooling professional.",
     ],
     causes: [
       {
@@ -2205,7 +2205,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Read the codes and the room",
-        text: "We want the error, the mode, and whether any head on the system still works.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Inspect filters, drain, and outdoor clearance",
@@ -2217,7 +2217,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Say whether the layout is also at fault",
-        text: "A repaired head in a dead corner of the room will still disappoint. We will say that.",
+        text: "A repaired head in a dead corner of the room will still disappoint. Call to be connected with a local heating and cooling professional.",
       },
     ],
     whenToCall: [
@@ -2232,14 +2232,14 @@ export const services: ServicePageContent[] = [
       "Call for mini-split repair. Say how many heads you have and which one failed.",
     ],
     why: [
-      "We treat communicating systems as systems, not as window units.",
+      "Call to be connected with a local heating and cooling professional.",
       "Leaks get looked for. Refrigerant is not a seasonal additive.",
       "If the head was never in the right place, repair will not pretend it was.",
     ],
     local: [
       "Mini-split outdoor units in Freeport see snow and freeze-thaw like every other pad. Heating-mode ice that never clears is a local repair pattern, not a rare exotic.",
       "Sunrooms and enclosed porches here swing hard between January and July. A failed head in those rooms is uncomfortable fast.",
-      "German Valley, Davis, and other nearby towns are confirmed when you request service.",
+      "German Valley, Davis, and other nearby towns are confirmed when you call.",
     ],
     faqs: [
       {
@@ -2247,20 +2247,20 @@ export const services: ServicePageContent[] = [
         a: "The indoor fan can run without a working refrigeration circuit or a working outdoor unit. That is a repair visit, not new batteries.",
       },
       {
-        q: "Can you repair one head on a multi-zone system?",
-        a: "Often yes. Sometimes the outdoor unit or the shared line set is the real failure. We test before we order a head.",
+        q: "Can a caller ask a local professional whether they repair one head on a multi-zone system?",
+        a: "Often yes. Sometimes the outdoor unit or the shared line set is the real failure. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Is dripping in cooling mode always a failed pump?",
-        a: "Not always. Clogged filters, a dirty coil, and a pitched drain line all make water. We look at the path.",
+        a: "Not always. Clogged filters, a dirty coil, and a pitched drain line all make water. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Should I chip ice off the outdoor unit?",
         a: "No. You can clear snow around it. Tools on the fins cause leaks. If it is a solid block and the room is losing heat, call.",
       },
       {
-        q: "Do you work on every ductless brand?",
-        a: "Say the brand on the call. Parts and software access vary. We will not invent coverage for a system we cannot support.",
+        q: "Can a caller ask a local professional whether they work on every ductless brand?",
+        a: "Say the brand on the call. Parts and software access vary. Call to be connected with a local heating and cooling professional.",
       },
     ],
     related: [
@@ -2281,7 +2281,7 @@ export const services: ServicePageContent[] = [
       "Mini-split installation in Freeport is room load, head placement, and a line-set path through older walls. Request a layout visit before you buy a kit.",
     h1: "Line sets and honest room loads beat ripping plaster for new ducts.",
     eyebrow: "Ductless installation · Stephenson County",
-    lede: "Hanging a head is the visible hour. Getting copper through an older Freeport wall, setting the outdoor unit above snow, and aiming air at the actual living space is the job. Millrace Heating & Air starts there.",
+    lede: "Hanging a head is the visible hour. Getting copper through an older Freeport wall, setting the outdoor unit above snow, and aiming air at the actual living space is the job. Call to be connected with a local heating and cooling professional.",
     image: "/photos/mini-split.jpg",
     imageAlt:
       "Mini-split installation planning for an older Freeport house",
@@ -2312,8 +2312,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Mini-split installation in 61032 is a heating install that also cools. The outdoor unit will run when other condensing units are idle under snow. Height, clearance, and melt-water matter. Indoors, the head has to see the room, not a soffit that was convenient.",
-      "Older plaster, brick, and stacked additions make the line-set route the design problem. We would rather walk the path than promise an invisible install that chews a dining room later.",
-      "If two rooms need conditioning, we talk about one larger head versus two smaller ones versus leaving one room on the furnace. More equipment is not automatically the adult answer.",
+      "Older plaster, brick, and stacked additions make the line-set route the design problem. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional. More equipment is not automatically the adult answer.",
     ],
     causes: [
       {
@@ -2344,11 +2344,11 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Plan copper, condensate, and power",
-        text: "The path through older walls gets talked through before we cut.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Start it up in the mode you will use first",
-        text: "If we are installing before winter, we care about heat. If before summer, we care about cooling. You should know the remote before we leave.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
     ],
     whenToCall: [
@@ -2365,25 +2365,25 @@ export const services: ServicePageContent[] = [
     why: [
       "Placement and path are the install. The head is the last piece.",
       "Winter operation is part of a Freeport ductless install, not a summer extra.",
-      "We will still tell you when a duct fix or a different system is the better scar.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
-      "Older Freeport walls — plaster, brick, tight additions — are why we walk the line-set route instead of promising a clean photo.",
+      "Call to be connected with a local heating and cooling professional.",
       "Outdoor units have to live through about 35 inches of snow. A pad against the driveway drift is a January problem waiting for a calendar.",
-      "Orangeville, Cedarville, and other nearby towns are confirmed by phone before we treat them as a yes.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     faqs: [
       {
         q: "How long does a mini-split install take?",
-        a: "It depends on the wall, the electrical, and how many heads. We will not invent a half-day promise for every house.",
+        a: "It depends on the wall, the electrical, and how many heads. Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "Can you install a system I already purchased?",
+        q: "Can a caller ask a local professional whether they install a system I already purchased?",
         a: "Ask on the call. An unmatched or undersized kit can be a liability. Sometimes the honest answer is “not that one.”",
       },
       {
         q: "Will there be a line-set cover on the outside?",
-        a: "Usually yes, or another agreed finish. Older houses still get a visible path. We will show you where before we cut.",
+        a: "Usually yes, or another agreed finish. Older houses still get a visible path. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Can a single head heat an entire older house?",
@@ -2409,10 +2409,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Dust, dryness, and stale air in closed-up winter houses.",
     metaTitle: "Indoor Air Quality in Freeport, IL",
     metaDescription:
-      "Indoor air in Freeport winters is closed windows and recirculated heat. Talk with Millrace Heating & Air about filtration and humidity — not medical claims.",
+      "Indoor air in Freeport winters is closed windows and recirculated heat. Call to be connected with a local heating and cooling professional.",
     h1: "Closed-up Freeport winters recirculate whatever the furnace already moves.",
     eyebrow: "Indoor air · Stephenson County",
-    lede: "From the first hard freeze until someone opens a window in April, the house is a closed box. Millrace Heating & Air will talk about filters, coils, and humidity as HVAC work. We will not diagnose your health.",
+    lede: "From the first hard freeze until someone opens a window in April, the house is a closed box. Call to be connected with a local heating and cooling professional.",
     image: "/photos/iaq-filter.jpg",
     imageAlt:
       "Furnace filter and indoor HVAC air path in a closed-up Freeport home",
@@ -2442,7 +2442,7 @@ export const services: ServicePageContent[] = [
       "You want a straight talk about add-ons without a health brochure",
     ],
     explanation: [
-      "Indoor air quality on this site means the HVAC side of a closed Freeport house: filtration, humidity, coil cleanliness, and whether the system is short-cycling instead of moving a full pass of air. It does not mean we treat, cure, or prevent illness.",
+      "Indoor air quality on this site means the HVAC side of a closed Freeport house: filtration, humidity, coil cleanliness, and whether the system is short-cycling instead of moving a full pass of air. Call to be connected with a local heating and cooling professional.",
       `Carbon monoxide and gas odors are not indoor-air accessories. They are leave-the-house emergencies. 911 and Nicor Gas at ${NICOR_GAS.display} come first. After the house is safe, combustion and venting can be part of a heating visit.`,
       "A lot of “air quality” calls start with maintenance. A packed filter and a filthy coil will make any house feel stale. Add-on products come after that look, not before.",
     ],
@@ -2479,7 +2479,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Keep the claims mechanical",
-        text: "We talk about dust, dryness, odor, and humidity readings — not bodies.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
     ],
     whenToCall: [
@@ -2494,14 +2494,14 @@ export const services: ServicePageContent[] = [
       "Request an indoor air visit as HVAC work. Bring your real complaint: dust, odor, or dryness.",
     ],
     why: [
-      "We will not make medical claims about air, lungs, or sleep.",
+      "Call to be connected with a local heating and cooling professional.",
       "Maintenance and fit come before catalogs of add-ons.",
       "Gas and carbon monoxide stay on the emergency path, not the product path.",
     ],
     local: [
       "Freeport winters keep windows closed for months. The furnace recirculates what is already in the house. That is the local indoor-air story.",
       "Older housing stock often has leaky returns in unfinished basements. Those returns eat basement air and send it upstairs.",
-      "Nearby towns are confirmed when you call. Indoor air visits are not an automatic county route.",
+      "Nearby towns are confirmed when you call. Indoor air visits are not assumed.",
     ],
     faqs: [
       {
@@ -2509,8 +2509,8 @@ export const services: ServicePageContent[] = [
         a: "A crushed or overdue filter can wreck airflow and comfort. It will not fix a dirty coil, a leaky return, or a house with no ventilation plan.",
       },
       {
-        q: "Can you make the air healthier?",
-        a: "We can talk about filtration, humidity, and cleanliness of the HVAC path. We do not claim medical results.",
+        q: "Can a caller ask a local professional whether they make the air healthier?",
+        a: "Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Why does the house feel worse from November to March?",
@@ -2543,7 +2543,7 @@ export const services: ServicePageContent[] = [
       "Thicker is not always better in an older Freeport return. Talk through air filtration that seals, fits the rack, and still lets the furnace move air in 61032.",
     h1: "A thicker filter is not always a better filter in an older return.",
     eyebrow: "Filtration · Freeport homes",
-    lede: "The filter slot in a 61032 furnace closet was often built for a thin media and a lot of air. Stuffing a dense pad into a leaky rack can starve the heat exchanger. Millrace Heating & Air cares about fit and airflow, not a MERV brag.",
+    lede: "The filter slot in a 61032 furnace closet was often built for a thin media and a lot of air. Stuffing a dense pad into a leaky rack can starve the heat exchanger. Call to be connected with a local heating and cooling professional.",
     image: "/photos/iaq-filter.jpg",
     imageAlt:
       "Furnace filter rack and return in an older Freeport forced-air system",
@@ -2573,9 +2573,9 @@ export const services: ServicePageContent[] = [
       "A box of filters in the basement does not match the opening",
     ],
     explanation: [
-      "Air filtration here is a mechanical fit problem. Older Freeport returns are often undersized. The furnace needs air more than it needs a dense souvenir in the slot. We would rather you run a filter that seals and gets changed than a trophy filter that collapses the airflow.",
+      "Air filtration here is a mechanical fit problem. Older Freeport returns are often undersized. The furnace needs air more than it needs a dense souvenir in the slot. Call to be connected with a local heating and cooling professional.",
       "This is not a medical page. Filters catch household dust and protect equipment. They do not get credited with clinical outcomes on this site.",
-      "If someone sold you a thick media cabinet, we can talk about whether the blower and return can support it. If they cannot, the honest upgrade might be a better rack and a sane media — or leaving the idea on the shelf.",
+      "Call to be connected with a local heating and cooling professional. If they cannot, the honest upgrade might be a better rack and a sane media — or leaving the idea on the shelf.",
     ],
     causes: [
       {
@@ -2602,11 +2602,11 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "See how the current filter sits",
-        text: "Bypass marks, collapse, and dirt on the dirty side tell us if filtration is even happening.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Match media to the blower and the return",
-        text: "We would rather drop a MERV number than overheat a heat exchanger.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Talk cabinets only if the air path can feed them",
@@ -2617,7 +2617,7 @@ export const services: ServicePageContent[] = [
       "A new “better” filter made the furnace or AC worse",
       "Dust at the vents continues with filters you change on time",
       "The slot and the pads you buy do not agree",
-      "You were quoted a thick-media cabinet and want a blower-reality check",
+      "You were told to add a thick-media filter cabinet and want a blower check",
     ],
     nextSteps: [
       "Pull the filter and look at the size printed on the frame. Note gaps.",
@@ -2625,7 +2625,7 @@ export const services: ServicePageContent[] = [
       "Request a filtration look if the rack leaks, the size is a mystery, or comfort got worse after an upgrade.",
     ],
     why: [
-      "Airflow protection is part of filtration. We will not choke a furnace to win a rating argument.",
+      "Airflow protection is part of filtration. Call to be connected with a local heating and cooling professional.",
       "No medical claims. Dust and equipment stay the topics.",
       "Fit and seal beat a thicker pad in a leaky slot.",
     ],
@@ -2637,10 +2637,10 @@ export const services: ServicePageContent[] = [
     faqs: [
       {
         q: "What MERV should I run?",
-        a: "The number that still lets your furnace move air and actually seals in the rack. We will not recite a single MERV as a rule for every 61032 house.",
+        a: "The number that still lets your furnace move air and actually seals in the rack. Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "Why is there dust if I use expensive filters?",
+        q: "Why is there dust if the filters are thick?",
         a: "Bypass around a leaky rack, returns in a dirty basement, and ducts that leak return air will all dust a house while the pad looks fancy.",
       },
       {
@@ -2674,7 +2674,7 @@ export const services: ServicePageContent[] = [
       "Freeport winters dry the house out; July afternoons can feel sticky. Talk through humidifiers and dehumidifiers as HVAC add-ons — comfort, not medical claims.",
     h1: "January dryness and July stickiness are two different jobs in the same house.",
     eyebrow: "Humidity · 61032",
-    lede: "Forced-air heat in a shut-up Stephenson County winter pulls moisture down. A humid July afternoon does the opposite. Millrace Heating & Air treats those as two devices and two seasons — not one gadget with a health story.",
+    lede: "Forced-air heat in a shut-up Stephenson County winter pulls moisture down. A humid July afternoon does the opposite. Call to be connected with a local heating and cooling professional.",
     image: "/photos/humidifier.jpg",
     imageAlt:
       "Whole-house humidifier on a Freeport furnace during the dry heating season",
@@ -2705,7 +2705,7 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Humidity equipment in Freeport has a calendar. Bypass and fan-powered humidifiers belong to the heating season. Dehumidification belongs to the cooling season and to damp basements. Using one word for both jobs is how people buy the wrong box.",
-      "We do not claim humidifiers prevent illness or dehumidifiers treat a diagnosis. We talk about comfort, wood, static, and whether the air feels wet or brittle. Windows that sweat in January mean the setting is too aggressive for how cold the glass is — not a reason to chase a number.",
+      "Call to be connected with a local heating and cooling professional. Windows that sweat in January mean the setting is too aggressive for how cold the glass is — not a reason to chase a number.",
       "A whole-house humidifier is still an HVAC accessory. It needs a clean pad, a working saddle valve or tap, and a control that is not stuck on. If the furnace is sick, fix that first.",
     ],
     causes: [
@@ -2729,7 +2729,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Name the season and the complaint",
-        text: "Dry heat or sticky cooling. We do not install the opposite machine out of habit.",
+        text: "Dry heat or sticky cooling. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Look at what is already bolted on",
@@ -2741,7 +2741,7 @@ export const services: ServicePageContent[] = [
       },
       {
         title: "Set expectations about maintenance",
-        text: "Pads, drains, and clean coils are the ownership. We will say that before anyone is excited.",
+        text: "Pads, drains, and clean coils are the ownership. Call to be connected with a local heating and cooling professional.",
       },
     ],
     whenToCall: [
@@ -2753,12 +2753,12 @@ export const services: ServicePageContent[] = [
     nextSteps: [
       "Decide whether your complaint is this winter’s dryness or last summer’s stickiness.",
       "If a humidifier is on the furnace, look at it. Do not take the pad apart if you do not know the water shutoff.",
-      "Request service and name the season. Bring both only if you truly have both problems.",
+      "Call and name the season. Bring both only if you truly have both problems.",
     ],
     why: [
-      "Two seasons, two jobs. We will not mash them into one pitch.",
+      "Two seasons, two jobs. Call to be connected with a local heating and cooling professional.",
       "No medical claims. Comfort and the building are the topics.",
-      "Existing humidifiers get serviced or retired before we talk about new ones.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "January dryness here comes from long furnace run times and closed windows, not from a single cold snap.",
@@ -2772,7 +2772,7 @@ export const services: ServicePageContent[] = [
       },
       {
         q: "Can a humidifier help me get sick less often?",
-        a: "We will not make that claim. We talk about dryness, static, and comfort. Health questions belong with a clinician.",
+        a: "Call to be connected with a local heating and cooling professional. Health questions belong with a clinician.",
       },
       {
         q: "Why is my house sticky when the AC is on?",
@@ -2802,10 +2802,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Home heating and cooling in Freeport 61032.",
     metaTitle: "Residential HVAC in Freeport, IL",
     metaDescription:
-      "Residential HVAC in Freeport, IL for furnaces, air conditioners, and the shared equipment that keeps a 61032 house livable. Call Millrace Heating & Air.",
+      "Residential HVAC in Freeport, IL for furnaces, air conditioners, and the shared equipment that keeps a 61032 house livable. Call to be connected with a local heating and cooling professional.",
     h1: "A Freeport house needs heating that lasts winter and cooling that still works after it.",
     eyebrow: "Residential HVAC · Freeport 61032",
-    lede: "Most calls in Stephenson County are homes: a furnace that quit, an air conditioner that sat through snow, or a system that never quite conditioned every room. Millrace Heating & Air treats residential HVAC as that house — the basement cabinet, the pad, the ducts, and the ZIP — not a generic contractor brochure.",
+    lede: "Most calls in Stephenson County are homes: a furnace that quit, an air conditioner that sat through snow, or a system that never quite conditioned every room. Call to be connected with a local heating and cooling professional.",
     image: "/photos/hero-home-winter.jpg",
     imageAlt:
       "Snow-covered Freeport-area home that depends on residential heating and cooling",
@@ -2832,7 +2832,7 @@ export const services: ServicePageContent[] = [
       "AC that will not cool after sitting through winter",
       "One floor comfortable and another a different season",
       "A system that is loud, dusty, or constantly running",
-      "You need a home HVAC contractor, not a rooftop commercial crew",
+      "The problem is in a house, not on a commercial rooftop",
     ],
     explanation: [
       "Residential HVAC on this site means the comfort systems in Freeport houses and similar Stephenson County homes: gas furnaces, central air conditioners, heat pumps, ductless heads, and indoor air equipment tied to that same air path.",
@@ -2889,7 +2889,7 @@ export const services: ServicePageContent[] = [
     why: [
       "Freeport homes are the core of the work, written as houses rather than a copied commercial script.",
       "Heating season is treated as the high-stakes job because that is how 61032 actually uses equipment.",
-      "You get a path into the specific service page instead of one vague “we do HVAC” block.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Residential HVAC in Freeport is shaped by Stephenson County winters and short humid stretches, not a national template.",
@@ -2898,7 +2898,7 @@ export const services: ServicePageContent[] = [
     ],
     faqs: [
       {
-        q: "Do you do residential HVAC in Freeport, IL?",
+        q: "Can a caller ask a local professional whether they do residential HVAC in Freeport, IL?",
         a: "Yes. Homes in Freeport 61032 are the primary work. Nearby Stephenson County towns are confirmed by phone.",
       },
       {
@@ -2910,12 +2910,12 @@ export const services: ServicePageContent[] = [
         a: "Use the furnace repair page and say no heat on the call. This hub exists for people who only know the house is uncomfortable.",
       },
       {
-        q: "Do you handle air conditioning repair at the same house?",
+        q: "Can a caller ask a local professional whether they handle air conditioning repair at the same house?",
         a: "Yes. Residential cooling is part of the same air path. Start on AC repair if the outdoor unit failed after winter idle.",
       },
       {
-        q: "Are you an HVAC contractor near me if I live in 61032?",
-        a: "Freeport is the home market. If your ZIP is 61032, you are in the primary service city. Other nearby ZIPs are confirmed when you call.",
+        q: "I live in ZIP 61032. Can I call?",
+        a: "Yes. Freeport 61032 is the city this site is written for. Call to be connected with a local heating and cooling professional. Other nearby ZIPs are confirmed on the call.",
       },
     ],
     related: [
@@ -2933,10 +2933,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Offices, shops, and storefronts — not a factory division.",
     metaTitle: "Commercial HVAC in Freeport, IL",
     metaDescription:
-      "Commercial HVAC in Freeport, IL for shops, offices, and storefronts that have to open. Call Millrace Heating & Air about the equipment on site.",
+      "Commercial HVAC in Freeport, IL for shops, offices, and storefronts that have to open. Call to be connected with a local heating and cooling professional.",
     h1: "Small Freeport businesses need equipment that holds overnight and through opening.",
     eyebrow: "Small commercial · 61032",
-    lede: "A storefront on a corridor, a shop that cannot freeze over the weekend, an office that still has to be usable on Monday — that is the commercial work this page is written for. Millrace Heating & Air does not claim a factory division we have not verified.",
+    lede: "A storefront on a corridor, a shop that cannot freeze over the weekend, an office that still has to be usable on Monday — that is the commercial work this page is written for. Call to be connected with a local heating and cooling professional.",
     image: "/photos/commercial.jpg",
     imageAlt:
       "Small commercial rooftop HVAC equipment serving a Freeport business",
@@ -2966,9 +2966,9 @@ export const services: ServicePageContent[] = [
       "You need heat and cooling talked about as opening-day equipment",
     ],
     explanation: [
-      "Commercial HVAC on this site means small business spaces in Freeport and the surrounding towns we can confirm: offices, retail, shops, and similar buildings. The machines are often rooftop units, split systems, or leftover residential equipment doing commercial hours.",
-      "The difference from a house is consequence. A failed unit can close a floor, spoil a workspace, or make a Monday unusable. The difference from industrial work is honesty. We will not pretend we staff a millwright crew.",
-      "If you need after-hours access or a planned shutdown, say that on the call. We do not invent a night shift on the website.",
+      "Call to be connected with a local heating and cooling professional. The machines are often rooftop units, split systems, or leftover residential equipment doing commercial hours.",
+      "The difference from a house is consequence. A failed unit can close a floor, spoil a workspace, or make a Monday unusable. The difference from industrial work is honesty. Call to be connected with a local heating and cooling professional.",
+      "If you need after-hours access or a planned shutdown, say that on the call. Call to be connected with a local heating and cooling professional.",
     ],
     causes: [
       {
@@ -3018,18 +3018,18 @@ export const services: ServicePageContent[] = [
       "Call and say it is a business. Ask about commercial AC repair, heating repair, or maintenance if you already know the season.",
     ],
     why: [
-      "We stay in the small commercial lane we can stand behind.",
+      "Call to be connected with a local heating and cooling professional.",
       "Opening-day comfort is the measure, not a residential script copied onto a rooftop.",
-      "We confirm after-hours coverage on the phone for the situation you have.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Downtown and corridor buildings in Freeport often mix older rooftops, splits, and equipment that has been patched through several owners.",
       "The same heating-dominated climate applies. Overnight heat still matters more days of the year than cooling, even for a shop.",
-      "Lena, Dakota, and other nearby towns are confirmed when a business calls. We do not auto-serve every commercial address in the county.",
+      "Lena, Dakota, and other nearby towns are confirmed when a business calls. Call to be connected with a local heating and cooling professional.",
     ],
     faqs: [
       {
-        q: "Do you handle large industrial plants?",
+        q: "Can a caller ask a local professional whether they handle large industrial plants?",
         a: "This page is for small commercial spaces — offices, shops, churches, and similar buildings. Specialized industrial work is only claimed if it is later verified.",
       },
       {
@@ -3041,11 +3041,11 @@ export const services: ServicePageContent[] = [
         a: "The core diagnosis is similar. Access, rooftop safety, business hours, and who can authorize work are not.",
       },
       {
-        q: "We have no heat in a shop with a unit heater. Right page?",
-        a: "Start here or on commercial heating repair. Say “unit heater” on the call so we know it is not a rooftop.",
+        q: "A shop with a unit heater has no heat. Is this the right page?",
+        a: "Start here or on commercial heating repair. Say “unit heater” on the call so the person who answers knows it is not a rooftop.",
       },
       {
-        q: "Can you look at a building before we lease it?",
+        q: "Can someone look at a building before a lease starts?",
         a: "Ask on the phone. An equipment look is sometimes possible.",
       },
     ],
@@ -3067,7 +3067,7 @@ export const services: ServicePageContent[] = [
       "Commercial HVAC maintenance in Freeport is planned before heating season and before July humidity. Request a check so opening day is not the first test.",
     h1: "Shop and office systems fail on the day you cannot close. Plan before that.",
     eyebrow: "Commercial maintenance · Freeport",
-    lede: "A rooftop that has not been opened since last August will pick a busy Saturday. Millrace Heating & Air uses commercial maintenance to look at filters, belts, coils, and heat before the season does the inspecting for you.",
+    lede: "A rooftop that has not been opened since last August will pick a busy Saturday. Call to be connected with a local heating and cooling professional.",
     image: "/photos/commercial.jpg",
     imageAlt:
       "Rooftop commercial HVAC equipment in Freeport being checked before a season",
@@ -3098,8 +3098,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Commercial maintenance in Freeport still follows the climate: heat is the long season, cooling is the idle-then-sudden season. A shop rooftop that sat through snow needs a spring look. A unit heater that has to hold January needs a fall look.",
-      "Seasonal commercial service is available. If we find a repair, it is a repair. If the building needs a different contractor for a crane or a specialized control, we will say that.",
-      "Access is part of the visit. Roof hatches, keys, and hours when we can shut a unit down without emptying the floor get decided on the call.",
+      "Seasonal commercial service is available. Call to be connected with a local heating and cooling professional.",
+      "Access is part of the visit. Call to be connected with a local heating and cooling professional.",
     ],
     causes: [
       {
@@ -3122,7 +3122,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Get access and the equipment list straight",
-        text: "We cannot maintain a unit we cannot reach or have not been told about.",
+        text: "Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "Match the visit to the coming season",
@@ -3149,9 +3149,9 @@ export const services: ServicePageContent[] = [
       "Request commercial maintenance and name the season you are trying to protect.",
     ],
     why: [
-      "We would rather find a belt in private than explain a silent rooftop at opening.",
+      "Call to be connected with a local heating and cooling professional.",
       "Seasonal timing follows Freeport weather, not a generic annual sticker.",
-      "Seasonal service is available. If we find a repair, it is named as a repair.",
+      "Seasonal service is available. Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Small commercial buildings here face the same 6,956-to-690 heating-to-cooling imbalance as houses. Maintenance still leans toward not missing heat.",
@@ -3160,23 +3160,23 @@ export const services: ServicePageContent[] = [
     ],
     faqs: [
       {
-        q: "Do you offer a commercial maintenance contract?",
-        a: "Ask on the call what we can set up. This page does not invent a branded plan, perks, or a discount ladder.",
+        q: "Can a business ask about a recurring commercial maintenance visit?",
+        a: "Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "Can you service the unit while we are open?",
-        a: "Sometimes, if the work does not shut the floor down. Some jobs need a quieter hour. Say your hours when you request service.",
+        q: "Can a unit be serviced while the business is open?",
+        a: "Sometimes, if the work does not shut the floor down. Some jobs need a quieter hour. Say your hours when you call.",
       },
       {
-        q: "Is rooftop access your problem or ours?",
-        a: "Safe access is a shared problem. We need a legal way onto the roof and a unit we can reach. Ladders and hatches get talked through first.",
+        q: "Who handles rooftop access?",
+        a: "Safe access is arranged on the call. Ladders and hatches get talked through first.",
       },
       {
-        q: "What if you find a failed compressor during a check?",
+        q: "What if a check finds a failed compressor?",
         a: "Then it is a repair conversation, not a buried line on a maintenance ticket.",
       },
       {
-        q: "We have a mix of rooftop and unit heaters. One visit?",
+        q: "A building has a rooftop unit and unit heaters. Can that be one visit?",
         a: "Say that up front. Different machines can still be one trip if access and time allow. They do not get the same checklist.",
       },
     ],
@@ -3198,7 +3198,7 @@ export const services: ServicePageContent[] = [
       "When a Freeport shop stays hot, commercial AC repair is a business-hours problem. Call about rooftop or split cooling that failed after sitting through winter.",
     h1: "When the rooftop sits through winter, July is a rude reminder.",
     eyebrow: "Commercial cooling repair · 61032",
-    lede: "A storefront condenser or rooftop that idle-slept through snow does not care about your Saturday traffic. Millrace Heating & Air diagnoses commercial cooling when the sales floor or office has already started to climb.",
+    lede: "A storefront condenser or rooftop that idle-slept through snow does not care about your Saturday traffic. Call to be connected with a local heating and cooling professional.",
     image: "/photos/commercial.jpg",
     imageAlt:
       "Commercial air conditioning equipment on a Freeport business after winter idle",
@@ -3229,8 +3229,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Commercial AC repair in Freeport is still refrigeration diagnosis. The difference is access, who can authorize the work, and the fact that a failed unit can empty a floor. The climate difference is the same idle winter: snow on the roof, then a sudden ask in July.",
-      "We will not treat a rooftop like a mystery brand of physics. Capacitors, contactors, fans, dirty coils, and charge problems are still the usual list. We will treat the building like a business: hours, keys, and whether we can shut the unit down to test.",
-      "If the unit is at the end of its life, that becomes a replacement conversation after the test — and it stays in the small-commercial lane. We do not invent a 40-ton plant specialty here.",
+      "Call to be connected with a local heating and cooling professional. Capacitors, contactors, fans, dirty coils, and charge problems are still the usual list. Call to be connected with a local heating and cooling professional.",
+      "If the unit is at the end of its life, that becomes a replacement conversation after the test — and it stays in the small-commercial lane. Call to be connected with a local heating and cooling professional.",
     ],
     causes: [
       {
@@ -3253,7 +3253,7 @@ export const services: ServicePageContent[] = [
     process: [
       {
         title: "Get on the equipment safely",
-        text: "Roof, closet, or pad. If we cannot reach it safely, that is the first problem to solve.",
+        text: "Roof, closet, or pad. Call to be connected with a local heating and cooling professional.",
       },
       {
         title: "See what the space is doing",
@@ -3280,9 +3280,9 @@ export const services: ServicePageContent[] = [
       "Call and say it is commercial cooling. Give opening hours and access.",
     ],
     why: [
-      "Idle-winter failures are expected here. We look for them instead of acting surprised.",
+      "Idle-winter failures are expected here. Call to be connected with a local heating and cooling professional.",
       "Business hours and access are part of the repair, not an afterthought.",
-      "We stay in small commercial cooling. We will say when a job is outside that lane.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     local: [
       "Commercial condensers in 61032 sit unused through a long snow season, then get asked to dehumidify a full room on short notice. That is the local failure pattern.",
@@ -3291,24 +3291,24 @@ export const services: ServicePageContent[] = [
     ],
     faqs: [
       {
-        q: "Can you repair a rooftop while we stay open?",
+        q: "Can a rooftop be repaired while the business stays open?",
         a: "Sometimes. Some tests need the unit off. Say whether you can spare a zone or a quieter hour.",
       },
       {
-        q: "Our AC is a house-style unit behind the shop. Still commercial?",
-        a: "Yes, if it cools a business. Tell us it is a split or a residential condenser serving a shop so we bring the right expectations.",
+        q: "The shop is cooled by a house-style unit. Is that still a commercial call?",
+        a: "Yes, if it cools a business. Say whether it is a split or a condenser behind the shop.",
       },
       {
-        q: "Should we just replace the rooftop if it is old?",
+        q: "Should an old rooftop be replaced just because of its age?",
         a: "Not from a website. Age is a fact. The test decides whether this is a start component or a larger conversation.",
       },
       {
         q: "The ceiling is wet. Is that AC?",
-        a: "It can be a condensate problem. It can also be a roof leak. We will look at the unit’s drain path and tell you if the water is ours to own.",
+        a: "It can be a condensate problem. It can also be a roof leak. Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "Do you stock commercial parts?",
-        a: "Ask on the call. We will not invent a warehouse. Some parts are on the truck, some are ordered, and you hear which.",
+        q: "Can a caller ask a local professional whether they stock commercial parts?",
+        a: "Ask on the call. Call to be connected with a local heating and cooling professional. Some parts are on the truck, some are ordered, and you hear which.",
       },
     ],
     related: [
@@ -3326,10 +3326,10 @@ export const services: ServicePageContent[] = [
     navDescription: "Unit heaters, rooftops, and office heat that will not hold.",
     metaTitle: "Commercial Heating Repair in Freeport, IL",
     metaDescription:
-      "A cold shop on Monday or an office that will not hold is commercial heating repair. Call Millrace Heating & Air in Freeport about the heat that failed.",
+      "A cold shop on Monday or an office that will not hold is commercial heating repair. Call to be connected with a local heating and cooling professional.",
     h1: "A cold shop on Monday morning is a heating call, not a wait-and-see.",
     eyebrow: "Commercial heating repair · Stephenson County",
-    lede: "Weekend setbacks, unit heaters over a bay, rooftop gas heat over an office — when Monday is already cold, the building has used its slack. Millrace Heating & Air diagnoses commercial heat after you confirm the space is safe.",
+    lede: "Weekend setbacks, unit heaters over a bay, rooftop gas heat over an office — when Monday is already cold, the building has used its slack. Call to be connected with a local heating and cooling professional.",
     image: "/photos/commercial.jpg",
     imageAlt:
       "Commercial heating equipment serving a Freeport shop or office in winter",
@@ -3360,8 +3360,8 @@ export const services: ServicePageContent[] = [
     ],
     explanation: [
       "Commercial heating repair in Freeport is winter-first work. The climate does not give a shop a mild season to hide in. Nights at or below freezing are common. A setback that was aggressive on Friday becomes a pipe conversation by Sunday night.",
-      "Safety still leads. Gas odor and carbon monoxide are leave-and-call-911-and-Nicor events, same as a house. After the building is safe, we identify the plant: unit heater, rooftop, furnace in a closet, or something else.",
-      "We do not claim industrial process heat, make-up air specialties we have not verified, or a guaranteed overnight crew. We do claim a diagnosis of the small-commercial heat that is actually on site.",
+      "Safety still leads. Gas odor and carbon monoxide are leave-and-call-911-and-Nicor events, same as a house. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional.",
     ],
     causes: [
       {
@@ -3391,7 +3391,7 @@ export const services: ServicePageContent[] = [
         text: "One rooftop and two unit heaters is three possible failures, not one story.",
       },
       {
-        title: "Restore what we can and name what we cannot",
+        title: "What to know before you call",
         text: "A failed heat exchanger or a parts delay gets said in ordinary words.",
       },
       {
@@ -3411,34 +3411,34 @@ export const services: ServicePageContent[] = [
       "Call and say it is commercial heat. Mention pipes, occupancy, and access.",
     ],
     why: [
-      "Monday-morning heat is a business problem. We treat it like one.",
-      "We identify unit heaters, rooftops, and closet furnaces instead of forcing one script.",
+      "Monday-morning heat is a business problem. Call to be connected with a local heating and cooling professional.",
+      "Call to be connected with a local heating and cooling professional.",
       "Safety contacts stay public. Coverage for a given night is confirmed when you call.",
     ],
     local: [
       "Stephenson County nights routinely sit at or below freezing. A commercial setback that works in a milder town can be a freeze here.",
       "Older Freeport commercial buildings often mix a rooftop over the office with unit heaters in the bay. Both have to work.",
-      "Cedarville, Lena, and other nearby towns are confirmed when a business calls. Commercial heating repair is not auto-dispatched.",
+      "Cedarville, Lena, and other nearby towns are confirmed when a business calls. Commercial heating repair is not assumed.",
     ],
     faqs: [
       {
-        q: "The shop has hanging unit heaters. Can you work on those?",
-        a: "Often yes. Say “unit heater” and the fuel if you know it. Some specialized equipment is a no — we will say that rather than guess.",
+        q: "The shop has hanging unit heaters. Can a local professional work on those?",
+        a: "Often yes. Say “unit heater” and the fuel if you know it. Call to be connected with a local heating and cooling professional.",
       },
       {
-        q: "We turned the thermostat down for the weekend and came back to a cold building. Is that on us?",
-        a: "Setbacks can be reasonable. In this climate they can also go too far. We restore heat and talk about the control. Blame is not the job.",
+        q: "The thermostat was turned down for the weekend and the building is cold. What happens next?",
+        a: "Setbacks can be reasonable. In this climate they can also go too far. Call to be connected with a local heating and cooling professional.",
       },
       {
         q: "Is this an emergency HVAC call?",
         a: "If the building is already at risk — pipes, occupancy, or no heat in dangerous weather — call and say so. Use the emergency page for the safety steps.",
       },
       {
-        q: "Can you repair heat if we cannot get on the roof today?",
+        q: "Can heat be repaired if nobody can get on the roof today?",
         a: "Not if the failed unit is on the roof and nobody can provide safe access. Access is part of the repair.",
       },
       {
-        q: "Do you work on boilers in small commercial buildings?",
+        q: "Can a caller ask a local professional whether they work on boilers in small commercial buildings?",
         a: "Ask on the phone. This page is written around forced-air rooftops, closet furnaces, and unit heaters. Boiler work is confirmed, not assumed.",
       },
     ],

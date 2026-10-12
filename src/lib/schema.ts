@@ -51,11 +51,11 @@ export function localBusinessSchema() {
   const url = absoluteUrl("/");
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "HVACBusiness",
+    "@type": "Organization",
     "@id": businessId(),
     name: site.businessName,
     alternateName: BRAND.shortName,
-    description: `${BRAND.name} is an HVAC company in ${site.city}, ${site.state} (${site.zip}) offering furnace repair, air conditioning repair, heating and cooling service, and HVAC maintenance for homes and small businesses.`,
+    description: `${BRAND.name} connects callers with independent local heating and cooling professionals in ${site.city}, ${site.state} (${site.zip}). This website is not itself a heating and cooling contractor.`,
     url,
     image: absoluteUrl("/opengraph-image/"),
     logo: {
@@ -71,34 +71,7 @@ export function localBusinessSchema() {
       addressCountry: "US",
     },
     areaServed: areaServed(),
-    serviceType: serviceLinks.map((item) => item.label),
-    knowsAbout: [
-      "HVAC contractor",
-      "Residential HVAC",
-      "Commercial HVAC",
-      "Furnace repair",
-      "Furnace installation",
-      "Heating repair",
-      "Air conditioning repair",
-      "AC installation",
-      "Emergency HVAC",
-      "HVAC maintenance",
-      "Heat pumps",
-      "Ductless mini splits",
-      "Indoor air quality",
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `HVAC services in ${site.city}, ${site.stateCode}`,
-      itemListElement: serviceLinks.map((item) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: `${item.label} in ${site.city}, ${site.stateCode}`,
-          url: absoluteUrl(item.href),
-        },
-      })),
-    },
+    knowsAbout: serviceLinks.map((item) => item.label),
   };
 
   if (site.address) {
@@ -159,7 +132,7 @@ export function serviceSchema({
   serviceType?: string;
 }) {
   const provider: Record<string, unknown> = {
-    "@type": "HVACBusiness",
+    "@type": "Organization",
     "@id": businessId(),
     name: site.businessName,
     url: absoluteUrl("/"),

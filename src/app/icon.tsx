@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og";
-import { BRAND_COLORS } from "@/lib/brand";
 
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
@@ -11,7 +10,7 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: BRAND_COLORS.navy,
+          background: "#123047",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -19,12 +18,19 @@ export default function Icon() {
       >
         <div
           style={{
-            width: 14,
-            height: 10,
-            background: BRAND_COLORS.ember,
-            clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
+            width: 16,
+            height: 12,
+            borderTop: "2px solid white",
+            borderLeft: "2px solid white",
+            borderRight: "2px solid white",
+            borderBottom: "2px solid white",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
           }}
-        />
+        >
+          <div style={{ width: 4, height: 6, background: "#9A3412" }} />
+        </div>
       </div>
     ),
     size,

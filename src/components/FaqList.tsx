@@ -10,13 +10,13 @@ export function FaqList({ items }: { items: Array<{ q: string; a: string }> }) {
               </span>
               <span
                 aria-hidden="true"
-                className="mt-0.5 shrink-0 text-ember group-open:rotate-45"
+                className="mt-0.5 shrink-0 text-navy"
               >
                 +
               </span>
             </span>
           </summary>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
+          <p className="accordion-fade mt-3 max-w-3xl leading-relaxed text-muted">
             {item.a}
           </p>
         </details>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { FinalCta } from "@/components/FinalCta";
+import { SectionCall } from "@/components/SectionCall";
 import { getService, servicesByCategory, type ServiceCategory, type ServicePageContent } from "@/content/services";
 import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema, serviceListSchema } from "@/lib/schema";
@@ -44,7 +46,7 @@ const sections: Array<{
     id: "residential",
     title: "Residential HVAC",
     intro:
-      "Most Freeport calls are houses: furnaces that carry winter, air conditioners that sat idle, and the shared blower and ducts between them. Start here if you need a home HVAC contractor rather than a rooftop visit.",
+      "Most Freeport calls are houses: furnaces that carry winter, air conditioners that sat idle, and the shared blower and ducts between them. Start here for a home rather than a rooftop unit.",
     image: "/photos/hero-home-winter.jpg",
     imageAlt: "Snow-covered Freeport-area home that depends on residential heating and cooling",
     category: "residential",
@@ -140,19 +142,18 @@ export default function ServicesIndexPage() {
         ])}
       />
       <JsonLd data={serviceListSchema()} />
-      <section className="bg-navy text-white">
+      <section className="border-b border-line bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <p className="kicker !text-brass">
-            Freeport, Illinois 61032
-          </p>
-          <h1 className="mt-3 max-w-3xl font-serif text-4xl text-balance sm:text-5xl">
-            HVAC services in Freeport, IL
+          <p className="kicker">Freeport, Illinois 61032</p>
+          <h1 className="mt-3 max-w-3xl text-4xl text-balance text-navy">
+            Heating and cooling topics in Freeport, IL
           </h1>
-          <p className="mt-5 max-w-2xl text-white/80">
-            Furnace and AC repair, installation, maintenance, heat pumps,
-            ductless systems, indoor air, commercial HVAC, and urgent no-heat
-            or no-cooling help.
+          <p className="mt-5 max-w-2xl text-muted">
+            Furnace and air conditioning repair, installation, maintenance, heat
+            pumps, ductless systems, indoor air, and small-building equipment.
+            Call to be connected with a local heating and cooling professional.
           </p>
+          <SectionCall context="services-hero" />
         </div>
       </section>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -185,7 +186,7 @@ export default function ServicesIndexPage() {
                   />
                 </div>
                 <div className="min-w-0">
-                  <h2 className="font-serif text-3xl text-navy">{section.title}</h2>
+                  <h2 className="text-3xl text-navy">{section.title}</h2>
                   <p className="mt-3 leading-relaxed text-muted">{section.intro}</p>
                   <ul className="mt-6 grid gap-2">
                     {items.map((service) => (
@@ -194,7 +195,7 @@ export default function ServicesIndexPage() {
                           href={service.href}
                           className="group flex items-baseline justify-between gap-4 border-b border-line py-2.5"
                         >
-                          <span className="font-semibold text-navy group-hover:text-ember">
+                          <span className="font-semibold text-navy group-hover:underline">
                             {service.navLabel}
                           </span>
                           <span className="hidden min-w-0 truncate text-sm text-muted sm:block">
@@ -206,6 +207,7 @@ export default function ServicesIndexPage() {
                   </ul>
                 </div>
               </div>
+              <SectionCall context={`services-${section.id}`} />
             </section>
           );
         })}
@@ -217,6 +219,11 @@ export default function ServicesIndexPage() {
           .
         </p>
       </div>
+      <FinalCta
+        title="Call about a heating or cooling problem in Freeport"
+        body="Call to be connected with a local heating and cooling professional."
+        context="services-final"
+      />
     </>
   );
 }

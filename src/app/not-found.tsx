@@ -7,12 +7,12 @@ import { primaryCtaLabel } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: "Page not found | Millrace" },
   description:
-    "That page is not on this site. Request HVAC service in Freeport or browse heating and cooling services.",
+    "That page is not on this site. Call to be connected with a local heating and cooling professional in Freeport, or browse the topic pages.",
   robots: { index: false, follow: false },
   openGraph: {
     title: "Page not found | Millrace",
     description:
-      "That page is not on this site. Request HVAC service in Freeport or browse heating and cooling services.",
+      "That page is not on this site. Call to be connected with a local heating and cooling professional in Freeport, or browse the topic pages.",
   },
 };
 
@@ -27,11 +27,11 @@ export default function NotFound() {
         That page is not on this site.
       </h1>
       <p className="mt-4 text-muted">
-        If you need heat or cooling help in Freeport, request service from the
-        home page or services list.
+        If you need heat or cooling help in Freeport, call to be connected
+        with a local heating and cooling professional.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <PhoneCta context="404" className="min-h-12 w-full sm:w-auto">
+        <PhoneCta location="inline" context="404" className="w-full sm:w-auto">
           {primaryCtaLabel()}
         </PhoneCta>
         <Link

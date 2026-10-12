@@ -23,7 +23,7 @@ export const guides: Guide[] = [
     title: "AC blowing warm air in Freeport",
     metaTitle: "AC Blowing Warm Air in Freeport, IL",
     metaDescription:
-      "When a Freeport air conditioner runs but the supply air stays warm, the blower is not the cooling system. Safe checks, local causes, and when to request repair.",
+      "When a Freeport air conditioner runs but the supply air stays warm, the blower is not the cooling system. Safe checks, local causes, and when to call.",
     h1: "The AC is on. The air still feels like a Stephenson County July.",
     lede:
       "Warm air from the registers is not a thermostat misunderstanding. In Freeport the outdoor unit often sat idle from first frost to the first sticky week. The indoor blower can move air the whole time the refrigeration side does nothing.",
@@ -36,7 +36,7 @@ export const guides: Guide[] = [
         heading: "Running is not the same as cooling",
         paragraphs: [
           "Homeowners often report that the system is “working” because they hear the indoor fan. That fan only circulates whatever the coil is doing. If the coil is not getting cold, the air that reaches a west-facing bedroom on an 82°F afternoon will feel like it came from outdoors.",
-          "A silent outdoor unit, a humming outdoor unit that never spins, or a fan that spins while the house still climbs are three different failures. Millrace Heating & Air treats them as cooling-circuit problems, not as a reason to keep lowering the setpoint.",
+          "A silent outdoor unit, a humming outdoor unit that never spins, or a fan that spins while the house still climbs are three different failures. Call to be connected with a local heating and cooling professional.",
         ],
       },
       {
@@ -69,10 +69,10 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "When to request AC repair",
+        heading: "When to call about cooling",
         paragraphs: [
           "Call if the outdoor unit is silent, the breaker trips more than once, the air stays warm after a clean filter and a correct thermostat setting, or the house is already uncomfortable during a hot spell. If someone in the home is vulnerable to heat, treat it as urgent cooling help rather than waiting for “a cooler day.”",
-          "Millrace Heating & Air diagnoses the refrigeration side, the blower, and the simple control mistakes that look identical from the couch. Request AC repair and describe what the outdoor unit is doing. That sentence saves time on the visit.",
+          "Call to be connected with a local heating and cooling professional. Request AC repair and describe what the outdoor unit is doing. That sentence saves time on the visit.",
         ],
       },
     ],
@@ -93,7 +93,7 @@ export const guides: Guide[] = [
     title: "AC freezing up in Freeport",
     metaTitle: "AC Freezing Up in Freeport, IL",
     metaDescription:
-      "Ice on a Freeport air conditioner is a symptom of airflow or charge trouble, not a cold snap. What you can safely do, what to leave alone, and when to request repair.",
+      "Ice on a Freeport air conditioner is a symptom of airflow or charge trouble, not a cold snap. What you can safely do, what to leave alone, and when to call.",
     h1: "Ice on the AC is a warning, not a weather report.",
     lede:
       "A coil or suction line coated in frost in Stephenson County June is not “the system working too well.” Ice means heat is not moving the way it should. Keep running it and you can starve the compressor and soak the drain path.",
@@ -134,7 +134,7 @@ export const guides: Guide[] = [
         heading: "After the ice is gone",
         paragraphs: [
           "If you restart cooling and the coil ices again within a day, the restriction or the charge problem is still there. Repeated freeze-thaw can throw water into the blower compartment and trip safety switches. That is a repair visit, not a new filter every morning.",
-          "Millrace Heating & Air looks at airflow first, then the refrigeration circuit, then the drain. Describe whether the ice was indoors, outdoors, or on the copper lines. Those details change the first tests on site.",
+          "Call to be connected with a local heating and cooling professional. Describe whether the ice was indoors, outdoors, or on the copper lines. Those details change the first tests on site.",
         ],
       },
     ],
@@ -182,21 +182,21 @@ export const guides: Guide[] = [
         heading: "Oversized and undersized both feel like “always on”",
         paragraphs: [
           "An undersized or neglected system runs without arriving. An oversized system can also feel restless: it slams the thermostat, short-cycles, and never dehumidifies, so someone turns it down again. Both show up in Stephenson County housing that grew a porch, a finished attic, or a kitchen bump-out after the original equipment was chosen.",
-          "Replacement talk belongs after a diagnosis. Runtime alone is not a shopping list, and this page will not turn a symptom into a price.",
+          "Replacement talk belongs after a diagnosis. Call to be connected with a local heating and cooling professional.",
         ],
       },
       {
         heading: "Heat pumps confuse the story",
         paragraphs: [
           "If the outdoor unit is a heat pump, long runtimes in shoulder seasons can be normal. The same unit running without heat or cool arriving is not. Auxiliary heat that never drops off is a different complaint and needs heat-pump service, not a cooling-only guess.",
-          "Say what kind of outdoor unit you have when you request help. A nameplate photo is enough. Millrace Heating & Air will not diagnose a heat pump as if it were a one-speed air conditioner from the driveway.",
+          "Say what kind of outdoor unit you have when you request help. A nameplate photo is enough. Call to be connected with a local heating and cooling professional.",
         ],
       },
       {
         heading: "What to do before you call",
         paragraphs: [
           "Change a filthy filter, open supply registers, and make sure the outdoor coil is not packed with cottonwood or grass clippings. Note whether the house is losing ground or merely taking all afternoon to get there.",
-          "If the breaker trips, the air turns warm, or ice appears, stop the cooling call and treat those as repair symptoms. Otherwise request AC repair or a maintenance check and describe the runtime, the indoor temperature, and how the air feels at the register.",
+          "If the breaker trips, the air turns warm, or ice appears, stop the cooling call and treat those as repair symptoms. Otherwise call about cooling or a maintenance check and describe the runtime, the indoor temperature, and how the air feels at the register.",
         ],
       },
     ],
@@ -217,10 +217,10 @@ export const guides: Guide[] = [
     title: "Furnace not heating in a Freeport winter",
     metaTitle: "Furnace Not Heating in Freeport, IL",
     metaDescription:
-      "If a Freeport furnace will not heat, treat gas and carbon monoxide first. Then use the safe checks, know what lockouts look like, and request heating repair.",
+      "If a Freeport furnace will not heat, treat gas and carbon monoxide first. Then use the safe checks, know what lockouts look like, and call about heating.",
     h1: "A dark furnace on an 11°F night is a safety problem first.",
     lede:
-      "January nights in Freeport sit near 11°F. Indoor temperatures fall fast in older houses, and pipes are not hypothetical. Millrace Heating & Air can diagnose a furnace that will not heat — after the house is safe to occupy.",
+      "January nights in Freeport sit near 11°F. Indoor temperatures fall fast in older houses, and pipes are not hypothetical. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
     image: "/photos/hero-home-winter.jpg",
     imageAlt:
@@ -257,7 +257,7 @@ export const guides: Guide[] = [
       {
         heading: "Cold air from the registers is still a no-heat call",
         paragraphs: [
-          "A blower that runs without burners lighting is not “the furnace working.” It is circulating basement air and making the house colder. Turn the system off if you are sure the house is otherwise safe, then request furnace repair.",
+          "A blower that runs without burners lighting is not “the furnace working.” It is circulating basement air and making the house colder. Turn the system off if you are sure the house is otherwise safe, then call about the furnace.",
           "If only some rooms have heat, you may be looking at a zone damper, a closed register campaign, or a furnace that can no longer carry the load. That still needs an on-site decision. It is not a reason to run space heaters on extension cords overnight without watching them.",
         ],
       },
@@ -265,7 +265,7 @@ export const guides: Guide[] = [
         heading: "Request help while the house is still recoverable",
         paragraphs: [
           "Call for furnace repair or emergency HVAC help if the unit will not ignite, keeps locking out, or blows cold air. Say how cold it is indoors, whether you have a gas smell or a CO alarm (if you do, you should already be outside), and what you already checked.",
-          "Millrace Heating & Air will not ask you to tear the cabinet apart on the phone. The goal is a safe house and a diagnosis, not a parts-guessing contest at midnight.",
+          "Call to be connected with a local heating and cooling professional. The goal is a safe house and a diagnosis, not a parts-guessing contest at midnight.",
         ],
       },
     ],
@@ -286,7 +286,7 @@ export const guides: Guide[] = [
     title: "Furnace short cycling in Freeport cold weather",
     metaTitle: "Furnace Short Cycling in Freeport, IL",
     metaDescription:
-      "A Freeport furnace that fires, stops, and repeats is not saving energy. What a full cycle should look like, why deep cold exposes it, and when to request repair.",
+      "A Freeport furnace that fires, stops, and repeats is not saving energy. What a full cycle should look like, why deep cold exposes it, and when to call.",
     h1: "A furnace that chatters on and off is failing the cycle.",
     lede:
       "In a heating-dominated climate, a furnace is supposed to run long enough to warm the heat exchanger, satisfy the thermostat, and shut down cleanly. Two minutes of flame, a pause, and another try is not thrift. It is a limit, a sensor, or a design problem interrupting the job.",
@@ -326,7 +326,7 @@ export const guides: Guide[] = [
       {
         heading: "Oversizing is a diagnosis, not a sales pitch",
         paragraphs: [
-          "A furnace that is too large for the load can satisfy a hallway thermostat before distant rooms move. It then sits, the house drifts, and it fires again. Replacement might be the answer later. So might duct changes or a control problem. Millrace Heating & Air will not treat every short cycle as a reason to swap the box.",
+          "A furnace that is too large for the load can satisfy a hallway thermostat before distant rooms move. It then sits, the house drifts, and it fires again. Replacement might be the answer later. So might duct changes or a control problem. Call to be connected with a local heating and cooling professional.",
           "Repeated lockouts on a design-cold night are urgent. A mild short cycle that started last week is still a repair visit. Neither one is a DIY board reset ritual.",
         ],
       },
@@ -368,13 +368,13 @@ export const guides: Guide[] = [
         heading: "Heating sounds that need a visit",
         paragraphs: [
           "A boom or thud when burners light can be delayed ignition — gas filling the heat exchanger before it lights. That is a repair problem, not a quirk of cold weather. Whistling at the burner or a roaring that is new can point to combustion or airflow changes.",
-          "Squeals and chirps that start when the blower comes on are often bearings or a belt on older air handlers. Grinding is worse. Turn the system off if the sound is harsh and the house is otherwise safe, then request heating repair.",
+          "Squeals and chirps that start when the blower comes on are often bearings or a belt on older air handlers. Grinding is worse. Turn the system off if the sound is harsh and the house is otherwise safe, then call about heating.",
         ],
       },
       {
         heading: "Cooling sounds after a long sit",
         paragraphs: [
-          "The first spring start in Stephenson County is when outdoor fans announce seized bearings, debris in the blade, or a loose access panel that buzzes. A scream from the condenser is not “getting the rust out.” Shut the cooling off and request AC repair.",
+          "The first spring start in Stephenson County is when outdoor fans announce seized bearings, debris in the blade, or a loose access panel that buzzes. A scream from the condenser is not “getting the rust out.” Shut the cooling off and call about cooling.",
           "A rattle that comes and goes with wind may be a loose grille. A rattle that comes and goes with the compressor is not something to chase with a screwdriver while the disconnect is on.",
         ],
       },
@@ -389,14 +389,14 @@ export const guides: Guide[] = [
         heading: "Noise plus smell is not a tuning problem",
         paragraphs: [
           `Burning dust on the first heat of the fall can last a short time and fade. A sharp electrical smell, hot insulation, or anything like gas is a stop-and-leave moment if gas or carbon monoxide is in play. Out of the house, then 911 and Nicor Gas at ${NICOR_GAS.display}.`,
-          "If the house is safe and the smell is “hot dust” that does not clear, still request service. Do not keep running a furnace that smells like wiring.",
+          "If the house is safe and the smell is “hot dust” that does not clear, still call. Do not keep running a furnace that smells like wiring.",
         ],
       },
       {
-        heading: "What Millrace needs on the call",
+        heading: "What to know before you call",
         paragraphs: [
           "Say when the sound happens: ignition, blower start, mid-cycle, or shutdown. Say whether heat, cooling, or both make it. Mention if it started after a power blip, a filter change, or the first cold snap.",
-          "Millrace Heating & Air will diagnose from the equipment, not from a noise vocabulary list. The point of this page is to keep you from ignoring a boom or taking a cabinet apart to look.",
+          "Call to be connected with a local heating and cooling professional. The point of this page is to keep you from ignoring a boom or taking a cabinet apart to look.",
         ],
       },
     ],
@@ -430,7 +430,7 @@ export const guides: Guide[] = [
         heading: "Weak air is a system problem, not a “vent” problem",
         paragraphs: [
           "Homeowners often hunt for one closed damper. The more common Freeport pattern is a filter that has become a wall, a return blocked by storage, or a blower that can no longer move the design amount of air. One weak bedroom can be a crushed run. Every register feeling soft is the air handler or the filter.",
-          "Hold a piece of tissue at the return. If it does not pull, the system is not circulating. That is worth a service request even if the furnace still makes heat.",
+          "Hold a piece of tissue at the return. If it does not pull, the system is not circulating. That is worth a call even if the furnace still makes heat.",
         ],
       },
       {
@@ -444,7 +444,7 @@ export const guides: Guide[] = [
         heading: "Closed rooms work against the furnace",
         paragraphs: [
           "Shutting every upstairs supply to push heat downstairs is a common Stephenson County habit. It raises static pressure, trips limits, and still leaves the closed rooms to freeze overnight. The same habit in summer ices the coil.",
-          "Interior doors that never have a jumper or undercut also starve returns. The equipment is then asked to pull air from a sealed box. That is a house-use problem Millrace Heating & Air can explain on site. It is not fixed by a hotter setpoint.",
+          "Interior doors that never have a jumper or undercut also starve returns. The equipment is then asked to pull air from a sealed box. Call to be connected with a local heating and cooling professional. It is not fixed by a hotter setpoint.",
         ],
       },
       {
@@ -513,7 +513,7 @@ export const guides: Guide[] = [
         heading: "Ductless as a room tool, not a slogan",
         paragraphs: [
           "A ductless mini split can heat and cool a stubborn addition without forcing the original trunk to do work it cannot do. That is useful in a heating-first climate if the head is chosen and placed for January, not only for a July demo.",
-          "Millrace Heating & Air will not pretend a wall unit fixes a cracked heat exchanger or a house-wide airflow failure. It is a tool for rooms the ducts cannot serve honestly.",
+          "Call to be connected with a local heating and cooling professional. It is a tool for rooms the ducts cannot serve honestly.",
         ],
       },
       {
@@ -541,10 +541,10 @@ export const guides: Guide[] = [
     title: "HVAC maintenance checklist for Freeport seasons",
     metaTitle: "HVAC Maintenance Checklist for Freeport, IL",
     metaDescription:
-      "A seasonal HVAC checklist for Freeport homes: what you can do safely before winter and summer, and what belongs on a Millrace Heating & Air maintenance visit.",
+      "Call to be connected with a local heating and cooling professional.",
     h1: "Maintenance here follows the heating year, not a generic calendar.",
     lede:
-      "A furnace that will face roughly 7,000 heating degree days needs a fall check. An air conditioner that sat under snow needs a spring check. This list is the split Millrace Heating & Air uses in Stephenson County: homeowner tasks that are safe, and work that is not a Saturday project.",
+      "A furnace that will face roughly 7,000 heating degree days needs a fall check. An air conditioner that sat under snow needs a spring check. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
     image: "/photos/maintenance.jpg",
     imageAlt:
@@ -575,25 +575,25 @@ export const guides: Guide[] = [
         heading: "Spring tasks before the first sticky week",
         paragraphs: [
           "Clear cottonwood, leaves, and winter debris from around the outdoor unit so air can move across the coil. Confirm the disconnect is on. Put the thermostat in cool for a short test on a mild day, then listen: outdoor fan, indoor blower, and whether the air at the register actually turns cold.",
-          "If the breaker trips, the outdoor unit stays silent, or the air stays warm, stop the test and request AC repair. A spring “peek” that ends in a dead compressor is not a DIY win.",
+          "If the breaker trips, the outdoor unit stays silent, or the air stays warm, stop the test and call about cooling. A spring “peek” that ends in a dead compressor is not a DIY win.",
         ],
       },
       {
         heading: "What a spring cooling visit is actually for",
         paragraphs: [
           "Idle-season damage shows up here: capacitors, contactors, fan motors, dirty coils, and drains that will overflow the first time the system pulls humidity. The point is to find that before an 82°F afternoon when every house in 61032 wants the same help.",
-          "If you already had ice, warm air, or a trip last summer, say that on the request. Those are not footnotes. They are the reason for the visit.",
+          "If you already had ice, warm air, or a trip last summer, say that on the call. Those are not footnotes. They are the reason for the visit.",
         ],
       },
       {
         heading: "Mid-season, keep it simple",
         paragraphs: [
           "In January, watch for short cycling, new noises, and filters that load faster because the house is shut. In July, watch for ice, weak air, and a drain that smells like it is sitting wet. Change filters when they are dirty, not when a sticker says a year has passed.",
-          "Space heaters and window units are not a maintenance plan. They are stopgaps. If you are living on them, request repair or a replacement conversation for the central system.",
+          "Space heaters and window units are not a maintenance plan. They are stopgaps. If you are living on them, call about repair or replacement for the central system.",
         ],
       },
       {
-        heading: "How to request a check",
+        heading: "How to ask for a check",
         paragraphs: [
           "Ask for HVAC maintenance and say whether you want the heating visit, the cooling visit, or both on their proper seasons. Mention nearby equipment — humidifier, heat pump, mini split — so the visit is not planned as a single-furnace glance.",
           "The useful move is a seasonal check timed to Freeport weather, then repair if the check finds something that should not wait.",
@@ -617,10 +617,10 @@ export const guides: Guide[] = [
     title: "When a Freeport furnace is telling you it is done",
     metaTitle: "Furnace Replacement Signals in Freeport, IL",
     metaDescription:
-      "Replacement signals for a Freeport furnace: safety, repeat failures, rooms that never recover, and equipment that cannot face another Stephenson County winter. No price list.",
+      "Replacement signals for a Freeport furnace: safety, repeat failures, rooms that never recover, and equipment that cannot face another Stephenson County winter. Call to be connected with a local heating and cooling professional.",
     h1: "Replacement is a reliability decision, not a birthday party for the furnace.",
     lede:
-      "Age matters. A cracked heat exchanger, a cabinet that cannot keep the house livable on a design-cold night, and a parts chase every freeze matter more. Millrace Heating & Air treats replacement as the end of a diagnosis, not the start of a catalog.",
+      "Age matters. A cracked heat exchanger, a cabinet that cannot keep the house livable on a design-cold night, and a parts chase every freeze matter more. Call to be connected with a local heating and cooling professional.",
     datePublished: "2026-09-13",
     image: "/photos/furnace.jpg",
     imageAlt:
@@ -658,13 +658,13 @@ export const guides: Guide[] = [
         heading: "A heat pump can be part of the same talk",
         paragraphs: [
           "If the furnace is at the end, you can ask whether a cold-climate heat pump, a dual-fuel pair, or another gas furnace fits this house. That question is climate math — about 6,956 heating degree days versus about 690 cooling degree days — not a rebate flyer.",
-          "A heat pump that cannot heat near Freeport’s January nights is the wrong machine. Say you want that said out loud. Millrace Heating & Air will not pretend northern Illinois is a mild-climate brochure.",
+          "A heat pump that cannot heat near Freeport’s January nights is the wrong machine. Say you want that said out loud. Call to be connected with a local heating and cooling professional.",
         ],
       },
       {
         heading: "What this page will not do",
         paragraphs: [
-          "This page does not quote equipment prices. Repair versus replacement depends on the furnace, the ducts, and how the house is behaving.",
+          "Call to be connected with a local heating and cooling professional. Repair versus replacement depends on the furnace, the ducts, and how the house is behaving.",
           "Request furnace repair if you are still on the fence and the house is failing now. Request a furnace installation conversation if you already know the current unit should not be asked to do another January. Either way, start with what the furnace is doing tonight, not with a catalog page.",
         ],
       },
@@ -734,7 +734,7 @@ export const guides: Guide[] = [
         heading: "If you are considering one during a furnace conversation",
         paragraphs: [
           "Say it on the call. The honest questions are load, ducts, backup plan, and whether the house can be heated when the low is near 11°F. Dual fuel is common in heating-dominated climates for a reason. All-electric can be right in some houses and wrong in others.",
-          "Millrace Heating & Air will not turn this into a rebate shopping page or an anti-heat-pump rant. It is climate math, then an on-site look. Request heat-pump installation only when you want that conversation, not when you need heat tonight — that is repair.",
+          "Call to be connected with a local heating and cooling professional. It is climate math, then an on-site look. Request heat-pump installation only when you want that conversation, not when you need heat tonight — that is repair.",
         ],
       },
     ],
@@ -782,14 +782,14 @@ export const guides: Guide[] = [
         heading: "Filters that clean the air still have to let air through",
         paragraphs: [
           "A loaded filter after months of closed windows will push dust around the bypass and starve the furnace. A filter that is too tight for the blower will do the same with a cleaner-looking pleat. Neither one “purifies the house.”",
-          "If you want a better filter, the cabinet and the blower have to be able to use it. That is an indoor-air and maintenance visit, not a thicker pad shoved into a slot that used to hold a cheap fiberglass rectangle.",
+          "If you want a better filter, the cabinet and the blower have to be able to use it. That is an indoor-air and maintenance visit, not a thicker pad shoved into a slot that used to hold a thin fiberglass rectangle.",
         ],
       },
       {
         heading: "Coils and ducts collect the winter",
         paragraphs: [
           "An indoor coil that never gets cleaned becomes a wet, dusty mat the first time cooling runs — and it can smell long before that if the drain is sitting. Returns in unfinished basements pull whatever is stored down there. Those are HVAC cleanliness problems.",
-          "Opening a trunk line to “clean ducts” without a plan can make a mess and not fix a dirty coil. Say what you smell and when you smell it. Millrace Heating & Air will start with the equipment that actually contacts the airstream.",
+          "Opening a trunk line to “clean ducts” without a plan can make a mess and not fix a dirty coil. Say what you smell and when you smell it. Call to be connected with a local heating and cooling professional.",
         ],
       },
       {
@@ -800,7 +800,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "What to request",
+        heading: "What to mention on the call",
         paragraphs: [
           "Ask for indoor air quality service if the issue is filtration, humidity equipment, or a system that recirculates dust because it cannot move air. Ask for maintenance if you have not had a fall heating check. Ask for repair if the furnace is short cycling or the coil is filthy enough to smell.",
           "This is not a medical page and it is not a cost page. The useful outcome in a closed Freeport house is equipment that moves clean-enough air without choking the furnace — and a house you can stay in because combustion is handled as safety, not as a gadget.",

@@ -52,8 +52,8 @@ export function TrustSignals() {
   return (
     <section className="bg-paper py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <p className="kicker">How we work</p>
-        <h2 className="mt-2 font-serif text-3xl text-navy sm:text-4xl">
+        <p className="kicker">How a call works</p>
+        <h2 className="mt-2 text-3xl text-navy">
           Straight answers for a house that needs heat or cooling
         </h2>
         {credentials.length ? (

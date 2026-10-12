@@ -2,7 +2,7 @@
 
 HVAC website for **Freeport, Illinois (61032), Stephenson County**.
 
-Primary action: **call (703) 703-7855**. Override with `NEXT_PUBLIC_PHONE_DISPLAY` / `NEXT_PUBLIC_PHONE_TEL` for a tracking number. Hours stay blank until a real schedule is provided.
+Primary action: **call (703) 703-7855**. Override with `NEXT_PUBLIC_PHONE_DISPLAY` / `NEXT_PUBLIC_PHONE_TEL` for a tracking number. The site is call-only. It connects callers with independent local service providers and is not itself a contractor.
 
 ## Stack
 
@@ -21,10 +21,8 @@ Copy `.env.example`:
 | `NEXT_PUBLIC_SITE_URL` | Canonical origin |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional GA4 |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional GSC HTML-tag token override |
-| `FORM_WEBHOOK` | Optional lead delivery. Without this, the contact form returns 503 and asks the visitor to call. |
-| `AI_GATEWAY_API_KEY` | Optional chat polish |
 
-Do not invent reviews, licenses, ratings, 24/7 claims, or prices.
+Do not invent reviews, licenses, ratings, around-the-clock claims, or prices.
 
 ## Local
 
@@ -33,6 +31,5 @@ npm install
 npm run dev
 npm run lint
 npm run typecheck
-npm run test:chat
 npm run build
 ```

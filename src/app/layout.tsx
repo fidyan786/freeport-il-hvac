@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
-import { ChatRoot } from "@/components/chat/ChatRoot";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -18,12 +17,6 @@ const sans = Source_Sans_3({
   display: "swap",
 });
 
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-source-serif",
-  display: "swap",
-});
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -31,9 +24,9 @@ export const viewport: Viewport = {
 };
 
 const defaultTitle =
-  "Freeport IL HVAC Repair | Furnace, AC & Urgent Help | Millrace";
+  "Freeport IL Heating and Cooling Help | Millrace";
 const defaultDescription =
-  "Furnace repair, AC repair, and heating and cooling help in Freeport, IL 61032. Call Millrace Heating & Air — describe the symptom and the ZIP.";
+  "Call to be connected with a local heating and cooling professional in Freeport, IL 61032.";
 
 const googleVerification = googleSiteVerification();
 
@@ -75,7 +68,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable} h-full`}>
+    <html lang="en" className={`${sans.variable} h-full`}>
       <body className="min-h-full bg-cream font-sans text-ink antialiased">
         <a className="skip-link" href="#main">
           Skip to content
@@ -88,7 +81,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <StickyCallBar />
-        <ChatRoot />
         <Analytics />
       </body>
     </html>

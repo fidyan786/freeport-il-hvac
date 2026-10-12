@@ -226,3 +226,6 @@ export function hoursLabel() {
 
 export const localLabel = `${site.city}, ${site.stateCode}`;
 export const marketLabel = `${site.city}, ${site.state}`;
+
+export const AFFILIATE_DISCLOSURE =
+  "This website connects callers with independent local service providers. It is not itself a heating and cooling contractor.";

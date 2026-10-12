@@ -33,7 +33,7 @@ export function ServiceCard({
       <div className="p-5">
         <h3 className="font-semibold text-navy">{title}</h3>
         <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>
-        <p className="card-arrow mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-ember">
+        <p className="mt-4 inline-flex items-center gap-1.5 font-semibold text-navy">
           Learn more
           <ArrowIcon />
         </p>
