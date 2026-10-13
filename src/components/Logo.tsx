@@ -1,39 +1,45 @@
-const MARK_FLAME =
-  "M23.6 23.2c.4 2.5-1.5 3.7-1.5 6 0 2.1 1.5 3.5 3.4 3.5s3.4-1.5 3.4-3.6c0-2.7-2.2-4-2.2-6.6 0 .2-2.6.2-3.1.7Z";
-const MARK_SNOW =
-  "M43.2,31.1L44.45,35.03L48.48,34.15L45.7,37.2L48.48,40.25L44.45,39.37L43.2,43.3L41.95,39.37L37.92,40.25L40.7,37.2L37.92,34.15L41.95,35.03Z";
-
 export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 64 64"
+      width="100%"
+      height="100%"
       className={className}
       aria-hidden="true"
       focusable="false"
     >
-      <rect width="64" height="64" rx="16" fill="#071422" />
+      <rect width="64" height="64" rx="18" fill="#071422" />
       <rect
-        x="1.4"
-        y="1.4"
-        width="61.2"
-        height="61.2"
-        rx="14.6"
+        x="1.35"
+        y="1.35"
+        width="61.3"
+        height="61.3"
+        rx="16.6"
         fill="none"
         stroke="#22D3EE"
-        strokeOpacity="0.85"
-        strokeWidth="1.4"
+        strokeWidth="1.5"
       />
       <path
-        d="M16 17.2c5.2-4.4 26.8-4.4 32 0"
+        d="M18.6 45.8c.4-6.6 4.6-8.8 4.6-15.4 0-3.4-1.8-5.8-3.2-8.8 1.1 2.4 2.2 3.8 2.2 6 0 2-1.1 3.2-1.1 4.8 1.7-1.1 4.2-.9 5.8.6 2 1.8 3.1 4.6 3.1 7.6 0 4.2-3.1 7.4-7 7.4-3.3 0-4.8-1.4-4.4-2.2z"
+        fill="#E85D04"
+      />
+      <g
         fill="none"
         stroke="#67E8F9"
-        strokeWidth="1.7"
+        strokeWidth="1.6"
         strokeLinecap="round"
-      />
-      <path d="M14 36.4 32 18.6 50 36.4V52.6H14Z" fill="#E8F7FB" />
-      <path d={MARK_FLAME} fill="#E85D04" />
-      <path d={MARK_SNOW} fill="#0891B2" />
-      <path d="M29.3 43.4h5.4v9.2h-5.4z" fill="#071422" />
+        transform="translate(45 32)"
+      >
+        <path d="M0-10.5V10.5" />
+        <path d="M-9.1-5.25 9.1 5.25" />
+        <path d="M-9.1 5.25 9.1-5.25" />
+        <path d="M0-10.5 2.1-8.2M0-10.5-2.1-8.2" />
+        <path d="M0 10.5 2.1 8.2M0 10.5-2.1 8.2" />
+        <path d="M-9.1-5.25-6.6-6.3M-9.1-5.25-7.8-3" />
+        <path d="M9.1 5.25 6.6 6.3M9.1 5.25 7.8 3" />
+        <path d="M9.1-5.25 6.6-6.3M9.1-5.25 7.8-3" />
+        <path d="M-9.1 5.25-6.6 6.3M-9.1 5.25-7.8 3" />
+      </g>
     </svg>
   );
 }

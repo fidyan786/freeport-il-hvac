@@ -97,7 +97,7 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
         image={service.image}
         imageAlt={service.imageAlt}
       />
-      <div id="page-body" className="mx-auto max-w-6xl px-4 py-10 [content-visibility:auto] [contain-intrinsic-size:auto_900px] sm:px-6">
+      <div id="page-body" data-reveal className="mx-auto max-w-6xl px-4 py-10 [content-visibility:auto] [contain-intrinsic-size:auto_900px] sm:px-6">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },

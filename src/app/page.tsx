@@ -71,7 +71,7 @@ export default function HomePage() {
           path: "/",
         })}
       />
-      <section className="relative isolate overflow-hidden bg-navy-deep text-white">
+      <section data-motion-root className="relative isolate overflow-hidden bg-navy-deep text-white">
         <div className="hero-mesh absolute inset-0" aria-hidden="true" />
         <div className="hero-grid absolute inset-0" aria-hidden="true" />
         <div className="hero-shimmer absolute inset-0" aria-hidden="true" />
@@ -108,23 +108,25 @@ export default function HomePage() {
             <TrustRow />
           </div>
           </div>
-          <div className="hero-enter hero-d5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-            <div className="equip-frame relative aspect-[16/10] overflow-hidden lg:aspect-[16/11]">
-              <SitePhoto
-                src="/photos/heroes/gas-furnace-utility.webp"
-                alt="Gas furnace in a utility space, the kind of equipment behind furnace repair in Freeport, IL."
-                priority
-                sizes="(min-width: 1024px) 36vw, 100vw"
-                className="hero-photo"
-              />
-            </div>
-            <div className="equip-frame relative aspect-[16/10] overflow-hidden lg:aspect-[16/11]">
-              <SitePhoto
-                src="/photos/heroes/outdoor-ac-condenser.webp"
-                alt="Outdoor air-conditioner condenser on a concrete pad beside a house."
-                sizes="(min-width: 1024px) 36vw, 100vw"
-                className="hero-photo"
-              />
+          <div className="hero-enter hero-d5">
+            <div className="equip-frame hero-carousel relative aspect-[4/3] overflow-hidden lg:aspect-[4/5]">
+              <div className="hero-slide hero-slide-a">
+                <SitePhoto
+                  src="/photos/heroes/gas-furnace-utility.webp"
+                  alt="Gas furnace cabinet and supply pipes in a utility space."
+                  priority
+                  sizes="(min-width: 1024px) 36vw, 100vw"
+                  className="hero-photo"
+                />
+              </div>
+              <div className="hero-slide hero-slide-b">
+                <SitePhoto
+                  src="/photos/heroes/outdoor-ac-condenser.webp"
+                  alt="Outdoor air-conditioner condenser on a concrete pad beside a house."
+                  sizes="(min-width: 1024px) 36vw, 100vw"
+                  className="hero-photo"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -133,7 +135,7 @@ export default function HomePage() {
         </a>
       </section>
 
-      <div className="border-b border-line bg-white/80">
+      <div data-reveal className="border-b border-line bg-white/80">
         <ul className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-4 sm:px-6">
           {intentLinks.slice(0, 6).map((item) => (
             <li key={item.href} className="shrink-0">

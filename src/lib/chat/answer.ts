@@ -13,6 +13,18 @@ const PHONE = phoneDisplayLabel();
 
 const TOPICS: Array<ChatReply & { keys: string[] }> = [
   {
+    keys: ["ice", "frozen", "iced"],
+    href: "/services/ac-repair-freeport-il/",
+    linkLabel: "AC repair",
+    text: `Ice on a coil means stop the system and let it thaw. Do not chip the ice, and do not add refrigerant from a can. Say whether the outdoor fan is turning and whether the filter is packed. Call ${PHONE}.`,
+  },
+  {
+    keys: ["musty", "burning smell", "smells", "smell"],
+    href: "/services/furnace-repair-freeport-il/",
+    linkLabel: "Furnace repair",
+    text: `A burning or musty smell from the equipment is a reason to switch the system off and call. If it smells like gas, leave and call 911 and Nicor Gas instead. Otherwise call ${PHONE} and say where the smell starts.`,
+  },
+  {
     keys: ["no heat", "furnace", "not heating", "cold air", "short cycl", "won't heat", "will not heat", "burner"],
     href: "/services/furnace-repair-freeport-il/",
     linkLabel: "Furnace repair",
@@ -118,7 +130,7 @@ export function answerQuestion(raw: string): ChatReply {
   ) {
     return {
       safety: true,
-      text: `Leave the building with everyone in it. Do not turn lights or appliances on or off, and do not use a phone inside the home. From a safe location, call 911 and Nicor Gas at ${NICOR_GAS.display}. Stay out until emergency personnel say it is safe to return. HVAC service comes after the property is safe. This assistant is not a technician.`,
+      text: `Leave the building with everyone in it. Do not turn lights or appliances on or off, and do not use a phone inside the home. From a safe location, call 911 and Nicor Gas at ${NICOR_GAS.display}. Stay out until emergency personnel say it is safe to return. HVAC help comes after the property is safe. Then call ${PHONE}. This assistant is not a technician.`,
     };
   }
 
@@ -202,12 +214,13 @@ export function answerQuestion(raw: string): ChatReply {
   };
 }
 
-export const OPENING = `I am the Millrace Assistant, an automated guide on this website, not a technician. Ask about a furnace, an air conditioner, a nearby town, or a safety concern. I do not collect your name, phone, or email. To request help, call ${PHONE}.`;
+export const OPENING = `Hi. I am an automated assistant on this website, not a technician. I do not collect your name, phone, or email. Ask about a furnace, cooling, a thermostat, or a safety concern, then call ${PHONE}.`;
 
 export const QUICK_REPLIES = [
   "Furnace not heating",
-  "AC blowing warm air",
-  "Emergency, no heat",
-  "Is Lena covered?",
+  "AC not cooling",
+  "Ice on the coil",
+  "Thermostat",
+  "Heat pump",
   "I smell gas",
 ] as const;

@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { BRAND_COLORS } from "@/lib/brand";
+import { LogoMark } from "@/components/Logo";
 import { BRAND, phoneDisplayLabel, site } from "@/lib/site";
 
 export const OG_SIZE = { width: 1200, height: 630 };
@@ -35,30 +36,8 @@ export function createOgImage({
         }}
       >
         <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              width: 72,
-              height: 72,
-              background: BRAND_COLORS.navy,
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "center",
-              marginRight: 24,
-            }}
-          >
-            <div
-              style={{
-                width: 36,
-                height: 28,
-                border: "4px solid white",
-                display: "flex",
-                alignItems: "flex-end",
-                justifyContent: "center",
-                marginBottom: 14,
-              }}
-            >
-              <div style={{ width: 8, height: 12, background: BRAND_COLORS.ember }} />
-            </div>
+          <div style={{ display: "flex", width: 84, height: 84, marginRight: 24 }}>
+            <LogoMark />
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ display: "flex", fontSize: 42, fontWeight: 700 }}>
