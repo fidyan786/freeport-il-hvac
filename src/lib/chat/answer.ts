@@ -70,7 +70,7 @@ const TOPICS: Array<ChatReply & { keys: string[] }> = [
     keys: ["service area", "lena", "cedarville", "dakota", "pearl", "orangeville", "ridott", "german valley", "davis", "rock city", "winslow", "61032", "zip", "stephenson"],
     href: "/service-area/",
     linkLabel: "Service area",
-    text: `Freeport, ZIP 61032, in Stephenson County is the city these pages are written for. Nearby towns — ${nearbyCommunities.map((town) => town.name).join(", ")} — can often be reached, and that is confirmed on the call rather than assumed from a map. Say the town and the ZIP when you dial ${PHONE}.`,
+    text: `Freeport, ZIP 61032, in Stephenson County is the city these pages are written for. Nearby towns — ${nearbyCommunities.map((town) => town.name).join(", ")} — are listed on one service area page, including German Valley, Davis, and Winslow, which shorter city pages often skip. A visit is confirmed on the call, not assumed from a map pin. This website has no street address. Say the town and the ZIP when you dial ${PHONE}.`,
   },
   {
     keys: ["thermostat"],

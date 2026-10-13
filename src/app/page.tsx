@@ -17,9 +17,9 @@ import { localLabel, primaryCtaLabel, site } from "@/lib/site";
 const faqs = [
   {
     q: "Is Freeport, Illinois covered?",
-    a: "Freeport, ZIP 61032, in Stephenson County is the city these pages are written for. Nearby towns can often be reached, and that is confirmed on the call rather than assumed from a map. Say the town and the ZIP when you dial.",
+    a: "Freeport, ZIP 61032, in Stephenson County is the city these pages are written for. Nearby towns, including German Valley, Davis, and Winslow, are on one service area page. A visit is confirmed on the call, not assumed from a map pin. This site has no street address. Say the town and the ZIP when you dial.",
     detail:
-      "Lena, Cedarville, Dakota, Pearl City, and the other Stephenson County towns are listed on the service area page so you can name yours. Listing a town is not a promise that a visit is already scheduled.",
+      "Lena, Cedarville, Dakota, Pearl City, Orangeville, Ridott, and Rock City are listed there too. Listing a town is not a promise that a visit is already scheduled.",
   },
   {
     q: "Is this website a heating and cooling contractor?",
@@ -61,7 +61,7 @@ const faqs = [
     q: "Which towns near Freeport does this site cover?",
     a: "The pages are written for Freeport, ZIP 61032, in Stephenson County. Lena, Cedarville, Dakota, Pearl City, Orangeville, Rock City, Ridott, German Valley, Davis, and Winslow are named on the service area page so you can say yours. Eleroy is an unincorporated community people also mention. None of those names is its own website, and a visit is confirmed on the call.",
     detail:
-      "Say the town and the ZIP first. A contractor list of nearby towns is not a promise that every one of them is on the schedule today.",
+      "Say the town and the ZIP first. A contractor list of nearby towns is not a promise that every one of them is on the schedule today. Public map pins for heating businesses sit mostly on Freeport streets. A pin is not a village route.",
   },
   {
     q: "Is Millrace Heating & Air the HVAC company?",
@@ -364,12 +364,13 @@ export default function HomePage() {
           </article>
         </div>
         <p className="mt-6 max-w-2xl text-muted">
-          Freeport 61032 is the city. Nearby Stephenson County towns, including
-          ones that show up on contractor lists such as Lena, Cedarville,
-          Dakota, Pearl City, Orangeville, Rock City, and Ridott, are explained
-          on the{" "}
+          Freeport 61032 is the city. Nearby Stephenson County towns are
+          explained on one{" "}
           <Link className="font-semibold text-navy underline underline-offset-2" href="/service-area/">service area</Link>{" "}
-          page. This site does not publish prices, coupons, or an arrival time.
+          page, including German Valley, Davis, and Winslow, which shorter
+          Freeport city pages often leave off. Public map listings cluster on
+          Freeport streets. This site has no street address of its own, and it
+          does not publish prices, coupons, or an arrival time.
         </p>
         <SectionCall context="home-search-questions" />
       </section>
