@@ -3,6 +3,7 @@ import { SitePhoto } from "@/components/SitePhoto";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { FinalCta } from "@/components/FinalCta";
+import { PageHero } from "@/components/PageHero";
 import { SectionCall } from "@/components/SectionCall";
 import { guides } from "@/content/guides";
 import { IMAGE_SIZES } from "@/lib/images";
@@ -25,18 +26,15 @@ export default function GuidesIndexPage() {
           { name: "Guides", path: "/guides/" },
         ])}
       />
-      <section className="border-b border-line bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <h1 className="text-4xl text-navy">Heating and cooling guides for Freeport, IL</h1>
-          <p className="mt-4 max-w-2xl text-muted">
-            Short explanations of heating and cooling problems Stephenson County
-            houses actually have. Call to be connected with a local heating and
-            cooling professional.
-          </p>
-          <SectionCall context="guides-hero" />
-        </div>
-      </section>
-      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
+      <PageHero
+        eyebrow="Freeport, Illinois"
+        title="Heating and cooling guides for Freeport, IL"
+        lede="Short explanations of heating and cooling problems Stephenson County houses actually have. Call to be connected with a local heating and cooling professional."
+        context="guides-hero"
+        image="/photos/heroes/gas-furnace-utility.webp"
+        imageAlt="High-efficiency gas furnace in a utility space."
+      />
+      <div id="page-body" className="mx-auto max-w-6xl px-4 pt-8 sm:px-6">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },

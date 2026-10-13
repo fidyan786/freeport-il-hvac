@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Sans_3 } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
+import { ChatLazy } from "@/components/chat/ChatLazy";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { BRAND_COLORS } from "@/lib/brand";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
@@ -11,12 +13,23 @@ import { SOCIAL_IMAGE } from "@/lib/seo";
 import { BRAND, getSiteUrl, googleSiteVerification, site } from "@/lib/site";
 import "./globals.css";
 
-const sans = Source_Sans_3({
+const sans = Manrope({
   subsets: ["latin"],
-  variable: "--font-source-sans",
+  variable: "--font-manrope",
   display: "swap",
   preload: true,
   adjustFontFallback: true,
+  weight: ["400", "500", "600", "700"],
+  fallback: ["Arial", "Helvetica", "sans-serif"],
+});
+
+const display = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+  weight: ["500", "600", "700"],
   fallback: ["Arial", "Helvetica", "sans-serif"],
 });
 
@@ -70,7 +83,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sans.variable} h-full`}>
+    <html lang="en" className={`${sans.variable} ${display.variable} h-full`}>
       <body className="min-h-full bg-cream font-sans text-ink antialiased">
         <a className="skip-link" href="#main">
           Skip to content
@@ -78,11 +91,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <Header />
+        <RevealOnScroll />
         <main id="main" className="flex-1 overflow-x-clip">
           {children}
         </main>
         <Footer />
         <StickyCallBar />
+        <ChatLazy />
         <Analytics />
       </body>
     </html>

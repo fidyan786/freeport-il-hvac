@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { SectionCall } from "@/components/SectionCall";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { AFFILIATE_DISCLOSURE, site } from "@/lib/site";
@@ -26,12 +27,18 @@ export default function TermsPage() {
         ]}
       />
       <h1 className="mt-6 text-4xl text-navy">Terms of Use</h1>
+      <SectionCall context="terms-hero" />
       <p className="mt-6">
         This site publishes information about heating and cooling problems in{" "}
         {site.city}, {site.state}. {site.businessName} is an affiliate,
         pay-per-call advertising website. {AFFILIATE_DISCLOSURE} Calls may be
         routed to an independent local service provider, and the site operator
         may be paid when a call is connected.
+      </p>
+      <p className="mt-4">
+        The on-page assistant is automated. It answers from the pages on this
+        site and does not collect a name, phone number, or email. It is not a
+        technician and it cannot promise a price or an arrival time.
       </p>
       <p className="mt-4">
         Content is informational. Using the site or placing a call does not

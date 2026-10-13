@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqList } from "@/components/FaqList";
 import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
+import { PageHero } from "@/components/PageHero";
 import { SectionCall } from "@/components/SectionCall";
 import { nearbyCommunities } from "@/lib/nav";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
@@ -47,6 +48,18 @@ const faqs = [
     detail:
       "Freeport is the center of the writing. Rural roads, a storm, or a full schedule can change whether a nearby ZIP is reachable. Ask. Do not assume.",
   },
+  {
+    q: "Which HVAC companies are based in Freeport?",
+    a: "Public pages and listings show Freeport addresses for Loescher Heating & Air Conditioning, Jansen Heating, Bomar Heating and Cooling, and several other heating businesses on Main Street, Bradmar Drive, Lily Creek Road, and Business 20. Loescher also names offices in Rock Falls, Dixon, Sterling, and Monroe. This website is not those companies and does not score them.",
+    detail:
+      "A Freeport address does not mean every Stephenson County town is on that day's route. Ask the person who answers.",
+  },
+  {
+    q: "Do Rockford HVAC companies cover Lena, Dakota, and Winslow?",
+    a: "Some companies based outside Freeport say they serve northwest Illinois. That is a claim on their site, not a map this page can verify. Lena is northwest of Freeport. Winslow is toward the west county line. Dakota is east. The drive is different for each, and snow changes it. Say the town and the ZIP on the call.",
+    detail:
+      "This site does not send you to a Rockford shop or a Freeport shop by name. It connects the call, and the person who answers confirms the address.",
+  },
 ];
 
 export const metadata = pageMetadata({
@@ -65,20 +78,15 @@ export default function ServiceAreaPage() {
         ])}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <section className="border-b border-line bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <h1 className="max-w-3xl text-4xl text-navy">
-            Heating and cooling near Freeport, IL
-          </h1>
-          <p className="mt-4 max-w-2xl text-muted">
-            Primary city: {site.city} {site.zip}, {site.county}. Nearby
-            communities are listed so you can name yours on the call. They are
-            not separate websites.
-          </p>
-          <SectionCall context="service-area-hero" />
-        </div>
-      </section>
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <PageHero
+        eyebrow={`${site.city} ${site.zip}`}
+        title="Heating and cooling near Freeport, IL"
+        lede={`Primary city: ${site.city} ${site.zip}, ${site.county}. Nearby communities are listed so you can name yours on the call. They are not separate websites.`}
+        context="service-area-hero"
+        image="/photos/heroes/condenser-beside-house.webp"
+        imageAlt="Outdoor condenser on a concrete pad beside house siding."
+      />
+      <div id="page-body" className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },
@@ -123,6 +131,55 @@ export default function ServiceAreaPage() {
           ))}
         </div>
         <SectionCall context="service-area-towns" />
+        <h2 className="mt-10 text-3xl text-navy">Who publishes a Freeport address</h2>
+        <p className="mt-4 text-muted">
+          Heating and cooling companies that work this county are not all based
+          in Freeport, and a city landing page is not the same thing as a shop
+          on a Freeport street. These are public descriptions from their own
+          sites or public listings, not reviews and not scores. This website is
+          not any of them.
+        </p>
+        <div className="mt-6 grid gap-4">
+          {[
+            {
+              name: "Loescher Heating & Air Conditioning",
+              base: "Publishes a Freeport office at 1860 S. Walnut Road, and also names Rock Falls, Dixon, Sterling, and Monroe.",
+              towns: "Its Freeport page is a city landing for repair, replacement, maintenance, and commercial work. An emergency page also names Lena.",
+            },
+            {
+              name: "Jansen Heating",
+              base: "Publishes 4341 Rolling Hills Lane, Freeport. A public listing also shows 213 W. Main Street.",
+              towns: "The public page is a short Freeport repair and installation pitch. Nearby villages are not explained one by one.",
+            },
+            {
+              name: "Bomar Heating and Cooling",
+              base: "Describes itself as locally owned in Freeport.",
+              towns: "The Freeport page is a short city page about air conditioning, furnace work, and indoor air. It does not walk through Stephenson County towns.",
+            },
+            {
+              name: "Other Freeport listings",
+              base: "Public contractor listings also show Freeport Heating & Air Conditioning at 7 W. Main Street, Bill George Plumbing & Heating at 705 Bradmar Drive, Family Heating & Air at 3198 W. Lily Creek Road, and Pearson Plumbing, Cooling and Pest Control at 1337 Business 20.",
+              towns: "Those listings put the businesses in Freeport. They are not evidence that every nearby ZIP is on the schedule today.",
+            },
+          ].map((row) => (
+            <section key={row.name} className="surface-card p-5">
+              <h3 className="text-xl text-navy">{row.name}</h3>
+              <p className="mt-2 text-muted">{row.base}</p>
+              <p className="mt-2 text-muted">{row.towns}</p>
+            </section>
+          ))}
+        </div>
+        <p className="mt-4 text-muted">
+          Rockford is a larger HVAC market to the east. Companies based there
+          can say they serve northwest Illinois without writing a page that
+          knows Cedarville from Winslow. The gap is not another doorway for
+          each village. It is one honest page: Freeport first, then the drive,
+          the ZIP, and the fact that coverage is confirmed on the call. Cedarville,
+          Dakota, Pearl City, Orangeville, Ridott, German Valley, Davis, Rock
+          City, and Winslow rarely get that explanation on a contractor city
+          page. Lena is the town most often named outside Freeport.
+        </p>
+        <SectionCall context="service-area-market" />
         <h2 className="mt-10 text-3xl text-navy">When to call</h2>
         <ul className="mt-4 grid gap-2 text-muted">
           <li>The house is losing heat or the furnace will not stay running.</li>

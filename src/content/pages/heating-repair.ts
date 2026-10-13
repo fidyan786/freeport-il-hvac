@@ -45,6 +45,13 @@ export const heatingRepair = defineService({
         "If the house is safe and simply cold, check the thermostat batteries and the mode, the switch that looks like a light switch on the furnace or near the air handler, and the filter if you have ducts. Then stop. Do not open boiler panels, do not bleed radiators until you know the system, and do not bypass a rollout switch or a pressure switch to get one more cycle. Those switches opened for a reason. The heating repair visit is where that reason gets a name.",
       ],
     },
+    {
+      heading: "Older Freeport houses, and heat that is not a furnace",
+      paragraphs: [
+        "A lot of heating repair calls start because the house is cold and the equipment is not obvious. Freeport has forced-air gas furnaces, and it also has boilers, baseboard, and a smaller number of heat pumps. An addition that never caught up with the rest of the house is a different problem from a dead burner. Say which one you are living with: whole house cold, or one room.",
+        "Nearby villages use the same heating season. If you are calling from Dakota, German Valley, Ridott, Davis, or Rock City, the equipment story is the same and the drive is not. Give the town and the ZIP with the symptom. This page does not rank those towns as separate sites, and it does not invent a price for a boiler visit versus a furnace visit.",
+      ],
+    },
   ],
   directAnswer:
     "Heating repair in Freeport, IL is where to start when the house is cold and you are not sure a gas furnace is the equipment. Boilers, baseboard, heat pumps, and furnaces all show up as no heat. Call with the symptom, the town, and the ZIP. This site connects that call. It is not the contractor.",
@@ -115,6 +122,18 @@ export const heatingRepair = defineService({
       a: "If heat is fully out and the indoor temperature is dropping in sub-freezing weather, treat it as emergency HVAC and call now. Heating repair is the right label when you need the system fixed and the house is still safe to wait in.",
       detail:
         "Give the indoor temperature either way. A number is more useful than “it’s pretty cold” when someone is deciding how urgent the visit is.",
+    },
+    {
+      q: "How much does heating repair cost in Freeport?",
+      a: "There is no price on this page. A boiler that will not circulate and a furnace that will not light are not the same repair, and a webpage cannot see either one. Call with what you see — vents, radiators, or an outdoor cabinet — and the independent professional can explain the next step after looking.",
+      detail:
+        "Offers, coupons, and financing claims are not published here. The only request path is the phone number.",
+    },
+    {
+      q: "Do I need a Freeport contractor, or will a Rockford company do?",
+      a: "This website does not assign a company. It connects the call with an independent local heating and cooling professional, and that person confirms whether your address, including a Stephenson County town outside Freeport, is one they can reach. A shop based in Rockford or in Freeport is a fact about that shop, not a promise from this site.",
+      detail:
+        "Say the town first. Distance and the day’s work decide the visit. The service area page lists the nearby ZIPs so you can name yours.",
     },
   ],
   related: [

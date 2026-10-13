@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { SectionCall } from "@/components/SectionCall";
 import { guides } from "@/content/guides";
 import { services } from "@/content/services";
 import { indexablePaths } from "@/lib/nav";
@@ -58,6 +59,7 @@ export default function HtmlSitemapPage() {
         ]}
       />
       <h1 className="mt-6 text-4xl text-navy">Sitemap</h1>
+      <SectionCall context="sitemap-hero" />
       <p className="mt-4 text-muted">
         Every public page on this site. The XML sitemap for crawlers is at{" "}
         <a className="font-semibold text-navy underline underline-offset-2" href="/sitemap.xml">

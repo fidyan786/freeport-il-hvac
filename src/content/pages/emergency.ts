@@ -45,6 +45,13 @@ export const emergencyHvac = defineService({
         "Cooling emergencies are less common here because the hot season is shorter, but they are not imaginary. An upstairs apartment over a sun-facing roof, a bedroom with one window unit that died, or a house with a vulnerable person can be an emergency HVAC call even when the neighbors are only uncomfortable. Say that plainly. For a system that is warm but not dangerous, AC repair is the better page, and HVAC maintenance is how you avoid discovering the failure on the first sticky afternoon.",
       ],
     },
+    {
+      heading: "Night calls, and what this page will not promise",
+      paragraphs: [
+        "Other Freeport-area heating pages advertise round-the-clock emergency repair and a technician at the door. This page will not. A no-heat night in Stephenson County is still urgent when the indoor temperature is falling. Urgency is a description you give on the phone, not a clock this website controls. Say the temperature, the town, and whether anyone cannot safely wait.",
+        "If you are in Lena, Orangeville, Winslow, or another edge-of-county town, the drive is part of that conversation, especially in snow. Name the town before you describe the equipment. The service area page lists those ZIPs so you can say yours. Listing them is not a promise that a visit is already scheduled.",
+      ],
+    },
   ],
   directAnswer:
     "Emergency HVAC in Freeport, IL is for no heat while the house is getting colder, or no cooling when someone cannot safely wait. It is not a promise that a truck is already coming. Call, give the indoor temperature and the ZIP, and the call is connected with an independent local professional.",
@@ -111,6 +118,18 @@ export const emergencyHvac = defineService({
       a: "If the gas furnace is the problem and the house is still safe to be in, furnace repair is the direct page, and you can still call the same number. Use emergency HVAC when the temperature is falling and waiting is the risky part.",
       detail:
         "AC repair is the matching page for cooling that is failing but not yet dangerous. Maintenance is for equipment that still runs, before the season turns on it.",
+    },
+    {
+      q: "Is emergency HVAC in Freeport available at night?",
+      a: "This website does not promise night, weekend, or 24-hour coverage, and it does not promise an arrival time. If the house is losing heat after dark, call and say so, with the indoor temperature. The independent professional who answers is the one who can say what they can actually do.",
+      detail:
+        "Do not wait out a night in the teens because a webpage refused to print a clock. Also do not treat a mild complaint as an emergency. The temperature is the difference.",
+    },
+    {
+      q: "What counts as an HVAC emergency in Stephenson County?",
+      a: "No heat while the indoor temperature is falling in sub-freezing weather, or no cooling when someone cannot safely wait through the heat. A system that is weak but still working, in a house that is still safe, is furnace repair, heating repair, or AC repair instead.",
+      detail:
+        "A gas smell or a carbon monoxide alarm is not an HVAC emergency. Leave and call 911 and Nicor Gas at 888-642-6748 before this number.",
     },
   ],
   related: [

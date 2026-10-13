@@ -1,9 +1,8 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SitePhoto } from "@/components/SitePhoto";
 import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
+import { PageHero } from "@/components/PageHero";
 import { SectionCall } from "@/components/SectionCall";
-import { IMAGE_SIZES } from "@/lib/images";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { NICOR_GAS } from "@/lib/safety-contacts";
@@ -24,27 +23,15 @@ export default function AboutPage() {
           { name: "About", path: "/about/" },
         ])}
       />
-      <section className="border-b border-line bg-white">
-        <div className="mx-auto grid max-w-6xl items-stretch lg:grid-cols-2">
-          <div className="flex flex-col justify-center px-4 py-14 sm:px-6">
-            <p className="kicker">Freeport, Illinois</p>
-            <h1 className="mt-3 max-w-xl text-4xl text-navy">About this website</h1>
-            <p className="mt-5 max-w-xl text-muted">
-              {AFFILIATE_DISCLOSURE} The name comes from the mill races that once
-              ran along the Pecatonica in Stephenson County.
-            </p>
-          </div>
-          <div className="relative min-h-[16rem] lg:min-h-[22rem]">
-            <SitePhoto
-              src="/photos/stephenson-county-courthouse-freeport.webp"
-              alt="Stephenson County Courthouse in Freeport, Illinois."
-              priority
-              sizes={IMAGE_SIZES.hero}
-            />
-          </div>
-        </div>
-      </section>
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <PageHero
+        eyebrow="Freeport, Illinois"
+        title="About this website"
+        lede={`${AFFILIATE_DISCLOSURE} The name comes from the mill races that once ran along the Pecatonica in Stephenson County.`}
+        context="about-hero"
+        image="/photos/stephenson-county-courthouse-freeport.webp"
+        imageAlt="Stephenson County Courthouse in Freeport, Illinois."
+      />
+      <div id="page-body" className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },

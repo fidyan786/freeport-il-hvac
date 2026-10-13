@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { ChevronIcon, PhoneIcon } from "@/components/Icons";
+import { ChevronIcon } from "@/components/Icons";
 import { Logo } from "@/components/Logo";
 import { PhoneCta, PhonePlain } from "@/components/PhoneCta";
 import { megaGroups, primaryNav } from "@/lib/nav";
@@ -41,6 +41,19 @@ export function Header() {
   function closeAfterNavigate() {
     window.setTimeout(closeAll, 0);
   }
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const onScroll = () => {
+      root.toggleAttribute("data-header-compact", window.scrollY > 12);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      root.removeAttribute("data-header-compact");
+    };
+  }, []);
 
   useEffect(() => {
     const desktop = window.matchMedia("(min-width: 1024px)");
@@ -135,18 +148,20 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-line bg-white text-navy">
-        <div className="border-b border-line bg-paper">
+      <header className="site-header text-navy">
+        <div className="site-header-utility border-b border-line/80">
+          <div>
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2 sm:px-6">
             <p className="min-w-0">
               {localLabel} {site.zip} · {site.county}
             </p>
             <PhonePlain location="header" className="shrink-0 font-semibold text-navy underline-offset-4 hover:underline" />
           </div>
+          </div>
         </div>
         <div
           ref={wrapRef}
-          className="relative mx-auto flex min-w-0 max-w-6xl items-center gap-3 px-4 py-3 sm:px-6"
+          className="site-header-bar relative mx-auto flex min-w-0 max-w-6xl items-center gap-3 px-4 py-3 transition-[padding] duration-200 sm:px-6"
         >
           <Link
             href="/"
@@ -154,7 +169,7 @@ export function Header() {
             aria-label={`${BRAND.name} home`}
             onClick={closeAfterNavigate}
           >
-            <Logo compact decorative />
+            <Logo decorative />
           </Link>
 
           <nav
@@ -215,10 +230,7 @@ export function Header() {
                     context="header-call"
                     className="px-4 py-2"
                   >
-                    <span className="inline-flex items-center gap-2">
-                      <PhoneIcon />
-                      {primaryCtaLabel()}
-                    </span>
+                    {primaryCtaLabel()}
                   </PhoneCta>
                 </>
               ) : (
@@ -254,7 +266,7 @@ export function Header() {
               role="navigation"
               aria-label="Services"
               data-mega-menu="true"
-              className="menu-fade absolute top-full right-0 left-0 z-50 hidden overflow-hidden border border-t-0 border-line bg-white text-ink lg:block"
+              className="menu-fade absolute top-full right-4 left-4 z-50 hidden overflow-hidden rounded-b-3xl border border-line bg-white/95 text-ink shadow-[0_24px_50px_-28px_rgb(11,30,46,0.55)] backdrop-blur-md lg:block"
             >
               <div className="grid max-h-[min(70vh,36rem)] grid-cols-3 gap-x-8 gap-y-6 overflow-y-auto p-6">
                 {megaGroups.map((group) => (
@@ -302,17 +314,30 @@ export function Header() {
       </header>
 
       <div
-        ref={drawerRef}
-        id={MOBILE_NAV_ID}
-        hidden={!open}
-        className={`fixed inset-0 z-[100] h-[100dvh] w-full flex-col overflow-hidden bg-white text-navy lg:hidden ${
-          open ? "menu-fade flex" : ""
-        }`}
-        role="dialog"
-        aria-modal={open}
-        aria-label="Site menu"
+        className={`fixed inset-0 z-[100] lg:hidden ${open ? "" : "pointer-events-none"}`}
         inert={!open}
       >
+        <button
+          type="button"
+          className={`drawer-scrim absolute inset-0 bg-navy-deep/50 ${open ? "opacity-100" : "opacity-0"}`}
+          aria-label="Close navigation menu"
+          tabIndex={open ? 0 : -1}
+          onClick={() => {
+            setOpen(false);
+            menuButtonRef.current?.focus();
+          }}
+        />
+        <div
+          ref={drawerRef}
+          id={MOBILE_NAV_ID}
+          role="dialog"
+          aria-modal={open}
+          aria-hidden={!open}
+          aria-label="Site menu"
+          className={`drawer-panel absolute inset-y-0 right-0 flex h-[100dvh] w-[min(100%,24rem)] flex-col overflow-hidden bg-white text-navy shadow-2xl ${
+            open ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
         <div className="flex h-[100dvh] flex-col overflow-hidden">
           <div className="flex items-center justify-between gap-3 px-4 py-4">
             <Link
@@ -417,6 +442,7 @@ export function Header() {
               {phoneReady ? primaryCtaLabel() : "Request Service"}
             </PhoneCta>
           </div>
+        </div>
         </div>
       </div>
     </>

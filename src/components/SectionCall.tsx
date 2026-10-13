@@ -1,4 +1,3 @@
-import { PhoneIcon } from "@/components/Icons";
 import { PhoneCta, type CallLocation } from "@/components/PhoneCta";
 import { primaryCtaLabel } from "@/lib/site";
 
@@ -11,11 +10,8 @@ export function SectionCall({
 }) {
   return (
     <div className="mt-8">
-      <PhoneCta location={location} context={context} className="w-full sm:w-auto">
-        <span className="inline-flex items-center gap-2">
-          <PhoneIcon />
-          {primaryCtaLabel()}
-        </span>
+      <PhoneCta location={location} context={context} className="min-h-14 w-full px-7 text-lg sm:w-auto">
+        {primaryCtaLabel()}
       </PhoneCta>
     </div>
   );

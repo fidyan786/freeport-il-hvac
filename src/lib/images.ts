@@ -8,6 +8,8 @@ export const IMAGE_SIZES = {
   split: "(max-width: 1023px) calc(100vw - 2rem), 536px",
   /** Hero / about band: one column of the same 2-col grid, edge-to-edge on small screens. */
   hero: "(max-width: 1023px) 100vw, 576px",
+  /** Full-bleed photograph behind a hero scrim. Assets top out at 960px. */
+  bleed: "100vw",
   /** 2–3 column cards. */
   card: "(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) calc(50vw - 2.5rem), 360px",
   /** Service-page sticky aside. */
