@@ -98,12 +98,11 @@ export function ChatWidget({ onClose }: { onClose: () => void }) {
       <header className="flex items-center gap-3 border-b border-white/10 px-4 py-3">
         <LogoMark className="h-10 w-10 shrink-0" />
         <div className="min-w-0 flex-1">
-          <p id={titleId} className="flex items-center gap-2 font-serif text-lg text-white">
+          <p id={titleId} className="flex items-center gap-2 font-serif text-base text-white">
             {BRAND.chatbotName}
             <span className="chat-online" aria-hidden="true" />
             <span className="sr-only">Online</span>
           </p>
-          <p className="text-sm text-white/70">Automated assistant, not a technician.</p>
         </div>
         <button
           type="button"
@@ -173,7 +172,7 @@ export function ChatWidget({ onClose }: { onClose: () => void }) {
         <PhoneCta location="chat" context="chat-panel" className="w-full">
           {primaryCtaLabel()}
         </PhoneCta>
-        <p>Nothing you type is sent to a server or saved.</p>
+        <p>Automated assistant, not a technician. Nothing you type is saved.</p>
       </div>
     </section>
   );

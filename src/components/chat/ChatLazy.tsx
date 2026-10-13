@@ -25,47 +25,32 @@ function ChatIcon() {
 export function ChatLazy() {
   const [open, setOpen] = useState(false);
   const [seen, setSeen] = useState(false);
-  const [greet, setGreet] = useState(false);
-
-  useEffect(() => {
-    const id = window.setTimeout(() => setGreet(true), 2800);
-    return () => window.clearTimeout(id);
-  }, []);
 
   useEffect(() => {
     document.body.toggleAttribute("data-chat-open", open);
     return () => document.body.removeAttribute("data-chat-open");
   }, [open]);
 
-  function toggle() {
-    setOpen((value) => {
-      const next = !value;
-      if (next) {
-        setSeen(true);
-        track("chatbot_open");
-      }
-      return next;
-    });
-  }
-
   return (
     <div className="chat-dock">
-      {open ? <ChatWidget onClose={() => setOpen(false)} /> : null}
-      {greet && !open ? (
-        <p className="chat-greet" role="status">
-          Hi! HVAC question?
-        </p>
-      ) : null}
-      <button
-        type="button"
-        className="chat-launcher"
-        aria-expanded={open}
-        aria-label={open ? "Close assistant" : "Hi! HVAC question? Open the assistant"}
-        onClick={toggle}
-      >
-        <ChatIcon />
-        {!seen && !open ? <span className="chat-dot" aria-hidden="true" /> : null}
-      </button>
+      {open ? (
+        <ChatWidget onClose={() => setOpen(false)} />
+      ) : (
+        <button
+          type="button"
+          className="chat-launcher"
+          aria-expanded={false}
+          aria-label="Open assistant"
+          onClick={() => {
+            setSeen(true);
+            setOpen(true);
+            track("chatbot_open");
+          }}
+        >
+          <ChatIcon />
+          {!seen ? <span className="chat-dot" aria-hidden="true" /> : null}
+        </button>
+      )}
     </div>
   );
 }
