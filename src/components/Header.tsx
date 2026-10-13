@@ -3,14 +3,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { ChevronIcon } from "@/components/Icons";
+import { ChevronIcon, CoolIcon, HeatIcon, HomeIcon, WrenchIcon } from "@/components/Icons";
 import { Logo } from "@/components/Logo";
-import { PhoneCta, PhonePlain } from "@/components/PhoneCta";
+import { PhoneCta } from "@/components/PhoneCta";
 import { megaGroups, primaryNav } from "@/lib/nav";
-import { BRAND, isPhoneConfigured, localLabel, primaryCtaLabel, site } from "@/lib/site";
+import { BRAND, isPhoneConfigured, localLabel, primaryCtaLabel } from "@/lib/site";
 
 const MOBILE_NAV_ID = "mobile-nav-panel";
 const DESKTOP_SERVICES_ID = "desktop-services-menu";
+const GROUP_ICONS = {
+  heating: HeatIcon,
+  cooling: CoolIcon,
+  "heat-pump": CoolIcon,
+  "whole-home": HomeIcon,
+  commercial: WrenchIcon,
+} as const;
+
 const FOCUSABLE =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
 
@@ -148,17 +156,7 @@ export function Header() {
 
   return (
     <>
-      <header className="site-header text-navy">
-        <div className="site-header-utility border-b border-line/80">
-          <div>
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2 sm:px-6">
-            <p className="min-w-0">
-              {localLabel} {site.zip} · {site.county}
-            </p>
-            <PhonePlain location="header" className="shrink-0 font-semibold text-navy underline-offset-4 hover:underline" />
-          </div>
-          </div>
-        </div>
+      <header className="site-header text-white">
         <div
           ref={wrapRef}
           className="site-header-bar relative mx-auto flex min-w-0 max-w-6xl items-center gap-3 px-4 py-3 transition-[padding] duration-200 sm:px-6"
@@ -169,7 +167,7 @@ export function Header() {
             aria-label={`${BRAND.name} home`}
             onClick={closeAfterNavigate}
           >
-            <Logo decorative />
+            <Logo invert decorative />
           </Link>
 
           <nav
@@ -181,8 +179,8 @@ export function Header() {
               type="button"
               className={`inline-flex min-h-11 items-center gap-1.5 rounded-brand px-3 py-2 text-sm font-semibold ${
                 servicesOpen || pathname.startsWith("/services")
-                  ? "text-navy"
-                  : "text-navy/75 hover:text-navy"
+                  ? "text-white"
+                  : "text-white/75 hover:text-cyan"
               }`}
               aria-expanded={servicesOpen}
               aria-controls={DESKTOP_SERVICES_ID}
@@ -212,7 +210,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={`inline-flex min-h-11 items-center rounded-brand px-3 py-2 text-sm font-semibold ${
-                    active ? "text-navy" : "text-navy/75 hover:text-navy"
+                    active ? "text-white" : "text-white/75 hover:text-cyan"
                   }`}
                 >
                   {item.label}
@@ -250,7 +248,7 @@ export function Header() {
             <button
               ref={menuButtonRef}
               type="button"
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-brand border border-navy/20 text-navy lg:hidden"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-brand border border-white/25 text-white lg:hidden"
               aria-expanded={open}
               aria-controls={MOBILE_NAV_ID}
               aria-label={open ? "Close navigation menu" : "Open navigation menu"}
@@ -266,26 +264,31 @@ export function Header() {
               role="navigation"
               aria-label="Services"
               data-mega-menu="true"
-              className="menu-fade absolute top-full right-4 left-4 z-50 hidden overflow-hidden rounded-b-3xl border border-line bg-white/95 text-ink shadow-[0_24px_50px_-28px_rgb(11,30,46,0.55)] backdrop-blur-md lg:block"
+              className="menu-fade absolute top-full right-4 left-4 z-50 hidden overflow-hidden rounded-b-3xl border border-cyan/35 bg-[rgb(4_10_18/0.96)] text-white shadow-[0_24px_40px_-18px_rgb(34,211,238,0.45)] lg:block"
             >
-              <div className="grid max-h-[min(70vh,36rem)] grid-cols-3 gap-x-8 gap-y-6 overflow-y-auto p-6">
-                {megaGroups.map((group) => (
+              <div className="grid max-h-[min(70vh,36rem)] grid-cols-3 gap-x-8 gap-y-8 overflow-y-auto p-7">
+                {megaGroups.map((group) => {
+                  const Icon = GROUP_ICONS[group.id as keyof typeof GROUP_ICONS] ?? WrenchIcon;
+                  return (
                   <div key={group.id} className="min-w-0">
-                    <p className="font-semibold text-muted">
+                    <p className="flex items-center gap-2 font-semibold text-cyan">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-cyan/40 text-cyan">
+                        <Icon className="h-4 w-4" />
+                      </span>
                       <Link
                         href={group.href}
-                        className="hover:text-navy"
+                        className="hover:text-white"
                         onClick={closeAfterNavigate}
                       >
                         {group.title}
                       </Link>
                     </p>
-                    <ul className="mt-3 grid gap-1.5">
+                    <ul className="mt-3 grid gap-1">
                       {group.items.map((item) => (
                         <li key={item.href}>
                           <Link
                             href={item.href}
-                            className="block rounded-brand py-1 text-navy hover:underline"
+                            className="block rounded-brand px-2 py-2 text-white/85 hover:bg-white/10 hover:text-cyan"
                             onClick={closeAfterNavigate}
                           >
                             {item.label}
@@ -294,15 +297,16 @@ export function Header() {
                       ))}
                     </ul>
                   </div>
-                ))}
+                  );
+                })}
               </div>
-              <div className="flex items-center justify-between gap-3 border-t border-line bg-paper px-6 py-3">
-                <p className="text-xs text-muted">
-                  {localLabel} {site.zip}
+              <div className="flex items-center justify-between gap-3 border-t border-white/10 px-7 py-3">
+                <p className="text-white/70">
+                  {localLabel}
                 </p>
                 <Link
                   href="/services/"
-                  className="shrink-0 text-sm font-semibold text-navy"
+                  className="shrink-0 text-sm font-semibold text-cyan hover:text-white"
                   onClick={closeAfterNavigate}
                 >
                   View all services
@@ -334,7 +338,7 @@ export function Header() {
           aria-modal={open}
           aria-hidden={!open}
           aria-label="Site menu"
-          className={`drawer-panel absolute inset-y-0 right-0 flex h-[100dvh] w-[min(100%,24rem)] flex-col overflow-hidden bg-white text-navy shadow-2xl ${
+          className={`drawer-panel absolute inset-y-0 right-0 flex h-[100dvh] w-[min(100%,24rem)] flex-col overflow-hidden bg-navy-deep text-white shadow-2xl ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -345,11 +349,11 @@ export function Header() {
               aria-label={`${BRAND.name} home`}
               onClick={closeAfterNavigate}
             >
-              <Logo compact decorative />
+              <Logo compact invert decorative />
             </Link>
             <button
               type="button"
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-brand border border-line"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-brand border border-white/20 text-white"
               aria-label="Close navigation menu"
               onClick={() => {
                 setOpen(false);
@@ -365,17 +369,17 @@ export function Header() {
           >
             <Link
               href="/"
-              className="block border-b border-line py-3.5"
+              className="block border-b border-white/10 py-3.5"
               onClick={closeAfterNavigate}
             >
               Home
             </Link>
-            <p className="pt-5 pb-1 font-semibold text-muted">
+            <p className="pt-5 pb-1 font-semibold text-cyan">
               Services
             </p>
             <Link
               href="/services/"
-              className="block border-b border-line py-3.5"
+              className="block border-b border-white/10 py-3.5"
               onClick={closeAfterNavigate}
             >
               All services
@@ -384,7 +388,7 @@ export function Header() {
               const expanded = expandedGroup === group.id;
               const panelId = `${MOBILE_NAV_ID}-${group.id}`;
               return (
-                <div key={group.id} className="border-b border-line">
+                <div key={group.id} className="border-b border-white/10">
                   <button
                     type="button"
                     className="flex min-h-12 w-full items-center justify-between py-3 text-left text-lg"
@@ -395,7 +399,7 @@ export function Header() {
                     }
                   >
                     {group.title}
-                    <span aria-hidden="true" className="text-navy">
+                    <span aria-hidden="true" className="text-cyan">
                       {expanded ? "–" : "+"}
                     </span>
                   </button>
@@ -408,7 +412,7 @@ export function Header() {
                       <li key={item.href}>
                         <Link
                           href={item.href}
-                          className="block py-2.5 pl-3 text-navy"
+                          className="block rounded-brand py-2.5 pl-3 text-white/85 hover:bg-white/10 hover:text-cyan"
                           onClick={closeAfterNavigate}
                         >
                           {item.label}
@@ -423,7 +427,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block border-b border-line py-3.5"
+                className="block border-b border-white/10 py-3.5"
                 onClick={closeAfterNavigate}
               >
                 {item.label}
@@ -431,13 +435,13 @@ export function Header() {
             ))}
             <Link
               href="/contact/"
-              className="block border-b border-line py-3.5"
+              className="block border-b border-white/10 py-3.5"
               onClick={closeAfterNavigate}
             >
               Contact
             </Link>
           </nav>
-          <div className="border-t border-line px-4 py-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+          <div className="border-t border-white/10 px-4 py-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
             <PhoneCta location="header" context="mobile-menu" className="w-full">
               {phoneReady ? primaryCtaLabel() : "Request Service"}
             </PhoneCta>

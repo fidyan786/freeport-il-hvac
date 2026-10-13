@@ -52,7 +52,18 @@ const nextConfig: NextConfig = {
     root: path.join(__dirname),
   },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    const year = "public, max-age=31536000, immutable";
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      {
+        source: "/photos/:path*",
+        headers: [{ key: "Cache-Control", value: year }],
+      },
+      {
+        source: "/brand/:path*",
+        headers: [{ key: "Cache-Control", value: year }],
+      },
+    ];
   },
 };
 
