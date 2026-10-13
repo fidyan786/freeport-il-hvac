@@ -50,6 +50,7 @@ export const heatingRepair = defineService({
       paragraphs: [
         "A lot of heating repair calls start because the house is cold and the equipment is not obvious. Freeport has forced-air gas furnaces, and it also has boilers, baseboard, and a smaller number of heat pumps. An addition that never caught up with the rest of the house is a different problem from a dead burner. Say which one you are living with: whole house cold, or one room.",
         "Nearby villages use the same heating season. If you are calling from Dakota, German Valley, Ridott, Davis, or Rock City, the equipment story is the same and the drive is not. Give the town and the ZIP with the symptom. This page does not rank those towns as separate sites, and it does not invent a price for a boiler visit versus a furnace visit.",
+        "A clogged filter, a thermostat that does not match the rooms, a new noise, and one cold room are heating symptoms. Air that feels warm from the supply vents in summer is an air conditioner problem, not a furnace problem. A frozen outdoor unit in July is cooling. A frozen house in January is heat. Say the season you are in. The brand on the cabinet is worth reading if you can see it without taking a panel off. This site does not advertise a brand it installs.",
       ],
     },
   ],
@@ -134,6 +135,18 @@ export const heatingRepair = defineService({
       a: "This website does not assign a company. It connects the call with an independent local heating and cooling professional, and that person confirms whether your address, including a Stephenson County town outside Freeport, is one they can reach. A shop based in Rockford or in Freeport is a fact about that shop, not a promise from this site.",
       detail:
         "Say the town first. Distance and the day’s work decide the visit. The service area page lists the nearby ZIPs so you can name yours.",
+    },
+    {
+      q: "The vents are blowing warm air and the house is cold. Is that heating repair?",
+      a: "In winter, supply air that never warms up is a no-heat symptom. If you can see a gas furnace, use furnace repair and say the blower is running. If you see radiators or you are not sure, stay on this page. In summer, warm supply air is AC repair, not a heating call.",
+      detail:
+        "One cold room with the rest of the house warm is often ducts or a closed register. The uneven-temperature guide is the matching explanation.",
+    },
+    {
+      q: "Can heating repair happen the same day in Freeport?",
+      a: "This site does not promise same-day repair. Call, give the indoor temperature, and say whether the whole house is cold. The independent professional who answers can say what the day allows. A falling temperature in sub-freezing weather should be described as emergency HVAC.",
+      detail:
+        "Weekday shop hours on a contractor site are not a schedule this page can book. There is no form here.",
     },
   ],
   related: [

@@ -50,6 +50,7 @@ export const emergencyHvac = defineService({
       paragraphs: [
         "Other Freeport-area heating pages advertise round-the-clock emergency repair and a technician at the door. This page will not. A no-heat night in Stephenson County is still urgent when the indoor temperature is falling. Urgency is a description you give on the phone, not a clock this website controls. Say the temperature, the town, and whether anyone cannot safely wait.",
         "If you are in Lena, Orangeville, Winslow, or another edge-of-county town, the drive is part of that conversation, especially in snow. Name the town before you describe the equipment. The service area page lists those ZIPs so you can say yours. Listing them is not a promise that a visit is already scheduled.",
+        "Pages aimed at this search often say a technician will be there in no time, the same day, or around the clock, and then list weekday office hours under the same logo. Read that as advertising, not as a clock. What you can control is the report: indoor temperature, whether it is still falling, gas smell or not, and the ZIP. Furnace repair and AC repair are the pages when the house is still safe. Carbon monoxide and gas leave the HVAC number for later.",
       ],
     },
   ],
@@ -130,6 +131,12 @@ export const emergencyHvac = defineService({
       a: "No heat while the indoor temperature is falling in sub-freezing weather, or no cooling when someone cannot safely wait through the heat. A system that is weak but still working, in a house that is still safe, is furnace repair, heating repair, or AC repair instead.",
       detail:
         "A gas smell or a carbon monoxide alarm is not an HVAC emergency. Leave and call 911 and Nicor Gas at 888-642-6748 before this number.",
+    },
+    {
+      q: "What should I say on a night call?",
+      a: "Say emergency HVAC, the indoor temperature, whether it is falling, the town, and the ZIP. Add furnace, air conditioner, boiler, or heat pump if you know which one quit. You do not need a model number, and you should not open the cabinet to find one.",
+      detail:
+        "If the house is still safe and the system is only weak, furnace repair, heating repair, or AC repair is the clearer label. The phone number is the same.",
     },
   ],
   related: [

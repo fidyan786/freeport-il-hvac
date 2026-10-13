@@ -11,16 +11,16 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 const townNotes: Record<string, string> = {
-  Lena: "Lena sits northwest of Freeport, ZIP 61048, with village streets and farm roads that are a real drive rather than a Freeport errand. Houses here see the same long heating season and the same idle air conditioners. Say Lena and 61048 first so the person you reach can decide whether the route works that day. A no-heat night is still a no-heat night. It is not automatically a closer call than a Freeport basement.",
+  Lena: "Lena sits northwest of Freeport, ZIP 61048, with village streets and farm roads that are a real drive rather than a Freeport errand. Houses here see the same long heating season and the same idle air conditioners. Loescher publishes a Lena office at 130 W. Main Street and a Freeport office on S. Walnut Road. That is their footprint, not a dispatch board for this website. Say Lena and 61048 first so the person you reach can decide whether the route works that day.",
   Cedarville: "Cedarville, 61013, is just north of Freeport, close enough that people treat it as the edge of town and far enough that a rural address still needs to be said out loud. Older houses and the same Stephenson County cold apply. Do not assume a Freeport visit continues to Cedarville without asking. Give the ZIP with the symptom.",
   Dakota: "Dakota, 61018, is east of Freeport, a small village where the heating equipment is often in an older house rather than a new subdivision. Wind and a long freeze hit the same way. If the furnace is out, say how cold the rooms are. If you are calling about a shop or a grain-office style building, say commercial so the visit is not planned as a basement furnace.",
   "Pearl City": "Pearl City, 61062, is southwest of Freeport. The drive is part of the call, especially in snow. Houses and a few small buildings share the heating-first climate: furnaces that have to work for months, condensers that sit until the humid stretch. Name Pearl City before you describe the equipment. Coverage is confirmed, not implied by the ZIP being in the county.",
   Orangeville: "Orangeville, 61060, is north of Freeport, toward the state line, where nights are not milder than the city and the drive is longer. A heat pump or a furnace that quits here has the same urgency as one in 61032 if the house is falling in temperature, and less certainty that someone can get there. Say Orangeville, the ZIP, and the indoor temperature.",
   Ridott: "Ridott, 61067, is a small community southeast of Freeport. Addresses may be rural even when the ZIP is local. Furnace and well-house freeze concerns show up in the same cold snaps as the city. Say whether the building is a house and whether the lane is open. This site cannot see the driveway. The person you call can ask.",
-  "German Valley": "German Valley, 61039, is south of Freeport, a village with the same closed-up winters and the same short cooling season. Older housing and outbuildings mean the first sentence should say house, shop, or farm building. Heating repair and furnace repair are still the right topics. The town name is how the visit gets aimed. It is not its own website.",
-  Davis: "Davis, 61019, is northeast of Freeport. It is easy to underestimate the drive when the map looks close and the roads are not. Winter no-heat calls and spring condenser calls are the same patterns as Freeport, with fewer neighbors to borrow heat from. Give Davis and the ZIP, and say if the system is the only heat in the house.",
-  "Rock City": "Rock City, 61070, is a small village northeast of Freeport. There is not a separate heating market here. There are houses in the same climate, often with equipment that has to carry a long season without a nearby parts counter. Describe the furnace or the outdoor unit the way you would in Freeport, and let the address decide whether a visit can be made.",
-  Winslow: "Winslow, 61089, is west of Freeport, toward the county edge. Snow and a longer drive matter more here than they do for a call inside 61032. Say Winslow first. If the house is losing heat after dark, say the indoor temperature so emergency HVAC is not confused with a routine repair that can wait for a clearer road.",
+  "German Valley": "German Valley, 61039, is south of Freeport, a village with the same closed-up winters and the same short cooling season. Shorter Freeport city pages often skip it. Longer service-area lists, including Bomar’s, include the name and then move on. Older housing and outbuildings mean the first sentence should say house, shop, or farm building. The town name aims the visit. It is not its own website.",
+  Davis: "Davis, 61019, is northeast of Freeport. It is easy to underestimate the drive when the map looks close and the roads are not. Kerley’s site, which describes Rockford as home base and also publishes a Rock City street address, names Davis along with Dakota and Freeport. A name on that list is not a truck already assigned. Give Davis and the ZIP, and say if the system is the only heat in the house.",
+  "Rock City": "Rock City, 61070, is a small village northeast of Freeport. Homestead Heating & Air Conditioning publishes 9570 N. Rock City Road. Kerley Heating and Cooling publishes 3762 N. Farwell Bridge Road and describes Rockford as its home base. Those are street listings, not proof that Winslow or German Valley is on the same route. Describe the furnace or the outdoor unit the way you would in Freeport, and let the address decide whether a visit can be made.",
+  Winslow: "Winslow, 61089, is west of Freeport, toward the county edge. It shows up on long service-area checklists and not on the shorter Freeport city pages that stop at Lena, Ridott, and Rock City. Snow and a longer drive matter more here than they do for a call inside 61032. Say Winslow first. If the house is losing heat after dark, say the indoor temperature so emergency HVAC is not confused with a routine repair that can wait for a clearer road.",
 };
 
 const faqs = [
@@ -56,9 +56,15 @@ const faqs = [
   },
   {
     q: "Do Rockford HVAC companies cover Lena, Dakota, and Winslow?",
-    a: "Some companies based outside Freeport say they serve northwest Illinois. That is a claim on their site, not a map this page can verify. Lena is northwest of Freeport. Winslow is toward the west county line. Dakota is east. The drive is different for each, and snow changes it. Say the town and the ZIP on the call.",
+    a: "Some companies based outside Freeport say they serve northwest Illinois. Pearson describes a radius around Rockford and lists Freeport as one phone line. Taylor’s Heating & Cooling publishes a Rockford address and a Freeport city page aimed at the Rockford suburbs. That is a claim on their site, not a map this page can verify. Lena is northwest of Freeport. Winslow is toward the west county line. Dakota is east. The drive is different for each, and snow changes it.",
     detail:
       "This site does not send you to a Rockford shop or a Freeport shop by name. It connects the call, and the person who answers confirms the address.",
+  },
+  {
+    q: "Why is the map pack full of Freeport streets?",
+    a: "Public place listings for heating and cooling cluster on Freeport streets: Walnut, Main, Bradmar, Lily Creek, and Business 20. Lena is the nearby village with a published second office, Loescher’s on W. Main Street. Rock City has published street addresses for Homestead and Kerley. Cedarville, Pearl City, Orangeville, Ridott, German Valley, Davis, and Winslow mostly appear as names on a service list, not as their own map pins.",
+    detail:
+      "This website has no street address and is not one of those pins. A pin is not a promise that a village is on today’s route. Say the town and the ZIP.",
   },
 ];
 
@@ -118,7 +124,13 @@ export default function ServiceAreaPage() {
           sounds like your drive, not so the town can rank as its own website.
           Distance, weather, and the day&apos;s work decide whether a visit can
           happen. Confirm that on the phone. There is no map on this page
-          because a boundary drawn here would be a fiction.
+          because a boundary drawn here would be a fiction. Contractor city
+          pages often name Cedarville, Dakota, Pearl City, Lena, Orangeville,
+          Rock City, Ridott, and Eleroy, and skip German Valley, Davis, and
+          Winslow. Eleroy is an unincorporated Stephenson County community, not
+          a separate page here. Say Eleroy and the ZIP on your mailbox if that
+          is the address. The notes below cover the villages this site already
+          lists, including the ones those city pages leave out.
         </p>
         <div className="mt-8 grid gap-8">
           {nearbyCommunities.map((town) => (
@@ -131,35 +143,45 @@ export default function ServiceAreaPage() {
           ))}
         </div>
         <SectionCall context="service-area-towns" />
-        <h2 className="mt-10 text-3xl text-navy">Who publishes a Freeport address</h2>
+        <h2 className="mt-10 text-3xl text-navy">Where the shops are based</h2>
         <p className="mt-4 text-muted">
           Heating and cooling companies that work this county are not all based
           in Freeport, and a city landing page is not the same thing as a shop
           on a Freeport street. These are public descriptions from their own
-          sites or public listings, not reviews and not scores. This website is
-          not any of them.
+          sites or place listings, not reviews and not scores. This website is
+          not any of them, and it does not publish a street address of its own.
         </p>
         <div className="mt-6 grid gap-4">
           {[
             {
               name: "Loescher Heating & Air Conditioning",
-              base: "Publishes a Freeport office at 1860 S. Walnut Road, and also names Rock Falls, Dixon, Sterling, and Monroe.",
-              towns: "Its Freeport page is a city landing for repair, replacement, maintenance, and commercial work. An emergency page also names Lena.",
+              base: "Freeport office at 1860 S. Walnut Road, and a Lena office at 130 W. Main Street. Other offices are named in Sterling, Monroe, and the Rock Falls and Dixon area.",
+              towns: "The Freeport page names Cedarville, Dakota, Pearl City, Lena, Orangeville, Rock City, Ridott, and Eleroy. The company site also links Orangeville and Pearl City. German Valley, Davis, and Winslow are not on that Freeport list.",
             },
             {
               name: "Jansen Heating",
-              base: "Publishes 4341 Rolling Hills Lane, Freeport. A public listing also shows 213 W. Main Street.",
-              towns: "The public page is a short Freeport repair and installation pitch. Nearby villages are not explained one by one.",
+              base: "Publishes 4341 Rolling Hills Lane, Freeport. A place listing also shows 213 W. Main Street, Freeport.",
+              towns: "Doorway pages name Freeport, Lena, Winnebago, Pecatonica, and Lanark. The smaller Stephenson villages are not written out one by one.",
             },
             {
               name: "Bomar Heating and Cooling",
-              base: "Describes itself as locally owned in Freeport.",
-              towns: "The Freeport page is a short city page about air conditioning, furnace work, and indoor air. It does not walk through Stephenson County towns.",
+              base: "Says it is located in Freeport, 61032, and also serves Rockford and Loves Park. The pages checked do not add a street.",
+              towns: "A long service-area checklist includes every town on this page, plus Eleroy, and a wide ring of Rockford, Dixon, and Wisconsin-line towns. A Pearl City page is a short city pitch with the Freeport location repeated. The checklist is not a shop in each village.",
             },
             {
-              name: "Other Freeport listings",
-              base: "Public contractor listings also show Freeport Heating & Air Conditioning at 7 W. Main Street, Bill George Plumbing & Heating at 705 Bradmar Drive, Family Heating & Air at 3198 W. Lily Creek Road, and Pearson Plumbing, Cooling and Pest Control at 1337 Business 20.",
-              towns: "Those listings put the businesses in Freeport. They are not evidence that every nearby ZIP is on the schedule today.",
+              name: "Freeport map listings",
+              base: "Place results for heating and cooling in Freeport also show Freeport Heating & Air Conditioning at 7 W. Main Street, Bill George Plumbing & Heating at 705 Bradmar Drive, Family Heating & Air at 3198 W. Lily Creek Road, and Pearson Plumbing, Cooling and Pest Control at 1337 Business 20.",
+              towns: "Those pins sit in Freeport. Pearson’s own site describes a radius around Rockford and lists Freeport beside Rockford, Belvidere, Roscoe, and Winnebago, not the village drives.",
+            },
+            {
+              name: "Rock City street listings",
+              base: "Homestead Heating & Air Conditioning publishes 9570 N. Rock City Road, Rock City 61070. Kerley Heating and Cooling publishes 3762 N. Farwell Bridge Road, Rock City 61070, and describes Rockford as home base.",
+              towns: "Kerley’s town list includes Freeport, Dakota, Davis, and Rock City among Winnebago County cities. A Rock City pin does not explain Winslow or German Valley.",
+            },
+            {
+              name: "Rockford city pages",
+              base: "Taylor’s Heating & Cooling publishes Rockford, Illinois 61103, and a Freeport landing page. The featured cities are mostly the Rockford suburbs, with Freeport added.",
+              towns: "That pattern names Freeport and skips the reason a Winslow or Orangeville call is a different drive. It is not a Stephenson County map.",
             },
           ].map((row) => (
             <section key={row.name} className="surface-card p-5">
@@ -170,14 +192,26 @@ export default function ServiceAreaPage() {
           ))}
         </div>
         <p className="mt-4 text-muted">
-          Rockford is a larger HVAC market to the east. Companies based there
-          can say they serve northwest Illinois without writing a page that
-          knows Cedarville from Winslow. The gap is not another doorway for
-          each village. It is one honest page: Freeport first, then the drive,
-          the ZIP, and the fact that coverage is confirmed on the call. Cedarville,
-          Dakota, Pearl City, Orangeville, Ridott, German Valley, Davis, Rock
-          City, and Winslow rarely get that explanation on a contractor city
-          page. Lena is the town most often named outside Freeport.
+          The gap is the drive, not another doorway. Freeport’s map pack is
+          Freeport streets. Lena is the village with a second published office.
+          Rock City has street listings of its own. Cedarville, Dakota, Pearl
+          City, Orangeville, and Ridott are names on Loescher’s Freeport page
+          and on Bomar’s long checklist. German Valley, Davis, and Winslow are
+          easier to miss: they are on the long checklist and off the shorter
+          Freeport page. None of that assigns a truck. Say the town, the ZIP,
+          and what failed.{" "}
+          <Link className="font-semibold text-navy underline underline-offset-2" href="/services/furnace-repair-freeport-il/">
+            Furnace repair
+          </Link>
+          ,{" "}
+          <Link className="font-semibold text-navy underline underline-offset-2" href="/services/ac-repair-freeport-il/">
+            AC repair
+          </Link>
+          , and{" "}
+          <Link className="font-semibold text-navy underline underline-offset-2" href="/services/emergency-hvac-freeport-il/">
+            emergency HVAC
+          </Link>{" "}
+          are the topic pages when you already know the symptom.
         </p>
         <SectionCall context="service-area-market" />
         <h2 className="mt-10 text-3xl text-navy">When to call</h2>

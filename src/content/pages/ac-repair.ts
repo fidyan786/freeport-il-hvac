@@ -49,6 +49,7 @@ export const acRepair = defineService({
       paragraphs: [
         "The first humid week in Freeport is when outdoor units that sat in snow are asked to start. A silent condenser, a hum with no fan, and warm air at the registers are three different reports, and each one is still AC repair. This page will not price the visit or promise someone the same afternoon. Contractor sites that cover northwest Illinois often fold Freeport into a long city list and then offer a form. The fact that matters here is the symptom and the ZIP.",
         "If you are outside 61032, in Lena, Cedarville, Dakota, Pearl City, or another Stephenson County town, say that town first. Coverage is confirmed on the call. The service area page explains why those towns are not separate websites. If the house is already unsafe to wait in, use emergency HVAC.",
+        "Warm air at the registers, a condenser that will not start, a system that never shuts off, a strange noise, and weak airflow are different reports. The guides for AC blowing warm air, AC not turning on, HVAC noises, and weak airflow walk through the safe checks. A system that runs all day is still an AC repair symptom even without its own page. Dollar ranges published on national lead pages are not a quote for a house in Freeport. This site does not print one.",
       ],
     },
   ],
@@ -139,6 +140,18 @@ export const acRepair = defineService({
       a: "Independent local heating and cooling professionals do the work. This website is not a contractor and does not employ technicians. Calling the number connects you with someone who can say whether they cover your address. Several companies publish Freeport locations of their own. This page is not those companies.",
       detail:
         "Judge the visit by what they explain at the condenser, not by a claim on this website. There is no review score here because this site does not invent one.",
+    },
+    {
+      q: "How fast can someone get to an AC repair in Freeport?",
+      a: "This website does not promise a same-day visit, a two-hour window, or 24-hour coverage. Call, say whether the outdoor unit is silent or spinning, and say if someone in the house cannot safely wait through the heat. The person who answers is the one who can talk about timing.",
+      detail:
+        "A published arrival time on another site is that company's claim. It is not a schedule this page controls.",
+    },
+    {
+      q: "My AC is noisy or runs all day. Is that still AC repair?",
+      a: "Yes, if the system is cooling poorly, short-cycling, or making a new noise. A clogged filter and closed registers are the homeowner checks. Grinding, squealing, or a condenser that never rests belongs on the call, not on a second afternoon of waiting to see if it stops.",
+      detail:
+        "Weak airflow in one room, with the rest of the house cool, can be ducts rather than a dead condenser. Say which rooms are involved.",
     },
   ],
   related: [
