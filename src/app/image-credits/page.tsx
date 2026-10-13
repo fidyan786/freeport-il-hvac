@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Image Credits | Millrace Heating, Freeport, Illinois",
-  description: `Photo credits for the Freeport, IL heating and cooling pages, including Wikimedia Commons sources, authors, and licenses. Call ${site.phoneDisplay}.`,
+  description: `Photo credits for the Freeport, IL heating and cooling pages, including Wikimedia Commons, Unsplash, and Pexels sources. Call ${site.phoneDisplay}.`,
   path: "/image-credits/",
 });
 
@@ -30,13 +30,10 @@ export default function ImageCreditsPage() {
       <h1 className="mt-6 text-4xl text-navy">Image credits</h1>
       <SectionCall context="credits-hero" />
       <p className="mt-6">
-        Photographs on this site are Creative Commons and public-domain files from Wikimedia Commons.
-        Unsplash, Pexels, Pixabay, and Openverse were checked for closer HVAC
-        photographs. Usable files that showed real equipment or Illinois winter
-        homes, without another company’s uniform, came from Commons. They are
-        not photos of a Freeport service call. Each picture is also saved as
-        smaller WebP and AVIF files so the pages do not depend on an image
-        optimizer.
+        Photographs on this site are Creative Commons and public-domain files from Wikimedia Commons,
+        plus Unsplash and Pexels photos used in the homepage equipment slider.
+        They are not photos of a Freeport service call. Commons pictures are also saved as
+        smaller WebP and AVIF files. Slider pictures are WebP files about 1200 pixels on the long edge.
       </p>
       <ul className="mt-8 grid gap-6">
         {IMAGE_CREDITS.map((item) => (

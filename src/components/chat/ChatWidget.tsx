@@ -61,7 +61,7 @@ export function ChatWidget({ onClose }: { onClose: () => void }) {
 
   useEffect(() => {
     const node = scrollerRef.current;
-    if (!node) return;
+    if (!node || messages.length < 2) return;
     node.scrollTop = node.scrollHeight;
   }, [messages, typing]);
 
@@ -155,7 +155,7 @@ export function ChatWidget({ onClose }: { onClose: () => void }) {
           rows={1}
           value={input}
           maxLength={400}
-          placeholder="Describe the symptom. Do not leave your phone number."
+          placeholder="Describe the problem..."
           onChange={(event) => setInput(event.target.value)}
           onKeyDown={(event) => {
             if (event.key === "Enter" && !event.shiftKey) {

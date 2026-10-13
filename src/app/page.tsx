@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroSlider } from "@/components/HeroSlider";
 import { SitePhoto } from "@/components/SitePhoto";
 import { FaqList } from "@/components/FaqList";
 import { FinalCta } from "@/components/FinalCta";
@@ -127,25 +128,7 @@ export default function HomePage() {
           </div>
           </div>
           <div className="hero-enter hero-d5">
-            <div className="equip-frame hero-carousel relative aspect-[4/3] overflow-hidden lg:aspect-[4/5]">
-              <div className="hero-slide hero-slide-a">
-                <SitePhoto
-                  src="/photos/heroes/gas-furnace-utility.webp"
-                  alt="Gas furnace cabinet and supply pipes in a utility space."
-                  priority
-                  sizes="(min-width: 1024px) 36vw, 100vw"
-                  className="hero-photo"
-                />
-              </div>
-              <div className="hero-slide hero-slide-b">
-                <SitePhoto
-                  src="/photos/heroes/outdoor-ac-condenser.webp"
-                  alt="Outdoor air-conditioner condenser on a concrete pad beside a house."
-                  sizes="(min-width: 1024px) 36vw, 100vw"
-                  className="hero-photo"
-                />
-              </div>
-            </div>
+            <HeroSlider />
           </div>
         </div>
         <a className="scroll-cue" href="#symptoms" aria-label="Scroll to symptoms">
