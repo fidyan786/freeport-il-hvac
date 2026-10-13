@@ -72,8 +72,8 @@ const faqs = [
 ];
 
 export const metadata = pageMetadata({
-  title: "Heating and Cooling in Freeport, IL | Millrace Heating",
-  description: `Heating and cooling help for Freeport, IL 61032. Furnace trouble, an air conditioner that will not cool, or a system that will not start. Call ${site.phoneDisplay}.`,
+  title: "HVAC Freeport IL | Millrace Heating",
+  description: `Furnace repair, AC repair, and emergency HVAC for Freeport, IL 61032. Call ${site.phoneDisplay} to be connected with a local professional.`,
   path: "/",
 });
 
@@ -196,13 +196,13 @@ export default function HomePage() {
 
       <section data-reveal className="border-y border-line bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <h2 className="text-3xl text-navy">Common heating and cooling topics</h2>
+          <h2 className="text-3xl text-navy">Furnace repair and AC repair in Freeport</h2>
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <article className="surface-card card-lift grid gap-4 p-4 sm:grid-cols-[12rem_1fr] sm:p-5">
               <div className="relative aspect-[4/3] overflow-hidden rounded-brand">
                 <SitePhoto
                   src="/photos/gas-furnace-utility.webp"
-                  alt="High-efficiency gas furnace in a utility space."
+                  alt="Gas furnace pipes and cabinet in a utility space."
                   sizes={IMAGE_SIZES.thumb}
                 />
               </div>

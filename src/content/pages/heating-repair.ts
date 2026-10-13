@@ -6,9 +6,9 @@ export const heatingRepair = defineService({
   category: "heating",
   navLabel: "Heating Repair",
   navDescription: "A cold house when you are not sure the furnace is the whole story.",
-  metaTitle: "Heating Repair Help in Freeport, IL | Millrace Heating",
+  metaTitle: "Heating Repair Freeport IL | Millrace Heating",
   metaDescription:
-    "A Freeport house that will not heat, when you are not sure the furnace is the problem. Describe the symptom and the ZIP. Call (703) 703-7855.",
+    "Heating repair in Freeport, IL when the house is cold and you are not sure the furnace is the whole problem. Call (703) 703-7855.",
   h1: "Heating Repair in Freeport, IL",
   eyebrow: "When the house will not heat",
   lede:

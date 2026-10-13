@@ -69,8 +69,8 @@ const faqs = [
 ];
 
 export const metadata = pageMetadata({
-  title: "HVAC Service Area, Freeport, Illinois | Millrace Heating",
-  description: `Heating and cooling calls for Freeport 61032 and nearby Stephenson County towns. Name the town, the ZIP, and what failed. Call ${site.phoneDisplay}.`,
+  title: "HVAC Service Area Freeport IL | Millrace Heating",
+  description: `HVAC service area for Freeport, IL 61032 and nearby Stephenson County towns, including Lena and Winslow. Call ${site.phoneDisplay}.`,
   path: "/service-area/",
 });
 
