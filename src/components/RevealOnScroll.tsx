@@ -16,6 +16,15 @@ export function RevealOnScroll() {
       return;
     }
 
+    const motionObserver = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        entry.target.toggleAttribute("data-paused", !entry.isIntersecting);
+      }
+    });
+    for (const node of document.querySelectorAll("[data-motion-root]")) {
+      motionObserver.observe(node);
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -38,6 +47,7 @@ export function RevealOnScroll() {
     root.classList.add("js-reveal");
     return () => {
       observer.disconnect();
+      motionObserver.disconnect();
       root.classList.remove("js-reveal");
     };
   }, [pathname]);

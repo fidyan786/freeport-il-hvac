@@ -29,7 +29,7 @@ export const verifiedPracticeSignals: TrustSignal[] = [
   },
   {
     id: "freeport-first",
-    title: "Local to 61032",
+    title: "Freeport local",
     text: "Freeport winters and short summers shape the work. Nearby Stephenson County towns are confirmed when you call.",
     kind: "practice",
   },

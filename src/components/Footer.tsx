@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { PhoneCta, PhonePlain } from "@/components/PhoneCta";
 import { footerServiceHighlights, nearbyCommunities } from "@/lib/nav";
-import { AFFILIATE_DISCLOSURE, localLabel, primaryCtaLabel, site } from "@/lib/site";
+import { localLabel, primaryCtaLabel, site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -32,7 +32,6 @@ export function Footer() {
           <p className="mt-4">
             <PhonePlain location="footer" className="font-semibold text-white underline-offset-4 hover:text-brass hover:underline" />
           </p>
-          <p className="mt-4 rounded-2xl border border-white/15 bg-white/5 p-4 text-white/75">{AFFILIATE_DISCLOSURE}</p>
         </div>
 
         <div>
@@ -97,8 +96,8 @@ export function Footer() {
         <div>
           <p className="font-semibold tracking-wide text-brass uppercase">Freeport and nearby</p>
           <p className="mt-3 text-white/75">
-            Primary city: {site.city} {site.zip}. Nearby Stephenson County towns
-            are confirmed on the call.
+            Primary city: {site.city}, {site.state}. Nearby Stephenson County towns
+            are confirmed on the call. The city ZIP is {site.zip}.
           </p>
           <p className="mt-3 text-white/75">
             {nearbyCommunities.map((town) => town.name).join(" · ")}
@@ -112,7 +111,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-white/55">
-        © {new Date().getFullYear()} {site.businessName} · {site.city}, {site.stateCode} {site.zip}
+        © {new Date().getFullYear()} {site.businessName} · {site.city}, {site.state}
       </div>
     </footer>
   );
