@@ -71,6 +71,9 @@ export const metadata: Metadata = {
   verification: googleVerification
     ? { google: googleVerification }
     : undefined,
+  other: {
+    "google-adsense-account": "ca-pub-2140760506973241",
+  },
   icons: {
     icon: [
       { url: "/brand/favicon.svg", type: "image/svg+xml" },
