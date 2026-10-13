@@ -51,6 +51,24 @@ const faqs = [
     detail:
       "A home office is still a house. A storefront with a unit on the roof is not. The distinction saves a visit that cannot reach the equipment.",
   },
+  {
+    q: "Do you offer emergency HVAC service in Freeport?",
+    a: "This website does not run a 24-hour desk and does not promise a same-day visit. If the house is losing heat in sub-freezing weather, or someone cannot safely wait through the heat, call and describe it as emergency HVAC, with the indoor temperature and the ZIP.",
+    detail:
+      "Some Freeport heating pages advertise round-the-clock help and also post weekday office hours. Those are their claims. Ask the person who answers what they can actually do. This site only connects the call.",
+  },
+  {
+    q: "Which towns near Freeport does this site cover?",
+    a: "The pages are written for Freeport, ZIP 61032, in Stephenson County. Lena, Cedarville, Dakota, Pearl City, Orangeville, Rock City, Ridott, German Valley, Davis, and Winslow are named on the service area page so you can say yours. Eleroy is an unincorporated community people also mention. None of those names is its own website, and a visit is confirmed on the call.",
+    detail:
+      "Say the town and the ZIP first. A contractor list of nearby towns is not a promise that every one of them is on the schedule today.",
+  },
+  {
+    q: "Is Millrace Heating & Air the HVAC company?",
+    a: "No. Millrace Heating & Air is a website that connects callers with independent local heating and cooling professionals. It is not itself a contractor, it does not employ technicians, and it does not publish a street address or a review score.",
+    detail:
+      "Several heating businesses publish their own Freeport addresses. This site is not those businesses. Judge the visit by what the person explains on site.",
+  },
 ];
 
 export const metadata = pageMetadata({
@@ -312,6 +330,48 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <h2 className="text-3xl text-navy">What a Freeport HVAC search should answer</h2>
+        <p className="mt-3 max-w-2xl text-muted">
+          A city page that lists repair, replacement, and maintenance in one
+          breath still leaves the useful questions open. Start from the symptom,
+          then the building, then the town.
+        </p>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          <article className="surface-card p-5">
+            <h3 className="text-xl text-navy">The house is cold</h3>
+            <p className="mt-2 text-muted">
+              A gas furnace you can see belongs on{" "}
+              <Link className="font-semibold text-navy underline underline-offset-2" href="/services/furnace-repair-freeport-il/">furnace repair</Link>.
+              Radiators, baseboard, or equipment you cannot name belongs on{" "}
+              <Link className="font-semibold text-navy underline underline-offset-2" href="/services/heating-repair-freeport-il/">heating repair</Link>.
+              A falling indoor temperature in the cold belongs on{" "}
+              <Link className="font-semibold text-navy underline underline-offset-2" href="/services/emergency-hvac-freeport-il/">emergency HVAC</Link>.
+            </p>
+          </article>
+          <article className="surface-card p-5">
+            <h3 className="text-xl text-navy">The house will not cool</h3>
+            <p className="mt-2 text-muted">
+              Warm supply air after a Freeport winter of sitting still is{" "}
+              <Link className="font-semibold text-navy underline underline-offset-2" href="/services/ac-repair-freeport-il/">AC repair</Link>.
+              A shop, office, or church with equipment on the roof is{" "}
+              <Link className="font-semibold text-navy underline underline-offset-2" href="/services/commercial-hvac-freeport-il/">commercial HVAC</Link>.
+              A house whose system still runs, ahead of the season, is{" "}
+              <Link className="font-semibold text-navy underline underline-offset-2" href="/services/hvac-maintenance-freeport-il/">maintenance</Link>.
+            </p>
+          </article>
+        </div>
+        <p className="mt-6 max-w-2xl text-muted">
+          Freeport 61032 is the city. Nearby Stephenson County towns, including
+          ones that show up on contractor lists such as Lena, Cedarville,
+          Dakota, Pearl City, Orangeville, Rock City, and Ridott, are explained
+          on the{" "}
+          <Link className="font-semibold text-navy underline underline-offset-2" href="/service-area/">service area</Link>{" "}
+          page. This site does not publish prices, coupons, or an arrival time.
+        </p>
+        <SectionCall context="home-search-questions" />
       </section>
 
       <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">

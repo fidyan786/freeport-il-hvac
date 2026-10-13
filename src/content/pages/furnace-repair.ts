@@ -57,7 +57,8 @@ export const furnaceRepair = defineService({
       heading: "What a furnace repair page can and cannot tell you",
       paragraphs: [
         "People ask what furnace repair costs in Freeport and who will show up. This page will not name a price, a coupon, or an arrival window. The cost depends on what failed, and the person who opens the cabinet is the one who can say. Several heating companies publish Freeport addresses. This website is not one of those shops. It connects the call to an independent local professional, and you confirm the address with the person who answers.",
-        "A typical contractor city page lists repair, replacement, and maintenance in a few sentences and then asks for a form. The useful version of that page is the symptom, the one safe check, and the gas rule. If the furnace still makes heat and you are planning next winter, use HVAC maintenance. If the indoor temperature is already falling, use emergency HVAC and call.",
+        "Most Freeport furnaces burn Nicor natural gas. Some houses have electric furnaces or a heat pump. Read the cabinet if you can do it without opening a panel, and say gas or electric when you call. Do not relight a pilot, and do not follow an internet step that tells you to. A standing pilot that is out, after a gas smell or a failed attempt, is a reason to leave the reset alone. The brand name on the door is useful to the person who looks at it. This site does not prefer a brand and does not claim to repair every one.",
+        "A furnace that is noisy, short-cycling, or blowing cold air has its own guide: furnace not heating, furnace blowing cold air, furnace short cycling, and HVAC noises. Replacement is a later conversation, after the house is stable, on the furnace installation page. A published lifespan, such as 15 or 20 years, is not a rule this site uses. Age alone does not decide repair versus replacement.",
       ],
     },
   ],
@@ -148,6 +149,18 @@ export const furnaceRepair = defineService({
       a: "If the furnace still produces some heat and the rooms are holding a safe temperature, it can be an ordinary furnace repair call rather than an overnight emergency. If the burners are out and the indoor temperature is falling on a night in the teens, do not wait it out. Say that when you call.",
       detail:
         "This site does not promise that someone is on the road. It does tell you to describe a falling temperature instead of treating every no-heat call as a morning errand.",
+    },
+    {
+      q: "Should I relight the pilot on a Freeport furnace?",
+      a: "No. Do not relight a pilot, and do not keep resetting a furnace that shuts the burners down again. If you smell gas, leave and call 911 and Nicor Gas at 888-642-6748 from outside. If the house is safe and the furnace simply will not stay lit, that is the furnace repair call.",
+      detail:
+        "Older instructions that say to check the pilot and the breaker are not a repair. One look at the thermostat mode and the furnace switch is enough. Then stop.",
+    },
+    {
+      q: "Do you repair every furnace brand in Freeport?",
+      a: "This website does not repair furnaces and does not certify a brand list. If you can read the name on the cabinet without removing a panel, say it when you call. The independent professional who answers can say whether they work on that equipment.",
+      detail:
+        "Gas and electric furnaces fail differently. Saying which one you have saves a visit planned for the wrong heat source.",
     },
   ],
   related: [

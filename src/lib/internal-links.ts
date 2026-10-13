@@ -6,7 +6,7 @@ const SERVICE_GUIDE_RULES: Array<{
 }> = [
   {
     test: (slug) => slug.startsWith("ac-repair"),
-    slugs: ["ac-blowing-warm-air", "ac-not-turning-on", "poor-airflow"],
+    slugs: ["ac-blowing-warm-air", "ac-not-turning-on", "hvac-strange-noises", "poor-airflow", "prepare-ac-after-winter"],
   },
   {
     test: (slug) => slug.startsWith("ac-installation"),
@@ -14,7 +14,7 @@ const SERVICE_GUIDE_RULES: Array<{
   },
   {
     test: (slug) => slug.startsWith("furnace-repair"),
-    slugs: ["furnace-not-heating", "furnace-blowing-cold-air", "furnace-short-cycling"],
+    slugs: ["furnace-not-heating", "furnace-blowing-cold-air", "furnace-short-cycling", "hvac-strange-noises", "furnace-replacement-signals"],
   },
   {
     test: (slug) => slug.startsWith("furnace-installation"),
@@ -22,11 +22,11 @@ const SERVICE_GUIDE_RULES: Array<{
   },
   {
     test: (slug) => slug.startsWith("heating-repair"),
-    slugs: ["no-heat-in-house", "furnace-not-heating", "thermostat-not-working"],
+    slugs: ["no-heat-in-house", "furnace-not-heating", "thermostat-not-working", "hvac-strange-noises", "uneven-temperatures"],
   },
   {
     test: (slug) => slug.includes("emergency"),
-    slugs: ["furnace-not-heating", "no-heat-in-house", "carbon-monoxide-safety"],
+    slugs: ["furnace-not-heating", "no-heat-in-house", "ac-blowing-warm-air", "carbon-monoxide-safety"],
   },
   {
     test: (slug) => slug.startsWith("hvac-maintenance"),
@@ -69,5 +69,5 @@ export function relatedGuidesForService(slug: string): Guide[] {
     }
   }
 
-  return matched.slice(0, 3);
+  return matched.slice(0, 4);
 }

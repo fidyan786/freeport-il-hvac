@@ -118,7 +118,13 @@ export default function ServiceAreaPage() {
           sounds like your drive, not so the town can rank as its own website.
           Distance, weather, and the day&apos;s work decide whether a visit can
           happen. Confirm that on the phone. There is no map on this page
-          because a boundary drawn here would be a fiction.
+          because a boundary drawn here would be a fiction. Contractor city
+          pages often name Cedarville, Dakota, Pearl City, Lena, Orangeville,
+          Rock City, Ridott, and Eleroy, and skip German Valley, Davis, and
+          Winslow. Eleroy is an unincorporated Stephenson County community, not
+          a separate page here. Say Eleroy and the ZIP on your mailbox if that
+          is the address. The notes below cover the villages this site already
+          lists, including the ones those city pages leave out.
         </p>
         <div className="mt-8 grid gap-8">
           {nearbyCommunities.map((town) => (

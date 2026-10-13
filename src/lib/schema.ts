@@ -133,16 +133,7 @@ export function serviceSchema({
     serviceType: serviceType ?? name,
     description,
     url: absoluteUrl(path),
-    areaServed: [
-      {
-        "@type": "City",
-        name: site.city,
-      },
-      {
-        "@type": "AdministrativeArea",
-        name: site.county,
-      },
-    ],
+    areaServed: areaServed(),
     provider,
   };
 }
