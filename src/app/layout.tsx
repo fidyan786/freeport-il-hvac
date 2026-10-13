@@ -39,9 +39,8 @@ export const viewport: Viewport = {
   themeColor: BRAND_COLORS.navy,
 };
 
-const defaultTitle =
-  "Heating and Cooling in Freeport, IL | Millrace Heating";
-const defaultDescription = `Heating and cooling help for Freeport, IL 61032. Furnace trouble, an air conditioner that will not cool, or a system that will not start. Call ${site.phoneDisplay}.`;
+const defaultTitle = "HVAC Freeport IL | Millrace Heating";
+const defaultDescription = `Furnace repair, AC repair, and emergency HVAC for Freeport, IL 61032. Call ${site.phoneDisplay} to be connected with a local professional.`;
 
 const googleVerification = googleSiteVerification();
 

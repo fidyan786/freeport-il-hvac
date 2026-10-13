@@ -6,9 +6,9 @@ export const emergencyHvac = defineService({
   category: "emergency",
   navLabel: "Emergency HVAC",
   navDescription: "No heat or no cooling that should not wait.",
-  metaTitle: "Emergency HVAC Help in Freeport, IL | Millrace Heating",
+  metaTitle: "Emergency HVAC Freeport IL | Millrace Heating",
   metaDescription:
-    "Urgent no-heat or no-cooling help for a Freeport house. If you smell gas or a CO alarm sounds, leave and call 911 first. Call (703) 703-7855.",
+    "Emergency HVAC in Freeport, IL for a house losing heat or cooling. Gas or a CO alarm: leave and call 911 first. Call (703) 703-7855.",
   h1: "Emergency HVAC in Freeport, IL",
   eyebrow: "No heat and no cooling",
   lede:
