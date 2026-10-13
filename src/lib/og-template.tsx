@@ -26,8 +26,8 @@ export function createOgImage({
         style={{
           width: "100%",
           height: "100%",
-          background: "#F7F8FA",
-          color: BRAND_COLORS.navy,
+          background: `linear-gradient(135deg, ${BRAND_COLORS.navyDeep} 0%, ${BRAND_COLORS.navy} 55%, #1C4A66 100%)`,
+          color: "white",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -70,7 +70,7 @@ export function createOgImage({
         <div style={{ display: "flex", fontSize: title.length > 60 ? 48 : 60, lineHeight: 1.15, maxWidth: 1000 }}>
           {title}
         </div>
-        <div style={{ display: "flex", fontSize: 40, fontWeight: 700, color: BRAND_COLORS.ember }}>
+        <div style={{ display: "flex", fontSize: 40, fontWeight: 700, color: "#F6F1E8" }}>
           {phone}
         </div>
       </div>

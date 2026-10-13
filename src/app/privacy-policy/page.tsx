@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { SectionCall } from "@/components/SectionCall";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { AFFILIATE_DISCLOSURE, site } from "@/lib/site";
@@ -26,6 +27,7 @@ export default function PrivacyPage() {
         ]}
       />
       <h1 className="mt-6 text-4xl text-navy">Privacy Policy</h1>
+      <SectionCall context="privacy-hero" />
       <p className="mt-6">
         {site.businessName} is an affiliate, pay-per-call advertising website.
         {` ${AFFILIATE_DISCLOSURE}`} A call to the number on this site may be
@@ -35,7 +37,9 @@ export default function PrivacyPage() {
       <p className="mt-4">
         If you call, your phone provider and the independent provider who
         receives the call process that call. This website does not collect
-        names, messages, or service requests through a form or chat.
+        names, phone numbers, email addresses, or service requests. The
+        assistant on the page runs in your browser. It does not send what you
+        type to this website, and it is an automated guide, not a technician.
       </p>
       <p className="mt-4">
         If analytics are enabled, a call-button click may be recorded with the

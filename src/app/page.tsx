@@ -2,12 +2,12 @@ import Link from "next/link";
 import { SitePhoto } from "@/components/SitePhoto";
 import { FaqList } from "@/components/FaqList";
 import { FinalCta } from "@/components/FinalCta";
-import { PhoneIcon } from "@/components/Icons";
+import { ChevronIcon, CoolIcon, HeatIcon } from "@/components/Icons";
 import { JsonLd } from "@/components/JsonLd";
 import { PhoneCta } from "@/components/PhoneCta";
 import { SafetyCallout } from "@/components/SafetyCallout";
 import { SectionCall } from "@/components/SectionCall";
-import { TrustSignals } from "@/components/TrustSection";
+import { TrustRow, TrustSignals } from "@/components/TrustSection";
 import { IMAGE_SIZES } from "@/lib/images";
 import { intentLinks, problemLinks } from "@/lib/nav";
 import { faqSchema, speakableWebPage } from "@/lib/schema";
@@ -71,53 +71,84 @@ export default function HomePage() {
           path: "/",
         })}
       />
-      <section className="hero-panel border-b border-line bg-white">
-        <div className="mx-auto grid max-w-6xl items-stretch lg:grid-cols-2">
-          <div className="flex flex-col justify-center px-4 py-12 sm:px-6 lg:py-16">
-            <p className="kicker">
-              {localLabel} {site.zip}
-            </p>
-            <h1 className="mt-3 max-w-xl text-3xl leading-tight text-balance text-navy sm:text-4xl">
-              Heating and cooling help in Freeport, Illinois
-            </h1>
-            <p className="speakable mt-5 max-w-xl leading-relaxed text-muted">
-              Furnace trouble, an air conditioner that will not cool, or a system
-              that will not start. Call to be connected with a local heating and
-              cooling professional.
-            </p>
-            <div className="mt-8">
-              <PhoneCta location="hero" context="home-hero" className="w-full sm:w-auto">
-                <span className="inline-flex items-center gap-2">
-                  <PhoneIcon />
-                  {primaryCtaLabel()}
-                </span>
-              </PhoneCta>
-            </div>
-            <ul className="mt-8 flex max-w-xl flex-wrap gap-2">
-              {intentLinks.slice(0, 6).map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="inline-flex min-h-12 items-center rounded-brand border border-line bg-white px-3 py-2 font-medium text-navy hover:border-navy"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      <section className="relative isolate overflow-hidden bg-navy-deep text-white">
+        <div className="hero-mesh absolute inset-0" aria-hidden="true" />
+        <div className="hero-grid absolute inset-0" aria-hidden="true" />
+        <div className="hero-shimmer absolute inset-0" aria-hidden="true" />
+        <svg className="hero-flow" viewBox="0 0 1200 640" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M-20 180 C 220 120, 420 80, 760 150 S 1180 240, 1240 120" />
+          <path d="M-20 300 C 260 250, 480 340, 820 280 S 1160 200, 1240 260" />
+          <path d="M-20 460 C 300 400, 540 500, 860 430 S 1140 360, 1240 420" />
+        </svg>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 sm:py-16 lg:min-h-[40rem] lg:grid-cols-[1.15fr_0.85fr] lg:py-20">
+          <div>
+          <p className="hero-enter hero-d1 kicker !text-[#a5f3fc]">
+            {localLabel} {site.zip}
+          </p>
+          <h1 className="hero-enter hero-d2 mt-3 max-w-3xl text-4xl leading-[1.08] text-balance text-white sm:text-5xl lg:text-6xl">
+            Heating and cooling help in Freeport, Illinois
+          </h1>
+          <p className="hero-enter hero-d3 speakable mt-5 max-w-2xl text-lg leading-relaxed text-white/90">
+            Furnace trouble, an air conditioner that will not cool, or a system
+            that will not start. Call to be connected with a local heating and
+            cooling professional.
+          </p>
+          <div className="hero-enter hero-d4 mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+            <PhoneCta location="hero" context="home-hero" className="min-h-14 w-full px-7 text-lg sm:w-auto">
+              {primaryCtaLabel()}
+            </PhoneCta>
+            <Link
+              href="/services/"
+              className="inline-flex min-h-12 items-center justify-center px-2 text-base font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white"
+            >
+              See services
+            </Link>
           </div>
-          <div className="relative min-h-[18rem] overflow-hidden sm:min-h-[24rem] lg:min-h-full">
-            <SitePhoto
-              src="/photos/heroes/downtown-freeport-illinois.webp"
-              alt="Downtown Freeport, Illinois, with brick storefronts along a main street."
-              priority
-              sizes={IMAGE_SIZES.hero}
-            />
+          <div className="hero-enter hero-d5 mt-8">
+            <TrustRow />
+          </div>
+          </div>
+          <div className="hero-enter hero-d5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="equip-frame relative aspect-[16/10] overflow-hidden lg:aspect-[16/11]">
+              <SitePhoto
+                src="/photos/heroes/gas-furnace-utility.webp"
+                alt="Gas furnace in a utility space, the kind of equipment behind furnace repair in Freeport, IL."
+                priority
+                sizes="(min-width: 1024px) 36vw, 100vw"
+                className="hero-photo"
+              />
+            </div>
+            <div className="equip-frame relative aspect-[16/10] overflow-hidden lg:aspect-[16/11]">
+              <SitePhoto
+                src="/photos/heroes/outdoor-ac-condenser.webp"
+                alt="Outdoor air-conditioner condenser on a concrete pad beside a house."
+                sizes="(min-width: 1024px) 36vw, 100vw"
+                className="hero-photo"
+              />
+            </div>
           </div>
         </div>
+        <a className="scroll-cue" href="#symptoms" aria-label="Scroll to symptoms">
+          <ChevronIcon className="h-5 w-5" />
+        </a>
       </section>
 
-      <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+      <div className="border-b border-line bg-white/80">
+        <ul className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-4 sm:px-6">
+          {intentLinks.slice(0, 6).map((item) => (
+            <li key={item.href} className="shrink-0">
+              <Link
+                href={item.href}
+                className="inline-flex min-h-12 items-center rounded-full border border-line bg-white px-4 py-2 font-semibold text-navy shadow-sm hover:border-ember"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <section id="symptoms" data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <h2 className="text-3xl text-navy">What is happening with the system?</h2>
         <p className="mt-3 max-w-2xl text-muted">
           Start with the symptom. Each link explains the problem and ends with a
@@ -125,14 +156,19 @@ export default function HomePage() {
         </p>
         <div className="mt-8 grid gap-3 sm:grid-cols-2">
           {problemLinks.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="symptom-link rounded-brand border border-line bg-white p-5"
-            >
-              <h3 className="font-semibold text-navy">{item.label}</h3>
-              <p className="mt-2 text-muted">{item.text}</p>
-            </Link>
+            <article key={item.label} className="symptom-link card-lift surface-card p-5">
+              <Link href={item.href} className="block">
+                <h3 className="font-semibold text-navy">{item.label}</h3>
+                <p className="mt-2 text-muted">{item.text}</p>
+              </Link>
+              <PhoneCta
+                location="inline"
+                context={`home-symptom-${item.href}`}
+                className="mt-4 w-full"
+              >
+                {primaryCtaLabel()}
+              </PhoneCta>
+            </article>
           ))}
         </div>
         <SectionCall context="home-symptoms" />
@@ -142,7 +178,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <h2 className="text-3xl text-navy">Common heating and cooling topics</h2>
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
-            <article className="grid gap-4 sm:grid-cols-[12rem_1fr]">
+            <article className="surface-card card-lift grid gap-4 p-4 sm:grid-cols-[12rem_1fr] sm:p-5">
               <div className="relative aspect-[4/3] overflow-hidden rounded-brand">
                 <SitePhoto
                   src="/photos/gas-furnace-utility.webp"
@@ -151,7 +187,11 @@ export default function HomePage() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl text-navy">Furnace and heating</h3>
+                <p className="kicker inline-flex items-center gap-2">
+                  <HeatIcon className="h-4 w-4" />
+                  Heating
+                </p>
+                <h3 className="mt-2 text-2xl text-navy">Furnace and heating</h3>
                 <p className="mt-3 text-muted">
                   No heat, weak heat, or a house that will not hold temperature
                   through a Stephenson County night.
@@ -170,7 +210,7 @@ export default function HomePage() {
                 </ul>
               </div>
             </article>
-            <article className="grid gap-4 sm:grid-cols-[12rem_1fr]">
+            <article className="surface-card card-lift grid gap-4 p-4 sm:grid-cols-[12rem_1fr] sm:p-5">
               <div className="relative aspect-[4/3] overflow-hidden rounded-brand">
                 <SitePhoto
                   src="/photos/condenser-beside-house.webp"
@@ -179,7 +219,11 @@ export default function HomePage() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl text-navy">Air conditioning</h3>
+                <p className="kicker inline-flex items-center gap-2">
+                  <CoolIcon className="h-4 w-4" />
+                  Cooling
+                </p>
+                <h3 className="mt-2 text-2xl text-navy">Air conditioning</h3>
                 <p className="mt-3 text-muted">
                   Outdoor units sit idle through snow, then fail on the first
                   warm week.
@@ -204,8 +248,18 @@ export default function HomePage() {
       </section>
 
       <section data-reveal className="border-b border-line bg-paper">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <h2 className="text-3xl text-navy">Repair, replace, or call now</h2>
+        <div className="relative h-64 overflow-hidden sm:h-80">
+          <SitePhoto
+            src="/photos/heroes/spring-jackson-freeport-illinois.webp"
+            alt="Houses at the corner of Spring and Jackson streets in Freeport, Illinois."
+            sizes={IMAGE_SIZES.bleed}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/25 to-navy/10" />
+          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-6xl px-4 pb-6 sm:px-6">
+            <h2 className="text-3xl text-white sm:text-4xl">Repair, replace, or call now</h2>
+          </div>
+        </div>
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <p className="speakable mt-3 max-w-2xl text-muted">
             Freeport winters are long and the cooling season is short and humid.
             The right page depends on whether the equipment still runs, whether
@@ -239,7 +293,7 @@ export default function HomePage() {
                 ],
               },
             ].map((item) => (
-              <article key={item.title} className="surface-card p-5">
+              <article key={item.title} className="surface-card card-lift p-5">
                 <h3 className="text-xl text-navy">{item.title}</h3>
                 <p className="mt-3 text-muted">{item.text}</p>
                 <ul className="mt-4 grid gap-2">
@@ -262,27 +316,29 @@ export default function HomePage() {
 
       <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <h2 className="text-3xl text-navy">How a call works</h2>
-        <ol className="mt-8 grid gap-4 md:grid-cols-3">
+        <ol className="step-rail mt-8 grid gap-4 md:grid-cols-3">
           {[
             {
               step: "1",
-              title: "Call the number",
+              title: "Call",
               text: "Describe the symptom and the ZIP. The phone is the only way to request help on this site.",
             },
             {
               step: "2",
-              title: "Confirm the town",
+              title: "Describe the problem",
               text: "Freeport 61032 is the city this site covers. Nearby Stephenson County towns are confirmed on the call.",
             },
             {
               step: "3",
-              title: "Talk with a local professional",
+              title: "Get connected",
               text: "Call to be connected with a local heating and cooling professional who can look at the equipment.",
             },
           ].map((item) => (
-            <li key={item.step} className="surface-card p-5">
-              <p className="font-semibold text-navy">{item.step}</p>
-              <h3 className="mt-2 text-xl text-navy">{item.title}</h3>
+            <li key={item.step} className="surface-card relative p-5">
+              <p className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ember text-lg font-semibold text-white shadow-[var(--glow)]">
+                {item.step}
+              </p>
+              <h3 className="mt-4 text-xl text-navy">{item.title}</h3>
               <p className="mt-2 text-muted">{item.text}</p>
             </li>
           ))}

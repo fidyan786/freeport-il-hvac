@@ -77,7 +77,7 @@ export default async function GuidePage({
         imageAlt={guide.imageAlt}
         priority={guide.image.startsWith("/photos/heroes/")}
       />
-      <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+      <div id="page-body" className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },

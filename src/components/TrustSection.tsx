@@ -11,6 +11,29 @@ const practiceIcons = {
   "freeport-first": PinIcon,
 } as const;
 
+const trustDelays = ["", "trust-d2", "trust-d3"] as const;
+
+export function TrustRow() {
+  return (
+    <ul className="grid gap-3 sm:grid-cols-3">
+      {verifiedPracticeSignals.map((item, index) => {
+        const Icon = practiceIcons[item.id as keyof typeof practiceIcons] ?? PinIcon;
+        return (
+          <li
+            key={item.id}
+            className={`glass-panel trust-icon flex items-center gap-3 rounded-2xl px-3 py-3 ${trustDelays[index] ?? ""}`}
+          >
+            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-brass">
+              <Icon className="h-5 w-5" />
+            </span>
+            <p className="font-semibold text-white">{item.title}</p>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export function TrustSignals() {
   const reviews = verifiedReviews();
   const credentials = verifiedCredentials;
@@ -73,8 +96,8 @@ export function TrustSignals() {
             const Icon =
               practiceIcons[item.id as keyof typeof practiceIcons] ?? WrenchIcon;
             return (
-              <div key={item.id} className="surface-card p-6">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-brand bg-navy text-white">
+              <div key={item.id} className="surface-card card-lift p-6">
+                <span className="icon-badge">
                   <Icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 font-semibold text-navy">{item.title}</h3>

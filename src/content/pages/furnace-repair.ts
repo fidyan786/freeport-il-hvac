@@ -53,6 +53,13 @@ export const furnaceRepair = defineService({
         "Soot around the draft hood, a furnace that smells like exhaust, or rusted vent pipe in a basement are reasons to stop running the unit and call, even when the alarm is quiet. High-efficiency furnaces also fail at the condensate trap and the inducer, and those failures can shut the burners down without a dramatic smell. Describe what you see. Do not pour water into a trap or bypass a pressure switch to force a cycle.",
       ],
     },
+    {
+      heading: "What a furnace repair page can and cannot tell you",
+      paragraphs: [
+        "People ask what furnace repair costs in Freeport and who will show up. This page will not name a price, a coupon, or an arrival window. The cost depends on what failed, and the person who opens the cabinet is the one who can say. Several heating companies publish Freeport addresses. This website is not one of those shops. It connects the call to an independent local professional, and you confirm the address with the person who answers.",
+        "A typical contractor city page lists repair, replacement, and maintenance in a few sentences and then asks for a form. The useful version of that page is the symptom, the one safe check, and the gas rule. If the furnace still makes heat and you are planning next winter, use HVAC maintenance. If the indoor temperature is already falling, use emergency HVAC and call.",
+      ],
+    },
   ],
   directAnswer:
     "Furnace repair in Freeport, IL is the call when a gas furnace will not light, will not stay lit, or the blower runs while the air stays cold. This website connects that call with an independent local professional. It does not diagnose the furnace and it does not promise an arrival time.",
@@ -129,6 +136,18 @@ export const furnaceRepair = defineService({
       a: "Repair is the starting point when the furnace quit and might still run. Replacement belongs in the conversation when the cabinet is failing every cold snap and another Stephenson County winter is a poor bet. This site does not name an age or a price that forces either choice.",
       detail:
         "Get the house stable first. Furnace installation is the page for a planned replacement. Emergency HVAC is the page when the indoor temperature is already falling.",
+    },
+    {
+      q: "How much does furnace repair cost in Freeport?",
+      a: "This website does not publish a price. A locked-out furnace after a packed filter and a furnace with a failed heat exchanger are not the same job, and neither has a number that belongs on a webpage. Call and describe the symptom. The independent professional who looks at the furnace is the one who can explain the work.",
+      detail:
+        "Asking for a quote before anyone sees the cabinet produces a guess. There is no coupon or offer on this site. The phone number is the only way to request help.",
+    },
+    {
+      q: "Can furnace repair wait until morning in Freeport?",
+      a: "If the furnace still produces some heat and the rooms are holding a safe temperature, it can be an ordinary furnace repair call rather than an overnight emergency. If the burners are out and the indoor temperature is falling on a night in the teens, do not wait it out. Say that when you call.",
+      detail:
+        "This site does not promise that someone is on the road. It does tell you to describe a falling temperature instead of treating every no-heat call as a morning errand.",
     },
   ],
   related: [

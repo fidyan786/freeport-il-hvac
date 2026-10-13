@@ -3,6 +3,7 @@ import { SitePhoto } from "@/components/SitePhoto";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { FinalCta } from "@/components/FinalCta";
+import { PageHero } from "@/components/PageHero";
 import { SectionCall } from "@/components/SectionCall";
 import { servicesByCategory, type ServiceCategory } from "@/content/services";
 import { IMAGE_SIZES } from "@/lib/images";
@@ -121,21 +122,17 @@ export default function ServicesIndexPage() {
         ])}
       />
       <JsonLd data={serviceListSchema()} />
-      <section className="border-b border-line bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <p className="kicker">Freeport, Illinois 61032</p>
-          <h1 className="mt-3 max-w-3xl text-4xl text-balance text-navy">
-            Heating and cooling topics in Freeport, IL
-          </h1>
-          <p className="mt-5 max-w-2xl text-muted">
-            Furnace and air conditioning repair, installation, maintenance, heat
-            pumps, ductless systems, indoor air, and small-building equipment.
-            Call to be connected with a local heating and cooling professional.
-          </p>
-          <SectionCall context="services-hero" />
-        </div>
-      </section>
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <PageHero
+        eyebrow="Freeport, Illinois 61032"
+        title="Heating and cooling topics in Freeport, IL"
+        lede="Furnace and air conditioning repair, installation, maintenance, heat pumps, ductless systems, indoor air, and small-building equipment. Call to be connected with a local heating and cooling professional."
+        context="services-hero"
+        secondaryHref="/service-area/"
+        secondaryLabel="Service area"
+        image="/photos/heroes/gas-furnace-utility.webp"
+        imageAlt="Gas furnace in a utility space, the kind of equipment behind furnace repair in Freeport, IL."
+      />
+      <div id="page-body" className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },

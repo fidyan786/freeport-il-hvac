@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { SectionCall } from "@/components/SectionCall";
 import { IMAGE_CREDITS } from "@/lib/image-credits";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -27,6 +28,7 @@ export default function ImageCreditsPage() {
         ]}
       />
       <h1 className="mt-6 text-4xl text-navy">Image credits</h1>
+      <SectionCall context="credits-hero" />
       <p className="mt-6">
         Photographs on this site are Creative Commons and public-domain files from Wikimedia Commons.
         Unsplash, Pexels, Pixabay, and Openverse were checked for closer HVAC

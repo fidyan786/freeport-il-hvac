@@ -97,7 +97,7 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
         image={service.image}
         imageAlt={service.imageAlt}
       />
-      <div className="mx-auto max-w-6xl px-4 py-10 [content-visibility:auto] [contain-intrinsic-size:auto_900px] sm:px-6">
+      <div id="page-body" className="mx-auto max-w-6xl px-4 py-10 [content-visibility:auto] [contain-intrinsic-size:auto_900px] sm:px-6">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },
@@ -191,7 +191,7 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
             <SectionCall context={`${service.slug}-body`} />
           </article>
           <aside className="grid gap-6 self-start lg:sticky lg:top-32">
-            <div className="surface-card p-6">
+            <div className="surface-card p-6 shadow-[var(--glow)]">
               <p className="kicker">Freeport, Illinois 61032</p>
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 Say what the equipment is doing, the town, and the ZIP. This

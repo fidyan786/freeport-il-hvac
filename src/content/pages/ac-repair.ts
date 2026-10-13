@@ -44,6 +44,13 @@ export const acRepair = defineService({
         "Low refrigerant is a leak, not a yearly top-off. Guessing the charge hides the leak and can wreck a compressor. Electrical failures, a dirty outdoor coil, and a failed capacitor are more common after an Illinois winter of sitting still, and they are still not driveway experiments. If someone in the home is vulnerable to heat, treat warm-air AC as urgent cooling help and use the emergency HVAC page when the house is already unsafe to wait in.",
       ],
     },
+    {
+      heading: "What people ask before they call about AC repair",
+      paragraphs: [
+        "The first humid week in Freeport is when outdoor units that sat in snow are asked to start. A silent condenser, a hum with no fan, and warm air at the registers are three different reports, and each one is still AC repair. This page will not price the visit or promise someone the same afternoon. Contractor sites that cover northwest Illinois often fold Freeport into a long city list and then offer a form. The fact that matters here is the symptom and the ZIP.",
+        "If you are outside 61032, in Lena, Cedarville, Dakota, Pearl City, or another Stephenson County town, say that town first. Coverage is confirmed on the call. The service area page explains why those towns are not separate websites. If the house is already unsafe to wait in, use emergency HVAC.",
+      ],
+    },
   ],
   directAnswer:
     "AC repair in Freeport, IL is the call when the air conditioner will not start, will not stay on, or runs while the supply air stays warm. Outdoor units sit idle all winter, so the first humid week is when failures show up. This site connects the call. It does not add refrigerant or promise a visit.",
@@ -120,6 +127,18 @@ export const acRepair = defineService({
       a: "The condenser sits outside through snow and ice, then has to start on the first humid afternoon. A failed capacitor, a seized fan, or a system low on charge often shows up then, not in January. The idle season is why a unit that cooled last August can be dead in June.",
       detail:
         "Say how long it has been since the system last ran, and what the outdoor fan is doing now. AC installation is the later conversation if the visit shows the unit should not do another summer.",
+    },
+    {
+      q: "How much does AC repair cost in Freeport?",
+      a: "This site does not list a price, a diagnostic fee, or a special. A capacitor, a fan motor, and a leaking system are different jobs, and none of them can be priced from a webpage. Call, describe whether the outdoor unit is silent or spinning, and let the person who sees it explain the work.",
+      detail:
+        "Adding refrigerant from a can is not a cheaper version of that visit. It skips the leak and can damage the compressor.",
+    },
+    {
+      q: "Who repairs air conditioners in Freeport?",
+      a: "Independent local heating and cooling professionals do the work. This website is not a contractor and does not employ technicians. Calling the number connects you with someone who can say whether they cover your address. Several companies publish Freeport locations of their own. This page is not those companies.",
+      detail:
+        "Judge the visit by what they explain at the condenser, not by a claim on this website. There is no review score here because this site does not invent one.",
     },
   ],
   related: [
