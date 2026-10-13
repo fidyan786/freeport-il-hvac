@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
@@ -89,19 +90,25 @@ export default async function GuidePage({
           Last updated{" "}
           {formatUpdated(guide.dateModified ?? GUIDES_LAST_UPDATED)}.
         </p>
-        {guide.body.map((section) => (
-          <section key={section.heading} className="mt-10">
-            <h2 className="font-serif text-2xl text-navy sm:text-3xl">
-              {section.heading}
-            </h2>
-            {section.paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 28)} className="mt-4 leading-relaxed text-muted">
-                {paragraph}
-              </p>
-            ))}
-            <SectionCall context={`guide-${guide.slug}-${section.heading}`} />
-          </section>
-        ))}
+        {guide.body.map((section, index) => {
+          const midpoint = Math.floor((guide.body.length - 1) / 2);
+          return (
+            <div key={section.heading}>
+              <section className="mt-10">
+                <h2 className="font-serif text-2xl text-navy sm:text-3xl">
+                  {section.heading}
+                </h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 28)} className="mt-4 leading-relaxed text-muted">
+                    {paragraph}
+                  </p>
+                ))}
+                <SectionCall context={`guide-${guide.slug}-${section.heading}`} />
+              </section>
+              {index === midpoint ? <AdSlot className="mt-10" /> : null}
+            </div>
+          );
+        })}
         {relatedServices.length ? (
           <section className="mt-12">
             <h2 className="font-serif text-2xl text-navy">Related services</h2>

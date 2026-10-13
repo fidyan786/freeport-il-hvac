@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@/components/Analytics";
 import { ChatLazy } from "@/components/chat/ChatLazy";
 import { Footer } from "@/components/Footer";
@@ -101,6 +102,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <StickyCallBar />
         <ChatLazy />
         <Analytics />
+        <Script
+          id="adsbygoogle-js"
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2140760506973241"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );

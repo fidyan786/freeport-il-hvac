@@ -427,6 +427,25 @@ body[data-chat-open] [data-sticky-call] {
   pointer-events: none;
 }
 
+.ad-slot {
+  min-height: 280px;
+  margin-block: 1.5rem;
+}
+
+.ad-slot-label {
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ad-slot .adsbygoogle {
+  display: block;
+  min-height: 250px;
+}
+
 .chat-dock {
   position: fixed;
   right: 1.25rem;

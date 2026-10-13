@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import { HeroSlider } from "@/components/HeroSlider";
 import { SitePhoto } from "@/components/SitePhoto";
 import { FaqList } from "@/components/FaqList";
@@ -176,6 +177,8 @@ export default function HomePage() {
         </div>
         <SectionCall context="home-symptoms" />
       </section>
+
+      <AdSlot className="mx-auto max-w-6xl px-4 sm:px-6" />
 
       <section data-reveal className="border-y border-line bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">

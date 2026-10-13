@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqList } from "@/components/FaqList";
 import { FinalCta } from "@/components/FinalCta";
@@ -112,32 +113,38 @@ export function ServiceTemplate({ service }: { service: ServicePageContent }) {
                 {service.directAnswer}
               </p>
             ) : null}
-            {service.sections.map((section) => (
-              <section key={section.heading} data-reveal className="mt-12 first:mt-0">
-                <h2 className="text-3xl text-navy">{section.heading}</h2>
-                {section.paragraphs.map((paragraph) => (
-                  <p
-                    key={paragraph.slice(0, 48)}
-                    className="mt-4 leading-relaxed text-muted"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-                {section.subsections?.map((sub) => (
-                  <div key={sub.heading} className="mt-6">
-                    <h3 className="text-xl text-navy">{sub.heading}</h3>
-                    {sub.paragraphs.map((paragraph) => (
+            {service.sections.map((section, index) => {
+              const midpoint = Math.floor((service.sections.length - 1) / 2);
+              return (
+                <div key={section.heading}>
+                  <section data-reveal className={index === 0 ? "mt-0" : "mt-12"}>
+                    <h2 className="text-3xl text-navy">{section.heading}</h2>
+                    {section.paragraphs.map((paragraph) => (
                       <p
                         key={paragraph.slice(0, 48)}
-                        className="mt-3 leading-relaxed text-muted"
+                        className="mt-4 leading-relaxed text-muted"
                       >
                         {paragraph}
                       </p>
                     ))}
-                  </div>
-                ))}
-              </section>
-            ))}
+                    {section.subsections?.map((sub) => (
+                      <div key={sub.heading} className="mt-6">
+                        <h3 className="text-xl text-navy">{sub.heading}</h3>
+                        {sub.paragraphs.map((paragraph) => (
+                          <p
+                            key={paragraph.slice(0, 48)}
+                            className="mt-3 leading-relaxed text-muted"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                  </section>
+                  {index === midpoint ? <AdSlot className="mt-12" /> : null}
+                </div>
+              );
+            })}
             {service.decision ? (
               <section data-reveal className="mt-12">
                 <h2 className="text-3xl text-navy">{service.decision.heading}</h2>
