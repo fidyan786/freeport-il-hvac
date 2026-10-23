@@ -102,7 +102,7 @@ export default function HomePage() {
         </svg>
         <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 sm:py-16 lg:min-h-[40rem] lg:grid-cols-[1.15fr_0.85fr] lg:py-20">
           <div>
-          <p className="hero-enter hero-d1 kicker !text-[#f4a261]">
+          <p className="hero-enter hero-d1 kicker !text-[#e3c27a]">
             {localLabel} {site.zip}
           </p>
           <h1 className="hero-enter hero-d2 mt-3 max-w-3xl text-4xl leading-[1.08] text-balance text-white sm:text-5xl lg:text-6xl">
@@ -375,7 +375,7 @@ export default function HomePage() {
             },
           ].map((item) => (
             <li key={item.step} className="surface-card relative p-5">
-              <p className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ember text-lg font-semibold text-white shadow-[var(--glow)]">
+              <p className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ember text-lg font-semibold text-navy-deep shadow-[var(--glow)]">
                 {item.step}
               </p>
               <h3 className="mt-4 text-xl text-navy">{item.title}</h3>

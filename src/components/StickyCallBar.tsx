@@ -7,7 +7,7 @@ export function StickyCallBar() {
       data-sticky-call
       role="region"
       aria-label="Call for heating and cooling help"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 px-3 pt-2.5 pb-[max(0.6rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_-14px_rgb(11,37,69,0.45)] backdrop-blur md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 px-3 pt-2.5 pb-[max(0.6rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_-14px_rgb(20,57,43,0.4)] backdrop-blur md:hidden"
     >
       <PhoneCta location="sticky" context="sticky-mobile" className="min-h-14 w-full rounded-xl text-lg font-bold">
         {primaryCtaLabel()}

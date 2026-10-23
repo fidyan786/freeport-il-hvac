@@ -15,7 +15,7 @@ type Props = {
 
 const variants = {
   primary:
-    "cta-attention inline-flex items-center justify-center gap-2 rounded-full bg-ember px-6 py-3 text-center text-base font-semibold text-white hover:bg-ember-dark",
+    "cta-attention inline-flex items-center justify-center gap-2 rounded-full bg-ember px-6 py-3 text-center text-base font-bold text-navy-deep hover:bg-ember-dark",
   secondary:
     "inline-flex items-center justify-center gap-2 rounded-full border border-navy/15 bg-white/90 px-6 py-3 text-center text-base font-semibold text-navy hover:border-navy hover:bg-white",
   light:

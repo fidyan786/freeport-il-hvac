@@ -14,10 +14,10 @@ export function FinalCta({
 }) {
   return (
     <section data-reveal className="relative overflow-hidden bg-navy text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(520px_240px_at_10%_0%,rgb(194_65_12/0.35),transparent_60%)]" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(520px_240px_at_10%_0%,rgb(201_162_74/0.22),transparent_60%)]" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="max-w-3xl">
-          <p className="kicker !text-[#f4a261]">
+          <p className="kicker !text-[#e3c27a]">
             Freeport, Illinois 61032
           </p>
           <h2 className="mt-3 text-3xl text-balance text-white sm:text-5xl">{title}</h2>

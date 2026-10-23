@@ -8,7 +8,7 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
       aria-hidden="true"
       focusable="false"
     >
-      <rect width="64" height="64" rx="18" fill="#0b2545" />
+      <rect width="64" height="64" rx="18" fill="#14392b" />
       <rect
         x="1.35"
         y="1.35"
@@ -16,16 +16,16 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
         height="61.3"
         rx="16.6"
         fill="none"
-        stroke="#22D3EE"
+        stroke="#E3C27A"
         strokeWidth="1.5"
       />
       <path
         d="M18.6 45.8c.4-6.6 4.6-8.8 4.6-15.4 0-3.4-1.8-5.8-3.2-8.8 1.1 2.4 2.2 3.8 2.2 6 0 2-1.1 3.2-1.1 4.8 1.7-1.1 4.2-.9 5.8.6 2 1.8 3.1 4.6 3.1 7.6 0 4.2-3.1 7.4-7 7.4-3.3 0-4.8-1.4-4.4-2.2z"
-        fill="#E85D04"
+        fill="#C9A24A"
       />
       <g
         fill="none"
-        stroke="#67E8F9"
+        stroke="#F3E6C4"
         strokeWidth="1.6"
         strokeLinecap="round"
         transform="translate(45 32)"
