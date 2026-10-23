@@ -49,7 +49,7 @@ export function PageHero({
       <div className="hero-shimmer absolute inset-0" aria-hidden="true" />
       <HeroAirflow />
       <div className="relative mx-auto flex max-w-6xl flex-col justify-center px-4 py-10 sm:px-6 sm:py-16 lg:min-h-[36rem] lg:py-20">
-        {eyebrow ? <p className="hero-enter hero-d1 kicker !text-[#a5f3fc]">{eyebrow}</p> : null}
+        {eyebrow ? <p className="hero-enter hero-d1 kicker !text-[#f4a261]">{eyebrow}</p> : null}
         <h1 className="hero-enter hero-d2 mt-3 max-w-3xl text-4xl leading-[1.08] text-balance text-white sm:text-5xl lg:text-6xl">
           {title}
         </h1>

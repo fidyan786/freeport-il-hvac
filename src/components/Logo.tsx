@@ -8,7 +8,7 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
       aria-hidden="true"
       focusable="false"
     >
-      <rect width="64" height="64" rx="18" fill="#071422" />
+      <rect width="64" height="64" rx="18" fill="#0b2545" />
       <rect
         x="1.35"
         y="1.35"

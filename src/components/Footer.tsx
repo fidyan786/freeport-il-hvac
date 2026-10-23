@@ -30,7 +30,7 @@ export function Footer() {
             {site.county}.
           </p>
           <p className="mt-4">
-            <PhonePlain location="footer" className="font-semibold text-white underline-offset-4 hover:text-brass hover:underline" />
+            <PhonePlain location="footer" className="font-semibold text-white underline-offset-4 hover:text-white hover:underline" />
           </p>
         </div>
 

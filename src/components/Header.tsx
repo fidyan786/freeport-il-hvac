@@ -264,7 +264,7 @@ export function Header() {
               role="navigation"
               aria-label="Services"
               data-mega-menu="true"
-              className="menu-fade absolute top-full right-4 left-4 z-50 hidden overflow-hidden rounded-b-3xl border border-cyan/35 bg-[rgb(4_10_18/0.96)] text-white shadow-[0_24px_40px_-18px_rgb(34,211,238,0.45)] lg:block"
+              className="menu-fade absolute top-full right-4 left-4 z-50 hidden overflow-hidden rounded-b-3xl border border-white/10 bg-navy-deep text-white shadow-2xl lg:block"
             >
               <div className="grid max-h-[min(70vh,36rem)] grid-cols-3 gap-x-8 gap-y-8 overflow-y-auto p-7">
                 {megaGroups.map((group) => {
@@ -272,7 +272,7 @@ export function Header() {
                   return (
                   <div key={group.id} className="min-w-0">
                     <p className="flex items-center gap-2 font-semibold text-cyan">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-cyan/40 text-cyan">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-cyan">
                         <Icon className="h-4 w-4" />
                       </span>
                       <Link

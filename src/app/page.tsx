@@ -102,7 +102,7 @@ export default function HomePage() {
         </svg>
         <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 sm:py-16 lg:min-h-[40rem] lg:grid-cols-[1.15fr_0.85fr] lg:py-20">
           <div>
-          <p className="hero-enter hero-d1 kicker !text-[#a5f3fc]">
+          <p className="hero-enter hero-d1 kicker !text-[#f4a261]">
             {localLabel} {site.zip}
           </p>
           <h1 className="hero-enter hero-d2 mt-3 max-w-3xl text-4xl leading-[1.08] text-balance text-white sm:text-5xl lg:text-6xl">
@@ -132,9 +132,6 @@ export default function HomePage() {
             <HeroSlider />
           </div>
         </div>
-        <a className="scroll-cue" href="#symptoms" aria-label="Scroll to symptoms">
-          <ChevronIcon className="h-5 w-5" />
-        </a>
       </section>
 
       <div data-reveal className="border-b border-line bg-white/80">
@@ -158,23 +155,19 @@ export default function HomePage() {
           Start with the symptom. Each link explains the problem and ends with a
           phone number.
         </p>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-8 grid overflow-hidden rounded-brand border border-line sm:grid-cols-2 sm:[&>li:nth-child(odd)]:border-r sm:[&>li:nth-child(odd)]:border-line">
           {problemLinks.map((item) => (
-            <article key={item.label} className="symptom-link card-lift surface-card p-5">
-              <Link href={item.href} className="block">
-                <h3 className="font-semibold text-navy">{item.label}</h3>
-                <p className="mt-2 text-muted">{item.text}</p>
+            <li key={item.label}>
+              <Link href={item.href} className="symptom-row h-full">
+                <span className="min-w-0 flex-1">
+                  <h3 className="font-sans text-base font-bold tracking-normal text-navy">{item.label}</h3>
+                  <span className="mt-1 block text-[0.95rem] leading-snug text-muted">{item.text}</span>
+                </span>
+                <ChevronIcon className="symptom-arrow h-5 w-5 -rotate-90 transition-transform" />
               </Link>
-              <PhoneCta
-                location="inline"
-                context={`home-symptom-${item.href}`}
-                className="mt-4 w-full"
-              >
-                {primaryCtaLabel()}
-              </PhoneCta>
-            </article>
+            </li>
           ))}
-        </div>
+        </ul>
         <SectionCall context="home-symptoms" />
       </section>
 
@@ -249,8 +242,7 @@ export default function HomePage() {
               </div>
             </article>
           </div>
-          <SectionCall context="home-services" />
-        </div>
+          </div>
       </section>
 
       <section data-reveal className="border-b border-line bg-paper">
@@ -360,7 +352,6 @@ export default function HomePage() {
           Freeport streets. This site has no street address of its own, and it
           does not publish prices, coupons, or an arrival time.
         </p>
-        <SectionCall context="home-search-questions" />
       </section>
 
       <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
@@ -398,13 +389,9 @@ export default function HomePage() {
       <div data-reveal>
         <TrustSignals />
       </div>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionCall context="home-trust" />
-      </div>
 
       <section data-reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <SafetyCallout />
-        <SectionCall context="home-safety" />
       </section>
 
       <section data-reveal className="bg-white">

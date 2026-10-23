@@ -15,18 +15,18 @@ const trustDelays = ["", "trust-d2", "trust-d3"] as const;
 
 export function TrustRow() {
   return (
-    <ul className="grid gap-3 sm:grid-cols-3">
+    <ul className="grid grid-cols-3 gap-2 sm:gap-3">
       {verifiedPracticeSignals.map((item, index) => {
         const Icon = practiceIcons[item.id as keyof typeof practiceIcons] ?? PinIcon;
         return (
           <li
             key={item.id}
-            className={`glass-panel trust-icon flex items-center gap-3 rounded-2xl px-3 py-3 ${trustDelays[index] ?? ""}`}
+            className={`glass-panel trust-icon flex flex-col items-start gap-2 rounded-xl px-2.5 py-2.5 sm:flex-row sm:items-center sm:gap-3 sm:px-3 sm:py-3 ${trustDelays[index] ?? ""}`}
           >
-            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-brass">
+            <span className="inline-flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-brass">
               <Icon className="h-5 w-5" />
             </span>
-            <p className="font-semibold text-white">{item.title}</p>
+            <p className="text-sm leading-tight font-semibold text-white sm:text-base">{item.title}</p>
           </li>
         );
       })}
