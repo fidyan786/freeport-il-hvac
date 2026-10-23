@@ -20,8 +20,8 @@ function readPublic(name: string, fallback = "") {
 
 export const site = {
   businessName: readPublic("NEXT_PUBLIC_BUSINESS_NAME", BRAND.name),
-  phoneDisplay: readPublic("NEXT_PUBLIC_PHONE_DISPLAY", "(703) 703-7855"),
-  phoneTel: readPublic("NEXT_PUBLIC_PHONE_TEL", "7037037855"),
+  phoneDisplay: readPublic("NEXT_PUBLIC_PHONE_DISPLAY", "(815) 580-4330"),
+  phoneTel: readPublic("NEXT_PUBLIC_PHONE_TEL", "8155804330"),
   hours: readPublic("NEXT_PUBLIC_BUSINESS_HOURS"),
   city: "Freeport",
   state: "Illinois",
@@ -160,7 +160,7 @@ export function phoneE164() {
   return digits ? `+1${digits}` : null;
 }
 
-/** Schema.org telephone. Example: +1-703-703-7855. tel: links stay compact via phoneE164(). */
+/** Schema.org telephone. Example: +1-815-580-4330. tel: links stay compact via phoneE164(). */
 export function phoneSchemaTelephone() {
   const digits = phoneDigits();
   if (!digits) return null;

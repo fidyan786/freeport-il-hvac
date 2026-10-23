@@ -8,7 +8,7 @@ export const indoorAir = defineService({
   navDescription: "Filters, humidity equipment, and airflow in a house that stays shut all winter.",
   metaTitle: "Indoor Air Quality in Freeport, IL | Millrace Heating",
   metaDescription:
-    "Indoor air quality for closed-up Freeport houses: filters, humidity equipment, and airflow that has gone dusty or weak. Call (703) 703-7855.",
+    "Indoor air quality for closed-up Freeport houses: filters, humidity equipment, and airflow that has gone dusty or weak. Call (815) 580-4330.",
   h1: "Indoor Air Quality in Freeport, IL",
   eyebrow: "Filters, humidity, and the air path",
   lede:

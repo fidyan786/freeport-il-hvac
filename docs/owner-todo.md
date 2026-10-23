@@ -4,8 +4,8 @@ Items only the owner can confirm or finish. The site does not invent an address,
 
 ## Tracking number
 
-- Confirm `(703) 703-7855` is the live partner tracking number before this goes to production traffic.
-- Display, `tel:+17037037855`, and schema `+1-703-703-7855` all come from `src/lib/site.ts`.
+- Confirm `(815) 580-4330` is the live partner tracking number before this goes to production traffic.
+- Display, `tel:+18155804330`, and schema `+1-815-580-4330` all come from `src/lib/site.ts`.
 - Overrides, if the number changes: `NEXT_PUBLIC_PHONE_DISPLAY` and `NEXT_PUBLIC_PHONE_TEL` (digits only). Recheck meta descriptions after a change. Several are written to land between 140 and 160 characters with the current number.
 
 ## Domain and hosting

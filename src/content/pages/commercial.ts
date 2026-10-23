@@ -8,7 +8,7 @@ export const commercialHvac = defineService({
   navDescription: "Rooftop and packaged equipment for shops, offices, and similar buildings.",
   metaTitle: "Commercial HVAC in Freeport, IL | Millrace Heating",
   metaDescription:
-    "Commercial HVAC for Freeport, IL shops, offices, churches, and similar buildings that use rooftop or packaged equipment. Call (703) 703-7855.",
+    "Commercial HVAC for Freeport, IL shops, offices, churches, and similar buildings that use rooftop or packaged equipment. Call (815) 580-4330.",
   h1: "Commercial HVAC in Freeport, IL",
   eyebrow: "Shops, offices, and small buildings",
   lede:

@@ -7,7 +7,7 @@ export const residentialHvac = defineService({
   navDescription: "Furnaces, air conditioners, and ducts in Freeport houses.",
   metaTitle: "Residential HVAC in Freeport, IL | Millrace Heating",
   metaDescription:
-    "Residential HVAC for Freeport, IL houses, from the furnace and air conditioner to the ducts that move air between rooms. Call (703) 703-7855.",
+    "Residential HVAC for Freeport, IL houses, from the furnace and air conditioner to the ducts that move air between rooms. Call (815) 580-4330.",
   h1: "Residential HVAC in Freeport, IL",
   eyebrow: "Houses, not rooftop units",
   lede:

@@ -2,7 +2,7 @@
 
 HVAC website for **Freeport, Illinois (61032), Stephenson County**.
 
-Primary action: **call (703) 703-7855**. Override with `NEXT_PUBLIC_PHONE_DISPLAY` / `NEXT_PUBLIC_PHONE_TEL` for a tracking number. The site is call-only. It connects callers with independent local service providers and is not itself a contractor.
+Primary action: **call (815) 580-4330**. Override with `NEXT_PUBLIC_PHONE_DISPLAY` / `NEXT_PUBLIC_PHONE_TEL` for a tracking number. The site is call-only. It connects callers with independent local service providers and is not itself a contractor.
 
 ## Stack
 
@@ -15,8 +15,8 @@ Copy `.env.example`:
 | Variable | Purpose |
 | --- | --- |
 | `NEXT_PUBLIC_BUSINESS_NAME` | Optional override (defaults to Millrace Heating & Air) |
-| `NEXT_PUBLIC_PHONE_DISPLAY` | Public phone (default `(703) 703-7855`) |
-| `NEXT_PUBLIC_PHONE_TEL` | Digits for `tel:` (default `7037037855`, link `tel:+17037037855`) |
+| `NEXT_PUBLIC_PHONE_DISPLAY` | Public phone (default `(815) 580-4330`) |
+| `NEXT_PUBLIC_PHONE_TEL` | Digits for `tel:` (default `8155804330`, link `tel:+18155804330`) |
 | `NEXT_PUBLIC_BUSINESS_HOURS` | Optional hours string |
 | `NEXT_PUBLIC_SITE_URL` | Optional canonical origin. Default is `https://freeporthvacil.com` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional GA4 |

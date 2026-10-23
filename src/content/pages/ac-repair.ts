@@ -7,7 +7,7 @@ export const acRepair = defineService({
   navDescription: "An air conditioner that will not start, will not cool, or blows warm air.",
   metaTitle: "AC Repair Freeport IL | Millrace Heating",
   metaDescription:
-    "AC repair in Freeport, IL when the air conditioner will not cool, will not start, or blows warm air. Call (703) 703-7855.",
+    "AC repair in Freeport, IL when the air conditioner will not cool, will not start, or blows warm air. Call (815) 580-4330.",
   h1: "AC Repair in Freeport, IL",
   eyebrow: "Central air conditioning",
   lede:

@@ -7,7 +7,7 @@ export const furnaceInstallation = defineService({
   navDescription: "Replacing a furnace that can no longer carry a Freeport winter.",
   metaTitle: "Furnace Installation in Freeport, IL | Millrace Heating",
   metaDescription:
-    "Furnace installation or replacement for a Freeport house that can no longer carry a long Stephenson County winter alone. Call (703) 703-7855.",
+    "Furnace installation or replacement for a Freeport house that can no longer carry a long Stephenson County winter alone. Call (815) 580-4330.",
   h1: "Furnace Installation in Freeport, IL",
   eyebrow: "Replacement and new furnaces",
   lede:

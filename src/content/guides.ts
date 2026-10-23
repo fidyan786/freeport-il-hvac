@@ -35,7 +35,7 @@ const guideRecords: Guide[] = [
     title: "AC blowing warm air in Freeport",
     metaTitle: "AC Blowing Warm Air in Freeport, IL | Millrace Heating",
     metaDescription:
-      "AC blowing warm air in Freeport means the fan is running and the coil is not cooling. What to check, then when to call. Call (703) 703-7855.",
+      "AC blowing warm air in Freeport means the fan is running and the coil is not cooling. What to check, then when to call. Call (815) 580-4330.",
     h1: "AC blowing warm air in Freeport, IL",
     lede:
       "AC blowing warm air in Freeport is the indoor fan moving air the coil is not cooling. Warm air from the registers is not a thermostat misunderstanding. In Freeport the outdoor unit often sat idle from first frost to the first sticky week. The indoor blower can move air the whole time the refrigeration side does nothing.",
@@ -229,7 +229,7 @@ const guideRecords: Guide[] = [
     title: "Furnace not heating in a Freeport winter",
     metaTitle: "Furnace Not Heating in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Furnace not heating in Freeport: treat gas and carbon monoxide first, then the safe checks, and call while the house can still recover. Call (703) 703-7855.",
+      "Furnace not heating in Freeport: treat gas and carbon monoxide first, then the safe checks, and call while the house can still recover. Call (815) 580-4330.",
     h1: "Furnace not heating on a Freeport winter night",
     lede:
       "Furnace not heating on a January night in Freeport starts with weather near 11°F and a house that will not coast until morning. Indoor temperatures fall fast in older houses, and pipes are not hypothetical. Call to be connected with a local heating and cooling professional.",
@@ -298,7 +298,7 @@ const guideRecords: Guide[] = [
     title: "Furnace short cycling in Freeport cold weather",
     metaTitle: "Furnace Short Cycling in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Furnace short cycling in Freeport is a unit that fires, stops, and repeats. What a full cycle should do in deep cold, and when to call. Call (703) 703-7855.",
+      "Furnace short cycling in Freeport is a unit that fires, stops, and repeats. What a full cycle should do in deep cold, and when to call. Call (815) 580-4330.",
     h1: "Furnace short cycling in Freeport cold weather",
     lede:
       "In a heating-dominated climate, a furnace is supposed to run long enough to warm the heat exchanger, satisfy the thermostat, and shut down cleanly. Two minutes of flame, a pause, and another try is not thrift. It is a limit, a sensor, or a design problem interrupting the job.",
@@ -360,7 +360,7 @@ const guideRecords: Guide[] = [
     title: "Strange HVAC noises in Freeport homes",
     metaTitle: "Strange HVAC Noises in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Strange HVAC noises in Freeport, from booms to squeals, are information. Which sounds can wait for a visit, and which mean stop and leave. Call (703) 703-7855.",
+      "Strange HVAC noises in Freeport, from booms to squeals, are information. Which sounds can wait for a visit, and which mean stop and leave. Call (815) 580-4330.",
     h1: "Strange HVAC noises in a Freeport house",
     lede:
       "Forced-air equipment in older Freeport houses is rarely silent. A soft whoosh at startup is normal. A boom, a metal-on-metal grind, or a scream from the outdoor fan is not. Treat a new sound as a symptom, not as background for the winter.",
@@ -429,7 +429,7 @@ const guideRecords: Guide[] = [
     title: "Poor airflow in Freeport forced-air homes",
     metaTitle: "Poor HVAC Airflow in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Poor HVAC airflow in a Freeport house starts with the filter, the return, or the ducts. Why closed rooms make winter and summer worse. Call (703) 703-7855.",
+      "Poor HVAC airflow in a Freeport house starts with the filter, the return, or the ducts. Why closed rooms make winter and summer worse. Call (815) 580-4330.",
     h1: "Poor HVAC airflow in a Freeport house",
     lede:
       "Forced-air heat and cooling only work if air can complete a loop. Many Freeport houses were built around a basement furnace and a short list of returns. Starve that loop and you get cold rooms, iced coils, short cycling, and a blower that sounds busier than it is.",
@@ -491,7 +491,7 @@ const guideRecords: Guide[] = [
     title: "Uneven temperatures in Freeport houses",
     metaTitle: "Uneven Temperatures in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Uneven temperatures in a Freeport house: one room cold in January or hot in July. Ducts, additions, and what to tell the call. Call (703) 703-7855.",
+      "Uneven temperatures in a Freeport house: one room cold in January or hot in July. Ducts, additions, and what to tell the call. Call (815) 580-4330.",
     h1: "Uneven temperatures in a Freeport house",
     lede:
       "A hallway sensor does not heat a converted attic or a parlor with three exterior walls. Uneven temperatures in Freeport are usually a building-and-duct story. Sometimes they are a failing blower or a heat pump in defrost. They are rarely solved by one more closed register.",
@@ -629,7 +629,7 @@ const guideRecords: Guide[] = [
     title: "When a Freeport furnace is telling you it is done",
     metaTitle: "Furnace Replacement Signs, Freeport IL | Millrace Heating",
     metaDescription:
-      "Furnace replacement signals in Freeport: repeat failures, a heat exchanger concern, and a unit that cannot face another long winter. Call (703) 703-7855.",
+      "Furnace replacement signals in Freeport: repeat failures, a heat exchanger concern, and a unit that cannot face another long winter. Call (815) 580-4330.",
     h1: "Furnace replacement signals in Freeport, IL",
     lede:
       "Age matters. A cracked heat exchanger, a cabinet that cannot keep the house livable on a design-cold night, and a parts chase every freeze matter more. Call to be connected with a local heating and cooling professional.",
@@ -698,7 +698,7 @@ const guideRecords: Guide[] = [
     title: "Heat pump basics for northern Illinois",
     metaTitle: "Heat Pump Basics for Freeport, IL | Millrace Heating",
     metaDescription:
-      "Heat pump basics for Freeport: heating in the cold, defrost, and backup heat. Written for Stephenson County winters, not a mild brochure. Call (703) 703-7855.",
+      "Heat pump basics for Freeport: heating in the cold, defrost, and backup heat. Written for Stephenson County winters, not a mild brochure. Call (815) 580-4330.",
     h1: "Heat pump basics for a Freeport winter",
     lede:
       "Heat pumps move heat. In July that is simple. In January, when Freeport nights sit near 11°F, the outdoor air holds less heat and the unit has to work differently. If you do not understand defrost and backup heat, the machine will look broken on the nights it is doing its hardest job.",

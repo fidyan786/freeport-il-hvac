@@ -7,7 +7,7 @@ export const hvacMaintenance = defineService({
   navDescription: "A seasonal check before the cold snap or the first hot week.",
   metaTitle: "HVAC Maintenance in Freeport, IL | Millrace Heating",
   metaDescription:
-    "Seasonal HVAC maintenance for Freeport furnaces and air conditioners, before the next cold snap or the first hot week of summer. Call (703) 703-7855.",
+    "Seasonal HVAC maintenance for Freeport furnaces and air conditioners, before the next cold snap or the first hot week of summer. Call (815) 580-4330.",
   h1: "HVAC Maintenance in Freeport, IL",
   eyebrow: "Before the season turns",
   lede:

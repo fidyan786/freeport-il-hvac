@@ -8,7 +8,7 @@ export const furnaceRepair = defineService({
   navDescription: "A gas furnace that will not light, stay lit, or warm the house.",
   metaTitle: "Furnace Repair Freeport IL | Millrace Heating",
   metaDescription:
-    "Furnace repair in Freeport, IL for no heat, a furnace that will not stay lit, or air that never warms. Call (703) 703-7855.",
+    "Furnace repair in Freeport, IL for no heat, a furnace that will not stay lit, or air that never warms. Call (815) 580-4330.",
   h1: "Furnace Repair in Freeport, IL",
   eyebrow: "Forced-air gas furnaces",
   lede:

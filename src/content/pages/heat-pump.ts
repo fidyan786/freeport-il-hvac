@@ -7,7 +7,7 @@ export const heatPump = defineService({
   navDescription: "Repair, installation, and maintenance for heat pumps in a cold climate.",
   metaTitle: "Heat Pump Service in Freeport, IL | Millrace Heating",
   metaDescription:
-    "Heat pump repair, installation, and maintenance for Freeport houses that heat and cool from the same outdoor equipment. Call (703) 703-7855.",
+    "Heat pump repair, installation, and maintenance for Freeport houses that heat and cool from the same outdoor equipment. Call (815) 580-4330.",
   h1: "Heat Pump Service in Freeport, IL",
   eyebrow: "Heating and cooling from one outdoor unit",
   lede:

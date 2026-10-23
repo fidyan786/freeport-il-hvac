@@ -7,7 +7,7 @@ export const ductless = defineService({
   navDescription: "A wall or ceiling unit for a room the old ducts never reached.",
   metaTitle: "Ductless Mini Split in Freeport, IL | Millrace Heating",
   metaDescription:
-    "Ductless mini split repair and installation for Freeport rooms, additions, and upstairs spaces the old ducts never reach. Call (703) 703-7855.",
+    "Ductless mini split repair and installation for Freeport rooms, additions, and upstairs spaces the old ducts never reach. Call (815) 580-4330.",
   h1: "Ductless Mini Split in Freeport, IL",
   eyebrow: "Rooms the ducts do not serve",
   lede:

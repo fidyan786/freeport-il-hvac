@@ -7,7 +7,7 @@ export const acInstallation = defineService({
   navDescription: "Replacing an air conditioner that can no longer cool the house.",
   metaTitle: "AC Installation in Freeport, IL | Millrace Heating",
   metaDescription:
-    "AC installation or replacement in Freeport, IL when the outdoor unit can no longer cool the house through a humid summer. Call (703) 703-7855.",
+    "AC installation or replacement in Freeport, IL when the outdoor unit can no longer cool the house through a humid summer. Call (815) 580-4330.",
   h1: "AC Installation in Freeport, IL",
   eyebrow: "Replacement and new air conditioners",
   lede:

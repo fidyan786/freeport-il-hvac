@@ -8,7 +8,7 @@ export const extraGuides: Guide[] = [
     title: "Furnace blowing cold air in Freeport",
     metaTitle: "Furnace Blowing Cold Air in Freeport | Millrace Heating",
     metaDescription:
-      "A furnace blowing cold air in Freeport is a blower moving unheated air. How to tell it from a fan setting, and when to call. Call (703) 703-7855.",
+      "A furnace blowing cold air in Freeport is a blower moving unheated air. How to tell it from a fan setting, and when to call. Call (815) 580-4330.",
     h1: "Furnace blowing cold air in Freeport",
     lede:
       "A furnace blowing cold air in Freeport is not “the heat is on.” The blower can run for hours while the burners never light, and on a night in the teens that air is colder than the rooms. This is a furnace repair problem unless you only left the fan switch on.",
@@ -51,7 +51,7 @@ export const extraGuides: Guide[] = [
     title: "No heat in a Freeport house",
     metaTitle: "No Heat in a Freeport, IL House | Millrace Heating",
     metaDescription:
-      "No heat in a Freeport house can be a furnace, a heat pump, a boiler, or a thermostat. What to look at, then who to call. Call (703) 703-7855.",
+      "No heat in a Freeport house can be a furnace, a heat pump, a boiler, or a thermostat. What to look at, then who to call. Call (815) 580-4330.",
     h1: "No heat in a Freeport house",
     lede:
       "No heat in a Freeport house is the symptom. The equipment behind it might be a gas furnace, a heat pump, a boiler, or electric baseboard in an addition. You do not have to name the part before you call. You do have to say whether the whole house is cold and how cold it is inside.",
@@ -95,7 +95,7 @@ export const extraGuides: Guide[] = [
     title: "AC not turning on in Freeport",
     metaTitle: "AC Not Turning On in Freeport, IL | Millrace Heating",
     metaDescription:
-      "AC not turning on in Freeport after a long winter idle: thermostat, disconnect, and a breaker that should not be reset twice. Call (703) 703-7855.",
+      "AC not turning on in Freeport after a long winter idle: thermostat, disconnect, and a breaker that should not be reset twice. Call (815) 580-4330.",
     h1: "AC not turning on in Freeport, IL",
     lede:
       "AC not turning on in Freeport is a common first-hot-week complaint, because the outdoor unit sat through snow and freeze-thaw and then was asked to start. A silent condenser, a hum that never becomes a start, and a breaker that trips are three different reports. Ice on the lines can end in the same silence if a safety switch opened.",
@@ -138,7 +138,7 @@ export const extraGuides: Guide[] = [
     title: "Thermostat not working in Freeport",
     metaTitle: "Thermostat Not Working in Freeport, IL | Millrace Heating",
     metaDescription:
-      "A thermostat not working in Freeport may be batteries, mode, or the furnace ignoring the call. What you can check before a visit. Call (703) 703-7855.",
+      "A thermostat not working in Freeport may be batteries, mode, or the furnace ignoring the call. What you can check before a visit. Call (815) 580-4330.",
     h1: "Thermostat not working in Freeport, IL",
     lede:
       "A thermostat not working in Freeport is often the first thing people blame, and sometimes they are right. Dead batteries, a mode left on cool in January, a blank screen after a power blink, or a setpoint the furnace never answers are different problems. The wall control is not the furnace, and replacing it at random does not fix a lockout.",
@@ -181,7 +181,7 @@ export const extraGuides: Guide[] = [
     title: "Prepare the AC after a Freeport winter",
     metaTitle: "Prepare AC After a Freeport Winter | Millrace Heating",
     metaDescription:
-      "How to prepare an air conditioner after a Freeport winter: clearance, the filter, and a maintenance visit before the first humid week. Call (703) 703-7855.",
+      "How to prepare an air conditioner after a Freeport winter: clearance, the filter, and a maintenance visit before the first humid week. Call (815) 580-4330.",
     h1: "Prepare the AC after a Freeport winter",
     lede:
       "Preparing an air conditioner after a Freeport winter is mostly about an outdoor unit that has not run since fall. Snow, freeze-thaw, cottonwood, and a disconnect nobody checked are the local story. The goal is a condenser that can start on the first humid week, not a surprise no-cool call.",
@@ -224,7 +224,7 @@ export const extraGuides: Guide[] = [
     title: "Carbon monoxide safety in Freeport",
     metaTitle: "Carbon Monoxide Safety in Freeport, IL | Millrace Heating",
     metaDescription:
-      "Carbon monoxide safety in Freeport houses with gas furnaces: alarms, when to leave, and Nicor Gas at 888-642-6748 before any HVAC call. Call (703) 703-7855.",
+      "Carbon monoxide safety in Freeport houses with gas furnaces: alarms, when to leave, and Nicor Gas at 888-642-6748 before any HVAC call. Call (815) 580-4330.",
     h1: "Carbon monoxide safety in Freeport, IL",
     lede:
       "Carbon monoxide safety in Freeport starts with the alarm and the exit, not with the furnace door. Gas furnaces in older houses, vent pipes in basements, and a long heating season are why this page exists. This is not a medical guide. If an alarm is sounding or someone is ill, you leave and you call for help from outside.",
@@ -267,7 +267,7 @@ export const extraGuides: Guide[] = [
     title: "Changing a furnace filter in Freeport",
     metaTitle: "Changing a Furnace Filter in Freeport | Millrace Heating",
     metaDescription:
-      "Changing a furnace filter in a closed-up Freeport house: size, direction, and why a thicker filter can starve the blower. Call (703) 703-7855.",
+      "Changing a furnace filter in a closed-up Freeport house: size, direction, and why a thicker filter can starve the blower. Call (815) 580-4330.",
     h1: "Changing a furnace filter in Freeport",
     lede:
       "Changing a furnace filter in Freeport matters more than it does in a mild climate, because the house stays shut from late fall through March and the furnace recirculates the same air. A loaded filter can look like a dying furnace. A filter that is too restrictive can do the same thing while it still looks clean.",
