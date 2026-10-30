@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SectionCall } from "@/components/SectionCall";
 import { guides } from "@/content/guides";
 import { services } from "@/content/services";
-import { indexablePaths } from "@/lib/nav";
+import { indexablePaths } from "@/lib/indexable";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -24,6 +24,7 @@ const staticLabels: Record<string, string> = {
   "/contact/": "Call",
   "/privacy-policy/": "Privacy",
   "/terms/": "Terms",
+  "/disclaimer/": "Disclosure",
   "/image-credits/": "Image credits",
   "/sitemap/": "Sitemap",
 };

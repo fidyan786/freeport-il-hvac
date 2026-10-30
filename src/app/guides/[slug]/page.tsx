@@ -6,11 +6,13 @@ import { FinalCta } from "@/components/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { SectionCall } from "@/components/SectionCall";
+import { headingId, RichText } from "@/components/RichText";
+import { categoryById } from "@/content/guide-categories";
 import { getGuide, guides, GUIDES_LAST_UPDATED } from "@/content/guides";
 import { getService } from "@/content/services";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
-import { primaryCtaLabel } from "@/lib/site";
+import { AFFILIATE_DISCLOSURE, primaryCtaLabel } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -42,34 +44,42 @@ export default async function GuidePage({
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) notFound();
+  const category = guide.category ? categoryById(guide.category) : undefined;
+  const updated = guide.dateModified ?? GUIDES_LAST_UPDATED;
+  const author = guide.author ?? "Millrace Heating & Air editorial";
+  const longForm = guide.body.length >= 7;
   const relatedServices = guide.relatedServices
     .map((item) => getService(item))
     .filter(Boolean);
   const relatedGuides = guide.relatedGuides
     .map((item) => getGuide(item))
     .filter(Boolean);
+  const crumb = [
+    { name: "Home", path: "/" },
+    { name: "Guides", path: "/guides/" },
+    ...(category
+      ? [{ name: category.label, path: `/guides/#${category.id}` }]
+      : []),
+    { name: guide.title, path: guide.href },
+  ];
 
   return (
     <>
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Guides", path: "/guides/" },
-          { name: guide.title, path: guide.href },
-        ])}
-      />
+      <JsonLd data={breadcrumbSchema(crumb)} />
       <JsonLd
         data={articleSchema({
           title: guide.metaTitle,
           description: guide.metaDescription,
           path: guide.href,
           datePublished: guide.datePublished,
-          dateModified: guide.dateModified ?? GUIDES_LAST_UPDATED,
+          dateModified: updated,
           image: guide.image,
+          authorName: author,
+          articleSection: category?.label,
         })}
       />
       <PageHero
-        eyebrow="Freeport HVAC guide"
+        eyebrow={category ? category.label : "Freeport HVAC guide"}
         title={guide.h1}
         lede={guide.lede}
         context={`guide-${guide.slug}`}
@@ -83,27 +93,66 @@ export default async function GuidePage({
           items={[
             { name: "Home", href: "/" },
             { name: "Guides", href: "/guides/" },
+            ...(category
+              ? [{ name: category.label, href: `/guides/#${category.id}` }]
+              : []),
             { name: guide.title },
           ]}
         />
         <p className="mt-4 text-sm text-muted">
-          Last updated{" "}
-          {formatUpdated(guide.dateModified ?? GUIDES_LAST_UPDATED)}.
+          By{" "}
+          <Link className="font-semibold text-navy underline underline-offset-2" href="/about/">
+            {author}
+          </Link>
+          {" · "}
+          Published {formatUpdated(guide.datePublished)}
+          {" · "}
+          Updated {formatUpdated(updated)}
         </p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          {AFFILIATE_DISCLOSURE} This guide is general information for homeowners,
+          not a diagnosis and not a service agreement.{" "}
+          <Link className="font-semibold text-navy underline underline-offset-2" href="/disclaimer/">
+            Read the disclosure
+          </Link>
+          .
+        </p>
+        {guide.body.length >= 5 ? (
+          <nav aria-label="On this page" className="mt-8 rounded-brand border border-line bg-white p-5">
+            <h2 className="text-sm font-semibold tracking-wide text-navy uppercase">On this page</h2>
+            <ol className="mt-3 grid gap-2 text-sm">
+              {guide.body.map((section, index) => (
+                <li key={headingId(section.heading, index)}>
+                  <a
+                    className="text-navy underline decoration-brass underline-offset-2"
+                    href={`#${headingId(section.heading, index)}`}
+                  >
+                    {section.heading}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        ) : null}
         {guide.body.map((section, index) => {
           const midpoint = Math.floor((guide.body.length - 1) / 2);
+          const showCall = longForm ? index === 1 : true;
           return (
-            <div key={section.heading}>
-              <section className="mt-10">
+            <div key={headingId(section.heading, index)}>
+              <section className="mt-10" id={headingId(section.heading, index)}>
                 <h2 className="font-serif text-2xl text-navy sm:text-3xl">
                   {section.heading}
                 </h2>
-                {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph.slice(0, 28)} className="mt-4 leading-relaxed text-muted">
-                    {paragraph}
-                  </p>
+                {section.paragraphs.map((paragraph, paragraphIndex) => (
+                  <RichText
+                    key={`${index}-${paragraphIndex}`}
+                    text={paragraph}
+                    className="mt-4 leading-relaxed text-muted"
+                  />
                 ))}
-                <SectionCall context={`guide-${guide.slug}-${section.heading}`} />
+                {showCall ? (
+                  <SectionCall context={`guide-${guide.slug}-${section.heading}`} />
+                ) : null}
               </section>
               {index === midpoint ? <AdSlot className="mt-10" /> : null}
             </div>
@@ -130,18 +179,6 @@ export default async function GuidePage({
                   Freeport and Stephenson County service area
                 </Link>
               </li>
-              {relatedServices.some(
-                (service) => service?.slug === "emergency-hvac-freeport-il",
-              ) ? null : (
-                <li>
-                  <Link
-                    className="font-semibold text-navy underline underline-offset-2"
-                    href="/services/emergency-hvac-freeport-il/"
-                  >
-                    Emergency HVAC in Freeport
-                  </Link>
-                </li>
-              )}
             </ul>
           </section>
         ) : null}
@@ -164,7 +201,7 @@ export default async function GuidePage({
       </div>
       <FinalCta
         title="If this sounds like the house, call"
-        body="These notes describe the symptom. Call to be connected with a local heating and cooling professional who can see the equipment."
+        body="These notes describe the situation. Call to be connected with a local heating and cooling professional who can see the equipment."
         context={`guide-${guide.slug}-final`}
       />
     </>

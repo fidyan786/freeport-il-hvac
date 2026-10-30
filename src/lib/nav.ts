@@ -1,4 +1,3 @@
-import { guides } from "@/content/guides";
 import {
   services,
   servicesByCategory,
@@ -96,9 +95,10 @@ export const serviceLinks: NavLink[] = services.map((service) => ({
 }));
 
 export const primaryNav: NavLink[] = [
+  { href: "/guides/", label: "Guides" },
   { href: "/service-area/", label: "Service Areas" },
   { href: "/about/", label: "About" },
-  { href: "/guides/", label: "Resources" },
+  { href: "/contact/", label: "Call" },
 ];
 
 export const footerServiceHighlights: NavLink[] = pick([
@@ -181,18 +181,3 @@ export const problemLinks: Array<NavLink & { text: string }> = [
 export function servicesByNavCategory(category: ServiceCategory) {
   return servicesByCategory(category);
 }
-
-export const indexablePaths = [
-  "/",
-  "/services/",
-  ...services.map((service) => service.href),
-  "/guides/",
-  ...guides.map((guide) => guide.href),
-  "/service-area/",
-  "/about/",
-  "/contact/",
-  "/privacy-policy/",
-  "/terms/",
-  "/image-credits/",
-  "/sitemap/",
-];

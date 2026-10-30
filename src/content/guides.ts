@@ -1,6 +1,12 @@
-import { NICOR_GAS } from "@/lib/safety-contacts";
+import { inDepthGuides } from "@/content/articles";
+import { EDITORIAL_AUTHOR } from "@/content/articles/build";
 import { extraGuides } from "@/content/guide-extra";
+import { legacyGuideCategories } from "@/content/guide-categories";
+import type { Guide } from "@/content/guide-types";
 import { withCallPhone } from "@/lib/phone-meta";
+import { NICOR_GAS } from "@/lib/safety-contacts";
+
+export type { Guide } from "@/content/guide-types";
 
 export const GUIDES_LAST_UPDATED = "2026-10-12";
 
@@ -10,23 +16,6 @@ const RETIRED_GUIDE_SLUGS = new Set([
   "hvac-maintenance-checklist",
   "indoor-air-quality-closed-homes",
 ]);
-
-export type Guide = {
-  slug: string;
-  href: string;
-  title: string;
-  metaTitle: string;
-  metaDescription: string;
-  h1: string;
-  lede: string;
-  datePublished: string;
-  dateModified?: string;
-  image: string;
-  imageAlt: string;
-  body: { heading: string; paragraphs: string[] }[];
-  relatedServices: string[];
-  relatedGuides: string[];
-};
 
 const guideRecords: Guide[] = [
   {
@@ -835,8 +824,11 @@ const guideRecords: Guide[] = [
 export const guides: Guide[] = [
   ...guideRecords.filter((guide) => !RETIRED_GUIDE_SLUGS.has(guide.slug)),
   ...extraGuides,
+  ...inDepthGuides,
 ].map((guide) => ({
   ...guide,
+  category: guide.category ?? legacyGuideCategories[guide.slug] ?? "troubleshooting",
+  author: guide.author ?? EDITORIAL_AUTHOR,
   metaDescription: withCallPhone(guide.metaDescription),
 }));
 

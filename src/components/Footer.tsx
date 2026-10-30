@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { PhoneCta, PhonePlain } from "@/components/PhoneCta";
 import { footerServiceHighlights, nearbyCommunities } from "@/lib/nav";
-import { localLabel, primaryCtaLabel, site } from "@/lib/site";
+import { AFFILIATE_DISCLOSURE, localLabel, primaryCtaLabel, site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -62,7 +62,7 @@ export function Footer() {
             </li>
             <li>
               <Link className="hover:underline" href="/guides/">
-                Resources
+                Guides
               </Link>
             </li>
             <li>
@@ -78,6 +78,11 @@ export function Footer() {
             <li>
               <Link className="hover:underline" href="/terms/">
                 Terms
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="/disclaimer/">
+                Disclosure
               </Link>
             </li>
             <li>
@@ -110,8 +115,16 @@ export function Footer() {
           <p className="mt-3 text-white/60">{localLabel}</p>
         </div>
       </div>
-      <div className="border-t border-white/10 py-4 text-center text-white/55">
-        © {new Date().getFullYear()} {site.businessName} · {site.city}, {site.state}
+      <div className="border-t border-white/10 px-4 py-4 text-center text-white/55">
+        <p>
+          © {new Date().getFullYear()} {site.businessName} · {site.city}, {site.state}
+        </p>
+        <p className="mx-auto mt-2 max-w-3xl text-sm text-white/70">
+          {AFFILIATE_DISCLOSURE}{" "}
+          <Link className="underline underline-offset-2 hover:text-white" href="/disclaimer/">
+            Affiliate disclosure
+          </Link>
+        </p>
       </div>
     </footer>
   );
