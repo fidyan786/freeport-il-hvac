@@ -231,6 +231,8 @@ export function articleSchema({
   datePublished,
   dateModified,
   image,
+  authorName,
+  articleSection,
 }: {
   title: string;
   description: string;
@@ -238,6 +240,8 @@ export function articleSchema({
   datePublished: string;
   dateModified?: string;
   image?: string;
+  authorName?: string;
+  articleSection?: string;
 }) {
   const pageUrl = absoluteUrl(path);
   const data: Record<string, unknown> = {
@@ -253,8 +257,8 @@ export function articleSchema({
     },
     author: {
       "@type": "Organization",
-      name: site.businessName,
-      url: absoluteUrl("/"),
+      name: authorName ?? site.businessName,
+      url: absoluteUrl("/about/"),
     },
     publisher: {
       "@type": "Organization",
@@ -266,6 +270,8 @@ export function articleSchema({
       },
     },
   };
+
+  if (articleSection) data.articleSection = articleSection;
 
   if (image) {
     data.image = absoluteUrl(image, { asset: true });

@@ -6,7 +6,7 @@ const SERVICE_GUIDE_RULES: Array<{
 }> = [
   {
     test: (slug) => slug.startsWith("ac-repair"),
-    slugs: ["ac-blowing-warm-air", "ac-not-turning-on", "hvac-strange-noises", "poor-airflow", "prepare-ac-after-winter"],
+    slugs: ["water-under-the-air-conditioner", "ac-blowing-warm-air", "ac-not-turning-on", "freeport-summer-humidity-and-ac-runtime"],
   },
   {
     test: (slug) => slug.startsWith("ac-installation"),
@@ -14,7 +14,7 @@ const SERVICE_GUIDE_RULES: Array<{
   },
   {
     test: (slug) => slug.startsWith("furnace-repair"),
-    slugs: ["furnace-not-heating", "furnace-blowing-cold-air", "furnace-short-cycling", "hvac-strange-noises", "furnace-replacement-signals"],
+    slugs: ["when-a-furnace-locks-out", "furnace-not-heating", "high-efficiency-furnace-condensate-problems", "furnace-short-cycling"],
   },
   {
     test: (slug) => slug.startsWith("furnace-installation"),
@@ -22,27 +22,27 @@ const SERVICE_GUIDE_RULES: Array<{
   },
   {
     test: (slug) => slug.startsWith("heating-repair"),
-    slugs: ["no-heat-in-house", "furnace-not-heating", "thermostat-not-working", "hvac-strange-noises", "uneven-temperatures"],
+    slugs: ["how-urgent-a-no-heat-night-is", "no-heat-in-house", "hot-water-boilers-in-older-houses", "thermostat-not-working"],
   },
   {
     test: (slug) => slug.includes("emergency"),
-    slugs: ["furnace-not-heating", "no-heat-in-house", "ac-blowing-warm-air", "carbon-monoxide-safety"],
+    slugs: ["how-urgent-a-no-heat-night-is", "carbon-monoxide-alarms-for-gas-heat", "no-heat-in-house", "carbon-monoxide-safety"],
   },
   {
     test: (slug) => slug.startsWith("hvac-maintenance"),
-    slugs: ["changing-a-furnace-filter", "prepare-ac-after-winter", "furnace-short-cycling"],
+    slugs: ["pre-winter-furnace-checklist", "what-a-heating-maintenance-visit-covers", "changing-a-furnace-filter", "prepare-ac-after-winter"],
   },
   {
     test: (slug) => slug.includes("heat-pump"),
-    slugs: ["heat-pump-basics-northern-illinois", "no-heat-in-house", "thermostat-not-working"],
+    slugs: ["cold-climate-heat-pumps-northern-illinois", "dual-fuel-heat-pump-and-gas-furnace", "heat-pump-basics-northern-illinois", "thermostat-setbacks-on-a-cold-night"],
   },
   {
     test: (slug) => slug.includes("mini-split") || slug.includes("ductless"),
-    slugs: ["uneven-temperatures", "heat-pump-basics-northern-illinois", "ac-not-turning-on"],
+    slugs: ["ductless-for-one-cold-room", "why-an-upstairs-bedroom-stays-cold", "cold-climate-heat-pumps-northern-illinois", "uneven-temperatures"],
   },
   {
     test: (slug) => slug.includes("indoor-air"),
-    slugs: ["changing-a-furnace-filter", "poor-airflow", "carbon-monoxide-safety"],
+    slugs: ["dry-winter-air-in-a-freeport-house", "ventilation-and-combustion-air-in-a-tight-house", "changing-a-furnace-filter", "carbon-monoxide-alarms-for-gas-heat"],
   },
   {
     test: (slug) => slug.startsWith("commercial"),
@@ -50,7 +50,7 @@ const SERVICE_GUIDE_RULES: Array<{
   },
   {
     test: (slug) => slug.startsWith("residential"),
-    slugs: ["uneven-temperatures", "furnace-not-heating", "ac-blowing-warm-air"],
+    slugs: ["why-an-upstairs-bedroom-stays-cold", "what-to-fix-before-you-replace-hvac-equipment", "uneven-temperatures", "ducts-in-basements-and-cold-attics"],
   },
 ];
 
